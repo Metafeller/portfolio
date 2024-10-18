@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    // color: #ffffff;
   }
   
 
@@ -17,16 +17,37 @@
   .hero-buttons button {
     margin: 16px;
     padding: 8px 16px;
-    background-color: var(--accent-color);
-    border: none;
+    background-color: transparent;
+    border: 0.5px solid;
+    // border-color: var(--primary-color);
     color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s;
+
+    // border: none;
+    border-radius: 45px;
+    height: 45px;
+    font-family: var(--font-family-second);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
   }
   
 
   .hero-buttons button:hover {
-    background-color: #00e699;
+    border: 0.5px solid;
+    border-color: #2EE59D;
+    // background-color: #00e699;
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: var(--primary-color);
+    font-weight: bold;
+    transform: translateY(-7px);
   }
 
 
@@ -40,8 +61,10 @@
 
   h3 {
     font-family: var(--font-family-second);
+    color: #2EE59D;
     font-weight: 300;
     font-size: 40px;
+    margin-bottom: 0px;
   }
 
 

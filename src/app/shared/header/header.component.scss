@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
   }
   
 
@@ -18,9 +19,11 @@
   
 
   .navbar-menu {
+    padding-inline-start: 16px;
+    padding-right: 16px;
     list-style: none;
     display: flex;
-    gap: 16px;
+    gap: 24px;
   }
   
 
@@ -34,4 +37,53 @@
   .navbar-menu li a:hover {
     color: var(--accent-color);
   }
+
+
+  .language-switch {
+    width: 84px;
+    height: 28px;
+    margin: 16px 32px 16px 32px;
+    padding-right: 16px;
+
+    // Inline Style meines EN DE Buttons
+    display: inline-flex;
+    border: 1px solid var(--accent-color);
+    box-shadow: 9px 1px 20px 0px rgb(28 87 63 / 50%);
+    border-radius: 20px;
+    overflow: hidden;
+
+    &:hover {
+        // border: 1px solid;
+        // color: #ffffff;
+      }
+
+  
+    .language-btn {
+      background: none;
+      border: none;
+      border-radius: 20px;
+      color: #00ffae;
+      box-shadow: 9px 1px 20px 0px rgb(28 87 63 / 50%);
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: 700;
+  
+      &.active {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+        // color: #ffffff;
+        font-weight: 700;
+      }
+  
+      &:hover {
+        background-color: var(--accent-color);
+        box-shadow: 9px 1px 20px 0px rgb(28 87 63 / 50%);
+        // color: var(--primary-color);
+        color: #ffffff;
+        font-weight: 700;
+      }
+    }
+  }
+  
   
