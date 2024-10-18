@@ -1,5 +1,4 @@
 .hero {
-    // background-image: url('../../../public/bg-images/bg-hero.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -9,10 +8,12 @@
     color: #ffffff;
   }
   
+
   .hero-content {
     text-align: center;
   }
   
+
   .hero-buttons button {
     margin: 16px;
     padding: 8px 16px;
@@ -23,7 +24,28 @@
     transition: background-color 0.3s;
   }
   
+
   .hero-buttons button:hover {
     background-color: #00e699;
+  }
+
+
+  h1 {
+    font-family: var(--font-family);
+    font-size: 120px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+
+  h3 {
+    font-family: var(--font-family-second);
+    font-weight: 300;
+    font-size: 40px;
+  }
+
+
+  p {
+    font-family: var(--font-family-second);
   }
   

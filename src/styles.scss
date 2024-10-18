@@ -3,14 +3,52 @@
     --primary-color: #1C1C1C; /* Hauptfarbe für dunkle Hintergründe */
     --primary-color-transparent: rgba(28, 28, 28, 0.3); // Die transparente Version
     --accent-color: #00ffae; /* Akzentfarbe */
-    --font-family: 'Inter', sans-serif; /* Beispiel Schriftart */
+    --font-family: 'Karla', sans-serif; // Hauptschriftart für den Text
+    --font-family-second: 'Fira Code', monospace; // Für Codeblöcke, Buttons, etc.
   }
   
+
+//   Meine Fonts
+@font-face {
+    font-family: 'Fira Code';
+    src: url('../public/fonts/fira/static/FiraCode-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+// @font-face {
+//     font-family: 'Fira Code';
+//     src: url('../public/fonts/fira/static/FiraCode-Regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+
+//   @font-face {
+//     font-family: 'Fira Code';
+//     src: url('../public/fonts/fira/static/FiraCode-Bold.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+  
+@font-face {
+    font-family: 'Karla';
+    src: url('../public/fonts/karla/static/Karla-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Karla';
+    src: url('../public/fonts/karla/static/Karla-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 
   body {
     margin: 0;
     padding: 0;
-    font-family: var(--font-family);
     background-color: var(--primary-color);
     color: #ffffff;
   }
