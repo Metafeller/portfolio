@@ -1,0 +1,29 @@
+.hero {
+    // background-image: url('../../../public/bg-images/bg-hero.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-buttons button {
+    margin: 16px;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #00e699;
+  }
+  
