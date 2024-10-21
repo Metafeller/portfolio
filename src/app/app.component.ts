@@ -8,6 +8,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -28,4 +29,14 @@ import { FooterComponent } from './shared/footer/footer.component';
 })
 export class AppComponent {
   title = 'portfolio';
+
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    const shadow = document.querySelector('.cursor-shadow') as HTMLElement;
+    if (shadow) {
+      shadow.style.left = `${event.clientX}px`;
+      shadow.style.top = `${event.clientY}px`;
+    }
+  }
 }

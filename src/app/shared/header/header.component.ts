@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  onMouseOver() {
+    const logo = document.getElementById('header-logo') as HTMLImageElement;
+    if (logo) {
+      logo.src = './../logos/beispiel-logo-hover.png';
+    }
+  }
+
+  onMouseLeave() {
+    const logo = document.getElementById('header-logo') as HTMLImageElement;
+    if (logo) {
+      logo.src = './../logos/beispiel-logo-default.png';
+    }
+  }
+
 }

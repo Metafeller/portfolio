@@ -9,6 +9,19 @@
     z-index: 1000;
     display: flex;
   }
+
+
+  .header-logo {
+    margin-left: auto;
+    margin-right: 32px;
+    padding: 4px;
+  
+    img {
+      max-height: 48px;
+      transition: opacity 0.3s ease;
+    }
+
+  } 
   
 
   .navbar {

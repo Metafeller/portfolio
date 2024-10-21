@@ -45,12 +45,12 @@
   }
   
 
-
   body {
     margin: 0;
     padding: 0;
     background-color: var(--primary-color);
     color: #ffffff;
+    // cursor: none;
   }
   
 
@@ -80,6 +80,20 @@
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
+  }
+
+
+  .cursor-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 255, 174, 0.5); /* Grüne Akzentfarbe mit Transparenz */
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
   }
   
   
