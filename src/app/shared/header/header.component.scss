@@ -38,19 +38,47 @@
     display: flex;
     gap: 24px;
   }
-  
+
 
   .navbar-menu li a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s;
     font-size: 20px;
+    position: relative; // Notwendig, damit das Pseudo-Element sich relativ zum Link positioniert
+
+
+    // Pseudo-Element für den grünen Punkt unter dem Link
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px; // Abstand vom Text nach unten
+      left: 50%; // In der Mitte des Links positioniert
+      transform: translateX(-50%);
+      width: 6px; // Breite des Punktes
+      height: 6px; // Höhe des Punktes
+      background-color: var(--accent-color); // Grüne Akzentfarbe
+      border-radius: 50%; // Runde Form für den Punkt
+      opacity: 0; // Unsichtbar im Normalzustand
+      transition: opacity 0.3s ease, transform 0.3s ease; // Sanfter Übergang
+    }
+
+
+    // Hover-Effekt für das Pseudo-Element
+    &:hover {
+      color: var(--accent-color); // Der Link wird grün
+
+      &::after {
+        opacity: 1; // Der Punkt wird sichtbar
+        transform: translateX(-50%) translateY(-3px); // Punkt bewegt sich leicht nach oben für ein schönes Effekt
+      }
+    }
   }
   
 
-  .navbar-menu li a:hover {
-    color: var(--accent-color);
-  }
+  // .navbar-menu li a:hover {
+  //   color: var(--accent-color);
+  // }
 
 
   .language-switch {
