@@ -33,7 +33,7 @@ export class AppComponent {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    const shadow = document.querySelector('.cursor-shadow') as HTMLElement;
+    const shadow = document.getElementById('cursor-shadow') as HTMLElement;
     if (shadow) {
       shadow.style.left = `${event.clientX}px`;
       shadow.style.top = `${event.clientY}px`;
