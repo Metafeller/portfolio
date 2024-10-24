@@ -82,6 +82,7 @@
     overflow: hidden; // Text bleibt im Container
     height: 60px; // Höhe des Banners
     transform: rotate(-2deg); // Leicht verwinkelte Darstellung
+    z-index: 1;
   }
 
 
@@ -103,7 +104,7 @@
     animation: scrollText 40s linear infinite; // Unendliche Animation von rechts nach links
     white-space: nowrap; // Verhindert Zeilenumbruch des Textes
     position: relative;
-    z-index: 2; // Text vor dem Hintergrund
+    z-index: 1; // Text vor dem Hintergrund
   }
 
 
@@ -111,7 +112,6 @@
     display: flex;
     gap: 48px; // Abstand zwischen den Texten
     padding-top: 16px; // Text im Banner zentrieren
-    // animation: scrollText 20s linear infinite; 
   }
 
 
@@ -162,6 +162,16 @@
         color: #ffffff;
         animation: arrowBounce 1.5s infinite;
     }
+
+    .vertical-line {
+      position: absolute;
+      margin-top: 700px; // Kleiner Abstand zwischen Pfeil und Linie
+      width: 1px; // Breite der Linie
+      height: 600px; // Höhe der Linie, kannst du nach Bedarf anpassen
+      background-color: var(--accent-color);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
 }
 
 @keyframes arrowBounce {
@@ -172,3 +182,4 @@
         transform: translateY(-10px);
     }
 }
+
