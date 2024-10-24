@@ -132,3 +132,43 @@
   }
   
   
+  // Linker Scroll-Button Vertikal
+  .scroll-button {
+    position: absolute;
+    bottom: 450px; // Abstand vom unteren Rand
+    margin-left: 48px;
+    left: 5%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid var(--accent-color);
+    transition: background-color 0.3s, transform 0.3s;
+    
+    &:hover {
+        // background-color: var(--accent-color);
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    .arrow {
+        font-size: 24px;
+        color: #ffffff;
+        animation: arrowBounce 1.5s infinite;
+    }
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
