@@ -96,30 +96,38 @@
   }
 
 
+  .banner-text-wrapper {
+    display: flex;
+    // width: calc(200% + 48px); /* Anpassung für nahtlosen Übergang */
+    width: 200%; /* Breite des Wrappers auf das Doppelte setzen */
+    animation: scrollText 40s linear infinite; // Unendliche Animation von rechts nach links
+    white-space: nowrap; // Verhindert Zeilenumbruch des Textes
+    position: relative;
+    z-index: 2; // Text vor dem Hintergrund
+  }
+
+
   .banner-text {
-    font-family: var(--font-family-second);
     display: flex;
     gap: 48px; // Abstand zwischen den Texten
-    animation: scrollText 20s linear infinite; // Unendliche Animation von rechts nach links
-    z-index: 2; // Text vor dem Hintergrund
-    position: relative;
-    white-space: nowrap; // Verhindert Zeilenumbruch des Textes
     padding-top: 16px; // Text im Banner zentrieren
+    // animation: scrollText 20s linear infinite; 
   }
 
 
   .banner-text span {
     font-size: 24px;
     color: var(--accent-color); // Grüne Akzentfarbe
+    font-family: var(--font-family-second);
   }
 
 
   @keyframes scrollText {
     0% {
-      transform: translateX(100%);
+      transform: translateX(1.3%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-89.5%);
     }
   }
   
