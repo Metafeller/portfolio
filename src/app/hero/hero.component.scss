@@ -11,6 +11,7 @@
 
   .hero-content {
     text-align: center;
+    height: 720px;
   }
   
 
@@ -71,4 +72,55 @@
   p {
     font-family: var(--font-family-second);
   }
+
+
+  // Animierter Banner
+  .animated-banner {
+    position: absolute;
+    bottom: 160px;
+    width: 100%; // Volle Breite des Containers
+    overflow: hidden; // Text bleibt im Container
+    height: 60px; // Höhe des Banners
+    transform: rotate(-2deg); // Leicht verwinkelte Darstellung
+  }
+
+
+  .banner-background {
+    filter: blur(10px); // Blur nur auf dem Hintergrund
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.08);
+    // background-color: rgba(28, 28, 28, 0.8); // Dunkler Hintergrund für das Banner
+    position: absolute;
+    z-index: 1;
+  }
+
+
+  .banner-text {
+    font-family: var(--font-family-second);
+    display: flex;
+    gap: 48px; // Abstand zwischen den Texten
+    animation: scrollText 20s linear infinite; // Unendliche Animation von rechts nach links
+    z-index: 2; // Text vor dem Hintergrund
+    position: relative;
+    white-space: nowrap; // Verhindert Zeilenumbruch des Textes
+    padding-top: 16px; // Text im Banner zentrieren
+  }
+
+
+  .banner-text span {
+    font-size: 24px;
+    color: var(--accent-color); // Grüne Akzentfarbe
+  }
+
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
   
