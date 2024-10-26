@@ -54,7 +54,7 @@
 
   h1 {
     font-family: var(--font-family);
-    font-size: 120px;
+    font-size: 128px;
     margin-top: 16px;
     margin-bottom: 16px;
   }
@@ -205,3 +205,108 @@
     }
 }
 
+
+// Social Media Container rechts im Hero-Bereich
+.social-media-container {
+  position: absolute;
+  top: 72%;
+  right: 5%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+
+  .email {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-size: 16px;
+    // font-weight: 100;
+    margin-bottom: 24px;
+
+    &:hover {
+      color: var(--accent-color);
+    } 
+
+  }
+
+  // Social Media Icons
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .icon-link {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s, color 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+
+        img {
+          filter: invert(1); // Icons von grün nach weiß wechseln
+        }
+
+        // Kleiner grüner Punkt bei Hover
+        &::after {
+          content: "";
+          position: absolute;
+          right: -20px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 8px;
+          width: 8px;
+          background-color: var(--accent-color);
+          border-radius: 50%;
+        }
+      }
+
+      img,
+      svg {
+        width: 32px;
+        height: 32px;
+        transition: fill 0.3s, filter 0.3s;
+      }
+    }
+  }
+
+  // Vertikale Linie rechts im Hero-Bereich
+  .vertical-line-right {
+    margin-top: 32px;
+    width: 1px;
+    height: 400px;
+    // background-color: var(--accent-color);
+    position: relative;
+    z-index: -1;
+
+    // Oberer Teil der Linie
+    .line-top {
+      height: 105px;
+      background-color: var(--accent-color);
+      z-index: -1;
+    }
+
+    // Mittlerer Teil der Linie mit Blur-Effekt
+    .line-middle {
+      height: 65px;
+      background-color: var(--accent-color);
+      filter: blur(3px);
+      mix-blend-mode: multiply;
+      z-index: -1;
+    }
+
+    // Unterer Teil der Linie
+    .line-bottom {
+      height: 360px;
+      background-color: var(--accent-color);
+      z-index: -1;
+    }
+  }
+}
