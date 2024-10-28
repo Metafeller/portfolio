@@ -9,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class HeroComponent {
 
+  // Methode für das Wechseln des Icons bei Hover
+  changeIconToWhite(id: string) {
+    const element = document.getElementById(id) as HTMLImageElement;
+    if (element) {
+      element.src = `./../icons/social/${id}-white.svg`;
+    }
+  }
+
+  // Methode für das Zurücksetzen des Icons, wenn die Maus weg ist
+  resetIcon(id: string) {
+    const element = document.getElementById(id) as HTMLImageElement;
+    if (element) {
+      element.src = `./../icons/social/${id}.svg`;
+    }
+  }
+
 }

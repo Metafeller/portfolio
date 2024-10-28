@@ -27,16 +27,24 @@
     <!-- Social Media Icons -->
     <div class="social-icons">
       <a href="https://github.com/Metafeller" target="_blank" class="icon-link">
-        <img src="./../icons/social/github.svg" alt="GitHub Icon">
+        <img id="github" src="./../icons/social/github.svg" alt="GitHub Icon"
+        (mouseenter)="changeIconToWhite('github')" 
+        (mouseleave)="resetIcon('github')">
       </a>
       <a href="https://www.linkedin.com/" target="_blank" class="icon-link">
-        <img src="./../icons/social/linkedin.svg" alt="LinkedIn Icon">
+        <img id="linkedin" src="./../icons/social/linkedin.svg" alt="LinkedIn Icon"
+        (mouseenter)="changeIconToWhite('linkedin')" 
+        (mouseleave)="resetIcon('linkedin')">
       </a>
       <a href="https://www.instagram.com/" target="_blank" class="icon-link">
-        <img src="./../icons/social/instagram.svg" alt="Instagram Icon">
+        <img id="instagram" src="./../icons/social/instagram.svg" alt="Instagram Icon"
+        (mouseenter)="changeIconToWhite('instagram')" 
+        (mouseleave)="resetIcon('instagram')">
       </a>
       <a href="https://www.twitter.com/" target="_blank" class="icon-link">
-        <img src="./../icons/social/twitterx.svg" alt="Twitter Icon">
+        <img id="twitterx" src="./../icons/social/twitterx.svg" alt="Twitter Icon"
+        (mouseenter)="changeIconToWhite('twitterx')" 
+        (mouseleave)="resetIcon('twitterx')">
       </a>
     </div>
   

@@ -250,9 +250,9 @@
       &:hover {
         transform: translateY(-5px);
 
-        img {
-          filter: invert(1); // Icons von grün nach weiß wechseln
-        }
+        // img {
+        //   filter: invert(1); // Icons von grün nach weiß wechseln
+        // }
 
         // Kleiner grüner Punkt bei Hover
         &::after {
