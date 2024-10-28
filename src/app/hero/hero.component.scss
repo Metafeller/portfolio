@@ -288,14 +288,14 @@
 
     // Oberer Teil der Linie
     .line-top {
-      height: 105px;
+      height: 104px;
       background-color: var(--accent-color);
       z-index: -1;
     }
 
     // Mittlerer Teil der Linie mit Blur-Effekt
     .line-middle {
-      height: 65px;
+      height: 62px;
       background-color: var(--accent-color);
       filter: blur(3px);
       mix-blend-mode: multiply;
