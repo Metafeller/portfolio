@@ -147,7 +147,14 @@
     margin-right: 24px;
   
     .burger-icon {
-      font-size: 32px;
+      font-size: 40px;
+      transition: transform 0.3s;
+    }
+
+    .close-icon {
+      font-size: 32px; // X-Icon Größe
+      transition: transform 0.3s;
+      transform: rotate(180deg);
     }
 
   }
@@ -179,7 +186,7 @@
           top: 80px; // Unter dem Header platzieren
           right: 0;
           // background-color: var(--primary-color-transparent);
-          background-color: rgba(28, 28, 28, 0.6);
+          background-color: rgba(28, 28, 28, 0.9);
           width: 100%;
           padding: 16px;
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);

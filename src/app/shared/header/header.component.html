@@ -28,7 +28,9 @@
 
   <!-- Burger Menu Button -->
   <div class="burger-menu" id="burger-menu" (click)="toggleMenu()">
-    <span class="burger-icon">&#9776;</span> <!-- Burger Icon -->
+    <!-- <span class="burger-icon">&#9776;</span> Burger Icon -->
+    <span class="burger-icon" *ngIf="!menuOpen">&#9776;</span> <!-- Burger Icon -->
+    <span class="burger-icon close-icon" *ngIf="menuOpen">&#10006;</span> <!-- Close Icon -->
   </div>
 
 </header>

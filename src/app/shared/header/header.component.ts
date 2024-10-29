@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -30,4 +31,21 @@ export class HeaderComponent {
     this.menuOpen = !this.menuOpen;
   }
 
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent) {
+    const burgerMenu = document.getElementById('burger-menu');
+    const navbar = document.querySelector('.navbar.open');
+    if (
+      this.menuOpen &&
+      burgerMenu &&
+      navbar &&
+      !burgerMenu.contains(event.target as Node) &&
+      !navbar.contains(event.target as Node)
+    ) {
+      this.menuOpen = false; // Menü schließen, wenn außerhalb geklickt wird
+    }
+  }
+
+  
 }
