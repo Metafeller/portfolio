@@ -1,14 +1,10 @@
 <header class="header">
+  <div *ngIf="!menuOpen" class="language-switch language-switch-desktop">
+    <button class="language-btn active">EN</button>
+    <button class="language-btn">DE</button>
+  </div>
       
   <nav class="navbar" [ngClass]="{ 'open': menuOpen }">
-
-    <div class="switch-btn-container">
-      <div class="language-switch">
-        <button class="language-btn active">EN</button>
-        <button class="language-btn">DE</button>
-      </div>
-  </div>
-
     <ul class="navbar-menu">
       <li><a href="#about-me">About me</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -16,6 +12,14 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
+    <div class="switch-btn-container">
+      <div *ngIf="menuOpen" class="language-switch-mobile">
+        <div class="language-switch">
+          <button class="language-btn active">EN</button>
+          <button class="language-btn">DE</button>
+        </div>
+      </div>
+    </div>
   </nav>
 
   <div class="header-logo" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
