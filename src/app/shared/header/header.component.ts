@@ -10,7 +10,7 @@ import { OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   menuOpen = false;
   screenWidth: number = 0;

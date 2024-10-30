@@ -1,0 +1,142 @@
+// @import '../styles.scss'; // Importiere globale Variablen und Fonts
+
+.about-me {
+//   background-color: var(--primary-color); // Hintergrundfarbe für die Sektion
+  padding: 64px 32px; // Außenabstände für die Sektion
+  max-width: 1921px;
+  margin: 0 auto; // Zentriert den Container innerhalb des Viewports
+
+  .about-me-content {
+    display: flex;
+    align-items: center;
+    gap: 64px; // Abstand zwischen Bild und Textbereich
+    max-width: 1200px; // Maximale Breite des Inhalts
+    margin: 0 auto;
+
+    .about-me-image {
+      flex: 1;
+      img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 16px; // Abrundung der Ecken, wie im Screenshot
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // Leichtes Schatten für ein plastisches Erscheinungsbild
+      }
+    }
+
+    .about-me-box {
+        background-color: rgba(0, 255, 174, 0.1);
+        width: 568px;
+        height: 562px;
+        border-radius: 30px;
+        padding: 32px;
+        gap: 40px;
+    }
+
+    .about-me-text {
+      flex: 2;
+      color: #ffffff; // Weißer Text auf dunklem Hintergrund
+
+      h2 {
+        font-family: var(--font-family);
+        font-size: 40px;
+        margin-bottom: 24px;
+      }
+
+      h4 {
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: var(--font-family-second);
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 32px;
+      }
+
+      .about-me-highlights {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 24px;
+
+          img {
+            width: 32px;
+            height: 32px; // Einheitliche Größe für alle Icons
+          }
+
+          span {
+            font-family: var(--font-family-second);
+            font-size: 18px;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Anpassungen
+
+// Mobile Ansicht (bis 768px)
+@media (max-width: 768px) {
+  .about-me {
+    padding: 48px 16px;
+
+    .about-me-content {
+      flex-direction: column; // Elemente untereinander statt nebeneinander
+
+      .about-me-image {
+        img {
+          max-width: 300px; // Verkleinere das Bild in der mobilen Ansicht
+        }
+      }
+
+      .about-me-text {
+        h3 {
+          font-size: 32px; // Kleinere Schriftgröße für mobile Ansicht
+        }
+
+        p,
+        .about-me-highlights li span {
+          font-size: 16px; // Anpassung der Schriftgröße für kleinere Bildschirme
+        }
+      }
+    }
+  }
+}
+
+// Tablet Ansicht (768px bis 1024px)
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-me {
+    padding: 56px 24px;
+
+    .about-me-content {
+      gap: 48px;
+
+      .about-me-image {
+        img {
+          max-width: 350px; // Bildgröße leicht anpassen
+        }
+      }
+
+      .about-me-text {
+        h3 {
+          font-size: 36px; // Leicht reduzierte Schriftgröße
+        }
+
+        p,
+        .about-me-highlights li span {
+          font-size: 17px; // Etwas größere Schrift im Vergleich zur mobilen Ansicht
+        }
+      }
+    }
+  }
+}
