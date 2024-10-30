@@ -9,14 +9,23 @@
     top: 0;
     z-index: 1000;
     display: flex;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+
+  .container {
+    width: 100%; // Container nimmt die volle Breite des Headers ein
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
   }
 
 
   .header-logo {
     margin-left: auto;
-    margin-right: 16px;
+    // margin-right: 16px;
     padding-right: 16px;
     padding: 4px;
   
@@ -32,7 +41,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 32px;
+    // margin-left: 32px;
   }
   
 

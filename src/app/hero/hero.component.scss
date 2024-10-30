@@ -315,8 +315,9 @@
 // ****************************** MEDIA QUERIES *************************************
 /* Media Queries: Standard (Desktop) Styles - ab 1024px sind alle Stile wie bisher. */
 
-/* Mobile Styles - 320px bis 767px */
-@media (max-width: 767px) {
+
+/* Mobile Styles - 320px bis 480px */
+@media (max-width: 480px) {
   .hero-content {
     h1 {
       font-size: 40px; /* Kleinere Schrift für mobile Ansicht */
@@ -400,7 +401,90 @@
 }
 
 
-/* Tablet Styles - 768px bis 1024px */
+/* Tablet Styles - 481px bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-content {
+    h1 {
+      font-size: 64px; /* Kleine Größe für Smartpohnes */
+    }
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .hero-buttons {
+      flex-direction: row; /* Buttons horizontal für Tablets */
+      button {
+        width: 80%;
+      }
+    }
+  }
+
+  .animated-banner {
+    bottom: 80px;
+  }
+
+
+  .scroll-button {
+    left: -5%;
+    bottom: 380px; // Abstand vom unteren Rand
+
+    .vertical-line {
+      // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
+      height: 600px;
+    }
+
+    .line-top {
+      height: 220px; // Länge des oberen Teils
+      }
+  
+    .line-bottom {
+      height: 265px; // Länge des unteren Teils
+    }
+  }
+
+
+  .social-media-container {
+    right: 5%;
+    transform: translateY(-50%);
+
+    .email {
+      display: none;
+    }
+
+    .social-icons {
+      // flex-direction: row; /* Icons nebeneinander für mobile Ansicht */
+      gap: 12px;
+    }
+
+    .vertical-line-right {
+      // display: none; /* Vertikale Linie für die mobile Ansicht ausblenden */
+      height: 200px;
+
+      .line-top {
+        height: 110px;
+      }
+  
+      .line-bottom {
+        height: 275px;
+      }
+    }
+  }
+
+
+  .burger-menu {
+    display: block; /* Burger-Menü anzeigen */
+  }
+
+
+  .navbar {
+    display: none; /* Navbar im Header verbergen */
+  }
+}
+
+
+/* Big-Tablet Styles - 768px bis 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-content {
     h1 {
@@ -437,7 +521,7 @@
 }
 
 
-/* Big-Tablet Styles - 1025px bis 1440px */
+/* Desktop Styles - 1025px bis 1440px */
 @media (min-width: 1025px) and (max-width: 1440px) {
   
   .social-media-container {
@@ -450,7 +534,7 @@
 }
 
 
-/* Desktop Styles - 1441px bis 1920px */
+/* Big-Desktop Styles - 1441px bis 1920px */
 @media (min-width: 1441px) and (max-width: 1920px) {
   
   .social-media-container {
@@ -465,7 +549,7 @@
 }
 
 
-/* Desktop Styles - ab 1921px bis kein Limit */
+/* Fullscreen-Desktop Styles - ab 1921px bis kein Limit */
 @media (min-width: 1921px) {
   
   .social-media-container {
