@@ -6,8 +6,17 @@
     align-items: center;
     justify-content: center;
     // color: #ffffff;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; // Zentriert den Inhalt horizontal im Viewport
+      padding: 0 32px; // Seitenabstand links und rechts für den Inhalt
+      height: 100%; // Höhe für die Hero-Sektion verwenden
+    }
   }
-  
+
 
   .hero-content {
     text-align: center;
@@ -210,7 +219,7 @@
 .social-media-container {
   position: absolute;
   top: 72%;
-  right: 5%;
+  right: 6%;
   transform: translateY(-50%);
   display: flex;
   justify-content: center;
@@ -320,7 +329,7 @@
 @media (max-width: 480px) {
   .hero-content {
     h1 {
-      font-size: 40px; /* Kleinere Schrift für mobile Ansicht */
+      font-size: 48px; /* Kleinere Schrift für mobile Ansicht */
     }
     h3 {
       font-size: 18px;
@@ -344,8 +353,8 @@
 
 
   .scroll-button {
-    left: -5%;
-    bottom: 380px; // Abstand vom unteren Rand
+    // left: -5%;
+    bottom: 180px; // Abstand vom unteren Rand
 
     .vertical-line {
       // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
@@ -353,17 +362,17 @@
     }
 
     .line-top {
-      height: 220px; // Länge des oberen Teils
+      height: 20px; // Länge des oberen Teils
       }
   
     .line-bottom {
-      height: 265px; // Länge des unteren Teils
+      height: 192px; // Länge des unteren Teils
     }
   }
 
 
   .social-media-container {
-    right: 5%;
+    // right: 5%;
     transform: translateY(-50%);
 
     .email {
@@ -377,14 +386,14 @@
 
     .vertical-line-right {
       // display: none; /* Vertikale Linie für die mobile Ansicht ausblenden */
-      height: 200px;
+      height: 20px;
 
       .line-top {
-        height: 110px;
+        height: 94px;
       }
   
       .line-bottom {
-        height: 275px;
+        height: 206px;
       }
     }
   }
@@ -427,7 +436,7 @@
 
 
   .scroll-button {
-    left: -5%;
+    // left: -5%;
     bottom: 380px; // Abstand vom unteren Rand
 
     .vertical-line {
@@ -446,7 +455,7 @@
 
 
   .social-media-container {
-    right: 5%;
+    // right: 5%;
     transform: translateY(-50%);
 
     .email {
@@ -506,7 +515,7 @@
 
 
   .social-media-container {
-    right: 5%;
+    // right: 5%;
 
     .email {
       display: none;

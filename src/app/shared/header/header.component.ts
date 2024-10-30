@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,16 @@ import { HostListener } from '@angular/core';
 export class HeaderComponent {
 
   menuOpen = false;
+  screenWidth: number = 0;
+
+  ngOnInit() {
+    this.screenWidth = window.innerWidth; // Initial die Breite des Fensters setzen
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = event.target.innerWidth; // Aktualisiere die Breite, wenn die Größe des Fensters geändert wird
+  }
 
   onMouseOver() {
     const logo = document.getElementById('header-logo') as HTMLImageElement;
@@ -47,5 +58,4 @@ export class HeaderComponent {
     }
   }
 
-  
 }

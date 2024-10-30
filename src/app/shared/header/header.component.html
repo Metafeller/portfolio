@@ -24,9 +24,21 @@
       </div>
     </nav>
 
-    <div class="header-logo" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+    <!-- <div class="header-logo" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+      <img id="header-logo" src="./../logos/beispiel-logo-default.png" alt="TAYFUN AYA LOGO">
+    </div> -->
+
+
+    <!-- Desktop Logo - Nur bei größerer Bildschirmgröße anzeigen -->
+    <div *ngIf="screenWidth > 1024" class="header-logo header-logo-desktop" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
       <img id="header-logo" src="./../logos/beispiel-logo-default.png" alt="TAYFUN AYA LOGO">
     </div>
+
+    <!-- Mobiles Logo - Nur bei kleiner Bildschirmgröße anzeigen -->
+    <div *ngIf="screenWidth <= 1024" class="header-logo-mobile">
+      <img id="mobile-header-logo" src="./../logos/beispiel-logo-mobile.png" alt="TAYFUN AYA LOGO Mobile">
+    </div>
+
 
     <!-- Burger Menu Button -->
     <div class="burger-menu" id="burger-menu" (click)="toggleMenu()">
