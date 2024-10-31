@@ -1,5 +1,11 @@
 // @import '../styles.scss'; // Importiere globale Variablen und Fonts
 
+.container {
+    max-width: 1921px;
+    margin: 0 auto; // Zentriert den Inhalt horizontal im Viewport
+    padding: 0 32px; // Fügt 32px Padding links und rechts zum Container hinzu
+  }
+
 .about-me {
 //   background-color: var(--primary-color); // Hintergrundfarbe für die Sektion
   padding: 64px 32px; // Außenabstände für die Sektion
@@ -7,17 +13,23 @@
   margin: 0 auto; // Zentriert den Container innerhalb des Viewports
 
   .about-me-content {
+    padding: 64px 32px;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    // align-items: center;
     gap: 64px; // Abstand zwischen Bild und Textbereich
-    max-width: 1200px; // Maximale Breite des Inhalts
-    margin: 0 auto;
+    // max-width: 1200px; // Maximale Breite des Inhalts
+    // margin: 0 auto;
 
     .about-me-image {
-      flex: 1;
+        display: flex;
+        justify-content: center;
+        // flex: 1;
       img {
-        width: 100%;
-        max-width: 400px;
+        width: 568px;
+        height: 568px;
+        // width: 100%;
+        // max-width: 400px;
         border-radius: 16px; // Abrundung der Ecken, wie im Screenshot
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // Leichtes Schatten für ein plastisches Erscheinungsbild
       }
@@ -25,21 +37,29 @@
 
     .about-me-box {
         background-color: rgba(0, 255, 174, 0.1);
+        box-shadow: 0px 8px 20px rgba(0, 255, 174, 0.2);
+        border: solid 2px;
+        border-color: var(--accent-color);
         width: 568px;
         height: 562px;
         border-radius: 30px;
-        padding: 32px;
+        padding: 40px;
+        padding-top: 20px;
+        padding-bottom: 80px;
         gap: 40px;
     }
 
     .about-me-text {
-      flex: 2;
+    //   flex: 2;
       color: #ffffff; // Weißer Text auf dunklem Hintergrund
 
       h2 {
         font-family: var(--font-family);
-        font-size: 40px;
-        margin-bottom: 24px;
+        color: var(--accent-color);
+        font-size: 72px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        margin-top: 8px;
       }
 
       h4 {
