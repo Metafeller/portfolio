@@ -13,6 +13,7 @@
   margin: 0 auto; // Zentriert den Container innerhalb des Viewports
 
   .about-me-content {
+    flex-wrap: wrap;
     padding: 64px 32px;
     display: flex;
     justify-content: space-between;
@@ -81,6 +82,15 @@
         padding: 0;
         margin: 0;
 
+        li img {
+            transition: transform 0.3s, background-color 0.3s;
+          }
+          
+          li:hover img {
+            transform: scale(1.1);
+            // background-color: rgba(0, 255, 174, 0.3); // Eine leichtere Version des Accent-Farbtons
+          }
+
         li {
           display: flex;
           align-items: flex-start;
@@ -97,6 +107,11 @@
             font-size: 18px;
             line-height: 1.5;
           }
+
+          span:hover {
+            color: var(--accent-color)
+          }
+
         }
       }
     }
