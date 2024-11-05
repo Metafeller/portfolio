@@ -22,18 +22,60 @@
     // max-width: 1200px; // Maximale Breite des Inhalts
     // margin: 0 auto;
 
-    .about-me-image {
+    .about-me-image-wrapper {
+        position: relative; // Wichtig für die Positionierung der Vektor-Grafik
         display: flex;
         justify-content: center;
-        // flex: 1;
-      img {
-        width: 568px;
-        height: 568px;
-        // width: 100%;
-        // max-width: 400px;
-        border-radius: 16px; // Abrundung der Ecken, wie im Screenshot
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // Leichtes Schatten für ein plastisches Erscheinungsbild
-      }
+
+        .about-me-image {
+            // display: flex;
+            // justify-content: center;
+            position: relative;
+            // flex: 1;
+
+            img {
+                width: 568px;
+                height: 568px;
+                // width: 100%;
+                // max-width: 568px;
+                border-radius: 16px; // Abrundung der Ecken, wie im Screenshot
+                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // Leichtes Schatten für ein plastisches Erscheinungsbild
+                transition: transform 0.3s ease-in-out; // Hinzufügen eines leichten Zoom-Effekts für das Bild beim Hover
+                margin-left: 40px;
+                margin-bottom: 40px;
+            }
+
+            // Hover Effekt für das Bild (Skalieren)
+            &:hover img {
+                transform: scale(1.05); // Bild leicht vergrößern
+            }
+
+            // Vektor-Hintergrund hinzufügen
+            .vector-background {
+                // background-color: tomato;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                // background-image: linear-gradient(135deg, rgba(0, 255, 174, 0.5) 0.5px, transparent 0.5px);
+                // background-size: 10px 10px;
+                background-image: url('./../../../public/vectors/img-bg-vector.svg'); // Verwende hier den richtigen Pfad zur SVG-Datei
+                background-size: cover; // SVG-Grafik soll den gesamten Bereich abdecken
+                border-radius: 16px; // Passend zum Bild
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                z-index: -1; // Damit der Hintergrund hinter dem Bild bleibt
+            }
+    
+            // Hover-Effekt
+            &:hover .vector-background {
+                opacity: 1; // Zeigt die Vektor-Grafik beim Hover an
+            }
+            // img {
+            //     transform: scale(1.05); // Leichter Zoom-Effekt für das Bild, um den Hover hervorzuheben
+            //   }
+        }
     }
 
     .about-me-box {
