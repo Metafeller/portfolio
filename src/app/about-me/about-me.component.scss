@@ -57,7 +57,7 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                bottom: 0;
+                bottom: 160px;
                 // background-image: linear-gradient(135deg, rgba(0, 255, 174, 0.5) 0.5px, transparent 0.5px);
                 // background-size: 10px 10px;
                 background-image: url('./../../../public/vectors/img-bg-vector.svg'); // Verwende hier den richtigen Pfad zur SVG-Datei
@@ -160,60 +160,471 @@
   }
 }
 
-// Responsive Anpassungen
+// ****************************** MEDIA QUERIES *************************************
+/* Media Queries: Standard (Desktop) Styles - ab 1024px sind alle Stile wie bisher. */
 
-// Mobile Ansicht (bis 768px)
-@media (max-width: 768px) {
+// Mobile Ansicht - bis 320px
+@media (min-width: 240px) and (max-width: 320px) {
   .about-me {
-    padding: 48px 16px;
+    padding: 16px 8px; // Weniger Padding für kleine Geräte
 
     .about-me-content {
-      flex-direction: column; // Elemente untereinander statt nebeneinander
+      flex-direction: column;
+      padding: 32px 16px;
+      gap: 24px;
 
-      .about-me-image {
-        img {
-          max-width: 300px; // Verkleinere das Bild in der mobilen Ansicht
+      .about-me-image-wrapper {
+        .about-me-image {
+          img {
+            width: 240px; // Kleinere Bildgröße
+            height: auto;
+            margin-left: 0px;
+            // margin-bottom: 40px;
+          }
+
+          // Vektor-Hintergrund hinzufügen
+          .vector-background {
+            top: 0;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+        }
+        }
+      }
+
+      .about-me-box {
+        width: 80%;
+        height: auto;
+        padding: 24px;
+
+        li {
+          flex-direction: column;
         }
       }
 
       .about-me-text {
-        h3 {
-          font-size: 32px; // Kleinere Schriftgröße für mobile Ansicht
+        h2 {
+          font-size: 32px;
         }
-
+        h4 {
+          font-size: 18px;
+          margin-left: 10px;
+        }
         p,
         .about-me-highlights li span {
-          font-size: 16px; // Anpassung der Schriftgröße für kleinere Bildschirme
+          font-size: 14px;
         }
       }
     }
   }
 }
 
-// Tablet Ansicht (768px bis 1024px)
-@media (min-width: 769px) and (max-width: 1024px) {
+// Mobile Ansicht - bis 480px
+@media (min-width: 321px) and (max-width: 480px) {
   .about-me {
-    padding: 56px 24px;
+    padding: 24px 12px; // Weniger Padding für kleine Geräte
+
+    .about-me-content {
+      flex-direction: column;
+      padding: 24px 12px;
+      gap: 24px;
+
+      .about-me-image-wrapper {
+        .about-me-image {
+          img {
+            width: 240px; // Kleinere Bildgröße
+            height: auto;
+            margin-left: 0px;
+          }
+
+          // Vektor-Hintergrund hinzufügen
+          .vector-background {
+            top: 0;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+
+      .about-me-box {
+        width: 80%;
+        height: auto;
+        padding: 32px;
+
+        li {
+          flex-direction: column;
+        }
+      }
+
+      .about-me-text {
+        h2 {
+          font-size: 32px;
+        }
+        h4 {
+          font-size: 18px;
+          margin-left: 10px;
+        }
+        p,
+        .about-me-highlights li span {
+          font-size: 14px;// Mobile Ansicht - bis 480px
+          @media (max-width: 480px) {
+            .about-me {
+              padding: 32px 16px; // Weniger Padding für kleine Geräte
+          
+              .about-me-content {
+                flex-direction: column;
+                gap: 24px;
+          
+                .about-me-image-wrapper {
+                  .about-me-image {
+                    img {
+                      width: 280px; // Kleinere Bildgröße
+                      height: auto;
+                      margin-left: 0px;
+                    }
+
+                    // Vektor-Hintergrund hinzufügen
+                    .vector-background {
+                      top: 0;
+                      left: -20px;
+                      right: 20px;
+                      bottom: 0px;
+                    }
+                  }
+                }
+          
+                .about-me-box {
+                  width: 95%;
+                  height: auto;
+                  padding: 24px;
+                }
+          
+                .about-me-text {
+                  h2 {
+                    font-size: 32px;
+                  }
+                  h4 {
+                    font-size: 18px;
+                  }
+                  p,
+                  .about-me-highlights li span {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+          
+          // Tablet Ansicht - 481px bis 767px
+          @media (min-width: 481px) and (max-width: 767px) {
+            .about-me {
+              padding: 48px 24px;
+          
+              .about-me-content {
+                flex-direction: column;
+                padding: 32px 16px;
+                gap: 32px;
+          
+                .about-me-image-wrapper {
+                  .about-me-image {
+                    img {
+                      width: 350px;
+                      height: auto;
+                      margin-left: 0px;
+                    }
+                    // Vektor-Hintergrund hinzufügen
+
+                    .vector-background {
+                      top: 0;
+                      left: 20px;
+                      right: 20px;
+                      bottom: 20px;
+                    }
+                  }
+                }
+          
+                .about-me-box {
+                  width: 80%;
+                  height: auto;
+                  padding: 32px;
+
+                  li {
+                    flex-direction: column;
+                  }
+                }
+          
+                .about-me-text {
+                  h2 {
+                    font-size: 40px;
+                  }
+                  h4 {
+                    font-size: 20px;
+                  }
+                  p,
+                  .about-me-highlights li span {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+          
+          // Big-Tablet Ansicht - 768px bis 1024px
+          @media (min-width: 768px) and (max-width: 1024px) {
+            .about-me {
+              padding: 64px 32px;
+          
+              .about-me-content {
+                gap: 48px;
+          
+                .about-me-image-wrapper {
+                  .about-me-image {
+                    img {
+                      width: 400px;
+                    }
+                  }
+                }
+          
+                .about-me-box {
+                  width: 90%;
+                  height: auto;
+                  padding: 40px;
+                }
+          
+                .about-me-text {
+                  h2 {
+                    font-size: 48px;
+                  }
+                  h4 {
+                    font-size: 24px;
+                  }
+                  p,
+                  .about-me-highlights li span {
+                    font-size: 17px;
+                  }
+                }
+              }
+            }
+          }
+          
+          // Desktop Ansicht - ab 1025px
+          @media (min-width: 1025px) {
+            .about-me {
+              padding: 64px;
+          
+              .about-me-content {
+                flex-direction: row;
+                gap: 64px;
+          
+                .about-me-image-wrapper {
+                  .about-me-image {
+                    img {
+                      width: 568px;
+                    }
+                  }
+                }
+          
+                .about-me-box {
+                  width: 568px;
+                  height: auto;
+                  padding: 40px;
+                }
+          
+                .about-me-text {
+                  h2 {
+                    font-size: 72px;
+                  }
+                  h4 {
+                    font-size: 28px;
+                  }
+                  p,
+                  .about-me-highlights li span {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+// Tablet Ansicht - 481px bis 767px
+@media (min-width: 481px) and (max-width: 767px) {
+  .about-me {
+    padding: 48px 24px;
+
+    .about-me-content {
+      flex-direction: column;
+      gap: 32px;
+
+      .about-me-image-wrapper {
+        .about-me-image {
+          img {
+            width: 350px;
+            height: auto;
+          }
+        }
+      }
+
+      .about-me-box {
+        width: 100%;
+        height: auto;
+        padding: 32px;
+      }
+
+      .about-me-text {
+        h2 {
+          font-size: 40px;
+        }
+        h4 {
+          font-size: 20px;
+        }
+        p,
+        .about-me-highlights li span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// Big-Tablet Ansicht - 768px bis 1024px
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-me {
+    padding: 64px 32px;
 
     .about-me-content {
       gap: 48px;
 
-      .about-me-image {
-        img {
-          max-width: 350px; // Bildgröße leicht anpassen
+      .about-me-image-wrapper {
+        .about-me-image {
+          img {
+            width: 400px;
+          }
         }
       }
 
-      .about-me-text {
-        h3 {
-          font-size: 36px; // Leicht reduzierte Schriftgröße
-        }
+      .about-me-box {
+        width: 90%;
+        height: auto;
+        padding: 40px;
+      }
 
+      .about-me-text {
+        h2 {
+          font-size: 48px;
+        }
+        h4 {
+          font-size: 24px;
+        }
         p,
         .about-me-highlights li span {
-          font-size: 17px; // Etwas größere Schrift im Vergleich zur mobilen Ansicht
+          font-size: 17px;
         }
       }
     }
   }
 }
+
+// Desktop Ansicht - ab 1025px
+@media (min-width: 1025px) {
+  .about-me {
+    padding: 64px;
+
+    .about-me-content {
+      flex-direction: row;
+      gap: 64px;
+
+      .about-me-image-wrapper {
+        .about-me-image {
+          img {
+            width: 568px;
+          }
+        }
+      }
+
+      .about-me-box {
+        width: 568px;
+        height: auto;
+        padding: 40px;
+      }
+
+      .about-me-text {
+        h2 {
+          font-size: 72px;
+        }
+        h4 {
+          font-size: 28px;
+        }
+        p,
+        .about-me-highlights li span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+
+/*********** Grenze ************/ 
+
+// // Mobile Ansicht (bis 768px)
+// @media (max-width: 768px) {
+//   .about-me {
+//     padding: 48px 16px;
+
+//     .about-me-content {
+//       flex-direction: column; // Elemente untereinander statt nebeneinander
+
+//       .about-me-image {
+//         img {
+//           max-width: 300px; // Verkleinere das Bild in der mobilen Ansicht
+//         }
+//       }
+
+//       .about-me-text {
+//         h3 {
+//           font-size: 32px; // Kleinere Schriftgröße für mobile Ansicht
+//         }
+
+//         p,
+//         .about-me-highlights li span {
+//           font-size: 16px; // Anpassung der Schriftgröße für kleinere Bildschirme
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Tablet Ansicht (768px bis 1024px)
+// @media (min-width: 769px) and (max-width: 1024px) {
+//   .about-me {
+//     padding: 56px 24px;
+
+//     .about-me-content {
+//       gap: 48px;
+
+//       .about-me-image {
+//         img {
+//           max-width: 350px; // Bildgröße leicht anpassen
+//         }
+//       }
+
+//       .about-me-text {
+//         h3 {
+//           font-size: 36px; // Leicht reduzierte Schriftgröße
+//         }
+
+//         p,
+//         .about-me-highlights li span {
+//           font-size: 17px; // Etwas größere Schrift im Vergleich zur mobilen Ansicht
+//         }
+//       }
+//     }
+//   }
+// }
