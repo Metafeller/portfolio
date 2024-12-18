@@ -15,7 +15,7 @@
   .about-me-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 64px 32px;
     gap: 64px; // Abstand zwischen Bild und Textbereich
     // align-items: center;
@@ -33,15 +33,16 @@
             position: relative;
             // flex: 1;
 
-            img {
-                width: 568px;
-                height: 568px;
+            img { 
+              // Maximal 568px für das about me Bild
+                width: 480px;
+                height: 480px;
                 // width: 100%;
                 // max-width: 568px;
                 border-radius: 16px; // Abrundung der Ecken, wie im Screenshot
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // Leichtes Schatten für ein plastisches Erscheinungsbild
                 transition: transform 0.3s ease-in-out; // Hinzufügen eines leichten Zoom-Effekts für das Bild beim Hover
-                margin-left: 40px;
+                margin-left: 0px;
                 margin-bottom: 40px;
             }
 
@@ -55,9 +56,9 @@
                 // background-color: tomato;
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: -40px;
                 right: 0;
-                bottom: 160px;
+                bottom: 180px;
                 // background-image: linear-gradient(135deg, rgba(0, 255, 174, 0.5) 0.5px, transparent 0.5px);
                 // background-size: 10px 10px;
                 background-image: url('./../../../public/vectors/img-bg-vector.svg'); // Verwende hier den richtigen Pfad zur SVG-Datei
@@ -86,9 +87,9 @@
         width: 568px;
         height: 562px;
         border-radius: 30px;
-        padding: 40px;
-        padding-top: 20px;
-        padding-bottom: 80px;
+        padding: 24px;
+        padding-top: 16px;
+        padding-bottom: 40px;
         gap: 40px;
     }
 
@@ -99,7 +100,7 @@
       h2 {
         font-family: var(--font-family);
         color: var(--accent-color);
-        font-size: 72px;
+        font-size: 64px;
         font-weight: 700;
         margin-bottom: 8px;
         margin-top: 8px;
@@ -114,7 +115,7 @@
 
       p {
         font-family: var(--font-family-second);
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.6;
         margin-bottom: 32px;
       }
@@ -249,7 +250,7 @@
       }
 
       .about-me-box {
-        width: 84%;
+        width: 80%;
         height: auto;
         padding: 32px;
 
@@ -304,7 +305,7 @@
       }
 
       .about-me-box {
-        width: 90%;
+        width: 84%;
         height: auto;
         padding: 32px;
 
@@ -434,7 +435,8 @@
   }
 }
 
-// Laptop oder Desktop Ansicht - 1367px bis 1920px ?
+
+// Laptop oder Desktop Ansicht - 1367px bis 1920px ? (Falls ich weitere Media Queries möchte)
 
 // // Laptop oder Desktop Ansicht - ab 1367px
 // @media (min-width: 1367px) {
