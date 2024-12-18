@@ -208,7 +208,7 @@
         }
         h4 {
           font-size: 18px;
-          margin-left: 10px;
+          margin-left: 8px;
         }
         p,
         .about-me-highlights li span {
@@ -264,7 +264,7 @@
         }
         h4 {
           font-size: 18px;
-          margin-left: 10px;
+          margin-left: 8px;
         }
         p,
         .about-me-highlights li span {
@@ -279,10 +279,11 @@
 // Tablet Ansicht - 481px bis 767px
 @media (min-width: 481px) and (max-width: 767px) {
   .about-me {
-    padding: 48px 24px;
+    padding: 40px 24px;
 
     .about-me-content {
       flex-direction: column;
+      padding: 32px 16px;
       gap: 32px;
 
       .about-me-image-wrapper {
@@ -290,14 +291,26 @@
           img {
             width: 350px;
             height: auto;
+            margin-left: 0px;
+          }
+          // Vektor-Hintergrund hinzufügen
+          .vector-background {
+            top: 0;
+            left: -30px;
+            right: 20px;
+            bottom: 10px;
           }
         }
       }
 
       .about-me-box {
-        width: 100%;
+        width: 90%;
         height: auto;
         padding: 32px;
+
+        li {
+          flex-direction: column;
+        }
       }
 
       .about-me-text {
@@ -306,6 +319,7 @@
         }
         h4 {
           font-size: 20px;
+          margin-left: 8px;
         }
         p,
         .about-me-highlights li span {
@@ -316,18 +330,31 @@
   }
 }
 
+
 // Big-Tablet Ansicht - 768px bis 1024px
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-me {
     padding: 64px 32px;
 
     .about-me-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 48px;
 
       .about-me-image-wrapper {
         .about-me-image {
           img {
-            width: 400px;
+            width: 480px;
+            height: auto;
+            margin-left: 0px;
+          }
+          // Vektor-Hintergrund hinzufügen
+          .vector-background {
+            top: 0;
+            left: -40px;
+            right: 20px;
+            bottom: 0px;
           }
         }
       }
@@ -344,6 +371,7 @@
         }
         h4 {
           font-size: 24px;
+          margin-left: 8px;
         }
         p,
         .about-me-highlights li span {
@@ -354,41 +382,95 @@
   }
 }
 
-// Desktop Ansicht - ab 1025px
-@media (min-width: 1025px) {
+
+// Big-Tablet oder Mini-Laptop Ansicht - 1025px bis 1366px
+@media (min-width: 1025px) and (max-width: 1366px) {
   .about-me {
-    padding: 64px;
+    padding: 80px 40px;
 
     .about-me-content {
-      flex-direction: row;
-      gap: 64px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 48px;
 
       .about-me-image-wrapper {
         .about-me-image {
           img {
-            width: 568px;
+            width: 480px;
+            height: auto;
+            margin-left: 0px;
+          }
+          // Vektor-Hintergrund hinzufügen
+          .vector-background {
+            top: 0;
+            left: -50px;
+            right: 20px;
+            bottom: -10px;
           }
         }
       }
 
       .about-me-box {
-        width: 568px;
+        width: 92%;
         height: auto;
         padding: 40px;
       }
 
       .about-me-text {
         h2 {
-          font-size: 72px;
+          font-size: 48px;
         }
         h4 {
-          font-size: 28px;
+          font-size: 24px;
+          margin-left: 8px;
         }
         p,
         .about-me-highlights li span {
-          font-size: 18px;
+          font-size: 17px;
         }
       }
     }
   }
 }
+
+// Laptop oder Desktop Ansicht - 1367px bis 1920px ?
+
+// // Laptop oder Desktop Ansicht - ab 1367px
+// @media (min-width: 1367px) {
+//   .about-me {
+//     padding: 64px;
+
+//     .about-me-content {
+//       flex-direction: row;
+//       gap: 64px;
+
+//       .about-me-image-wrapper {
+//         .about-me-image {
+//           img {
+//             width: 568px;
+//           }
+//         }
+//       }
+
+//       .about-me-box {
+//         width: 568px;
+//         height: auto;
+//         padding: 40px;
+//       }
+
+//       .about-me-text {
+//         h2 {
+//           font-size: 72px;
+//         }
+//         h4 {
+//           font-size: 28px;
+//         }
+//         p,
+//         .about-me-highlights li span {
+//           font-size: 18px;
+//         }
+//       }
+//     }
+//   }
+// }
