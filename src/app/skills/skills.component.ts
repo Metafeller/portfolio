@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { DeveloperComponent } from './developer/developer.component';
+import { BrandingComponent } from './branding/branding.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [
+    DeveloperComponent,
+    BrandingComponent
+  ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
