@@ -11,17 +11,17 @@ import { CommonModule } from '@angular/common';
 })
 export class DeveloperComponent {
   skills = [
-    { name: 'HTML', icon: 'assets/icons/html.svg', isHovered: false },
-    { name: 'CSS', icon: 'assets/icons/css.svg', isHovered: false },
-    { name: 'JavaScript', icon: 'assets/icons/javascript.svg', isHovered: false },
-    { name: 'Material Design', icon: 'assets/icons/material-design.svg', isHovered: false },
-    { name: 'TypeScript', icon: 'assets/icons/typescript.svg', isHovered: false },
-    { name: 'Angular', icon: 'assets/icons/angular.svg', isHovered: false },
-    { name: 'Firebase', icon: 'assets/icons/firebase.svg', isHovered: false },
-    { name: 'GIT', icon: 'assets/icons/git.svg', isHovered: false },
-    { name: 'Rest-API', icon: 'assets/icons/rest-api.svg', isHovered: false },
-    { name: 'Scrum', icon: 'assets/icons/scrum.svg', isHovered: false },
-    { name: 'Growth Mindset', icon: 'assets/icons/growth-mindset.svg', isHovered: false },
+    { name: 'HTML', icon: '/icons/skillset/html.svg', isHovered: false },
+    { name: 'CSS', icon: '/icons/skillset/css.svg', isHovered: false },
+    { name: 'JavaScript', icon: '/icons/skillset/javascript.svg', isHovered: false },
+    { name: 'Material Design', icon: '/icons/skillset/material-design.svg', isHovered: false },
+    { name: 'TypeScript', icon: '/icons/skillset/typescript.svg', isHovered: false },
+    { name: 'Angular', icon: '/icons/skillset/angular.svg', isHovered: false },
+    { name: 'Firebase', icon: '/icons/skillset/firebase.svg', isHovered: false },
+    { name: 'GIT', icon: '/icons/skillset/git.svg', isHovered: false },
+    { name: 'Rest-API', icon: '/icons/skillset/rest-api.svg', isHovered: false },
+    { name: 'Scrum', icon: '/icons/skillset/scrum.svg', isHovered: false },
+    { name: 'Growth Mindset', icon: '/icons/skillset/growth-mindset.svg', isHovered: false },
   ];
 
   showHover(skill: any): void {
