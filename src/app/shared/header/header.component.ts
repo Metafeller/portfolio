@@ -1,7 +1,6 @@
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { HostListener } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { WindowService } from '../../window.service';
 
 @Component({
   selector: 'app-header',
@@ -15,16 +14,20 @@ export class HeaderComponent implements OnInit {
   menuOpen = false;
   screenWidth: number = 0;
 
+  constructor(private windowService: WindowService) {}
+
   ngOnInit() {
-    if (typeof window !== 'undefined') {
-      this.screenWidth = window.innerWidth; // Initial die Breite des Fensters setzen
+    const windowRef = this.windowService.nativeWindow;
+    if (windowRef) {
+      this.screenWidth = windowRef.innerWidth;
     }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    if (typeof window !== 'undefined') {
-      this.screenWidth = event.target.innerWidth; // Aktualisiere die Breite, wenn die Größe des Fensters geändert wird
+    const windowRef = this.windowService.nativeWindow;
+    if (windowRef) {
+      this.screenWidth = event.target.innerWidth;
     }
   }
 
