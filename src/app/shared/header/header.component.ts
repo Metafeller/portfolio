@@ -16,12 +16,16 @@ export class HeaderComponent implements OnInit {
   screenWidth: number = 0;
 
   ngOnInit() {
-    this.screenWidth = window.innerWidth; // Initial die Breite des Fensters setzen
+    if (typeof window !== 'undefined') {
+      this.screenWidth = window.innerWidth; // Initial die Breite des Fensters setzen
+    }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.screenWidth = event.target.innerWidth; // Aktualisiere die Breite, wenn die Größe des Fensters geändert wird
+    if (typeof window !== 'undefined') {
+      this.screenWidth = event.target.innerWidth; // Aktualisiere die Breite, wenn die Größe des Fensters geändert wird
+    }
   }
 
   onMouseOver() {
