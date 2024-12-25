@@ -1,5 +1,35 @@
-<section class="developer">
-    <h2>Developer Skills</h2>
-    <p>Here are the technologies I work with:</p>
-    <app-button buttonClass="default-button">Let's Talk</app-button>
-  </section>
+<div class="developer-section">
+  <!-- Hintergrundbild kommt hier -->
+  <div class="background-overlay"></div>
+
+  <div class="developer-content">
+    <!-- Skill Box -->
+    <div class="skill-box">
+      <h2>Skill Set</h2>
+      <p>
+        My journey has involved working on diverse projects, employing a range of frontend technologies and concepts.
+        I am open to embracing new technologies and methodologies to continuously enhance my skills and stay ahead
+        in the ever-evolving landscape of web development.
+      </p>
+      <p class="highlight">
+        <strong>You need <span>another skill?</span></strong>
+      </p>
+      <p>
+        Feel free to contact me. I look forward to expanding on my previous knowledge.
+      </p>
+      <!-- Button Component -->
+      <app-button [label]="'Let\'s Talk'" [type]="'button'" buttonClass="primary-button"></app-button>
+    </div>
+
+    <!-- Grid mit Icons -->
+    <div class="skills-grid">
+      <div class="icon" *ngFor="let skill of skills" (mouseenter)="showHover(skill)" (mouseleave)="hideHover(skill)">
+        <img [src]="skill.icon" [alt]="skill.name" />
+        <span>{{ skill.name }}</span>
+        <div class="hover-box" *ngIf="skill.isHovered">
+          Hovered: {{ skill.name }}
+        </div>
+      </div>
+    </div>    
+</div>
+
