@@ -15,7 +15,8 @@
   .about-me-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
+    justify-content: space-around;
     padding: 64px 32px;
     gap: 64px; // Abstand zwischen Bild und Textbereich
     // align-items: center;

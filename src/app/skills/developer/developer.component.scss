@@ -1,6 +1,6 @@
 .developer-section {
     position: relative;
-    padding: 256px 32px; // padding bis 64px 32px herunterschrauben von Desktop zu Mobile Ansicht
+    padding: 256px 128px; // padding bis 64px 32px herunterschrauben von Desktop zu Mobile Ansicht
     background-color: var(--primary-color);
     max-width: 1920px;
     margin: 0 auto;
@@ -28,12 +28,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: normal;
+    // align-items: flex-start;
+    padding: 64px 32px;
     gap: 64px;
   }
   
   .skill-box {
-    flex: 1 1 45%;
+    // flex: 1 1 45%;
+    flex: 1 1 16%;
     background-color: rgba(0, 255, 174, 0.1);
     border: 2px solid var(--accent-color);
     border-radius: 32px;
@@ -56,13 +59,27 @@
     color: #ffffff;
   }
   
-  .skill-box .highlight span {
-    color: var(--accent-color);
+  .skill-box h3 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    letter-spacing: 4px;
+    // line-height: 1.6;
   }
+
+  .skill-box .highlight span {
+    // font-family: var(--font-family);
+    color: var(--accent-color);
+    // letter-spacing: 4px;
+    // line-height: 1.6;
+  }
+
+//   .skill-box .highlight span {
+//     color: var(--accent-color);
+//   }
   
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     flex: 1 1 45%;
   }
@@ -77,8 +94,8 @@
   }
   
   .icon img {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     transition: transform 0.3s ease-in-out;
   }
   
