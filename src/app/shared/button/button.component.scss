@@ -1,29 +1,53 @@
+// Standard Button für die ganze Website
 .default-button {
-  padding: 12px 24px;
-  border: 2px solid var(--accent-color);
-  background: transparent;
-  color: var(--accent-color);
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
+  margin: 16px 0px;
+  padding: 8px 16px;
+  background-color: transparent;
+  // border: 2px solid var(--accent-color);
+  // background: transparent;
+  color: #ffffff;
+  transition: background-color 0.3s;
+  border-radius: 45px;
+  height: 45px;
+  font-family: var(--font-family-second);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  // font-weight: bold;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
-  transition: all 0.3s ease;
+  outline: none;
+
+  // display: block;
+  appearance: auto;
+  padding-block: 1px;
+  // padding-inline: 6px;
+  border-width: 1px;
+  border-style: double;
+  border-color: #ffffff;
+  border-image: initial;
 }
 
 .default-button:hover {
-  background: var(--accent-color);
-  color: #ffffff;
+  border: 0.5px solid;
+  border-color: #2EE59D;
+  // background-color: #00e699;
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: var(--primary-color);
+  font-weight: bold;
+  transform: translateY(-7px);
 }
 
-.primary-button {
-  background: var(--accent-color);
-  color: #ffffff;
-}
+// .primary-button {
+//   background: var(--accent-color);
+//   color: #ffffff;
+// }
 
-.primary-button:hover {
-  background: #ffffff;
-  color: var(--accent-color);
-}
+// .primary-button:hover {
+//   background: #ffffff;
+//   color: var(--accent-color);
+// }
 
   
