@@ -36,7 +36,7 @@
   
   .skill-box {
     // flex: 1 1 45%;
-    flex: 1 1 16%;
+    flex: 1 1 35%;
     background-color: rgba(0, 255, 174, 0.1);
     border: 2px solid var(--accent-color);
     border-radius: 32px;
@@ -84,43 +84,97 @@
     flex: 1 1 45%;
   }
   
-  .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
+//  Test Area 51
+
+.icon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+
+  .vector-background {
+    // background-color: tomato;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    right: 10px;
+    bottom: 0px;
+    background-image: url('/vectors/img-bg-vector.svg'); /* Pfad zur Vektor-Grafik */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px; /* Gleiche Abrundung wie die Icons */
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.3s ease-in-out;
   }
-  
-  .icon img {
+
+  img {
     width: 64px;
     height: 64px;
     transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Damit das Icon über dem Vektor bleibt */
   }
-  
-  .icon:hover img {
-    transform: scale(1.1);
-  }
-  
-  .icon span {
+
+  span {
     margin-top: 8px;
     font-family: var(--font-family-secondary);
     font-size: 14px;
     color: #ffffff;
+    z-index: 1; /* Text über dem Hintergrund */
   }
 
-  .hover-box {
-    position: absolute;
-    background: rgba(0, 255, 174, 0.8);
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-120%);
-    transition: opacity 0.3s ease-in-out;
+  &:hover {
+    .vector-background {
+      opacity: 1; /* Hintergrund sichtbar machen */
+    }
+    img {
+      transform: scale(1.1); /* Leichtes Vergrößern des Icons */
+    }
   }
+}
+
+//  Test Area 51
+
+//   .icon {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     text-align: center;
+//     cursor: pointer;
+//   }
+  
+//   .icon img {
+//     width: 64px;
+//     height: 64px;
+//     transition: transform 0.3s ease-in-out;
+//   }
+  
+//   .icon:hover img {
+//     transform: scale(1.1);
+//   }
+  
+//   .icon span {
+//     margin-top: 8px;
+//     font-family: var(--font-family-secondary);
+//     font-size: 14px;
+//     color: #ffffff;
+//   }
+
+//   .hover-box {
+//     position: absolute;
+//     background: rgba(0, 255, 174, 0.8);
+//     color: #ffffff;
+//     padding: 8px 16px;
+//     border-radius: 8px;
+//     font-size: 14px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//     transform: translateY(-120%);
+//     transition: opacity 0.3s ease-in-out;
+//   }
   
   
   /* Media Queries */

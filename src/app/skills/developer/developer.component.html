@@ -27,10 +27,11 @@
     <!-- Grid mit Icons -->
     <div class="skills-grid">
       <div class="icon" *ngFor="let skill of skills" (mouseenter)="showHover(skill)" (mouseleave)="hideHover(skill)">
+        <div class="vector-background"></div>
         <img [src]="skill.icon" [alt]="skill.name" />
         <span>{{ skill.name }}</span>
         <div class="hover-box" *ngIf="skill.isHovered">
-          Hovered: {{ skill.name }}
+          <!-- Hovered: {{ skill.name }} -->
         </div>
       </div>
     </div>    
