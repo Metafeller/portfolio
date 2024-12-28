@@ -1,8 +1,12 @@
 .developer-section {
     position: relative;
-    padding: 256px 128px; // padding bis 64px 32px herunterschrauben von Desktop zu Mobile Ansicht
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 32px; // padding bis 64px 32px herunterschrauben von Desktop zu Mobile Ansicht
     background-color: var(--primary-color);
-    max-width: 1920px;
+    min-height: 80vh;
+    max-width: max-content;
     margin: 0 auto;
     overflow: hidden;
 
@@ -30,10 +34,24 @@
     justify-content: space-between;
     align-items: normal;
     // align-items: flex-start;
-    padding: 64px 32px;
+    padding: 64px 96px;
     gap: 64px;
   }
+
+  .developer-headline {
+    // display: flex;
+    padding-left: 96px;
+    margin-bottom: -72px;
+  }
   
+  .developer-title {
+    font-family: var(--font-family-second);
+    font-size: 24px;
+    color: var(--accent-color);
+    // margin-bottom: 16px;
+    text-align: left; /* Ausrichtung passend zur Skill-Box */
+  }  
+
   .skill-box {
     // flex: 1 1 45%;
     flex: 1 1 35%;
@@ -151,32 +169,191 @@
 //     transition: opacity 0.3s ease-in-out;
 //   }
   
-  
-  /* Media Queries */
-  @media (max-width: 480px) {
 
-    .developer-section {
-      background-position: top center; /* Fokus auf den oberen Bereich des Bildes */
-      background-size: contain; /* Verhindert, dass Teile des Bildes abgeschnitten werden */
-    }
+/* Media Queries für verschiedene Bildschirmgrößen */
 
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .skill-box h2 {
-      font-size: 36px;
-    }
-  
-    .skill-box p {
-      font-size: 14px;
-    }
+/* Mobile Ansicht - bis 320px */
+@media (min-width: 240px) and (max-width: 320px) {
+  .developer-section {
+    padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
   }
-  
-  @media (min-width: 481px) and (max-width: 1024px) {
-    .skills-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+
+  .developer-content {
+    flex-direction: column-reverse;
+    padding: 24px 16px;
+    gap: 16px; /* Weniger Abstand zwischen den Elementen */
   }
+
+  .developer-headline {
+    padding-left: 0px;
+    margin-bottom: -24px;
   
-  
+  .developer-title {
+    font-family: var(--font-family-second);
+    font-size: 18px;
+    color: var(--accent-color);
+    // margin-bottom: 16px;
+    text-align: center;
+    }
+  } 
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für Icons */
+    gap: 16px;
+  }
+
+  .skill-box {
+    padding: 32px 16px;
+    margin-top: 8px;
+  }
+
+  .skill-box h2 {
+    font-size: 32px; /* Kleinere Schriftgröße */
+    text-align: center;
+  }
+
+  .skill-box p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .skill-box h3 {
+    text-align: center;
+  }
+
+  .developer-title {
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center; /* Zentrierter Titel für kleine Bildschirme */
+  }
+}
+
+/* Mobile Ansicht - bis 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+  .developer-section {
+    padding: 24px 12px;
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
+  }
+
+  .developer-content {
+    flex-direction: column;
+    padding: 32px 16px;
+    gap: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 24px;
+  }
+
+  .skill-box h2 {
+    font-size: 36px;
+  }
+
+  .skill-box p {
+    font-size: 16px;
+  }
+
+  .developer-title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/* Tablet Ansicht - 481px bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .developer-section {
+    padding: 40px 24px;
+  }
+
+  .developer-content {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
+    gap: 24px;
+  }
+
+  .skill-box h2 {
+    font-size: 40px;
+  }
+
+  .skill-box p {
+    font-size: 16px;
+  }
+
+  .developer-title {
+    font-size: 20px;
+    text-align: left; /* Optional: Zentriert lassen */
+    padding-left: 24px;
+  }
+}
+
+/* Big-Tablet Ansicht - 768px bis 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .developer-section {
+    padding: 64px 32px;
+  }
+
+  .developer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
+    gap: 32px;
+  }
+
+  .skill-box h2 {
+    font-size: 48px;
+  }
+
+  .skill-box p {
+    font-size: 17px;
+  }
+
+  .developer-title {
+    font-size: 24px;
+    padding-left: 32px;
+    text-align: left;
+  }
+}
+
+/* Big-Tablet oder Mini-Laptop Ansicht - 1025px bis 1366px */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .developer-section {
+    padding: 80px 40px;
+  }
+
+  .developer-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr); /* Vier Spalten */
+    gap: 32px;
+  }
+
+  .skill-box h2 {
+    font-size: 56px;
+  }
+
+  .skill-box p {
+    font-size: 18px;
+  }
+
+  .developer-title {
+    font-size: 28px;
+    text-align: left;
+    padding-left: 40px;
+  }
+}
+
