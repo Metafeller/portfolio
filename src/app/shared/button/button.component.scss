@@ -84,3 +84,21 @@
   }
 }
 
+/* Mobile Ansicht - bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .developer-section {
+    padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
+  }
+
+  .default-button {
+    display: block; /* Block-Level für zentrierte Darstellung */
+    width: 100%; /* Füllt den verfügbaren Raum aus */
+    text-align: center; /* Text zentrieren */
+    margin: 16px auto; /* Zentrieren mit Auto-Margin */
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+

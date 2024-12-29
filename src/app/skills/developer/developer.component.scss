@@ -295,9 +295,23 @@
   }
 
   .developer-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 40px 24px;
     gap: 32px;
+  }
+  
+  .developer-headline {
+    padding-left: 0px;
+    margin-bottom: -24px;
+  
+  .developer-title {
+    font-family: var(--font-family-second);
+    font-size: 20px;
+    color: var(--accent-color);
+    // margin-bottom: 16px;
+    padding-left: 0;
+    text-align: center;
+    }
   }
 
   .skills-grid {
@@ -305,19 +319,30 @@
     gap: 24px;
   }
 
+  .skill-box {
+    // padding: 32px 16px;
+    margin-top: 8px;
+  }
+
   .skill-box h2 {
     font-size: 40px;
+    text-align: center;
   }
 
   .skill-box p {
     font-size: 16px;
+    text-align: center;
   }
 
-  .developer-title {
-    font-size: 20px;
-    text-align: left; /* Optional: Zentriert lassen */
-    padding-left: 24px;
+  .skill-box h3 {
+    text-align: center;
   }
+
+  .highlight span {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 
 /* Big-Tablet Ansicht - 768px bis 1024px */
