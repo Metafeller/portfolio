@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 
@@ -38,35 +39,38 @@ export class DeveloperComponent {
       infoboxIcons: [
         { src: '/icons/skillset/react-color.svg', alt: 'React' },
         { src: '/icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
-        { src: '/icons/skillset/python-color-96.svg', alt: 'Python' },
-        { src: '/icons/skillset/django-50.svg', alt: 'Django' }
-      ]
+        { src: '/icons/skillset/python-custom-100.svg', alt: 'Python' },
+        { src: '/icons/skillset/dj-django-100.svg', alt: 'Django' },
+      ],
     },
   ];
 
+  constructor(private windowService: WindowService) {}
+
   toggleInfobox(skill: any): void {
-    // Andere Infoboxen schließen
-    this.skills.forEach(s => {
-      if (s !== skill) {
-        s.isInfoboxVisible = false;
-        s.isHovered = false; // Reset hover state for other skills
-      }
-    });
-    // Toggle the clicked infobox
-    skill.isInfoboxVisible = !skill.isInfoboxVisible;
+    if (this.windowService.isMobile() || this.windowService.isTablet()) {
+      // Klickbare Infobox nur auf mobilen und Tablet-Geräten
+      this.skills.forEach(s => {
+        if (s !== skill) {
+          s.isInfoboxVisible = false;
+        }
+      });
+      skill.isInfoboxVisible = !skill.isInfoboxVisible;
+    }
   }
 
   showHover(skill: any): void {
-    skill.isHovered = true;
+    if (this.windowService.isDesktop()) {
+      // Hover nur auf Desktop-Geräten
+      skill.isHovered = true;
+    }
   }
 
   hideHover(skill: any): void {
-    skill.isHovered = false;
+    if (this.windowService.isDesktop()) {
+      // Hover verlassen nur auf Desktop-Geräten
+      skill.isHovered = false;
+    }
   }
-
-  // toggleInfobox(skill: any): void {
-  //   skill.isInfoboxVisible = !skill.isInfoboxVisible;
-  // }
-  
 }
 

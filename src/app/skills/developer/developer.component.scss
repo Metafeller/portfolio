@@ -165,6 +165,7 @@
     transform: translateX(-50%);
     width: 240px;
     background-color: rgba(0, 255, 174, 0.1);
+    backdrop-filter: blur(10px); /* Blur-Effekt */
     border: 2px solid var(--accent-color);
     border-radius: 16px;
     padding: 16px;
