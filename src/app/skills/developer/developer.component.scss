@@ -101,8 +101,6 @@
     gap: 24px;
     flex: 1 1 45%;
   }
-  
-//  Test Area 51
 
 .icon {
   position: relative;
@@ -142,6 +140,11 @@
     font-size: 15px;
     color: #ffffff;
     z-index: 1; /* Text über dem Hintergrund */
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 
   &:hover {
@@ -152,15 +155,77 @@
     img {
       transform: scale(1.1); /* Leichtes Vergrößern des Icons */
     }
+  }
 
-    // span {
-    //   color: var(--accent-color);
-    // }
+  // Infobox Area
+  .infobox {
+    position: absolute;
+    top: -140%; // Zentrierte Position über dem Icon
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    background-color: rgba(0, 255, 174, 0.1);
+    border: 2px solid var(--accent-color);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    h3 {
+      font-family: var(--font-family);
+      font-size: 18px;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-family: var(--font-family-second);
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .infobox-icons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+      }
+    }
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // &.active .infobox {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+}
+
+/* Mobile Anpassung */
+@media (max-width: 767px) {
+  .infobox {
+    top: -150%;
+    width: 90%; // Anpassung für kleinere Geräte
   }
 }
 
-//  Test Area 51
+//  Infobox Area Ende
 
 //   .hover-box {
 //     position: absolute;

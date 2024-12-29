@@ -28,12 +28,30 @@
 
     <!-- Grid mit Icons -->
     <div class="skills-grid">
-      <div class="icon" *ngFor="let skill of skills" (mouseenter)="showHover(skill)" (mouseleave)="hideHover(skill)">
-        <div class="vector-background"></div>
-        <img [src]="skill.icon" [alt]="skill.name" />
-        <span>{{ skill.name }}</span>
-        <div class="hover-box" *ngIf="skill.isHovered">
-          <!-- Hovered: {{ skill.name }} -->
+      <div 
+      class="icon" 
+      *ngFor="let skill of skills" 
+      (mouseenter)="showHover(skill)" 
+      (mouseleave)="hideHover(skill)"
+      (click)="toggleInfobox(skill)"
+      >
+
+      <div class="vector-background"></div>
+      <img [src]="skill.icon" [alt]="skill.name" />
+      <!-- <span>{{ skill.name }}</span> -->
+      <span [ngClass]="{ 'hovered': skill.isHovered }">{{ skill.name }}</span>
+
+      <!-- <div class="hover-box" *ngIf="skill.isHovered"> -->
+      <!-- Hovered: {{ skill.name }} -->
+
+          <!-- Infobox -->
+          <div class="infobox" [class.visible]="skill.isHovered || skill.isInfoboxVisible">
+            <h3>{{ skill.infoboxTitle }}</h3>
+            <p>{{ skill.infoboxDescription }}</p>
+            <div class="infobox-icons">
+              <img *ngFor="let subIcon of skill.infoboxIcons" [src]="subIcon.src" [alt]="subIcon.alt" />
+            </div>
+          </div>
         </div>
       </div>
     </div>    
