@@ -412,8 +412,24 @@
 
   .developer-content {
     flex-wrap: wrap;
-    justify-content: center;
+    // justify-content: center;
+    padding: 40px 24px;
+    flex-direction: column-reverse;
     gap: 48px;
+  }
+
+  .developer-headline {
+    padding-left: 0px;
+    margin-bottom: -24px;
+  
+  .developer-title {
+    font-family: var(--font-family-second);
+    // font-size: 20px;
+    color: var(--accent-color);
+    // margin-bottom: 16px;
+    padding-left: 0;
+    text-align: center;
+    }
   }
 
   .skills-grid {
@@ -421,18 +437,30 @@
     gap: 32px;
   }
 
+  .skill-box {
+    // padding: 32px 16px;
+    margin-top: 8px;
+  }
+
   .skill-box h2 {
     font-size: 56px;
+    text-align: center;
+  }
+
+  .skill-box h3 {
+    text-align: center;
   }
 
   .skill-box p {
     font-size: 18px;
+    text-align: center;
   }
 
-  .developer-title {
-    font-size: 28px;
-    text-align: left;
-    padding-left: 40px;
-  }
+  // .developer-title {
+  //   font-size: 28px;
+  //   text-align: left;
+  //   padding-left: 40px;
+  // }
+
 }
 
