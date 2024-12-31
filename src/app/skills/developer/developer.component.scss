@@ -161,7 +161,7 @@
   // Infobox Area
   .infobox {
     position: absolute;
-    top: -140%; // Zentrierte Position über dem Icon
+    top: -130%; // Zentrierte Position über dem Icon
     left: 50%;
     transform: translateX(-50%);
     width: 240px;
@@ -220,13 +220,13 @@
   // }
 }
 
-/* Mobile Anpassung */
-@media (max-width: 767px) {
-  .infobox {
-    top: -150%;
-    width: 90%; // Anpassung für kleinere Geräte
-  }
-}
+// /* Mobile Anpassung */
+// @media (max-width: 767px) {
+//   .infobox {
+//     top: -150%;
+//     width: 90%; // Anpassung für kleinere Geräte
+//   }
+// }
 
 //  Infobox Area Ende
 
@@ -250,6 +250,11 @@
   .developer-section {
     padding: 16px 8px; /* Weniger Padding für kleine Geräte */
     background-size: contain; /* Verhindert abgeschnittene Bereiche */
+
+    .infobox {
+    top: -80%;
+    width: 90%;
+    }
   }
 
   .developer-content {
@@ -308,6 +313,11 @@
   .developer-section {
     padding: 16px 8px;
     background-size: contain; /* Verhindert abgeschnittene Bereiche */
+
+    .infobox {
+      top: -90%;
+      width: 90%;
+    }
   }
 
   .developer-content {
@@ -365,6 +375,11 @@
 @media (min-width: 481px) and (max-width: 767px) {
   .developer-section {
     padding: 40px 24px;
+
+    .infobox {
+      top: -100%;
+      width: 90%;
+    }
   }
 
   .developer-content {
@@ -422,6 +437,11 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .developer-section {
     padding: 64px 32px;
+
+    .infobox {
+      top: -120%;
+      width: 90%;
+    }
   }
 
   .developer-content {
