@@ -73,6 +73,16 @@ export class BrandingComponent {
     },
 
     {
+      name: 'Unique Selling Point (USP)',
+      icon: '/icons/branding/unique-selling-point.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Unique Selling Point (USP)',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
