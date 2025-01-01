@@ -84,13 +84,24 @@ export class BrandingComponent {
 
     {
       name: 'Graphic Design',
-      icon: '/icons/branding/graphic-design.svg',
+      icon: '/icons/branding/graphic-design.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Graphic Design',
       infoboxDescription: 'Visual storytelling through impactful design.',
       infoboxIcons: []
     },
+
+    {
+      name: 'Web Design & UX / UI',
+      icon: '/icons/branding/web-design-ux-ui.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Web Design & UX / UI',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
     {
       name: 'Digital Strategy',
       icon: '/icons/branding/digital-strategy.svg',
