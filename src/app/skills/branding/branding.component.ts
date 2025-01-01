@@ -13,6 +13,16 @@ import { CommonModule } from '@angular/common';
 export class BrandingComponent {
   skills = [
     {
+      name: 'Brand Awareness',
+      icon: '/icons/branding/brand-awareness.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Brand Awareness',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
