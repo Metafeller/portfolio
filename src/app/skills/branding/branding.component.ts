@@ -23,6 +23,26 @@ export class BrandingComponent {
     },
 
     {
+      name: 'Creative Brand Strategies',
+      icon: '/icons/branding/brand-strategies.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Brand Strategies',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
+      name: 'Personal Branding',
+      icon: '/icons/branding/personal-branding.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Personal Branding',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
