@@ -53,6 +53,16 @@ export class BrandingComponent {
     },
 
     {
+      name: 'Target Group Definition',
+      icon: '/icons/branding/target-group.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Target Group Definition',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
