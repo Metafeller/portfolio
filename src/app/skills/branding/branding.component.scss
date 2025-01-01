@@ -1,0 +1,30 @@
+.branding-section {
+    @extend .developer-section; // Wiederverwendet das Styling der Developer-Komponente
+  }
+  
+  .branding-headline {
+    @extend .developer-headline; // Wiederverwendet das Styling
+  }
+  
+  .branding-title {
+    @extend .developer-title; // Wiederverwendet das Styling
+  }
+  
+  .branding-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: normal;
+    padding: 64px 96px;
+    gap: 64px;
+  
+    @media (min-width: 1025px) {
+      .skills-grid {
+        order: 1; // Icons links
+      }
+      .skill-box {
+        order: 2; // Skillbox rechts
+      }
+    }
+  }
+  
