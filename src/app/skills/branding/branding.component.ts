@@ -43,6 +43,16 @@ export class BrandingComponent {
     },
 
     {
+      name: 'Company & Product Branding',
+      icon: '/icons/branding/product-branding.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Company & Product Branding',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
