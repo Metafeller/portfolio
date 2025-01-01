@@ -63,6 +63,16 @@ export class BrandingComponent {
     },
 
     {
+      name: 'Market Positioning',
+      icon: '/icons/branding/market-positioning.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Market Positioning',
+      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxIcons: []
+    },
+
+    {
       name: 'Graphic Design',
       icon: '/icons/branding/graphic-design.svg',
       isHovered: false,
