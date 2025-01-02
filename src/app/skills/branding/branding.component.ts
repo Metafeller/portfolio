@@ -14,11 +14,11 @@ export class BrandingComponent {
   skills = [
     {
       name: 'Brand Awareness',
-      icon: '/icons/branding/brand-awareness.png',
+      icon: '/icons/branding/brand-awareness-flowchart.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Brand Awareness',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Establish a strong presence to resonate with your target audience.',
       infoboxIcons: []
     },
 
@@ -28,7 +28,7 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Brand Strategies',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Craft smart, emotional strategies to create an authentic brand.',
       infoboxIcons: []
     },
 
@@ -38,27 +38,17 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Personal Branding',
-      infoboxDescription: 'Lorem Ipsum dolor.',
-      infoboxIcons: []
-    },
-
-    {
-      name: 'Company & Product Branding',
-      icon: '/icons/branding/product-branding.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Company & Product Branding',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Build an authentic and inspiring personal brand.',
       infoboxIcons: []
     },
 
     {
       name: 'Target Group Definition',
-      icon: '/icons/branding/target-group.png',
+      icon: '/icons/branding/target-audience.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Target Group Definition',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Identify and understand your ideal audience to tailor your communication.',
       infoboxIcons: []
     },
 
@@ -68,7 +58,7 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Market Positioning',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Stand out by positioning your brand uniquely in the market.',
       infoboxIcons: []
     },
 
@@ -78,7 +68,7 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Unique Selling Point (USP)',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Define what makes your brand special and differentiate it from competitors.',
       infoboxIcons: []
     },
 
@@ -88,56 +78,60 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Graphic Design',
-      infoboxDescription: 'Visual storytelling through impactful design.',
+      infoboxDescription: 'Communicate visually with high-quality designs and creative assets.',
       infoboxIcons: []
     },
 
     {
       name: 'Web Design & UX / UI',
-      icon: '/icons/branding/web-design-ux-ui.png',
+      icon: '/icons/branding/figma.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Web Design & UX / UI',
-      infoboxDescription: 'Lorem Ipsum dolor.',
+      infoboxDescription: 'Create seamless and visually appealing digital experiences.',
       infoboxIcons: []
     },
 
     {
-      name: 'Digital Strategy',
-      icon: '/icons/branding/digital-strategy.svg',
+      name: 'PR / Public Relations',
+      icon: '/icons/branding/pr-public-relations.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Digital Strategy',
-      infoboxDescription: 'Targeted approaches for measurable success.',
+      infoboxTitle: 'PR / Public Relations',
+      infoboxDescription: 'Build trust and manage your brands reputation effectively',
       infoboxIcons: []
     },
+
     {
-      name: 'Content Creation',
-      icon: '/icons/branding/content-creation.svg',
+      name: 'Dynamic Visability Strategies',
+      icon: '/icons/branding/visability-strategies.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Content Creation',
-      infoboxDescription: 'Compelling content that engages and inspires.',
+      infoboxTitle: 'Dynamic Visability Strategies',
+      infoboxDescription: 'Be visible and relevant across all key channels with adaptive strategies.',
       infoboxIcons: []
     },
+
     {
-      name: 'Social Media Marketing',
-      icon: '/icons/branding/social-media.svg',
+      name: 'AI-Influencer Creating [New]',
+      icon: '/icons/branding/artificial-intelligence-ai.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Social Media Marketing',
-      infoboxDescription: 'Building communities and driving engagement.',
+      infoboxTitle: 'AI Influencer Identity',
+      infoboxDescription: 'Use AI to create digital influencers and amplify your brands reach.',
       infoboxIcons: []
     },
+
     {
-      name: 'SEO Optimization',
-      icon: '/icons/branding/seo.svg',
+      name: 'Growth Mindset',
+      icon: '/icons/branding/growth-mindset-rare-green.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'SEO Optimization',
-      infoboxDescription: 'Boosting visibility with search engine best practices.',
+      infoboxTitle: 'Growth Mindset',
+      infoboxDescription: 'I am interested in innovative and rare niches.',
       infoboxIcons: []
-    }
+    },
+
   ];
 
   constructor(private windowService: WindowService) {}
