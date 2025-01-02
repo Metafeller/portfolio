@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DeveloperComponent {
   skills = [
-    { name: 'HTML', 
+    { 
+      name: 'HTML', 
       icon: '/icons/skillset/html.svg', 
       isHovered: false, 
       isInfoboxVisible: false, 

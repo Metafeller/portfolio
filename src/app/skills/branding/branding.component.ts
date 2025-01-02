@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
+import { ServerTestingModule } from '@angular/platform-server/testing';
+
+interface InfoboxIcon {
+  src: string;
+  alt: string;
+}
 
 @Component({
   selector: 'app-branding',
@@ -19,7 +25,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Brand Awareness',
       infoboxDescription: 'Establish a strong presence to resonate with your target audience.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -29,7 +35,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Brand Strategies',
       infoboxDescription: 'Craft smart, emotional strategies to create an authentic brand.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -39,7 +45,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Personal Branding',
       infoboxDescription: 'Build an authentic and inspiring personal brand.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -49,7 +55,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Target Group Definition',
       infoboxDescription: 'Identify and understand your ideal audience to tailor your communication.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -59,7 +65,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Market Positioning',
       infoboxDescription: 'Stand out by positioning your brand uniquely in the market.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -69,7 +75,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Unique Selling Point (USP)',
       infoboxDescription: 'Define what makes your brand special and differentiate it from competitors.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -79,7 +85,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Graphic Design',
       infoboxDescription: 'Communicate visually with high-quality designs and creative assets.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -89,7 +95,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Web Design & UX / UI',
       infoboxDescription: 'Create seamless and visually appealing digital experiences.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -98,8 +104,8 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'PR / Public Relations',
-      infoboxDescription: 'Build trust and manage your brands reputation effectively',
-      infoboxIcons: []
+      infoboxDescription: 'Build trust and manage your brand\'s reputation effectively',
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -109,7 +115,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Dynamic Visability Strategies',
       infoboxDescription: 'Be visible and relevant across all key channels with adaptive strategies.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -118,8 +124,8 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'AI Influencer Identity',
-      infoboxDescription: 'Use AI to create digital influencers and amplify your brands reach.',
-      infoboxIcons: []
+      infoboxDescription: 'Use AI to create digital influencers and amplify your brand\'s reach.',
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
@@ -129,7 +135,7 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Growth Mindset',
       infoboxDescription: 'I am interested in innovative and rare niches.',
-      infoboxIcons: []
+      infoboxIcons: [] as InfoboxIcon[]
     },
 
   ];
