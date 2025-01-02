@@ -4,92 +4,90 @@
     flex-direction: column;
     justify-content: center;
     padding: 64px 32px;
-    background-color: var(--primary-color);
-    min-height: 80vh;
+    // background-color: var(--primary-color);
+    // min-height: 80vh;
     max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
   
-    /* Hintergrundbild für die gesamte Sektion */
-    background-image: url('/bg-images/bg-branding.png'); /* Branding-spezifisches Hintergrundbild */
+    /* Hintergrundbild */
+    background-image: url('/bg-images/bg-branding.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  
-  .branding-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 105, 180, 0.3); /* Branding-spezifische Überlagerung */
-    z-index: -1;
   }
   
   .branding-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: normal;
+    flex-direction: row-reverse;
+    align-items: center;
     padding: 64px 96px;
     gap: 64px;
   }
   
-  .branding-headline {
-    padding-left: 96px;
-    margin-bottom: -72px;
+  .branding-text {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    // gap: 16px;
+    text-align: left;
+  
+    h4 {
+      font-family: var(--font-family-second);
+      font-size: 24px;
+      color: var(--accent-color);
+      margin-bottom: 16px;
+    }
+  
+    .branding-box {
+        flex: 1 1 35%;
+        background-color: rgba(0, 255, 174, 0.1);
+        border: 2px solid var(--accent-color);
+        border-radius: 32px;
+        padding: 32px;
+        box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
+  
+      h2 {
+        font-family: var(--font-family);
+        font-size: 64px;
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+  
+      p {
+        font-family: var(--font-family-second);
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ffffff;
+      }
+  
+      h3 {
+        font-family: var(--font-family);
+        font-size: 24px;
+        letter-spacing: 4px;
+        color: var(--accent-color);
+        margin-top: 16px;
+      }
+  
+      .highlight span {
+        color: var(--accent-color);
+      }
+  
+      app-button {
+        margin-top: 16px;
+      }
+    }
   }
   
-  .branding-title {
-    font-family: var(--font-family-second);
-    font-size: 24px;
-    color: var(--accent-color);
-    text-align: left; /* Überschrift bleibt links ausgerichtet */
-  }
-  
-  .skill-box {
-    flex: 1 1 35%;
-    background-color: rgba(255, 105, 180, 0.1); /* Branding-spezifische Farbe */
-    border: 2px solid var(--accent-color);
-    border-radius: 32px;
-    padding: 32px;
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2); /* Branding-spezifische Schattenfarbe */
-    order: 2; /* Skill-Box rechts platzieren */
-  }
-  
-  .skill-box h2 {
-    font-family: var(--font-family);
-    font-size: 64px;
-    color: var(--accent-color);
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
-  
-  .skill-box p {
-    font-family: var(--font-family-second);
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-  }
-  
-  .skill-box h3 {
-    font-family: var(--font-family);
-    font-size: 24px;
-    letter-spacing: 4px;
-  }
-  
-  .skill-box .highlight span {
-    color: var(--accent-color);
-  }
-  
+  /* Skills Grid */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     flex: 1 1 45%;
-    order: 1; /* Icons zuerst (links) platzieren */
   }
   
   .icon {
@@ -107,7 +105,7 @@
       left: 10px;
       right: 10px;
       bottom: 0px;
-      background-image: url('/vectors/img-bg-vector.svg'); /* Branding-spezifischer Vektor */
+      background-image: url('/vectors/img-bg-vector.svg');
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
@@ -156,7 +154,7 @@
       border: 2px solid var(--accent-color);
       border-radius: 16px;
       padding: 16px;
-      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2); /* Branding-spezifischer Schatten */
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
       z-index: 2;
       opacity: 0;
       visibility: hidden;
@@ -195,7 +193,7 @@
     }
   }
   
-  /* Media Queries für die Branding-Komponente */
+  /* Media Queries */
   @media (max-width: 767px) {
     .branding-content {
       flex-direction: column-reverse;
@@ -208,9 +206,8 @@
       gap: 16px;
     }
   
-    .skill-box {
+    .branding-box {
       margin-top: 16px;
-      order: 1; /* Icons zuerst in mobiler Ansicht */
     }
   }
   
@@ -224,16 +221,4 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-  
-  @media (min-width: 1025px) and (max-width: 1366px) {
-    .branding-content {
-      padding: 64px 32px;
-      gap: 48px;
-    }
-  
-    .skills-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
   

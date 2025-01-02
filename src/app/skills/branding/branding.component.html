@@ -1,13 +1,26 @@
-<div class="branding-section">
-  <!-- Hintergrundbild kommt hier -->
-  <div class="background-overlay"></div>
-
-  <!-- Überschrift über der Skill-Box -->
-  <div class="branding-headline">
-    <h4 class="branding-title">Branding & Marketing</h4>
-  </div>
-
+<section class="branding-section container">
   <div class="branding-content">
+    <!-- Branding Skill Set -->
+    <div class="branding-text">
+      <h4>Branding Technologies</h4>
+
+      <div class="branding-box">
+        <h2>Skill Set</h2>
+        <p>
+          Crafting impactful visual identities, strategies, and experiences that resonate
+          with target audiences and bring brands to life. It's not over until we say it's over. 
+          Everyone is special and we bring it to life. That's our promise.
+        </p>
+        <h3 class="highlight">
+          <strong>Need a unique <span>branding solution?</span></strong>
+        </h3>
+        <p>
+          Feel free to contact me. Together, we can create the perfect strategy to elevate your brand.
+        </p>
+        <!-- Button Component -->
+        <app-button [label]="'Get in Touch'" [type]="'button'" buttonClass="default-button"></app-button>
+      </div>
+    </div>
 
     <!-- Grid mit Icons -->
     <div class="skills-grid">
@@ -18,39 +31,19 @@
       (mouseleave)="hideHover(skill)"
       (click)="toggleInfobox(skill)"
       >
-      <div class="vector-background"></div>
-      <img [src]="skill.icon" [alt]="skill.name" />
-      <span [ngClass]="{ 'hovered': skill.isHovered }">{{ skill.name }}</span>
+        <div class="vector-background"></div>
+        <img [src]="skill.icon" [alt]="skill.name" />
+        <span [ngClass]="{ 'hovered': skill.isHovered }">{{ skill.name }}</span>
 
-      <!-- Infobox -->
-      <div class="infobox" [class.visible]="skill.isHovered || skill.isInfoboxVisible">
-        <h3>{{ skill.infoboxTitle }}</h3>
-        <p>{{ skill.infoboxDescription }}</p>
-        <div class="infobox-icons">
-          <img *ngFor="let subIcon of skill.infoboxIcons" [src]="subIcon.src" [alt]="subIcon.alt" />
+        <!-- Infobox -->
+        <div class="infobox" [class.visible]="skill.isHovered || skill.isInfoboxVisible">
+          <h3>{{ skill.infoboxTitle }}</h3>
+          <p>{{ skill.infoboxDescription }}</p>
+          <div class="infobox-icons">
+            <img *ngFor="let subIcon of skill.infoboxIcons" [src]="subIcon.src" [alt]="subIcon.alt" />
+          </div>
         </div>
       </div>
-      </div>
-    </div>
-
-    <!-- Skill Box -->
-    <div class="skill-box">
-      <h2>Skill Set</h2>
-      <p>
-        Crafting impactful visual identities, strategies, and experiences that resonate
-        with target audiences and bring brands to life. It's not over until we say it's over. 
-        Everyone is special and we bring it to life. That's our promise.
-      </p>
-      <h3 class="highlight">
-        <strong>Need a unique <span>branding solution?</span></strong>
-      </h3>
-      <p>
-        Feel free to contact me. Together, we can create the perfect strategy to elevate your brand.
-      </p>
-      <!-- Button Component -->
-      <app-button [label]="'Get in Touch'" [type]="'button'" buttonClass="default-button"></app-button>
     </div>
   </div>
-</div>
-
-  
+</section>
