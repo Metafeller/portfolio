@@ -98,7 +98,7 @@
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 64px;
+    gap: 40px;
     flex: 1 1 45%;
   }
   
@@ -109,6 +109,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    // padding-top: 32px;
     cursor: pointer;
   
     .vector-background {

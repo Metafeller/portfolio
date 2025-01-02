@@ -29,7 +29,7 @@ export class BrandingComponent {
     },
 
     {
-      name: 'Creative Brand Strategies',
+      name: 'Brand Strategy',
       icon: '/icons/branding/brand-strategies.png',
       isHovered: false,
       isInfoboxVisible: false,
@@ -39,7 +39,7 @@ export class BrandingComponent {
     },
 
     {
-      name: 'Personal Branding',
+      name: 'Personal Brand',
       icon: '/icons/branding/personal-branding.png',
       isHovered: false,
       isInfoboxVisible: false,
@@ -49,7 +49,7 @@ export class BrandingComponent {
     },
 
     {
-      name: 'Target Group Definition',
+      name: 'Target Group',
       icon: '/icons/branding/target-audience.png',
       isHovered: false,
       isInfoboxVisible: false,
@@ -69,7 +69,7 @@ export class BrandingComponent {
     },
 
     {
-      name: 'Unique Selling Point (USP)',
+      name: 'Unique Selling Point',
       icon: '/icons/branding/unique-selling-point.png',
       isHovered: false,
       isInfoboxVisible: false,
@@ -89,8 +89,8 @@ export class BrandingComponent {
     },
 
     {
-      name: 'Web Design & UX / UI',
-      icon: '/icons/branding/figma.png',
+      name: 'Web Design',
+      icon: '/icons/branding/ux-ui-web-design.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Web Design & UX / UI',
@@ -99,27 +99,27 @@ export class BrandingComponent {
     },
 
     {
-      name: 'PR / Public Relations',
+      name: 'Public Relations',
       icon: '/icons/branding/pr-public-relations.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'PR / Public Relations',
+      infoboxTitle: 'Public Relations [ PR ]',
       infoboxDescription: 'Build trust and manage your brand\'s reputation effectively',
       infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
-      name: 'Dynamic Visability Strategies',
+      name: 'Visability Strategies',
       icon: '/icons/branding/visability-strategies.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Dynamic Visability Strategies',
+      infoboxTitle: 'Dynamic Visability',
       infoboxDescription: 'Be visible and relevant across all key channels with adaptive strategies.',
       infoboxIcons: [] as InfoboxIcon[]
     },
 
     {
-      name: 'AI-Influencer Creating [New]',
+      name: 'AI-Influencer',
       icon: '/icons/branding/artificial-intelligence-ai.png',
       isHovered: false,
       isInfoboxVisible: false,
