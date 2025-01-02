@@ -120,7 +120,7 @@ export class BrandingComponent {
 
     {
       name: 'AI-Influencer',
-      icon: '/icons/branding/artificial-intelligence-ai.png',
+      icon: '/icons/branding/bot.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'AI Influencer Identity',
@@ -135,7 +135,12 @@ export class BrandingComponent {
       isInfoboxVisible: false,
       infoboxTitle: 'Growth Mindset',
       infoboxDescription: 'I am interested in innovative and rare niches.',
-      infoboxIcons: [] as InfoboxIcon[]
+      infoboxIcons: [
+        { src: '/icons/branding/artificial-intelligence-ai.png', alt: 'Artificial Intelligence' },
+        // { src: '/icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
+        { src: '/icons/branding/blockchain-technologie.png', alt: 'Blockchain' },
+        { src: '/icons/branding/metaverse.png', alt: 'Metaverse NFTs' },
+      ] as InfoboxIcon[]
     },
 
   ];
