@@ -120,6 +120,10 @@
         letter-spacing: 4px;
         // color: var(--accent-color);
         // margin-top: 16px;
+
+        @media (min-width: 240px) and (max-width: 320px) {
+        font-size: 28px;
+        }
       }
   
       p {
@@ -326,7 +330,7 @@
         .highlight span {
           display: inline-block;
           text-align: center;
-          font-size: 32px;
+        //   font-size: 28px;
         }
       }  
 
