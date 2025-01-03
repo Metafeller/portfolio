@@ -530,7 +530,7 @@
 /* Mobile Ansicht - bis 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
     .branding-section {
-    //   padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+      padding: 32px 20px; /* Weniger Padding für kleine Geräte */
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
   
       .infobox {
@@ -541,7 +541,7 @@
   
     .branding-content {
       flex-direction: column-reverse;
-      padding: 40px 24px;
+      padding: 32px 20px;
       gap: 32px; /* Weniger Abstand zwischen den Elementen */
       align-items: normal;
     }
