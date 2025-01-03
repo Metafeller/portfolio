@@ -357,9 +357,10 @@
 // Big-Tablet Ansicht - 768px bis 1024px
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-me {
-    padding: 64px 32px;
+    padding: 32px 20px;
 
     .about-me-content {
+      padding: 32px 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -386,7 +387,7 @@
         // width: 90%;
         width: auto;
         height: auto;
-        padding: 40px;
+        padding: 32px;
 
         li {
           flex-direction: column;
