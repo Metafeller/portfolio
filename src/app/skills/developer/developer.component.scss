@@ -521,7 +521,7 @@
 /* Big-Tablet oder Mini-Laptop Ansicht - 1025px bis 1366px */
 @media (min-width: 1025px) and (max-width: 1366px) {
   .developer-section {
-    padding: 64px 32px;
+    padding: 40px 24px;
   }
 
   .developer-content {
@@ -552,7 +552,7 @@
   }
 
   .skill-box {
-    // padding: 32px 16px;
+    padding: 40px;
     margin-top: 8px;
   }
 

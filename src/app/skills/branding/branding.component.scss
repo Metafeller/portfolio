@@ -83,12 +83,12 @@
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
-        // padding: 32px 16px;
+        // padding: 32px;
         margin-top: 8px;
         }
 
         @media (min-width: 1025px) and (max-width: 1366px) {
-        // padding: 32px 16px;
+        padding: 40px;
         margin-top: 8px;
         }
   
@@ -613,11 +613,11 @@
 /* Mobile Ansicht - bis 1366px */
 @media (min-width: 1025px) and (max-width: 1366px) {
     .branding-section {
-    //   padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+      padding: 40px 24px; /* Weniger Padding für kleine Geräte */
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
   
       .infobox {
-      top: -100%;
+      top: -120%;
       width: 90%;
       }
     }
@@ -675,10 +675,10 @@
       margin-bottom: 16px;
     }
 
-    .icon img {
-        width: 56px;
-        height: 56px;
-    }
+    // .icon img {
+    //     width: 56px;
+    //     height: 56px;
+    // }
 
     .headline-mobile {
         font-family: var(--font-family-second);
