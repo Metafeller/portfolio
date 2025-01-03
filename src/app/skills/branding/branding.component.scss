@@ -15,6 +15,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @media (min-width: 240px) and (max-width: 320px) {
+    padding: 16px 8px;
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
   }
 
   .branding-section::after {
@@ -67,7 +72,7 @@
         }
 
         @media (min-width: 321px) and (max-width: 480px) {
-        // padding: 32px 16px;
+        padding: 24px;
         margin-top: 8px;
         }
 
@@ -280,8 +285,6 @@
 /* Mobile Ansicht - bis 320px */
 @media (min-width: 240px) and (max-width: 320px) {
     .branding-section {
-      padding: 16px 8px; /* Weniger Padding für kleine Geräte */
-      background-size: contain; /* Verhindert abgeschnittene Bereiche */
   
       .infobox {
       top: -80%;
