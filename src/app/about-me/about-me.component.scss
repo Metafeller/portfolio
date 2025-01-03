@@ -172,7 +172,7 @@
 
     .about-me-content {
       flex-direction: column;
-      padding: 32px 16px;
+      padding: 24px 16px;
       gap: 24px;
 
       .about-me-image-wrapper {
@@ -198,7 +198,7 @@
         // width: 82%;
         width: auto;
         height: auto;
-        padding: 24px;
+        padding: 24px 16px;
 
         li {
           flex-direction: column;
@@ -232,11 +232,11 @@
 // Mobile Ansicht - bis 480px
 @media (min-width: 321px) and (max-width: 480px) {
   .about-me {
-    padding: 24px 12px; // Weniger Padding für kleine Geräte
+    padding: 20px 12px; // Weniger Padding für kleine Geräte
 
     .about-me-content {
       flex-direction: column;
-      padding: 24px 12px;
+      padding: 20px 12px;
       gap: 24px;
 
       .about-me-image-wrapper {
@@ -261,7 +261,7 @@
         // width: 82%;
         width: auto;
         height: auto;
-        padding: 32px;
+        padding: 24px;
 
         li {
           flex-direction: column;
@@ -284,7 +284,7 @@
         }
         p,
         .about-me-highlights li span {
-          font-size: 14px;      
+          font-size: 16px;     
         }
       }
     }
@@ -299,7 +299,7 @@
 
     .about-me-content {
       flex-direction: column;
-      padding: 32px 16px;
+      padding: 40px 24px;
       gap: 32px;
 
       .about-me-image-wrapper {
@@ -420,12 +420,13 @@
 // Big-Tablet oder Mini-Laptop Ansicht - 1025px bis 1366px
 @media (min-width: 1025px) and (max-width: 1366px) {
   .about-me {
-    padding: 80px 40px;
+    padding: 64px 32px;
 
     .about-me-content {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 40px 24px;
       gap: 48px;
 
       .about-me-image-wrapper {
