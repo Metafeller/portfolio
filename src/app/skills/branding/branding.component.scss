@@ -359,5 +359,86 @@
   }
 
 
+/* Mobile Ansicht - bis 480px */
+@media (min-width: 321px) and (max-width: 480px) {
+    .branding-section {
+      padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
+  
+      .infobox {
+      top: -80%;
+      width: 90%;
+      }
+    }
+  
+    .branding-content {
+      flex-direction: column-reverse;
+      padding: 24px 16px;
+      gap: 16px; /* Weniger Abstand zwischen den Elementen */
+    }
+  
+    // Branding Technologie Headline
+    .branding-text-area h4 {
+      padding-left: 0px;
+    //   margin-bottom: -24px;
+      font-family: var(--font-family-second);
+      font-size: 18px;
+      color: var(--accent-color);
+      // margin-bottom: 16px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    // Technische Probleme bei den Media Queries, irgendeine höhere Instanz blockiert, deshalb habe ich das Problem direkt mit ein konsistentes SCSS-Setup gelöst.
+    .branding-box {
+        // padding: 32px 16px;
+        // margin-top: 8px;
+    
+        h2 {
+        //   font-size: 28px !important; /* Erzwingt die Schriftgröße */
+          text-align: center;
+        }
+    
+        h3 {
+        //   font-size: 18px !important; /* Kleinere Überschrift */
+          text-align: center;
+        }
+    
+        p {
+        //   font-size: 14px !important; /* Kleinere Schriftgröße für Absätze */
+          text-align: center;
+        }
+    
+        .highlight span {
+          display: inline-block;
+          text-align: center;
+        //   font-size: 28px;
+        }
+      }  
+
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für Icons */
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .icon img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .headline-mobile {
+        font-family: var(--font-family-second);
+        font-size: 18px;
+        color: var(--accent-color);
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .headline-desktop {
+        display: none;
+    }
+  }
+
 
   
