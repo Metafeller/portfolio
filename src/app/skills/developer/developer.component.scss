@@ -385,7 +385,7 @@
 /* Tablet Ansicht - 481px bis 767px */
 @media (min-width: 481px) and (max-width: 767px) {
   .developer-section {
-    padding: 40px 24px;
+    padding: 24px 16px;
 
     .infobox {
       top: -100%;
@@ -395,7 +395,7 @@
 
   .developer-content {
     flex-direction: column-reverse;
-    padding: 40px 24px;
+    padding: 24px 16px;
     gap: 32px;
   }
   
@@ -419,7 +419,7 @@
   }
 
   .skill-box {
-    // padding: 32px 16px;
+    padding: 24px;
     margin-top: 8px;
   }
 

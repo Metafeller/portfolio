@@ -295,11 +295,11 @@
 // Tablet Ansicht - 481px bis 767px
 @media (min-width: 481px) and (max-width: 767px) {
   .about-me {
-    padding: 40px 24px;
+    padding: 24px 16px;
 
     .about-me-content {
       flex-direction: column;
-      padding: 40px 24px;
+      padding: 24px 16px;
       gap: 32px;
 
       .about-me-image-wrapper {
@@ -323,7 +323,7 @@
         // width: 84%;
         width: auto;
         height: auto;
-        padding: 32px;
+        padding: 24px;
 
         li {
           flex-direction: column;

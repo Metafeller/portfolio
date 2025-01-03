@@ -20,6 +20,7 @@
     padding: 16px 8px;
     background-size: contain; /* Verhindert abgeschnittene Bereiche */
     }
+
   }
 
   .branding-section::after {
@@ -77,7 +78,7 @@
         }
 
         @media (min-width: 481px) and (max-width: 767px) {
-        // padding: 32px 16px;
+        padding: 24px;
         margin-top: 8px;
         }
 
@@ -365,7 +366,7 @@
 /* Mobile Ansicht - bis 480px */
 @media (min-width: 321px) and (max-width: 480px) {
     .branding-section {
-      padding: 16px 8px; /* Weniger Padding für kleine Geräte */
+      padding: 20px 12px; /* Weniger Padding für kleine Geräte */
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
   
       .infobox {
@@ -376,7 +377,7 @@
   
     .branding-content {
       flex-direction: column-reverse;
-      padding: 24px 16px;
+      padding: 20px 12px;
       gap: 16px; /* Weniger Abstand zwischen den Elementen */
     }
   
@@ -447,7 +448,7 @@
 /* Mobile Ansicht - bis 767px */
 @media (min-width: 481px) and (max-width: 767px) {
     .branding-section {
-      padding: 40px 24px; /* Weniger Padding für kleine Geräte */
+      padding: 24px 16px; /* Weniger Padding für kleine Geräte */
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
   
       .infobox {
@@ -458,7 +459,7 @@
   
     .branding-content {
       flex-direction: column-reverse;
-      padding: 40px 24px;
+      padding: 24px 16px;
       gap: 16px; /* Weniger Abstand zwischen den Elementen */
     }
   
