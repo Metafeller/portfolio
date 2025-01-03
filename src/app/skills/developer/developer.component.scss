@@ -302,6 +302,11 @@
     text-align: center;
   }
 
+  .icon img {
+    height: 56px;
+    width: 56px;
+  }
+
   // .developer-title {
   //   font-size: 16px;
   //   padding-left: 0;
@@ -370,6 +375,11 @@
     flex-direction: column;
   }
 
+  .icon img {
+    height: 56px;
+    width: 56px;
+  }
+
 }
 
 /* Tablet Ansicht - 481px bis 767px */
@@ -430,6 +440,11 @@
   .highlight span {
     display: flex;
     flex-direction: column;
+  }
+
+  .icon img {
+    height: 56px;
+    width: 56px;
   }
 
 }
@@ -495,6 +510,11 @@
   //   display: flex;
   //   flex-direction: column;
   // }
+
+  .icon img {
+    height: 56px;
+    width: 56px;
+  }
 
 }
 
