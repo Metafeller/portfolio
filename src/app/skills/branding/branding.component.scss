@@ -337,11 +337,24 @@
     .skills-grid {
       grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für Icons */
       gap: 16px;
+      margin-bottom: 16px;
     }
 
     .icon img {
         width: 56px;
         height: 56px;
+    }
+
+    .headline-mobile {
+        font-family: var(--font-family-second);
+        font-size: 18px;
+        color: var(--accent-color);
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .headline-desktop {
+        display: none;
     }
   }
 
