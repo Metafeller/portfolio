@@ -1,1 +1,52 @@
-<p>marketing works!</p>
+<section class="marketing-section container">
+    <div class="marketing-content">
+      <!-- Marketing Skill Set -->
+      <div class="marketing-text-area">
+        <h4 class="headline-desktop">Marketing Technologies</h4>
+  
+        <div class="marketing-box">
+          <h2>Marketing Skills</h2>
+          <p>
+            Crafting innovative marketing strategies to amplify brand visibility, engage audiences, 
+            and drive growth. Leveraging data and creativity to deliver impactful campaigns.
+          </p>
+          <h3 class="highlight">
+            <strong>Need a unique <span>marketing solution?</span></strong>
+          </h3>
+          <p>
+            Feel free to contact me. Together, we can create the perfect strategy to elevate your marketing efforts.
+          </p>
+          <!-- Button Component -->
+          <app-button [label]="'Get in Touch'" [type]="'button'" buttonClass="default-button"></app-button>
+        </div>
+      </div>
+  
+      <!-- Grid mit Icons -->
+      <div class="skills-grid">
+        <div 
+        class="icon" 
+        *ngFor="let skill of skills" 
+        (mouseenter)="showHover(skill)" 
+        (mouseleave)="hideHover(skill)"
+        (click)="toggleInfobox(skill)"
+        >
+          <div class="vector-background"></div>
+          <img [src]="skill.icon" [alt]="skill.name" />
+          <span [ngClass]="{ 'hovered': skill.isHovered }">{{ skill.name }}</span>
+  
+          <!-- Infobox -->
+          <div class="infobox" [class.visible]="skill.isHovered || skill.isInfoboxVisible">
+            <h3>{{ skill.infoboxTitle }}</h3>
+            <p>{{ skill.infoboxDescription }}</p>
+            <div class="infobox-icons">
+              <img *ngFor="let subIcon of skill.infoboxIcons" [src]="subIcon.src" [alt]="subIcon.alt" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="headline-mobile">
+        <h4>Marketing Technologies</h4>
+      </div>
+    </div>
+  </section>
+  
