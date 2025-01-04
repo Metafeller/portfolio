@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 64px 32px; // padding bis 64px 32px herunterschrauben von Desktop zu Mobile Ansicht
+    padding: 48px 32px; // padding ab 48px 32px bis 16px 8px herunterschrauben von Desktop zu Mobile Ansicht
     background-color: var(--primary-color);
-    // min-height: 80vh;
+    min-height: 80vh;
     // max-width: max-content;
     max-width: 1921px;
     margin: 0 auto;
@@ -16,6 +16,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
   }
   
   .developer-section::after {
@@ -35,14 +36,14 @@
     justify-content: space-between;
     align-items: normal;
     // align-items: flex-start;
-    padding: 64px 96px;
+    padding: 48px 32px;
     gap: 64px;
   }
 
   .developer-headline {
     // display: flex;
-    padding-left: 96px;
-    margin-bottom: -72px;
+    padding-left: 32px;
+    margin-bottom: -64px;
   }
   
   .developer-title {
@@ -59,7 +60,7 @@
     background-color: rgba(0, 255, 174, 0.1);
     border: 2px solid var(--accent-color);
     border-radius: 32px;
-    padding: 32px;
+    padding: 48px;
     box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
   }
   

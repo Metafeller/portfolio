@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 64px 32px;
+    padding: 48px 32px;
     background-color: var(--primary-color);
-    // min-height: 80vh;
+    min-height: 80vh;
     max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
@@ -39,9 +39,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row-reverse;
-    align-items: center;
-    padding: 64px 96px;
+    align-items: normal;
+    padding: 48px 32px;
     gap: 64px;
+
+    @media (min-width: 1367px) {
+        
+    .headline-mobile {
+      display: none;
+      }
+
+    }
+
+    
   }
   
   .branding-text-area {
@@ -63,7 +73,7 @@
         background-color: rgba(0, 255, 174, 0.1);
         border: 2px solid var(--accent-color);
         border-radius: 32px;
-        padding: 32px;
+        padding:48px;
         box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
         margin-bottom: 84px;
 
@@ -173,7 +183,8 @@
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    padding: 32px 16px;
+    gap: 24px;
     flex: 1 1 45%;
   }
   
@@ -233,7 +244,7 @@
   
     .infobox {
       position: absolute;
-      top: -180%;
+      top: -100%;
       left: 50%;
       transform: translateX(-50%);
       width: 240px;
