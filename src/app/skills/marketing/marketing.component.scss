@@ -1,0 +1,32 @@
+.marketing-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 32px;
+    background-color: var(--primary-color);
+    min-height: 80vh;
+    max-width: 1921px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    /* Hintergrundbild */
+    background-image: url('/bg-images/bg-marketing.png'); /* Passe das Hintergrundbild an */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .marketing-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 0.3); /* Passe die Farbe an */
+    z-index: -1;
+  }
+  
+  /* Weitere Styles ähnlich wie in branding.component.scss */
+  
