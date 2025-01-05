@@ -20,7 +20,7 @@ export class MarketingComponent {
     // Gruppe 1: Strategien und Kanäle
     {
       name: 'Touchpoints Selection',
-      icon: '/icons/marketing/touchpoints.png',
+      icon: '/icons/marketing/channels.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Touchpoints Selection',
@@ -76,7 +76,7 @@ export class MarketingComponent {
     },
     {
       name: 'Automated Funnel Concepts',
-      icon: '/icons/marketing/automated-funnel.png',
+      icon: '/icons/marketing/sales-funnel.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Automated Funnel Concepts',
@@ -86,8 +86,8 @@ export class MarketingComponent {
 
     // Gruppe 3: Lead-Generierung und Kundenbindung
     {
-      name: 'Landing Page & Lead Generation',
-      icon: '/icons/marketing/landing-page.png',
+      name: 'Automated Lead Generation',
+      icon: '/icons/marketing/lead-generation.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Landing Page & Lead Generation',
@@ -95,19 +95,19 @@ export class MarketingComponent {
       infoboxIcons: [] as InfoboxIcon[],
     },
     {
-      name: 'Account Management / CRM',
+      name: 'Account Management',
       icon: '/icons/marketing/account-management-network.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Account Management',
+      infoboxTitle: 'Account Management [CRM]',
       infoboxDescription: 'Foster long-term customer relationships with personalized strategies.',
       infoboxIcons: [] as InfoboxIcon[],
     },
 
     // Gruppe 4: Content und Partnerstrategien
     {
-      name: 'Content Marketing',
-      icon: '/icons/marketing/content-marketing.png',
+      name: 'Content Marketing and Creation',
+      icon: '/icons/marketing/digital-content.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Content Marketing / Creation',
@@ -115,8 +115,8 @@ export class MarketingComponent {
       infoboxIcons: [] as InfoboxIcon[],
     },
     {
-      name: 'Influencer & Affiliate Marketing',
-      icon: '/icons/marketing/ads-click.png',
+      name: 'Affiliate Marketing',
+      icon: '/icons/marketing/up-arrow.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Influencer & Affiliate Marketing',
