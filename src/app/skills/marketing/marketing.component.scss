@@ -70,10 +70,10 @@
         box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
         margin-bottom: 84px;
 
-        // @media (min-width: 240px) and (max-width: 320px) {
-        // padding: 24px 16px;
-        // margin-top: 8px;
-        // }
+        @media (min-width: 240px) and (max-width: 320px) {
+        padding: 24px 16px;
+        margin-top: 8px;
+        }
 
         // @media (min-width: 321px) and (max-width: 480px) {
         // padding: 24px;
@@ -102,9 +102,9 @@
         margin-top: 0;
         margin-bottom: 16px;
 
-        // @media (min-width: 240px) and (max-width: 320px) {
-        // font-size: 32px;
-        // }
+        @media (min-width: 240px) and (max-width: 320px) {
+        font-size: 32px;
+        }
 
         // @media (min-width: 321px) and (max-width: 480px) {
         // font-size: 32px;
@@ -279,4 +279,78 @@
   }
 
   
+/* Media Queries für verschiedene Bildschirmgrößen */
+
+/* Mobile Ansicht - bis 320px */
+@media (min-width: 240px) and (max-width: 320px) {
+  .marketing-section {
+    padding: 16px 8px;
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
+
+    .infobox {
+    top: -80%;
+    width: 90%;
+    }
+  }
+
+  .marketing-content {
+    flex-direction: column-reverse;
+    padding: 24px 16px;
+    gap: 16px; /* Weniger Abstand zwischen den Elementen */
+  }
+
+  // Branding Technologie Headline
+  .marketing-text-area h4 {
+    padding-left: 0px;
+    font-family: var(--font-family-second);
+    font-size: 18px;
+    color: var(--accent-color);
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .marketing-box {
+    padding: 24px 16px;
+    margin-top: 8px;
   
+      h2 {
+        text-align: center;
+      }
+  
+      h3 {
+        text-align: center;
+      }
+  
+      p {
+        text-align: center;
+      }
+  
+      .highlight span {
+        display: inline-block;
+        text-align: center;
+      }
+    }  
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten für Icons */
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .icon img {
+      width: 56px;
+      height: 56px;
+  }
+
+  .headline-mobile {
+      font-family: var(--font-family-second);
+      font-size: 18px;
+      color: var(--accent-color);
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .headline-desktop {
+      display: none;
+  }
+}
