@@ -106,7 +106,7 @@ export class MarketingComponent {
 
     // Gruppe 4: Content und Partnerstrategien
     {
-      name: 'Content Marketing and Creation',
+      name: 'Content Marketing Concepts',
       icon: '/icons/marketing/digital-content.png',
       isHovered: false,
       isInfoboxVisible: false,
