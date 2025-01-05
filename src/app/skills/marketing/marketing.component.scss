@@ -609,39 +609,31 @@
   // Marketing Technologie Headline
   .marketing-text-area h4 {
     padding-left: 0px;
-  //   margin-bottom: -24px;
     font-family: var(--font-family-second);
     font-size: 18px;
     color: var(--accent-color);
-    // margin-bottom: 16px;
     padding-left: 0;
     text-align: center;
   }
 
   // Technische Probleme bei den Media Queries, irgendeine höhere Instanz blockiert, deshalb habe ich das Problem direkt mit ein konsistentes SCSS-Setup gelöst.
   .marketing-box {
-      // padding: 32px 16px;
-      // margin-top: 8px;
   
       h2 {
-      //   font-size: 28px !important; /* Erzwingt die Schriftgröße */
         text-align: center;
       }
   
       h3 {
-      //   font-size: 18px !important; /* Kleinere Überschrift */
         text-align: center;
       }
   
       p {
-      //   font-size: 14px !important; /* Kleinere Schriftgröße für Absätze */
         text-align: center;
       }
   
       .highlight span {
         display: inline-block;
         text-align: center;
-      //   font-size: 28px;
       }
     }  
 
