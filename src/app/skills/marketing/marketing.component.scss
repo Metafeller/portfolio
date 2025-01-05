@@ -85,15 +85,15 @@
         margin-top: 8px;
         }
 
-        @media (min-width: 768px) and (max-width: 1024px) {
-        // padding: 32px;
-        margin-top: 8px;
-        }
+        // @media (min-width: 768px) and (max-width: 1024px) {
+        // // padding: 32px;
+        // margin-top: 8px;
+        // }
 
-        @media (min-width: 1025px) and (max-width: 1366px) {
-        padding: 40px;
-        margin-top: 8px;
-        }
+        // @media (min-width: 1025px) and (max-width: 1366px) {
+        // padding: 40px;
+        // margin-top: 8px;
+        // }
   
       h2 {
         font-family: var(--font-family);
@@ -114,13 +114,13 @@
         font-size: 40px;
         }
 
-        @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 48px;
-        }
+        // @media (min-width: 768px) and (max-width: 1024px) {
+        // font-size: 48px;
+        // }
 
-        @media (min-width: 1025px) and (max-width: 1366px) {
-        font-size: 56px;
-        }
+        // @media (min-width: 1025px) and (max-width: 1366px) {
+        // font-size: 56px;
+        // }
       }
 
       h3 {
@@ -151,13 +151,13 @@
         font-size: 16px;
         }
         
-        @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 17px;
-        }
+        // @media (min-width: 768px) and (max-width: 1024px) {
+        // font-size: 17px;
+        // }
         
-        @media (min-width: 1025px) and (max-width: 1366px) {
-        font-size: 18px;
-        }
+        // @media (min-width: 1025px) and (max-width: 1366px) {
+        // font-size: 18px;
+        // }
       }
   
       .highlight span {
@@ -424,6 +424,82 @@
   .headline-mobile {
       font-family: var(--font-family-second);
       font-size: 18px;
+      color: var(--accent-color);
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .headline-desktop {
+      display: none;
+  }
+}
+
+
+/* Mobile Ansicht - bis 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+  .marketing-section {
+    padding: 24px 16px; /* Weniger Padding für kleine Geräte */
+    background-size: contain; /* Verhindert abgeschnittene Bereiche */
+
+    .infobox {
+    top: -80%;
+    width: 90%;
+    }
+  }
+
+  .marketing-content {
+    flex-direction: column-reverse;
+    padding: 24px 16px;
+    gap: 16px; /* Weniger Abstand zwischen den Elementen */
+  }
+
+  // Marketing Technologie Headline
+  .marketing-text-area h4 {
+    padding-left: 0px;
+  //   margin-bottom: -24px;
+    font-family: var(--font-family-second);
+    font-size: 18px;
+    color: var(--accent-color);
+    // margin-bottom: 16px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  // Technische Probleme bei den Media Queries, irgendeine höhere Instanz blockiert, deshalb habe ich das Problem direkt mit ein konsistentes SCSS-Setup gelöst.
+  .marketing-box {
+  
+      h2 {
+        text-align: center;
+      }
+  
+      h3 {
+        text-align: center;
+      }
+  
+      p {
+        text-align: center;
+      }
+  
+      .highlight span {
+        display: inline-block;
+        text-align: center;
+      }
+    }  
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr); /* Zwei Spalten für Icons */
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+
+  .icon img {
+      width: 56px;
+      height: 56px;
+  }
+
+  .headline-mobile {
+      font-family: var(--font-family-second);
+      font-size: 20px;
       color: var(--accent-color);
       padding-left: 0;
       text-align: center;
