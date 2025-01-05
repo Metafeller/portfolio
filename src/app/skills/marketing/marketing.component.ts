@@ -13,29 +13,127 @@ interface InfoboxIcon {
   standalone: true,
   imports: [ButtonComponent, CommonModule],
   templateUrl: './marketing.component.html',
-  styleUrl: './marketing.component.scss'
+  styleUrl: './marketing.component.scss',
 })
 export class MarketingComponent {
   skills = [
+    // Gruppe 1: Strategien und Kanäle
+    {
+      name: 'Touchpoints Selection',
+      icon: '/icons/marketing/touchpoints.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Touchpoints Selection',
+      infoboxDescription: 'Choose the right channels to reach your audience at the perfect time.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+    {
+      name: 'Organic Online Campaigns',
+      icon: '/icons/marketing/organic-sprout.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Organic Online Campaigns',
+      infoboxDescription: 'Engage authentically with creative, budget-free marketing.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+    {
+      name: 'Paid Marketing Campaigns',
+      icon: '/icons/marketing/meta.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Paid Marketing Campaigns',
+      infoboxDescription: 'Maximize reach with efficient paid strategies across digital platforms.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+    {
+      name: 'Social Media Marketing',
+      icon: '/icons/marketing/social-media-advertising.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Social Media Marketing',
+      infoboxDescription: 'Connect with your audience directly on platforms they love.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+
+    // Gruppe 2: Technische Optimierung und Automatisierung
     {
       name: 'SEO Optimization',
       icon: '/icons/marketing/seo.png',
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'SEO Optimization',
-      infoboxDescription: 'Enhance your website’s visibility and ranking in search engines.',
-      infoboxIcons: [] as InfoboxIcon[]
+      infoboxDescription: 'Boost your visibility by optimizing for search engines.',
+      infoboxIcons: [] as InfoboxIcon[],
     },
     {
-      name: 'Social Media Campaigns',
-      icon: '/icons/marketing/social-media.png',
+      name: 'Google Ads & AdSense',
+      icon: '/icons/marketing/google-ads.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Social Media Campaigns',
-      infoboxDescription: 'Create engaging campaigns to connect with your audience.',
-      infoboxIcons: [] as InfoboxIcon[]
+      infoboxTitle: 'Google Ads & AdSense',
+      infoboxDescription: "Leverage Google's ad tools for effective marketing and monetization.",
+      infoboxIcons: [] as InfoboxIcon[],
     },
-    // Weitere Skills hinzufügen
+    {
+      name: 'Automated Funnel Concepts',
+      icon: '/icons/marketing/automated-funnel.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Automated Funnel Concepts',
+      infoboxDescription: 'Streamline your processes with automated sales and lead funnels.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+
+    // Gruppe 3: Lead-Generierung und Kundenbindung
+    {
+      name: 'Landing Page & Lead Generation',
+      icon: '/icons/marketing/landing-page.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Landing Page & Lead Generation',
+      infoboxDescription: 'Convert visitors into loyal customers with targeted landing pages.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+    {
+      name: 'Account Management / CRM',
+      icon: '/icons/marketing/account-management-network.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Account Management',
+      infoboxDescription: 'Foster long-term customer relationships with personalized strategies.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+
+    // Gruppe 4: Content und Partnerstrategien
+    {
+      name: 'Content Marketing',
+      icon: '/icons/marketing/content-marketing.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Content Marketing / Creation',
+      infoboxDescription: 'Inspire and inform with high-quality, engaging content.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+    {
+      name: 'Influencer & Affiliate Marketing',
+      icon: '/icons/marketing/ads-click.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Influencer & Affiliate Marketing',
+      infoboxDescription: 'Partner with influencers and affiliates to expand your reach.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
+
+    // Gruppe 5: Wachstum und Skalierung
+    {
+      name: 'Exponential Growth Strategies',
+      icon: '/icons/marketing/growth-strategies-pestle.png',
+      isHovered: false,
+      isInfoboxVisible: false,
+      infoboxTitle: 'Exponential Growth Strategies',
+      infoboxDescription: 'Achieve sustainable and impactful scaling with innovative methods.',
+      infoboxIcons: [] as InfoboxIcon[],
+    },
   ];
 
   constructor(private windowService: WindowService) {}
@@ -63,4 +161,3 @@ export class MarketingComponent {
     }
   }
 }
-

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
-import { ServerTestingModule } from '@angular/platform-server/testing';
+// import { ServerTestingModule } from '@angular/platform-server/testing';
 
 interface InfoboxIcon {
   src: string;
