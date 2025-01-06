@@ -134,7 +134,7 @@ export class BrandingComponent {
       isHovered: false,
       isInfoboxVisible: false,
       infoboxTitle: 'Growth Mindset',
-      infoboxDescription: 'I am interested in innovative and rare niches.',
+      infoboxDescription: 'I am interested in innovative and rare niches such as Blockchain. AI-Agency and Web 3.0',
       infoboxIcons: [
         { src: '/icons/branding/artificial-intelligence-ai.png', alt: 'Artificial Intelligence' },
         // { src: '/icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
