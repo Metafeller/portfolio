@@ -140,6 +140,7 @@ export class BrandingComponent {
         // { src: '/icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
         { src: '/icons/branding/blockchain-technologie.png', alt: 'Blockchain' },
         { src: '/icons/branding/metaverse.png', alt: 'Metaverse NFTs' },
+        // { src: '/icons/branding/web-30.png', alt: 'Web 3.0' },
       ] as InfoboxIcon[]
     },
 
