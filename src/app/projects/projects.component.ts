@@ -28,7 +28,7 @@ export class ProjectsComponent {
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://example.com/github-join',
       liveUrl: 'https://example.com/live-join',
-      imageUrl: '/assets/images/projects/join.png',
+      imageUrl: '/images/projects/ai-lex.png',
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://example.com/github-el-pollo-loco',
       liveUrl: 'https://example.com/live-el-pollo-loco',
-      imageUrl: '/assets/images/projects/el-pollo-loco.png',
+      imageUrl: '/images/projects/ai-lex.png',
     },
     {
       id: 3,
@@ -48,8 +48,12 @@ export class ProjectsComponent {
       technologies: ['Angular', 'Firebase', 'TypeScript'],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
-      imageUrl: '/assets/images/projects/da-bubble.png',
+      imageUrl: '/images/projects/ai-lex.png',
     },
   ];
+
+  selectedProject: Project | null = null; // Initialwert: null
+
+  constructor() {}
 
 }
