@@ -67,7 +67,17 @@
             } 
         }
     }
-  }
+}
+
+.project-preview {
+    margin-top: 32px;
+
+    img {
+        max-width: 10%;
+        border: 2px solid var(--accent-color);
+        border-radius: 8px;
+    }
+}
 
 
   
