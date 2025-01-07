@@ -1,48 +1,73 @@
-.projects {
-    padding: 32px;
+.projects-section-container {
+    padding: 48px 32px;
     background-color: var(--primary-color);
     color: var(--text-color);
-  
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // flex-direction: row-reverse;
+    flex-direction: row;
+    align-items: normal;
+    padding: 48px 32px;
+    gap: 64px;
+}
+
+.projects-text-area {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    h4 {
+        font-family: var(--font-family-second);
+        font-size: 24px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+    }
+
     h2 {
-      font-family: var(--font-family);
-      font-size: 36px;
-      color: var(--accent-color);
-    }
+        font-family: var(--font-family);
+        font-size: 64px;
+        color: var(--accent-color);
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-family: var(--font-family);
+        font-size: 24px;
+        letter-spacing: 4px;
+      }
   
-    p {
-      font-family: var(--font-family-second);
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-  
-    .project-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-  
-      .project-item {
-        padding: 16px;
-        border: 1px solid var(--accent-color);
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-  
-        &:hover {
-          background-color: var(--accent-color);
-          color: #fff;
+      p {
+        font-family: var(--font-family-second);
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ffffff;
+      }
+
+    .project-list-box {
+        display: flex; 
+        flex-direction: column; 
+        gap: 16px; 
+
+        .project-item {
+            padding: 16px; 
+            border: 1px solid var(--accent-color); 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+
+            &:hover { 
+            background-color: var(--accent-color); 
+            color: #fff; 
+            } 
         }
-      }
-    }
-  
-    .project-preview {
-      margin-top: 32px;
-  
-      img {
-        max-width: 100%;
-        border: 2px solid var(--accent-color);
-        border-radius: 8px;
-      }
     }
   }
+
+
   
