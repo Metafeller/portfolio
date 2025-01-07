@@ -81,7 +81,8 @@
             transition: background-color 0.3s ease; 
 
             &:hover { 
-            background-color: var(--accent-color); 
+            // background-color: var(--accent-color); 
+            background-color: rgba(0, 255, 174, 0.1);
             color: #fff; 
             } 
         }
