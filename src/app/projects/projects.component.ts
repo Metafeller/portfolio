@@ -25,7 +25,7 @@ export class ProjectsComponent {
       name: 'Join',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       githubUrl: 'https://example.com/github-join',
       liveUrl: 'https://example.com/live-join',
       imageUrl: '/images/projects/ai-lex.png',
@@ -45,7 +45,7 @@ export class ProjectsComponent {
       name: 'DA Bubble',
       description:
         'Slack clone app that revolutionizes team communication and collaboration with intuitive interfaces and real-time messaging.',
-      technologies: ['Angular', 'Firebase', 'TypeScript'],
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
       imageUrl: '/images/projects/ai-lex.png',
