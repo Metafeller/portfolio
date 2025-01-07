@@ -10,15 +10,15 @@
             </p>
 
             <div class="project-list-box">
-            <div
-                class="project-item"
-                *ngFor="let project of projects"
-                (mouseenter)="selectedProject = project"
-                (mouseleave)="selectedProject = null"
-            >
-                <h3>{{ project.name }}</h3>
-                <p>{{ project.technologies.join(' | ') }}</p>
-            </div>
+                <div
+                    class="project-item"
+                    *ngFor="let project of projects"
+                    (mouseenter)="selectedProject = project"
+                    (mouseleave)="selectedProject = null"
+                >
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.technologies.join(' | ') }}</p>
+                </div>
             </div>
         </div>
 
