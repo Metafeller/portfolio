@@ -1,26 +1,30 @@
 <section class="projects-section-container">
     <div class="projects-content">
+
         <!-- Featured Projects Area -->
-        <div class="projects-text-area">
+        <!-- <div class="projects-text-area">
             <h4 class="headline-desktop">Portfolio</h4>
             <h2>Featured Projects</h2>
             <p>
             Explore a selection of my work here - Interact with projects to see my skills
             in action.
-            </p>
+            </p>            
+        </div> -->
 
-            <div class="project-list-box">
-                <div
-                    class="project-item"
-                    *ngFor="let project of projects"
-                    (mouseenter)="selectedProject = project"
-                    (mouseleave)="selectedProject = null"
-                >
-                    <h3>{{ project.name }}</h3>
-                    <p>{{ project.technologies.join(' | ') }}</p>
-                </div>
+        <!-- Left Side: Project List -->
+        <div class="project-list-box">
+            <div
+                class="project-item"
+                *ngFor="let project of projects"
+                (mouseenter)="selectedProject = project"
+                (mouseleave)="selectedProject = null"
+            >
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.technologies.join(' | ') }}</p>
             </div>
         </div>
+
+        <!-- Right Side: Project Preview -->
 
         <div class="project-preview" *ngIf="selectedProject">
         <img [src]="selectedProject.imageUrl" [alt]="selectedProject.name" />

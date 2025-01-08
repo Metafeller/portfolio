@@ -6,37 +6,58 @@
 
 .projects-content {
     display: flex;
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
     justify-content: space-between;
     // flex-direction: row;
     align-items: flex-start;
     padding: 48px 32px;
-    gap: 64px;
+    // gap: 64px;
+    gap: 32px;
+}
 
-    .projects-text-area {
-    flex: 1 1 50%; /* Nimmt 50% der Breite ein */
+.project-list-box {
+    flex: 0 0 50%; /* Linke Seite nimmt 50% ein */
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px; 
+
+    .project-item {
+        padding: 16px; 
+        border: 1px solid var(--accent-color); 
+        border-radius: 8px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+
+        &:hover { 
+        // background-color: var(--accent-color); 
+        background-color: rgba(0, 255, 174, 0.1);
+        color: #fff; 
+        } 
     }
+}
 
-    .project-preview {
-        // margin-top: 32px;
-        flex: 1 1 50%; /* Nimmt 50% der Breite ein */
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
+.project-preview {
+    // margin-top: 32px;
+    flex: 0 0 50%; /* Rechte Seite nimmt 50% ein */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-        img {
-            max-width: 80%;
-            height: auto;
-            border: 2px solid var(--accent-color);
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+    img {
+        // max-width: 100%;
+        max-width: max-content;
+        height: 412px;
+        border: 2px solid var(--accent-color);
+        border-radius: 8px;
+        transition: transform 0.3s ease;
 
-            &:hover {
-                transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
-            }
+        &:hover {
+            transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
         }
     }
 }
+
+// Warte...
 
 .projects-text-area {
 
@@ -67,27 +88,12 @@
         line-height: 1.6;
         color: #ffffff;
       }
-
-    .project-list-box {
-        display: flex; 
-        flex-direction: column; 
-        gap: 16px; 
-
-        .project-item {
-            padding: 16px; 
-            border: 1px solid var(--accent-color); 
-            border-radius: 8px; 
-            cursor: pointer; 
-            transition: background-color 0.3s ease; 
-
-            &:hover { 
-            // background-color: var(--accent-color); 
-            background-color: rgba(0, 255, 174, 0.1);
-            color: #fff; 
-            } 
-        }
-    }
 }
+
+
+.projects-text-area {
+    flex: 1 1 50%; /* Nimmt 50% der Breite ein */
+    }
 
 
 
