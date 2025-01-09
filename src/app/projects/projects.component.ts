@@ -28,7 +28,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       githubUrl: 'https://example.com/github-join',
       liveUrl: 'https://example.com/live-join',
-      imageUrl: '/images/projects/ai-lex.png',
+      imageUrl: '/images/projects/frame-join-cms.png',
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://example.com/github-el-pollo-loco',
       liveUrl: 'https://example.com/live-el-pollo-loco',
-      imageUrl: '/images/projects/ai-lex.png',
+      imageUrl: '/images/projects/frame-pollo-loco.png',
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ export class ProjectsComponent {
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
-      imageUrl: '/images/projects/ai-lex.png',
+      imageUrl: '/images/projects/frame-da-bubble.png',
     },
   ];
 
