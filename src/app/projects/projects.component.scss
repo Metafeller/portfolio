@@ -19,6 +19,7 @@
     flex: 0 0 60%; /* Linke Seite nimmt 50% ein */
     display: flex; 
     flex-direction: column; 
+    padding: 48px;
     gap: 16px; 
 
     .project-item {
@@ -66,15 +67,16 @@
 
 .project-preview {
     // margin-top: 32px;
+    padding: 48px;
     flex: 0 0 40%; /* Rechte Seite nimmt 50% ein */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 
     img {
         // max-width: 100%;
         max-width: max-content;
-        height: 412px;
+        height: 506px;
         border: 2px solid var(--accent-color);
         border-radius: 24px;
         transition: transform 0.3s ease;
