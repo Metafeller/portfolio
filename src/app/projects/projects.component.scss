@@ -26,6 +26,9 @@
     gap: 16px; 
 
     .project-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 16px 48px; 
         border: 2px solid var(--accent-color); 
         border-radius: 24px; 
