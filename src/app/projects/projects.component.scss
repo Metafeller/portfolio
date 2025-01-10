@@ -93,6 +93,25 @@
         }
     }
 }
+  
+
+.arrow-icon {
+    display: inline-block;
+    margin-left: 8px;
+    color: var(--accent-color);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  .project-item:hover .arrow-icon {
+    opacity: 1;
+  }  
+
 
 // Warte...
 
