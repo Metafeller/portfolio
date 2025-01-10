@@ -32,7 +32,9 @@
                 (mouseleave)="selectedProject = null"
             >
                 <h3>{{ project.name }}</h3>
-                <p>{{ project.technologies.join(' | ') }}</p>
+                <!-- <p>{{ project.technologies.join(' | ') }}</p> -->
+                <p [innerHTML]="project.technologies | technologyPipe"></p>
+
             </div>
         </div>
 

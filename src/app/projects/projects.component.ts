@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TechnologyPipe } from '../pipes/technology-pipe.pipe';
 
 interface Project {
   id: number;
@@ -14,7 +15,7 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TechnologyPipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
