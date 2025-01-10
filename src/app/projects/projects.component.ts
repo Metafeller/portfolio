@@ -26,7 +26,7 @@ export class ProjectsComponent {
       name: 'Join',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      technologies: ['Firebase', 'HTML', 'CSS', 'JavaScript'],
       githubUrl: 'https://example.com/github-join',
       liveUrl: 'https://example.com/live-join',
       imageUrl: '/images/projects/frame-join-cms.png',
@@ -43,14 +43,24 @@ export class ProjectsComponent {
     },
     {
       id: 3,
-      name: 'DA Bubble',
+      name: '15K Portfolio',
       description:
-        'Slack clone app that revolutionizes team communication and collaboration with intuitive interfaces and real-time messaging.',
-      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+        'My personal 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work.',
+      technologies: ['Angular', 'Firebase', 'HTML', 'CSS', 'TypeScript'],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
       imageUrl: '/images/projects/frame-da-bubble.png',
     },
+    // {
+    //   id: 4,
+    //   name: 'DA Bubble',
+    //   description:
+    //     'Slack clone app that revolutionizes team communication and collaboration with intuitive interfaces and real-time messaging.',
+    //   technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+    //   githubUrl: 'https://example.com/github-da-bubble',
+    //   liveUrl: 'https://example.com/live-da-bubble',
+    //   imageUrl: '/images/projects/frame-da-bubble.png',
+    // },
   ];
 
   selectedProject: Project | null = null; // Initialwert: null
