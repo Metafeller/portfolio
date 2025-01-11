@@ -75,17 +75,22 @@
     position: relative; /* Wichtig für die absolute Positionierung des Backgrounds */
     // margin-top: 32px;
     // padding: 48px;
-    flex: 0 0 50%; /* Rechte Seite nimmt 50% ein */
+    flex: 0 0 40%; /* Rechte Seite nimmt 50% ein */
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
 
     .vector-background {
+        // display: flex;
+        // align-items: flex-start;
+        // justify-content: center;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 340px;
+        left: 150px;
         right: 0;
         bottom: 0;
+        height: 296px;
+        width: 512px;
         background-color: tomato;
         background: url('/vectors/img-bg-vector.svg') no-repeat center;
         background-size: cover;
