@@ -172,6 +172,61 @@
     }
 
 
+/* Media Queries und Responsiveness für verschiedene Bildschirmgrößen */
+
+/* Mobile Ansicht - bis 320px */
+//  Ab hier weiter...
+
+
+
+  // Mobil
+  @media screen and (max-width: 767px) {
+    .projects-content {
+      flex-direction: column;
+      align-items: center; /* Zentriert */
+      gap: 16px; /* Reduzierter Abstand */
+    }
+  
+    .project-list-box {
+      width: 100%; /* Volle Breite */
+      align-items: stretch;
+  
+      .project-item {
+        padding: 8px 16px;
+        font-size: 14px;
+        border-radius: 12px; /* Abgerundet für Mobil */
+      }
+  
+      h2 {
+        font-size: 32px; /* Reduzierte Schriftgröße */
+      }
+  
+      h3 {
+        font-size: 18px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+    }
+  
+    .project-preview {
+      flex: 1 1 auto;
+      text-align: center;
+  
+      .vector-background {
+        height: 200px;
+        width: 300px;
+        top: 80px; /* Position für Mobil */
+        left: 0; /* Zentriert */
+      }
+  
+      img {
+        max-width: 90%;
+        margin-top: 80px; /* Reduzierter Abstand */
+      }
+    }
+  }
 
 
   
