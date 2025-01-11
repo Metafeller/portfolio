@@ -72,6 +72,7 @@
 } 
 
 .project-preview {
+    position: relative; /* Wichtig für die absolute Positionierung des Backgrounds */
     // margin-top: 32px;
     // padding: 48px;
     flex: 0 0 50%; /* Rechte Seite nimmt 50% ein */
@@ -79,7 +80,21 @@
     align-items: flex-start;
     justify-content: flex-start;
 
+    .vector-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: tomato;
+        background: url('/vectors/img-bg-vector.svg') no-repeat center;
+        background-size: cover;
+        z-index: 0;
+        border-radius: 32px;
+      }
+
     img {
+        position: relative;
         margin-top: 235px;
         // max-width: 100%;
         max-width: 100%;
@@ -87,6 +102,7 @@
         // border: 2px solid var(--accent-color);
         border-radius: 32px;
         transition: transform 0.3s ease;
+        z-index: 1;
 
         &:hover {
             transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
