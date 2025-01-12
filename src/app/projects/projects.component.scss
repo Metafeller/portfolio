@@ -191,7 +191,7 @@
 
     .project-list-box {
         padding: 24px 16px;
-        // margin-top: 8px;
+        margin-top: 8px;
         width: 100%; /* Volle Breite */
         align-items: stretch;
 
@@ -228,6 +228,7 @@
         text-align: center;
 
         .vector-background {
+        display: none;
         height: 200px;
         width: 300px;
         top: 80px; /* Position für Mobil */
@@ -235,6 +236,7 @@
         }
 
         img {
+        display: none;
         max-width: 90%;
         margin-top: 80px; /* Reduzierter Abstand */
         }
