@@ -132,6 +132,7 @@
 }  
 
 .projects-text-area {
+    flex: 1 1 50%; /* Nimmt 50% der Breite ein */
 
     h4 {
         font-family: var(--font-family-second);
@@ -162,9 +163,9 @@
       }
 }
 
-.projects-text-area {
-    flex: 1 1 50%; /* Nimmt 50% der Breite ein */
-}
+// .projects-text-area {
+//     flex: 1 1 50%; /* Nimmt 50% der Breite ein */
+// }
 
 /* Media Queries und Responsiveness für verschiedene Bildschirmgrößen */
 
@@ -517,4 +518,82 @@
         }
     } 
 
+
+/* Mobile Tablet Ansicht - bis 1740px */
+@media (min-width: 1367px) and (max-width: 1740px) {
+    // .projects-section-container {
+    //     padding:40px 24px;
+    //     background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    // }
+    
+    .projects-content {
+        // padding: 48px 32px;
+        // flex-direction: column;
+        flex-direction: row-reverse;
+        align-items: center; /* Zentriert */
+        gap: 24px; /* Reduzierter Abstand */
+    }
+    
+        .project-list-box {
+            // flex: 0 0 55%; /* Linke Seite nimmt 50% ein */
+            flex-direction: column;
+            // padding: 32px;
+            margin-top: 8px;
+            width: 100%; /* Volle Breite */
+            align-items: stretch;
+            gap: 16px;
+    
+            .project-item {
+            // flex-direction: column;
+            padding: 24px;
+            margin-left: 8px;
+            // font-size: 14px;
+            // border-radius: 32px; /* Abgerundet für Mobil */
+            }
+    
+            // h2 {
+            // font-size: 56px; /* Reduzierte Schriftgröße */
+            // text-align: center;
+            // }
+    
+            // h3 {
+            // font-size: 24px;
+            // align-items: center;
+            // }
+    
+            // h4 {
+            // font-size: 24px;
+            // text-align: center;    
+            // }
+    
+            p {
+            font-size: 16px;
+            // text-align: center;
+            }
+        }
+    
+        .project-preview {
+            flex: 1 1 auto;
+            // text-align: center;
+            // flex: 0 0 45%; /* Rechte Seite nimmt 50% ein */
+    
+            .vector-background {
+            // display: none;
+            height: 280px;
+            width: 320px;
+            top: 280px; /* Position für Mobil */
+            left: 160px; /* Zentriert */
+            }
+    
+            img {
+            // display: none;
+            max-width: 90%;
+            // margin-top: 80px; /* Reduzierter Abstand */
+            }
+        }
+
+        .projects-text-area {
+            margin-left: 8px;
+        }
+    }
 
