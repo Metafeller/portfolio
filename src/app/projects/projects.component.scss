@@ -475,7 +475,7 @@
     
             .project-item {
             flex-direction: column;
-            padding: 40px;
+            padding: 32px;
             font-size: 14px;
             border-radius: 32px; /* Abgerundet für Mobil */
             }
@@ -522,36 +522,35 @@
     } 
 
 
-/* Mobile Tablet Ansicht - bis 1740px */
-@media (min-width: 1367px) and (max-width: 1740px) {
+// Special MEDIA QUERIES
+/* Nur Vectorgrafik beim Hovern - Mobile Tablet Ansicht - bis 1440px */
+
+@media (min-width: 1367px) and (max-width: 1440px) {
     // .projects-section-container {
     //     padding:40px 24px;
     //     background-size: contain; /* Verhindert abgeschnittene Bereiche */
     // }
     
     .projects-content {
-        // padding: 48px 32px;
+        // padding: 40px 24px;
         // flex-direction: column;
-        // flex-direction: row-reverse;
         align-items: center; /* Zentriert */
-        gap: 24px; /* Reduzierter Abstand */
+        // gap: 32px; /* Reduzierter Abstand */
     }
     
         .project-list-box {
-            // flex: 0 0 55%; /* Linke Seite nimmt 50% ein */
-            flex-direction: column;
-            // padding: 32px;
+            // padding: 40px 24px;
+            padding: 32px;
             margin-top: 8px;
             width: 100%; /* Volle Breite */
             align-items: stretch;
-            gap: 16px;
+            gap: 24px;
     
             .project-item {
-            // flex-direction: column;
-            padding: 24px;
-            margin-left: 8px;
-            // font-size: 14px;
-            // border-radius: 32px; /* Abgerundet für Mobil */
+            flex-direction: row;
+            padding: 32px;
+            font-size: 14px;
+            border-radius: 32px; /* Abgerundet für Mobil */
             }
     
             // h2 {
@@ -559,10 +558,10 @@
             // text-align: center;
             // }
     
-            // h3 {
-            // font-size: 24px;
+            h3 {
+            font-size: 21px;
             // align-items: center;
-            // }
+            }
     
             // h4 {
             // font-size: 24px;
@@ -577,15 +576,14 @@
     
         .project-preview {
             flex: 1 1 auto;
-            // text-align: center;
-            // flex: 0 0 45%; /* Rechte Seite nimmt 50% ein */
+            text-align: center;
     
             .vector-background {
             // display: none;
             height: 240px;
-            width: 300px;
-            top: 280px; /* Position für Mobil */
-            left: 120px; /* Zentriert */
+            width: 360px;
+            // top: 320px; /* Position für Mobil */
+            left: 60px; /* Zentriert */
             }
     
             img {
@@ -594,9 +592,76 @@
             // margin-top: 80px; /* Reduzierter Abstand */
             }
         }
+    } 
 
-        .projects-text-area {
-            margin-left: 8px;
+
+/* Nur Vectorgrafik beim Hovern - Mobile Tablet Ansicht - bis 1440px */
+@media (min-width: 1441px) and (max-width: 1540px) {
+    // .projects-section-container {
+    //     padding:40px 24px;
+    //     background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    // }
+    
+    .projects-content {
+        // padding: 40px 24px;
+        // flex-direction: column;
+        align-items: center; /* Zentriert */
+        // gap: 32px; /* Reduzierter Abstand */
+    }
+    
+        .project-list-box {
+            // padding: 40px 24px;
+            padding: 32px;
+            margin-top: 8px;
+            width: 100%; /* Volle Breite */
+            align-items: stretch;
+            gap: 24px;
+    
+            .project-item {
+            flex-direction: row;
+            padding: 32px;
+            font-size: 14px;
+            border-radius: 32px; /* Abgerundet für Mobil */
+            }
+    
+            // h2 {
+            // font-size: 56px; /* Reduzierte Schriftgröße */
+            // text-align: center;
+            // }
+    
+            h3 {
+            font-size: 21px;
+            // align-items: center;
+            }
+    
+            // h4 {
+            // font-size: 24px;
+            // text-align: center;    
+            // }
+    
+            p {
+            font-size: 16px;
+            // text-align: center;
+            }
+        }
+    
+        .project-preview {
+            flex: 1 1 auto;
+            text-align: center;
+    
+            .vector-background {
+            // display: none;
+            height: 260px;
+            width: 360px;
+            // top: 320px; /* Position für Mobil */
+            left: 90px; /* Zentriert */
+            }
+    
+            img {
+            // display: none;
+            max-width: 90%;
+            // margin-top: 80px; /* Reduzierter Abstand */
+            }
         }
     }
 
