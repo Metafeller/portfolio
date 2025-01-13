@@ -119,12 +119,12 @@ export class BrandingComponent {
     },
 
     {
-      name: 'AI-Influencer',
+      name: 'AI-Agency',
       icon: '/icons/branding/bot.png',
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'AI Influencer Identity',
-      infoboxDescription: 'Use AI to create digital influencers and amplify your brand\'s reach.',
+      infoboxTitle: 'AI-Agency',
+      infoboxDescription: 'Use AI to automate your business or create digital influencers to increase your brand\'s reach.',
       infoboxIcons: [] as InfoboxIcon[]
     },
 
