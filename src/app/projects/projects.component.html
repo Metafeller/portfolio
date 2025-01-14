@@ -1,15 +1,5 @@
 <section class="projects-section-container">
 
-    <!-- Featured Projects Area -->
-    <!-- <div class="projects-text-area">
-        <h4 class="headline-desktop">Portfolio</h4>
-        <h2>Featured Projects</h2>
-        <p>
-        Explore a selection of my work here - Interact with projects to see my skills
-        in action.
-        </p>            
-    </div> -->
-
     <div class="projects-content">
 
         <!-- Left Side: Project List -->
@@ -30,6 +20,7 @@
                 *ngFor="let project of projects"
                 (mouseenter)="selectedProject = project"
                 (mouseleave)="selectedProject = null"
+                (click)="openOverlay(project)"
             >
                 <h3>{{ project.name }}
                     <!-- <span class="arrow-icon" *ngIf="selectedProject === project">→</span> -->
@@ -58,5 +49,14 @@
         </div>
 
     </div>
+
+    <!-- Overlay -->
+    <div *ngIf="isOverlayOpen" id="project-overlay" (click)="closeOverlay()">
+        <div class="overlay-content" (click)="$event.stopPropagation()">
+            <h2>{{ selectedProject?.name }}</h2>
+            <p>{{ selectedProject?.description }}</p>
+            <button class="default-button" (click)="closeOverlay()">Close</button>
+        </div>
+    </div>
+
 </section>
-  

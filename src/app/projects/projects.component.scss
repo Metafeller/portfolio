@@ -167,9 +167,32 @@
       }
 }
 
-// .projects-text-area {
-//     flex: 1 1 50%; /* Nimmt 50% der Breite ein */
-// }
+
+// Overlay Area
+
+#project-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Halbtransparenter Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    .overlay-content {
+      background: var(--primary-color);
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      color: var(--text-color);
+      width: 90%;
+      max-width: 600px;
+    }
+  }
+
 
 /* Media Queries und Responsiveness für verschiedene Bildschirmgrößen */
 
