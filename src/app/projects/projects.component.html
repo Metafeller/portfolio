@@ -19,7 +19,7 @@
                 class="project-item"
                 *ngFor="let project of projects; let i = index"
                 (mouseenter)="selectedProject = project"
-                (mouseleave)="selectedProject = null"
+                
                 (click)="openOverlay(project, i)"
             >
                 <h3>{{ project.name }}

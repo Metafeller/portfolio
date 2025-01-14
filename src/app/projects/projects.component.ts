@@ -23,7 +23,7 @@ export class ProjectsComponent {
   projects: Project[] = [
     {
       id: 1,
-      name: 'Join',
+      name: 'Join CMS',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: ['Firebase', 'HTML', 'CSS', 'JavaScript'],
@@ -69,15 +69,37 @@ export class ProjectsComponent {
   selectedProjectIndex: number = 0;
 
   openOverlay(project: Project, index: number): void {
+    this.isOverlayOpen = true;
     this.selectedProjectIndex = index + 1; // Index plus 1, da Array bei 0 beginnt
     this.selectedProject = project;
-    this.isOverlayOpen = true;
   }
 
   closeOverlay(): void {
     this.isOverlayOpen = false;
     this.selectedProject = null;
   }
+
+  openGithub(): void {
+    if (this.selectedProject?.githubUrl) {
+      window.open(this.selectedProject.githubUrl, '_blank');
+    }
+  }
+  
+  openLiveTest(): void {
+    if (this.selectedProject?.liveUrl) {
+      window.open(this.selectedProject.liveUrl, '_blank');
+    }
+  }
+  
+  goToNextProject(): void {
+    // Logik fürs „nächste Projekt“
+    // Beispiel: next ID, oder cyclich
+    let nextIndex = (this.selectedProjectIndex % this.projects.length);
+    let nextProject = this.projects[nextIndex];
+    // Dann overlay neu öffnen
+    this.selectedProject = nextProject;
+    this.selectedProjectIndex = nextIndex + 1;
+  }  
 
   constructor() {}
 

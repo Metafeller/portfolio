@@ -168,7 +168,7 @@
 }
 
 
-// Overlay Area
+// Overlay Basis-Stile
 
 #project-overlay {
     position: fixed;
@@ -176,22 +176,119 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* Halbtransparenter Hintergrund */
+    background: rgba(0, 0, 0, 0.8); /* oder Blur-Effekt mit backdrop-filter */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
   
+    // .overlay-content {
+    //   background: var(--primary-color);
+    //   padding: 32px;
+    //   border-radius: 16px;
+    //   text-align: center;
+    //   color: var(--text-color);
+    //   width: 90%;
+    //   max-width: 600px;
+    // }
+
     .overlay-content {
-      background: var(--primary-color);
-      padding: 32px;
-      border-radius: 16px;
-      text-align: center;
-      color: var(--text-color);
-      width: 90%;
-      max-width: 600px;
+        position: relative;
+        width: 80%;
+        max-width: 1200px;
+        background: rgba(0, 255, 174, 0.1);
+        border: 2px solid var(--accent-color);
+        border-radius: 32px;
+        padding: 32px;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        /* optional: animation: fadeIn 0.3s ease; */
+      }
+  }
+
+
+//   Overlay-Inhalt-Stile (Linke Seite)
+  .overlay-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+    .project-number {
+      font-size: 80px; /* z. B. sehr groß laut Figma */
+      color: var(--accent-color);
+    }
+    .project-title {
+      font-size: 48px;
+      color: #ffffff;
+    }
+    .overlay-subtitle {
+      font-size: 20px;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .overlay-description {
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    .overlay-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+  
+      span {
+        color: var(--accent-color);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 4px 8px;
+        border-radius: 8px;
+      }
+    }
+    .overlay-buttons {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
     }
   }
+  
+
+//   Overlay-Inhalt-Stile (Rechte Seite)
+  .overlay-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    img {
+      max-width: 100%;
+      border-radius: 16px;
+    }
+  }
+
+
+//   Close-Button (oben rechts)
+.close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  
+    &:hover {
+      transform: scale(1.1);
+      color: var(--accent-color);
+    }
+  }
+  
+  
+
+  
 
 
 /* Media Queries und Responsiveness für verschiedene Bildschirmgrößen */
