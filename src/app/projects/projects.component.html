@@ -17,10 +17,10 @@
 
             <div
                 class="project-item"
-                *ngFor="let project of projects"
+                *ngFor="let project of projects; let i = index"
                 (mouseenter)="selectedProject = project"
                 (mouseleave)="selectedProject = null"
-                (click)="openOverlay(project)"
+                (click)="openOverlay(project, i)"
             >
                 <h3>{{ project.name }}
                     <!-- <span class="arrow-icon" *ngIf="selectedProject === project">→</span> -->
@@ -50,12 +50,59 @@
 
     </div>
 
-    <!-- Overlay -->
+
+    <!-- Projekt-Overlay -->
     <div *ngIf="isOverlayOpen" id="project-overlay" (click)="closeOverlay()">
         <div class="overlay-content" (click)="$event.stopPropagation()">
-            <h2>{{ selectedProject?.name }}</h2>
+
+        <!-- Schließen-Button oben rechts -->
+        <button class="close-button" (click)="closeOverlay()">
+            <span>X</span>
+        </button>
+
+            <!-- Linke Seite: Nummer + Projekt-Texte -->
+            <div class="overlay-left">
+                <h2 class="project-number">
+                {{ selectedProjectIndex | number:'2.0' }}
+                </h2>
+                <h3 class="project-title">{{ selectedProject?.name }}</h3>
+        
+                <h4 class="overlay-subtitle">What is this project about?</h4>
+                <p class="overlay-description">
+                {{ selectedProject?.description }}
+                </p>
+        
+                <!-- Technologie-Liste (später ggf. mit Icons) -->
+                <div class="overlay-tech">
+                <span *ngFor="let tech of selectedProject?.technologies">{{ tech }}</span>
+                </div>
+        
+                <!-- Buttons: GitHub, Live Test, Next Project -->
+                <div class="overlay-buttons">
+                <button class="primary-button" (click)="openGithub()">
+                    GitHub ↗
+                </button>
+                <button class="primary-button" (click)="openLiveTest()">
+                    Live Test ↗
+                </button>
+                <button class="next-button" (click)="goToNextProject()">
+                    Next project →
+                </button>
+                </div>
+            </div>
+
+            <!-- <h2>{{ selectedProject?.name }}</h2>
             <p>{{ selectedProject?.description }}</p>
-            <button class="default-button" (click)="closeOverlay()">Close</button>
+            <button class="default-button" (click)="closeOverlay()">Close</button> -->
+
+            <!-- Rechte Seite: Bild -->
+            <div class="overlay-right">
+                <img
+                [src]="selectedProject?.imageUrl"
+                [alt]="selectedProject?.name"
+                />
+            </div>
+
         </div>
     </div>
 

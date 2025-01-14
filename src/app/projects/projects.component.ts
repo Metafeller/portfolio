@@ -66,7 +66,10 @@ export class ProjectsComponent {
   selectedProject: Project | null = null; // Initialwert: null
   isOverlayOpen: boolean = false; // Steuerung der Sichtbarkeit des Overlays
 
-  openOverlay(project: Project): void {
+  selectedProjectIndex: number = 0;
+
+  openOverlay(project: Project, index: number): void {
+    this.selectedProjectIndex = index + 1; // Index plus 1, da Array bei 0 beginnt
     this.selectedProject = project;
     this.isOverlayOpen = true;
   }
