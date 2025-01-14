@@ -216,25 +216,30 @@
     gap: 16px;
   
     .project-number {
-      font-size: 80px; /* z. B. sehr groß laut Figma */
+      font-family: var(--font-family);  
+      font-size: 120px; /* z. B. sehr groß laut Figma */
       color: var(--accent-color);
     }
     .project-title {
+      font-family: var(--font-family);
       font-size: 48px;
       color: #ffffff;
     }
     .overlay-subtitle {
+      font-family: var(--font-family);
       font-size: 20px;
       color: var(--accent-color);
       text-transform: uppercase;
       letter-spacing: 2px;
     }
     .overlay-description {
+      font-family: var(--font-family-second);
       font-size: 18px;
       color: #ffffff;
       line-height: 1.6;
     }
     .overlay-tech {
+      font-family: var(--font-family);
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
