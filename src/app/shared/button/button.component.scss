@@ -50,6 +50,36 @@
 //   color: var(--accent-color);
 // }
 
+/* Example for a primary button – "aufbauend" auf default-button */
+.primary-button {
+  @extend .default-button; 
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    background-color: #ffffff;
+    color: var(--accent-color);
+    transform: translateY(-7px);
+  }
+}
+
+/* Example for a next button – minimaler Rand, Pfeil-Icon etc. */
+.next-button {
+  @extend .default-button;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  font-weight: bold;
+
+  &:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+  }
+}
+
+// Media Queries und Responsiveness
+
 /* Mobile Ansicht - bis 320px */
 @media (min-width: 240px) and (max-width: 320px) {
   .developer-section {
