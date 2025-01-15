@@ -92,27 +92,33 @@
                     <app-button buttonClass="primary-button" (click)="openLiveTest()">
                         Live Test ↗
                     </app-button>
+
+                    <!-- Next-Button: "Next Project", 
+                    z. B. ganz ohne Rahmen, aber mit *eingebautem* Symbol -->
+                    <app-button buttonClass="next-button" (click)="goToNextProject()">
+                        Next project →
+                    </app-button>
                 </div>
             </div>
 
-            <!-- <h2>{{ selectedProject?.name }}</h2>
-            <p>{{ selectedProject?.description }}</p>
-            <button class="default-button" (click)="closeOverlay()">Close</button> -->
-
             <!-- Rechte Seite: Bild -->
             <div class="overlay-right">
-                <img
-                [src]="selectedProject?.imageUrl"
-                [alt]="selectedProject?.name"
-                />
 
-                <!-- Next-Button: "Next Project", 
-                z. B. ganz ohne Rahmen, aber mit *eingebautem* Symbol -->
-                <app-button buttonClass="next-button" (click)="goToNextProject()">
-                    Next project →
-                </app-button>
+                    <img
+                    [src]="selectedProject?.imageUrl"
+                    [alt]="selectedProject?.name"
+                    />
+                
             </div>
+
+            <!-- <div class="overlay-footer">
+                <p>footer</p>
+            </div> -->
         </div>
+
+        <!-- <div class="overlay-footer">
+            <p>footer</p>
+        </div> -->
     </div>
 
 </section>
