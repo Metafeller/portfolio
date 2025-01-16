@@ -53,12 +53,16 @@
 /* Example for a primary button – "aufbauend" auf default-button */
 .primary-button {
   @extend .default-button; 
-  background-color: var(--accent-color);
+  // background-color: var(--accent-color);
+  background: transparent;
   color: #ffffff;
-  border: none;
+  // border: none;
+  border-color: #ffffff;
+  border: 1px solid;
 
   &:hover {
-    background-color: #ffffff;
+    background-color: transparent;
+    box-shadow: none;
     color: var(--accent-color);
     transform: translateY(-7px);
   }
@@ -73,7 +77,10 @@
   font-weight: bold;
 
   &:hover {
+    background-color: transparent;
+    border: none;
     color: #ffffff;
+    box-shadow: none;
     transform: translateX(4px);
   }
 }
