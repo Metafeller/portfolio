@@ -66,7 +66,7 @@ export class ProjectsComponent {
         { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
         { name: 'HTML', icon: '/icons/overlay/html.svg' },
         { name: 'CSS', icon: '/icons/overlay/css.svg' },
-        { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+        { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
       ],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
