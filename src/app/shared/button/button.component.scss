@@ -73,13 +73,13 @@
   @extend .default-button;
   background-color: transparent;
   border: none;
-  color: var(--accent-color);
+  color: #ffffff;
   font-weight: bold;
 
   &:hover {
     background-color: transparent;
     border: none;
-    color: #ffffff;
+    color: var(--accent-color);
     box-shadow: none;
     transform: translateX(4px);
   }
