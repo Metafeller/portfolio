@@ -115,7 +115,7 @@ export class ProjectsComponent {
   goToNextProject(): void {
     // Logik fürs „nächste Projekt“
     // Beispiel: next ID, oder cyclich
-    let nextIndex = (this.selectedProjectIndex % this.projects.length);
+    let nextIndex = (this.selectedProjectIndex % this.projects.length); // Modulo für Rundlauf
     let nextProject = this.projects[nextIndex];
     // Dann overlay neu öffnen
     this.selectedProject = nextProject;

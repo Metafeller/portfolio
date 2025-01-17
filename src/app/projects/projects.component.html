@@ -98,7 +98,7 @@
                 </div>
 
                     <!-- Overlay-Footer: Buttons unten -->
-                    <div class="overlay-footer">
+                    <div class="overlay-footer" (click)="$event.stopPropagation()">
                     <!-- Linke Seite: GitHub + LiveTest -->
                         <div class="overlay-footer-left">
                             <app-button buttonClass="primary-button" (click)="openGithub()">
