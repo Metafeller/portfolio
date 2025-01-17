@@ -3,11 +3,16 @@ import { Component } from '@angular/core';
 import { TechnologyPipe } from '../pipes/technology-pipe.pipe';
 import { ButtonComponent } from '../shared/button/button.component';
 
+interface Technology {
+  name: string; 
+  icon: string; // Pfad zum Icon
+}
+
 interface Project {
   id: number;
   name: string;
   description: string;
-  technologies: string[];
+  technologies: Technology[]; // Array von Technology
   githubUrl: string;
   liveUrl: string;
   imageUrl: string;
@@ -27,7 +32,12 @@ export class ProjectsComponent {
       name: 'Join CMS',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: ['Firebase', 'HTML', 'CSS', 'JavaScript'],
+      technologies: [
+        { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
+        { name: 'HTML', icon: '/icons/overlay/html.svg' },
+        { name: 'CSS', icon: '/icons/overlay/css.svg' },
+        { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+      ],
       githubUrl: 'https://example.com/github-join',
       liveUrl: 'https://example.com/live-join',
       imageUrl: '/images/projects/frame-join-cms.png',
@@ -37,7 +47,11 @@ export class ProjectsComponent {
       name: 'El Pollo Loco',
       description:
         'Jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight against the crazy hen.',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+        technologies: [
+          { name: 'HTML', icon: '/icons/overlay/html.svg' },
+          { name: 'CSS', icon: '/icons/overlay/css.svg' },
+          { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+        ],
       githubUrl: 'https://example.com/github-el-pollo-loco',
       liveUrl: 'https://example.com/live-el-pollo-loco',
       imageUrl: '/images/projects/frame-pollo-loco.png',
@@ -47,7 +61,13 @@ export class ProjectsComponent {
       name: '15K Portfolio',
       description:
         'My personal 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work.',
-      technologies: ['Angular', 'Firebase', 'HTML', 'CSS', 'TypeScript'],
+      technologies: [
+        { name: 'Angular', icon: '/icons/overlay/angular.svg' }, 
+        { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
+        { name: 'HTML', icon: '/icons/overlay/html.svg' },
+        { name: 'CSS', icon: '/icons/overlay/css.svg' },
+        { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+      ],
       githubUrl: 'https://example.com/github-da-bubble',
       liveUrl: 'https://example.com/live-da-bubble',
       imageUrl: '/images/projects/frame-da-bubble.png',

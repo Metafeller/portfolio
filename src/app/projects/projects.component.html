@@ -77,11 +77,14 @@
                         {{ selectedProject?.description }}
                         </p>
                 
-                        <!-- Technologie-Liste: mit Icon plus Text -->
+                        <!-- Technologie-Liste mit Icons -->
                         <div class="overlay-tech">
-                        <!-- Platzhalter für die Technologie Icons -->
-                        <span *ngFor="let tech of selectedProject?.technologies">{{ tech }}</span>
+                            <div class="tech-item" *ngFor="let tech of selectedProject?.technologies">
+                                <img [src]="tech.icon" [alt]="tech.name" class="tech-icon" />
+                                <span>{{ tech.name }}</span>
+                            </div>
                         </div>
+  
                     </div>
         
         

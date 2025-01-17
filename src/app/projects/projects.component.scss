@@ -71,6 +71,7 @@
         font-size: 18px;
         line-height: 1.6;
         color: #ffffff;
+        display: flex;
     }
 } 
 
@@ -274,7 +275,7 @@
   
       span {
         color: var(--accent-color);
-        background: rgba(255, 255, 255, 0.05);
+        // background: rgba(255, 255, 255, 0.05);
         padding: 4px 8px;
         border-radius: 8px;
       }
@@ -297,15 +298,16 @@
     .tech-item {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: rgba(255, 255, 255, 0.05);
       padding: 4px 8px;
       border-radius: 8px;
   
       img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         object-fit: contain; /* oder 'cover' je nach Icon */
+        padding: 2px;
       }
   
       span {
