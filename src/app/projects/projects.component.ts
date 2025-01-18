@@ -60,7 +60,7 @@ export class ProjectsComponent {
       id: 3,
       name: '15K Portfolio',
       description:
-        'My personal 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work.',
+        'My personal 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work. Every line of code is written by me.',
       technologies: [
         { name: 'Angular', icon: '/icons/overlay/angular.svg' }, 
         { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 

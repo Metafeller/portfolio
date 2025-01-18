@@ -101,6 +101,21 @@
     margin: 16px auto; /* Zentrieren mit Auto-Margin */
     margin-top: 32px;
   }
+
+  .primary-button {
+    margin-top: 8px;
+
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--accent-color);
+    transform: none;
+  }
+  }
+
+  .next-button {
+    margin-top: 8px;
+  }
 }
 
 /* Mobile Ansicht - bis 480px */
