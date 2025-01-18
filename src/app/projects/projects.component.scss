@@ -376,6 +376,7 @@
 
       @media (min-width: 240px) and (max-width: 320px) {
         margin-top: 16px;
+        max-width: 90%;
       }
 
     }
@@ -394,7 +395,7 @@
     @media (min-width: 240px) and (max-width: 320px) {
         flex-direction: column;
         justify-content: center;
-        padding: 0 16px;
+        padding: 0 8px;
         gap: 16px;
     }
   
@@ -1086,27 +1087,3 @@
     }
 
 }
-
-
-/* Responsive Anpassungen für Project-Overlay */
-
-/* Mobile Ansicht - bis 320px */
-@media (min-width: 240px) and (max-width: 320px) {
-  #project-overlay .overlay-container {
-    // padding: 16px;
-    // gap: 16px;
-  }
-
-  #project-overlay .overlay-content {
-    // flex-direction: column;
-  }
-  
-    #project-overlay .overlay-left {
-    }
-  
-    #project-overlay .overlay-right img {
-      max-width: 80%;
-    }
-  
-  }
-
