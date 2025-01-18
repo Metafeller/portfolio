@@ -210,6 +210,8 @@
 
         @media (min-width: 240px) and (max-width: 320px) {
             max-width: 90%;
+            padding: 16px 8px;
+            gap: 16px;
         }
 
         .overlay-content {
@@ -231,10 +233,10 @@
                 padding: 16px;
                 gap: 16px;
             }
-          }
+        }
     }
 
-  }
+}
 
 
 //   Overlay-Inhalt-Stile (Linke Seite)
@@ -340,11 +342,20 @@
         height: 24px;
         object-fit: contain; /* oder 'cover' je nach Icon */
         padding: 2px;
+
+        @media (min-width: 240px) and (max-width: 320px) {
+          width: 16px;
+          height: 16px;
+        }
       }
   
       span {
         color: var(--accent-color);
         font-size: 12px;
+
+        @media (min-width: 240px) and (max-width: 320px) {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -1082,26 +1093,15 @@
 /* Mobile Ansicht - bis 320px */
 @media (min-width: 240px) and (max-width: 320px) {
   #project-overlay .overlay-container {
-    padding: 16px;
-    gap: 16px;
+    // padding: 16px;
+    // gap: 16px;
   }
 
   #project-overlay .overlay-content {
-    flex-direction: column;
+    // flex-direction: column;
   }
   
     #project-overlay .overlay-left {
-  
-      .overlay-tech .tech-item {
-        img {
-          width: 16px;
-          height: 16px;
-        }
-  
-        span {
-          font-size: 12px;
-        }
-      }
     }
   
     #project-overlay .overlay-right img {
