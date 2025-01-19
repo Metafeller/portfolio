@@ -187,14 +187,14 @@
     @media (min-width: 240px) and (max-width: 320px) {
         flex-direction: column;
         max-width: fit-content;
-        padding: 16px;
+        padding: 24px;
         gap: 16px;
     }
 
     @media (min-width: 321px) and (max-width: 480px) {
         flex-direction: column;
         max-width: fit-content;
-        padding: 20px;
+        padding: 24px;
         gap: 16px;
     }
 
@@ -208,7 +208,14 @@
     @media (min-width: 768px) and (max-width: 1024px) {
         flex-direction: column;
         max-width: fit-content;
-        padding: 32px;
+        padding: 40px;
+        gap: 16px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1366px) {
+        flex-direction: column;
+        max-width: fit-content;
+        padding: 48px;
         gap: 16px;
     }
 
@@ -253,6 +260,12 @@
             gap: 16px;
         }
 
+        @media (min-width: 1025px) and (max-width: 1366px) {
+            max-width: 96%;
+            padding: 40px 24px;
+            gap: 16px;
+        }
+
         .overlay-content {
             position: relative;
             // width: 80%;
@@ -291,6 +304,12 @@
                 padding: 32px;
                 gap: 16px;
             }
+
+            @media (min-width: 1025px) and (max-width: 1366px) {
+                flex-direction: column;
+                padding: 40px;
+                gap: 16px;
+            }
         }
     }
 
@@ -319,6 +338,10 @@
     @media (min-width: 768px) and (max-width: 1024px) {
         text-align: center;
     }
+
+    @media (min-width: 1025px) and (max-width: 1366px) {
+        text-align: center;
+    }
   
     .project-number {
       font-family: var(--font-family);  
@@ -340,6 +363,10 @@
 
       @media (min-width: 768px) and (max-width: 1024px) {
         font-size: 72px;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        font-size: 80px;
       }
     }
 
@@ -368,6 +395,12 @@
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
         font-size: 32px;
         text-align: center;
         margin-top: 8px;
@@ -401,6 +434,10 @@
         font-size: 24px;
         margin: 8px;
       }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        font-size: 28px;
+      }
     }
 
     .overlay-description {
@@ -429,6 +466,11 @@
         font-size: 16px;
         margin: 0;
       }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        font-size: 16px;
+        margin: 0;
+      }
     }
 
     .overlay-tech {
@@ -451,6 +493,10 @@
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
+        display: none;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
         display: none;
       }
   
@@ -504,6 +550,11 @@
           width: 16px;
           height: 16px;
         }
+
+        @media (min-width: 1025px) and (max-width: 1366px) {
+          width: 16px;
+          height: 16px;
+        }
       }
   
       span {
@@ -524,6 +575,10 @@
 
         @media (min-width: 768px) and (max-width: 1024px) {
           font-size: 12px;
+        }
+
+        @media (min-width: 1025px) and (max-width: 1366px) {
+          font-size: 12px;  
         }
       }
     }
@@ -562,6 +617,11 @@
         margin-top: 20px;
         max-width: 100%;
       }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        margin-top: 24px;
+        max-width: 100%;
+      }
     }
   }
 
@@ -597,9 +657,16 @@
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         padding: 0 12px;
+        gap: 20px;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1366px) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 16px;
         gap: 20px;
     }
   
@@ -625,7 +692,12 @@
 
       @media (min-width: 768px) and (max-width: 1024px) {
         margin: 0;
-        gap: 24px;
+        gap: 32px;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
+        margin: 0;
+        gap: 40px;
       }
     }
   
@@ -651,6 +723,10 @@
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
+        margin: 0;
+      }
+
+      @media (min-width: 1025px) and (max-width: 1366px) {
         margin: 0;
       }
     }
