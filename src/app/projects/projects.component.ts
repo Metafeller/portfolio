@@ -63,7 +63,7 @@ export class ProjectsComponent {
         'My 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work. Every line of code is written by me.',
       technologies: [
         { name: 'Angular', icon: '/icons/overlay/angular.svg' }, 
-        { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
+        // { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
         { name: 'HTML', icon: '/icons/overlay/html.svg' },
         { name: 'CSS', icon: '/icons/overlay/css.svg' },
         { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
