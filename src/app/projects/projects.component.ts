@@ -68,7 +68,7 @@ export class ProjectsComponent {
         { name: 'CSS', icon: '/icons/overlay/css.svg' },
         { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
       ],
-      githubUrl: 'https://example.com/github-da-bubble',
+      githubUrl: 'https://github.com/Metafeller/portfolio',
       liveUrl: 'https://example.com/live-da-bubble',
       imageUrl: '/images/projects/frame-da-bubble.png',
     },
