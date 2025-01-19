@@ -122,6 +122,12 @@ export class ProjectsComponent {
     this.selectedProjectIndex = nextIndex + 1;
   }  
 
+  // Hier wird die Weiterleitung zu einer Unterseite/Subdomain umgesetzt
+  openMoreProjects(): void {
+    window.open('https://example.com/all-projects', '_blank'); // Link zu einer Beispiel-Seite
+  }
+
+
   constructor() {}
 
 }

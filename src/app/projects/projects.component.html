@@ -2,7 +2,7 @@
 
     <div class="projects-content">
 
-        <!-- Left Side: Project List -->
+        <!-- Right Side: Project List -->
         <div class="project-list-box">
 
             <!-- Featured Projects Area -->
@@ -39,10 +39,17 @@
                 </h3>
                 <p [innerHTML]="project.technologies | technologyPipe"></p>
             </div>
+
+            <!-- Hierkommt ein zusätzlicher Button der mich zu allen meinen Projekten führt -->
+            <div class="more-projects">
+                <app-button buttonClass="next-button" (click)="openMoreProjects()">
+                    More Projects ↗
+                </app-button>
+            </div>
+
         </div>
 
-        <!-- Right Side: Project Preview -->
-
+        <!-- Left Side: Project Preview -->
         <div class="project-preview" *ngIf="selectedProject">
             <div class="vector-background"></div>
             <img [src]="selectedProject.imageUrl" [alt]="selectedProject.name" />

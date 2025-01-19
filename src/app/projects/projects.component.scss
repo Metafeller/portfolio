@@ -73,6 +73,19 @@
         color: #ffffff;
         display: flex;
     }
+
+    .more-projects {
+        display: flex;
+        justify-content: center;
+      
+        .next-button {
+          font-size: 16px;
+      
+        //   &:hover {
+        //     background-color: #2EE59D;
+        //   }
+        }
+    }
 } 
 
 .project-preview {
@@ -442,7 +455,7 @@
 
     .overlay-description {
       font-family: var(--font-family-second);
-      font-size: 18px;
+      font-size: 17px;
       color: #ffffff;
       line-height: 1.6;
       margin: 16px;
