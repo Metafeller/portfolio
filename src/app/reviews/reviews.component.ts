@@ -27,27 +27,34 @@ export class ReviewsComponent {
 
   reviews: Review[] = [
     {
-      image: '/assets/images/reviewer1.jpg',
-      name: 'Sarah Malik',
+      image: '/images/team/marc-braun-github.jpg',
+      name: 'Marc Braun',
       position: 'Graphic Designer',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      rating: 4.5,
+      rating: 5.0,
     },
     {
-      image: '/assets/images/reviewer2.jpg',
+      image: '/images/team/lyonel-berzen-github.png',
       name: 'John Smith',
       position: 'Frontend Developer',
       text: 'John was an excellent colleague to work with.',
       rating: 5.0,
     },
     {
-      image: '/assets/images/reviewer3.jpg',
-      name: 'Emily Taylor',
+      image: '/images/team/fabion-latifi-github.jpg',
+      name: 'Sarah Malik',
       position: 'Team Manager',
       text: 'She is highly skilled and brings great energy to the team.',
-      rating: 4.0,
+      rating: 4.5,
     },
     // Weitere Platzhalter-Reviews
+    // {
+    //   image: '/assets/images/reviewer3.jpg',
+    //   name: 'Sarah Malik',
+    //   position: 'Team Manager',
+    //   text: 'She is highly skilled and brings great energy to the team.',
+    //   rating: 4.0,
+    // },
   ];
 
   currentIndex = 0;
