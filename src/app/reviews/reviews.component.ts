@@ -1,12 +1,80 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+
+
+
+interface Review {
+  image: string;
+  name: string;
+  position: string;
+  text: string;
+  rating: number; // z. B. 4.5
+}
 
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './reviews.component.html',
-  styleUrl: './reviews.component.scss'
+  styleUrl: './reviews.component.scss',
 })
 export class ReviewsComponent {
 
+  faStar = faStar;
+  faStarHalfAlt = faStarHalfAlt;
+
+  reviews: Review[] = [
+    {
+      image: '/assets/images/reviewer1.jpg',
+      name: 'Sarah Malik',
+      position: 'Graphic Designer',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      rating: 4.5,
+    },
+    {
+      image: '/assets/images/reviewer2.jpg',
+      name: 'John Smith',
+      position: 'Frontend Developer',
+      text: 'John was an excellent colleague to work with.',
+      rating: 5.0,
+    },
+    {
+      image: '/assets/images/reviewer3.jpg',
+      name: 'Emily Taylor',
+      position: 'Team Manager',
+      text: 'She is highly skilled and brings great energy to the team.',
+      rating: 4.0,
+    },
+    // Weitere Platzhalter-Reviews
+  ];
+
+  currentIndex = 0;
+
+  get currentTransform(): string {
+    return `translateX(-${this.currentIndex * 100}%)`;
+  }
+
+  goToPreviousReview(): void {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.reviews.length) % this.reviews.length;
+  }
+
+  goToNextReview(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
+  }
+
+  navigateToReview(index: number): void {
+    this.currentIndex = index;
+  }
+
+  getStarArray(rating: number): { full: boolean }[] {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push({ full: rating >= i });
+    }
+    return stars;
+  }
 }
+
