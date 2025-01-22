@@ -48,13 +48,20 @@ export class ReviewsComponent {
       rating: 4.5,
     },
     // Weitere Platzhalter-Reviews
-    // {
-    //   image: '/assets/images/reviewer3.jpg',
-    //   name: 'Sarah Malik',
-    //   position: 'Team Manager',
-    //   text: 'She is highly skilled and brings great energy to the team.',
-    //   rating: 4.0,
-    // },
+    {
+      image: '/images/team/fabion-latifi-github.jpg',
+      name: 'Anna Fritz',
+      position: 'Team Manager',
+      text: 'She is highly skilled and brings great energy to the team.',
+      rating: 4.0,
+    },
+    {
+      image: '/images/team/fabion-latifi-github.jpg',
+      name: 'Nina Blockhaus',
+      position: 'Team Manager',
+      text: 'She is highly skilled and brings great energy to the team.',
+      rating: 4.0,
+    },
   ];
 
   currentIndex = 0;
