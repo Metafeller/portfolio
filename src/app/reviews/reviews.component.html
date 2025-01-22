@@ -4,15 +4,12 @@
     
     <!-- Slider Wrapper -->
     <div class="slider-wrapper">
-      <!-- Left Arrow -->
-      <button class="arrow left-arrow" (click)="goToPreviousReview()">
-        <span>&larr;</span>
-      </button>
-  
+
       <!-- Review Cards -->
       <div class="reviews-cards" [style.transform]="currentTransform">
         <div class="review-card" *ngFor="let review of reviews">
           <div class="review-card-content">
+
             <!-- Profile Picture -->
             <div class="profile-pic-container">
               <img [src]="review.image" alt="{{review.name}}" class="profile-pic" />
@@ -31,23 +28,33 @@
             <div class="star-rating">
             <fa-icon [icon]="faStar" *ngFor="let star of getStarArray(review.rating)"></fa-icon>
             </div>
+
           </div>
         </div>
       </div>
-  
-      <!-- Right Arrow -->
-      <button class="arrow right-arrow" (click)="goToNextReview()">
-        <span>&rarr;</span>
-      </button>
     </div>
   
     <!-- Miniature Images for Navigation -->
     <div class="miniature-navigation">
+
+    <!-- Left Arrow -->
+    <button class="arrow left-arrow" (click)="goToPreviousReview()">
+    <!-- <span>&larr;</span> --> 
+    <img src="/icons/general/arrow-left-hover.svg" alt="Previous" />
+    </button>
+
       <div class="miniature" *ngFor="let review of reviews; let i = index"
            [class.active]="i === currentIndex"
            (click)="navigateToReview(i)">
         <img [src]="review.image" alt="{{review.name}}" class="miniature-img" />
       </div>
+
+    <!-- Right Arrow -->
+    <button class="arrow right-arrow" (click)="goToNextReview()">
+    <!-- <span>&rarr;</span> -->
+    <img src="/icons/general/arrow-right-hover.svg" alt="Next" />
+    </button>
+
     </div>
   </div>
   
