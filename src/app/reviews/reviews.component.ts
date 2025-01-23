@@ -67,7 +67,7 @@ export class ReviewsComponent {
   currentIndex = 0;
 
   get currentTransform(): string {
-    return `translateX(-${this.currentIndex * 100}%)`;
+    return `translateX(-${this.currentIndex * (100 / this.reviews.length)}%)`;
   }
 
   goToPreviousReview(): void {
@@ -83,6 +83,10 @@ export class ReviewsComponent {
     this.currentIndex = index;
   }
 
+  isActive(index: number): boolean {
+    return this.currentIndex === index;
+  }
+
   getStarArray(rating: number): { full: boolean }[] {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -90,5 +94,13 @@ export class ReviewsComponent {
     }
     return stars;
   }
+
+  getClassesForCard(index: number): string {
+    if (index === this.currentIndex) {
+      return 'review-card active';
+    }
+    return 'review-card inactive';
+  }
+  
 }
 

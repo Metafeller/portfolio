@@ -14,16 +14,18 @@
       position: relative;
       display: flex;
       align-items: center;
-      overflow: hidden;
+    //   overflow: hidden;
   
       .reviews-cards {
         display: flex;
+        justify-content: center;
+        align-items: center;
         transition: transform 0.5s ease;
       }
     }  
 
     .review-card {
-        flex: 0 0 100%;
+        flex: 0 0 30%;
         padding: 32px;
         background-color: rgba(0, 255, 174, 0.1);
         border-radius: 16px;
@@ -31,6 +33,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+
+        &.active {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
+            z-index: 2;
+        }
+
+        &.inactive {
+            filter: blur(5px);
+            opacity: 0.6;
+            transform: scale(0.9);
+        }
   
         .profile-pic-container {
           position: relative;
@@ -49,7 +64,12 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: var(--accent-color);
+            // background: var(--accent-color);
+            background: linear-gradient(
+            135deg,
+            var(--accent-color),
+            rgba(0, 255, 174, 0.7)
+            );
             top: -10px;
             left: -10px;
           }
@@ -86,19 +106,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 16px;
-        position: relative;
-  
-      //   .arrow {
-      //     background: none;
-      //     border: none;
-      //     color: var(--accent-color);
-      //     font-size: 24px;
-      //     cursor: pointer;
-      //     z-index: 1;
-      //     &:hover {
-      //       transform: scale(1.2);
-      //     }
-      //   }
+        // position: relative;
     
       .arrow {
         background: none;
