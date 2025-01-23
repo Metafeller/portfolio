@@ -18,96 +18,92 @@
   
       .reviews-cards {
         display: flex;
-        justify-content: center;
-        align-items: center;
         transition: transform 0.5s ease;
-      }
-    }  
-
-    .review-card {
-        flex: 0 0 30%;
-        padding: 32px;
-        background-color: rgba(0, 255, 174, 0.1);
-        border-radius: 16px;
-        margin: 0 16px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-
-        &.active {
+  
+        .review-card {
+          flex: 0 0 33.33%; // Jede Karte nimmt 1/3 des Containers ein
+          padding: 32px;
+          background-color: rgba(0, 255, 174, 0.1);
+          border-radius: 16px;
+          margin: 0 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  
+          &.active {
             transform: scale(1.1);
             box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
             z-index: 2;
-        }
-
-        &.inactive {
+          }
+  
+          &.inactive {
             filter: blur(5px);
             opacity: 0.6;
             transform: scale(0.9);
-        }
+          }
   
-        .profile-pic-container {
-          position: relative;
-  
-          .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 4px solid var(--accent-color);
+          .profile-pic-container {
             position: relative;
-            z-index: 2;
+  
+            .profile-pic {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              border: 4px solid var(--accent-color);
+              position: relative;
+              z-index: 2;
+            }
+  
+            .profile-pic-background {
+              position: absolute;
+              width: 120px;
+              height: 120px;
+              border-radius: 50%;
+              background: linear-gradient(
+                135deg,
+                var(--accent-color),
+                rgba(0, 255, 174, 0.7)
+              );
+              top: -10px;
+              left: -10px;
+            }
           }
   
-          .profile-pic-background {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            // background: var(--accent-color);
-            background: linear-gradient(
-            135deg,
-            var(--accent-color),
-            rgba(0, 255, 174, 0.7)
-            );
-            top: -10px;
-            left: -10px;
+          .review-text {
+            margin-top: 16px;
+            text-align: center;
+  
+            blockquote {
+              font-size: 16px;
+              font-style: italic;
+            }
+  
+            .review-author {
+              margin-top: 8px;
+              font-size: 14px;
+              color: var(--accent-color);
+            }
+          }
+  
+          .star-rating {
+            margin-top: 16px;
+  
+            fa-icon {
+              color: gold;
+              margin: 0 2px;
+            }
           }
         }
-  
-        .review-text {
-          margin-top: 16px;
-          text-align: center;
-  
-          blockquote {
-            font-size: 16px;
-            font-style: italic;
-          }
-  
-          .review-author {
-            margin-top: 8px;
-            font-size: 14px;
-            color: var(--accent-color);
-          }
-        }
-  
-        .star-rating {
-          margin-top: 16px;
-  
-          fa-icon {
-            color: gold;
-            margin: 0 2px;
-          }
-        }
+      }
     }
-
+  
     .miniature-navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 16px;
-        // position: relative;
-    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 16px;
+  
       .arrow {
         background: none;
         border: none;
@@ -119,46 +115,42 @@
         justify-content: center;
         width: 40px;
         height: 40px;
-        
-            img {
-                width: 100%;
-                height: auto;
-                // filter: invert(1);
-            }
-
-            &:hover img {
-                transform: scale(1.1);
-                transition: transform 0.3s ease;
-            }
-        }   
-       
-        .miniature {
-          width: 40px;
-          height: 40px;
-          margin: 0 8px;
-          cursor: pointer;
-          border-radius: 50%;
-          overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+  
+        &:hover img {
+          transform: scale(1.1);
           transition: transform 0.3s ease;
-    
-          &.active {
-            transform: scale(1.2);
-            border: 2px solid var(--accent-color);
-          }
-    
-          &:hover {
-            transform: scale(1.1);
-          }
-    
-          .miniature-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
         }
       }
-
-}
   
-    
+      .miniature {
+        width: 40px;
+        height: 40px;
+        margin: 0 8px;
+        cursor: pointer;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+  
+        &.active {
+          transform: scale(1.2);
+          border: 2px solid var(--accent-color);
+        }
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+  
+        .miniature-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
   

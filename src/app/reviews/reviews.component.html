@@ -7,17 +7,15 @@
       <!-- Review Cards -->
       <div class="reviews-cards" [style.transform]="currentTransform">
         <div
-          [class]="getClassesForCard(i)"
+          class="review-card"
           *ngFor="let review of reviews; let i = index"
+          [class.active]="isActive(i)"
+          [class.inactive]="!isActive(i)"
         >
           <div class="review-card-content">
             <!-- Profile Picture -->
             <div class="profile-pic-container">
-              <img
-                [src]="review.image"
-                alt="{{ review.name }}"
-                class="profile-pic"
-              />
+              <img [src]="review.image" alt="{{ review.name }}" class="profile-pic" />
               <div class="profile-pic-background"></div>
             </div>
   
@@ -43,7 +41,7 @@
       </div>
     </div>
   
-    <!-- Miniature Images for Navigation -->
+    <!-- Miniature Navigation -->
     <div class="miniature-navigation">
       <!-- Left Arrow -->
       <button class="arrow left-arrow" (click)="goToPreviousReview()">
@@ -53,7 +51,7 @@
       <div
         class="miniature"
         *ngFor="let review of reviews; let i = index"
-        [class.active]="i === currentIndex"
+        [class.active]="isActive(i)"
         (click)="navigateToReview(i)"
       >
         <img [src]="review.image" alt="{{ review.name }}" class="miniature-img" />
