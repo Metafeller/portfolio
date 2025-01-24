@@ -67,7 +67,7 @@ export class ReviewsComponent {
   currentIndex = 0;
 
   get currentTransform(): string {
-    const cardWidth = 33.33; // Breite jeder Karte in Prozent
+    const cardWidth = 0; // Breite jeder Karte in Prozent
     const offset = (100 - cardWidth) / 2; // Zentrieren der aktiven Karte
     return `translateX(-${this.currentIndex * cardWidth - offset}%)`;
   }  
