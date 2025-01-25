@@ -8,7 +8,7 @@
       <div class="reviews-cards" [style.transform]="currentTransform">
         <div
           class="review-card"
-          *ngFor="let review of reviews; let i = index"
+          *ngFor="let review of reviews; let i = index; trackBy: trackByIndex"
           [class.active]="isActive(i)"
           [class.inactive]="!isActive(i)"
         >

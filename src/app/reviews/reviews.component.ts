@@ -108,6 +108,10 @@ export class ReviewsComponent {
     }
     return 'review-card inactive';
   }
+
+  trackByIndex(index: number, review: Review): number {
+    return index;
+  }  
   
 }
 
