@@ -109,6 +109,7 @@ export class ReviewsComponent {
     return 'review-card inactive';
   }
 
+  // um die Performance zu verbessern, wenn es mehrere Bewertungen gibt
   trackByIndex(index: number, review: Review): number {
     return index;
   }  

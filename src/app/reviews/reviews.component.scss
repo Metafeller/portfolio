@@ -27,6 +27,7 @@
         display: flex;
         // justify-content: center;
         transition: transform 0.5s ease;
+        // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         width: 56%;
 
         .review-card-content {
@@ -37,7 +38,8 @@
         .review-card {
           flex: 0 0 90%; // Jede Karte nimmt 100% des Viewports ein
         //   opacity: 0.5; // Unscharfe Karten im Hintergrund
-          transition: transform 0.5s ease, opacity 0.5s ease;
+        //   transition: transform 0.5s ease, opacity 0.5s ease;
+          transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
           transform: scale(0.8);
           padding: 32px;
           background-color: rgba(0, 255, 174, 0.1);
