@@ -125,7 +125,8 @@
             // align-items: end;
   
             fa-icon {
-              color: gold;
+            //   color: gold;
+              color: var(--gold-color, gold);
               margin: 0 2px;
             }
           }
@@ -137,7 +138,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 16px;
+      margin-top: 32px;
   
       .arrow {
         background: none;

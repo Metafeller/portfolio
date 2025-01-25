@@ -1,11 +1,11 @@
-<div class="reviews-section">
+<div class="reviews-section" role="region" aria-label="Testimonials">
     <!-- Section Headline -->
     <h2 class="section-title">What my colleagues say about me</h2>
   
     <!-- Slider Wrapper -->
-    <div class="slider-wrapper">
+    <div class="slider-wrapper" role="region" aria-label="Testimonials Slider">
       <!-- Review Cards -->
-      <div class="reviews-cards" [style.transform]="currentTransform">
+      <div class="reviews-cards" [style.transform]="currentTransform" aria-live="polite">
         <div
           class="review-card"
           *ngFor="let review of reviews; let i = index; trackBy: trackByIndex"
@@ -52,7 +52,7 @@
     <!-- Miniature Navigation -->
     <div class="miniature-navigation">
       <!-- Left Arrow -->
-      <button class="arrow left-arrow" (click)="goToPreviousReview()">
+      <button class="arrow left-arrow" (click)="goToPreviousReview()" aria-label="Previous Review">
         <img src="/icons/general/arrow-left-hover.svg" alt="Previous" />
       </button>
   
@@ -66,7 +66,7 @@
       </div>
   
       <!-- Right Arrow -->
-      <button class="arrow right-arrow" (click)="goToNextReview()">
+      <button class="arrow right-arrow" (click)="goToNextReview()" aria-label="Previous Review">
         <img src="/icons/general/arrow-right-hover.svg" alt="Next" />
       </button>
     </div>
