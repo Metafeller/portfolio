@@ -25,17 +25,25 @@
                 {{ review.text }}
               </blockquote>
               <p class="review-author">
-                {{ review.name }} - {{ review.position }}
+                {{ review.name }} &#11089; {{ review.position }}
               </p>
+
+              <!-- Star Rating -->
+            <div class="star-rating">
+                <fa-icon
+                  [icon]="faStar"
+                  *ngFor="let star of getStarArray(review.rating)"
+                ></fa-icon>
+              </div>
             </div>
   
             <!-- Star Rating -->
-            <div class="star-rating">
+            <!-- <div class="star-rating">
               <fa-icon
                 [icon]="faStar"
                 *ngFor="let star of getStarArray(review.rating)"
               ></fa-icon>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
