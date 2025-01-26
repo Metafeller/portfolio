@@ -43,7 +43,7 @@
           transform: scale(0.8);
           padding: 32px;
           background-color: rgba(0, 255, 174, 0.1);
-          border-radius: 16px;
+          border-radius: 32px;
           border: double;
           border-color: var(--accent-color);
           margin: 0 16px;
@@ -73,24 +73,37 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
+            padding: 16px;
   
             .profile-pic {
               width: 120px;
               height: 120px;
               border-radius: 50%;
               border: 4px solid var(--accent-color);
+              box-shadow: 3px 5px 12px 8px rgba(18, 53, 41, 0.5);
               position: absolute;
               z-index: 2;
             }
   
             .profile-pic-background {
               position: relative;
+            //   position: absolute;
               display: flex;
               justify-content: center;
-              flex-direction: column;
+            //   flex-direction: column;
+              align-items: center;
               width: 160px;
               height: 160px;
-              border-radius: 50%;
+              top: -20px;
+              left: -20px;
+              z-index: 1;
+              background-image: url('/vectors/img-bg-vector.svg');
+              background-size: cover;
+              background-repeat: no-repeat;
+              border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+              transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+              opacity: 0.8;  
+
               background: linear-gradient(
                 135deg,
                 var(--accent-color),
@@ -99,6 +112,13 @@
               top: -10px;
               left: -10px;
             }
+
+            &:hover {
+                transform: scale(1.1); /* Effekt beim Hover */
+                // transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                transition: transform 0.5s ease, opacity 0.5s ease;
+                opacity: 1;
+              }
           }
   
           .review-text {
@@ -139,6 +159,7 @@
       justify-content: center;
       align-items: center;
       margin-top: 32px;
+      gap: 4px;
   
       .arrow {
         background: none;
@@ -178,6 +199,8 @@
         &.active {
           transform: scale(1.2);
           border: 2px solid var(--accent-color);
+        //   box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
+          box-shadow: 0px 0px 8px 6px rgba(0, 255, 174, 0.5);
         }
   
         &:hover {
