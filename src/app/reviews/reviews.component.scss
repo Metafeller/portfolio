@@ -26,7 +26,8 @@
       .reviews-cards {
         display: flex;
         // justify-content: center;
-        transition: transform 0.5s ease;
+        // transition: transform 0.5s ease;
+        transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
         // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         width: 56%;
 
@@ -57,7 +58,8 @@
             opacity: 1;
             transform: scale(1);
             // transform: translateX(33.325%);
-            box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
+            // box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
+            box-shadow: 0 12px 24px rgba(0, 255, 174, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 2;
           }
   
@@ -114,9 +116,9 @@
             }
 
             &:hover {
-                transform: scale(1.1); /* Effekt beim Hover */
-                // transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                transition: transform 0.5s ease, opacity 0.5s ease;
+                transform: scale(1.2); /* Leichte Vergrößerung beim Hover */
+                filter: brightness(1.1); /* Heller beim Hover */
+                transition: transform 0.4s ease, filter 0.4s ease;
                 opacity: 1;
               }
           }
