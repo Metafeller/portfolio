@@ -55,7 +55,7 @@ export class ReviewsComponent {
     {
       image: '/images/team/marc-braun-style.png',
       name: 'Marc Braun II',
-      position: 'UI/UX Designer with 10 years of experience',
+      position: 'UI/UX Designer',
       text: 'Ty has an extraordinary ability to maintain an overview and act with a goal-oriented approach. Even in crisis situations, he remains calm and solution-oriented. His professional approach and wisdom, especially at such a young age, have deeply impressed me. Tayfun also demonstrates a strong capacity for self-reflection and continuous improvement. I look forward to executing more projects with Tayfun in the future and am convinced that his skills and personality will enrich any team.',
       rating: 5.0,
     },
