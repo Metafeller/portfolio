@@ -6,6 +6,12 @@
     max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
+
+    /* Mobile Ansicht - bis 320px */
+    @media (min-width: 240px) and (max-width: 320px) {
+        padding: 16px 8px;
+        background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
   
     .section-title {
       font-family: var(--font-family);
@@ -22,6 +28,10 @@
       align-items: center;
       overflow: hidden;
       padding: 48px 32px;
+
+      @media (min-width: 240px) and (max-width: 320px) {
+        padding: 0px 0px;
+      }
   
       .reviews-cards {
         display: flex;
@@ -31,9 +41,18 @@
         // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         width: 56%;
 
+        @media (min-width: 240px) and (max-width: 320px) {
+          width: 100%;
+          padding: 24px 16px;
+        }
+
         .review-card-content {
           display: flex;
           flex-direction: row;
+
+          @media (min-width: 240px) and (max-width: 320px) {
+            padding: 24px 16px;
+          }
         }
   
         .review-card {
@@ -54,6 +73,10 @@
           align-items: center;
         //   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   
+        @media (min-width: 240px) and (max-width: 320px) {
+          padding: 24px 16px;
+        }
+
           &.active {
             opacity: 1;
             transform: scale(1);
@@ -61,6 +84,10 @@
             // box-shadow: 0 8px 16px rgba(0, 255, 174, 0.5);
             box-shadow: 0 12px 24px rgba(0, 255, 174, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 2;
+
+            @media (min-width: 240px) and (max-width: 320px) {
+              max-width: fit-content;
+            }
           }
   
           &.inactive {
@@ -76,6 +103,10 @@
             justify-content: center;
             flex-direction: column;
             padding: 16px;
+
+            @media (min-width: 240px) and (max-width: 320px) {
+              position: absolute;
+            }
   
             .profile-pic {
               width: 120px;
@@ -144,6 +175,12 @@
             blockquote {
               font-size: 16px;
               font-style: italic;
+
+              @media (min-width: 240px) and (max-width: 320px) {
+                font-size: 12px;
+                padding: 0px 0px;
+                margin: 0;
+              }
             }
   
             .review-author {
@@ -230,3 +267,8 @@
       }
     }
   }
+
+
+
+
+// Breakpoints Media Queries Responsiveness
