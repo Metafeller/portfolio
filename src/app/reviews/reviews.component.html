@@ -22,11 +22,16 @@
             <!-- Review Text -->
             <div class="review-text">
               <blockquote>
-                {{ review.text }}
+                {{ showFullText === i ? review.text : review.text | slice:0:100 }}...
               </blockquote>
               <p class="review-author">
                 {{ review.name }} &#11089; {{ review.position }}
               </p>
+              <!-- "Read More" Option -->
+              <span *ngIf="review.text.length > 100 && showFullText !== i" class="read-more" (click)="expandText(i)">
+                Read More
+              </span>
+              <span *ngIf="showFullText === i" class="read-more" (click)="collapseText()">Read Less</span>
 
               <!-- Star Rating -->
             <div class="star-rating">
@@ -55,6 +60,15 @@
       <button class="arrow left-arrow" (click)="goToPreviousReview()" aria-label="Previous Review">
         <img src="/icons/general/arrow-left-hover.svg" alt="Previous" />
       </button>
+
+    <!-- Dots Navigation -->
+    <div class="dots-navigation" *ngIf="isMobileView">
+      <span
+        *ngFor="let review of reviews; let i = index"
+        [class.active]="isActive(i)"
+        (click)="navigateToReview(i)"
+      ></span>
+    </div>
   
       <div
         class="miniature"

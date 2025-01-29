@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
+import { WindowService } from '../window.service';
 
 
 
@@ -24,6 +25,9 @@ export class ReviewsComponent {
 
   faStar = faStar;
   faStarHalfAlt = faStarHalfAlt;
+
+  // showFullText: number | null = null; // Track the index of the expanded text
+  // isMobileView = false; // Responsive check for viewports
 
   reviews: Review[] = [
     {
@@ -72,9 +76,32 @@ export class ReviewsComponent {
   ];
 
   currentIndex = 0;
+  showFullText: number | null = null; // Track the index of the expanded text
+  isMobileView = false; // Responsive check for viewports
+
+  constructor(
+    private windowService: WindowService, 
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.checkViewport();
+  }
+
+  @HostListener('window:resize')
+  checkViewport() {
+    // this.isMobileView = window.innerWidth <= 480;
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobileView = this.windowService.isMobile();
+    }
+  }
+
+  // get currentTransform(): string {
+  //   return `translateX(calc(-100% * ${this.currentIndex}))`;
+  // }
 
   get currentTransform(): string {
-    return `translateX(calc(-100% * ${this.currentIndex}))`;
+    return this.isMobileView
+      ? `translateX(calc(-103% * ${this.currentIndex}))`
+      : `translateX(calc(-100% * ${this.currentIndex}))`;
   }
 
   goToPreviousReview(): void {
@@ -100,6 +127,14 @@ export class ReviewsComponent {
       stars.push({ full: rating >= i });
     }
     return stars;
+  }
+
+  expandText(index: number): void {
+    this.showFullText = index;
+  }
+
+  collapseText(): void {
+    this.showFullText = null;
   }
 
   getClassesForCard(index: number): string {

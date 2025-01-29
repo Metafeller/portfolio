@@ -1,3 +1,9 @@
+@mixin responsive($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
 .reviews-section {
     padding: 48px 32px;
     background-color: var(--primary-color);
@@ -19,6 +25,11 @@
       font-size: 32px;
       margin-bottom: 32px;
       color: var(--accent-color);
+
+      @include responsive(240px, 320px) {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
     }
   
     .slider-wrapper {
@@ -28,6 +39,10 @@
       align-items: center;
       overflow: hidden;
       padding: 48px 32px;
+
+      @include responsive(240px, 320px) {
+        padding: 16px 8px;
+      }
 
       @media (min-width: 240px) and (max-width: 320px) {
         padding: 0px 0px;
@@ -40,6 +55,10 @@
         transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
         // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         width: 56%;
+
+        @include responsive(240px, 320px) {
+          width: 100%;
+        }
 
         @media (min-width: 240px) and (max-width: 320px) {
           width: 100%;
@@ -73,6 +92,11 @@
           align-items: center;
         //   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   
+        @include responsive(240px, 320px) {
+          padding: 16px 8px;
+          // flex: 0 0 100%;
+        }  
+
         @media (min-width: 240px) and (max-width: 320px) {
           padding: 24px 16px;
         }
@@ -103,6 +127,10 @@
             justify-content: center;
             flex-direction: column;
             padding: 16px;
+
+            @include responsive(240px, 320px) {
+              margin-bottom: 16px;
+            }
 
             @media (min-width: 240px) and (max-width: 320px) {
               position: absolute;
@@ -176,6 +204,11 @@
               font-size: 16px;
               font-style: italic;
 
+              @include responsive(240px, 320px) {
+                font-size: 12px;
+                max-width: 100%;
+              }
+
               @media (min-width: 240px) and (max-width: 320px) {
                 font-size: 12px;
                 padding: 0px 0px;
@@ -187,6 +220,13 @@
               margin-top: 8px;
               font-size: 14px;
               color: var(--accent-color);
+            }
+
+            .read-more {
+              color: var(--accent-color);
+              cursor: pointer;
+              text-decoration: underline;
+              font-size: 14px;
             }
           }
   
@@ -237,6 +277,28 @@
           transition: transform 0.3s ease;
         }
       }
+
+      .dots-navigation {
+        display: none;
+
+        @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+
+            span {
+                width: 12px;
+                height: 12px;
+                background-color: var(--accent-color);
+                border-radius: 50%;
+                cursor: pointer;
+
+                &.active {
+                    background-color: var(--active-color, #0ff);
+                }
+            }
+        }
+      }
   
       .miniature {
         width: 56px;
@@ -247,6 +309,10 @@
         border: 2px solid transparent;
         overflow: hidden;
         transition: transform 0.3s ease;
+
+        @include responsive(240px, 320px) {
+          display: none;
+        }
   
         &.active {
           transform: scale(1.2);
