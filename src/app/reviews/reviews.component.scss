@@ -14,9 +14,9 @@
     overflow: hidden;
 
     /* Mobile Ansicht - bis 320px */
-    @media (min-width: 240px) and (max-width: 320px) {
-        padding: 16px 8px;
-        background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    @include responsive(240px, 320px) {
+      padding: 16px 8px;
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
     }
   
     .section-title {
@@ -41,12 +41,12 @@
       padding: 48px 32px;
 
       @include responsive(240px, 320px) {
-        padding: 16px 8px;
-      }
-
-      @media (min-width: 240px) and (max-width: 320px) {
         padding: 0px 0px;
       }
+
+      // @media (min-width: 240px) and (max-width: 320px) {
+      //   padding: 0px 0px;
+      // }
   
       .reviews-cards {
         display: flex;
@@ -58,20 +58,25 @@
 
         @include responsive(240px, 320px) {
           width: 100%;
-        }
-
-        @media (min-width: 240px) and (max-width: 320px) {
-          width: 100%;
           padding: 24px 16px;
         }
+
+        // @media (min-width: 240px) and (max-width: 320px) {
+        //   width: 100%;
+        //   padding: 24px 16px;
+        // }
 
         .review-card-content {
           display: flex;
           flex-direction: row;
 
-          @media (min-width: 240px) and (max-width: 320px) {
+          @include responsive(240px, 320px) {
             padding: 24px 16px;
           }
+
+          // @media (min-width: 240px) and (max-width: 320px) {
+          //   padding: 24px 16px;
+          // }
         }
   
         .review-card {
@@ -93,13 +98,13 @@
         //   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   
         @include responsive(240px, 320px) {
-          padding: 16px 8px;
+          padding: 24px 16px;
           // flex: 0 0 100%;
         }  
 
-        @media (min-width: 240px) and (max-width: 320px) {
-          padding: 24px 16px;
-        }
+        // @media (min-width: 240px) and (max-width: 320px) {
+        //   padding: 24px 16px;
+        // }
 
           &.active {
             opacity: 1;
@@ -109,9 +114,13 @@
             box-shadow: 0 12px 24px rgba(0, 255, 174, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 2;
 
-            @media (min-width: 240px) and (max-width: 320px) {
+            @include responsive(240px, 320px) {
               max-width: fit-content;
             }
+
+            // @media (min-width: 240px) and (max-width: 320px) {
+            //   max-width: fit-content;
+            // }
           }
   
           &.inactive {
@@ -129,12 +138,13 @@
             padding: 16px;
 
             @include responsive(240px, 320px) {
-              margin-bottom: 16px;
-            }
-
-            @media (min-width: 240px) and (max-width: 320px) {
+              // margin-bottom: 16px;
               position: absolute;
             }
+
+            // @media (min-width: 240px) and (max-width: 320px) {
+            //   position: absolute;
+            // }
   
             .profile-pic {
               width: 120px;
@@ -221,15 +231,19 @@
               @include responsive(240px, 320px) {
                 font-size: 12px;
                 max-width: 100%;
-                margin-top: 80px;
+                margin-top: 72px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0px 0px;
               }
 
-              @media (min-width: 240px) and (max-width: 320px) {
-                font-size: 12px;
-                padding: 0px 0px;
-                margin: 0;
-                margin-top: 80px;
-              }
+              // @media (min-width: 240px) and (max-width: 320px) {
+              //   font-size: 12px;
+              //   padding: 0px 0px;
+              //   margin: 0;
+              //   margin-top: 80px;
+              // }
             }
   
             .review-author {
