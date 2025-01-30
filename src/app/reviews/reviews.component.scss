@@ -18,6 +18,30 @@
       padding: 16px 8px;
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
     }
+
+    /* Mobile Ansicht - bis 480px */
+    @include responsive(321px, 480px) {
+      padding: 20px 12px;
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
+
+    /* Mobile Ansicht - bis 767px */
+    @include responsive(481px, 767px) {
+      padding: 24px 16px;
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
+
+    /* Mobile Ansicht - bis 1024px */
+    @include responsive(768px, 1024px) {
+      padding: 32px 20px;
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
+
+    /* Mobile Ansicht - bis 1366px */
+    @include responsive(1025px, 1366px) {
+      padding: 40px 24px;
+      background-size: contain; /* Verhindert abgeschnittene Bereiche */
+    }
   
     .section-title {
       font-family: var(--font-family);
@@ -26,12 +50,47 @@
       margin-bottom: 32px;
       color: var(--accent-color);
 
+      /* Mobile Ansicht - bis 320px */
       @include responsive(240px, 320px) {
         // font-size: 24px;
         margin-bottom: 16px;
         margin-left: 16px;
         margin-right: 16px;
       }
+
+      /* Mobile Ansicht - bis 480px */
+      @include responsive(321px, 480px) {
+        margin-bottom: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      /* Mobile Ansicht - bis 767px */
+      @include responsive(481px, 767px) {
+        margin-bottom: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      /* Mobile Ansicht - bis 1024px */
+      @include responsive(768px, 1024px) {
+        margin-bottom: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+
+      // /* Mobile Ansicht - bis 1366px */
+      // @include responsive(1025px, 1366px) {
+      //   margin-bottom: 16px;
+      //   margin-left: 16px;
+      //   margin-right: 16px;
+      //   padding-left: 60px;
+      //   padding-right: 60px;
+      // }
     }
   
     .slider-wrapper {
@@ -42,13 +101,30 @@
       overflow: hidden;
       padding: 48px 32px;
 
+      /* Mobile Ansicht - bis 320px */
       @include responsive(240px, 320px) {
         padding: 0px 0px;
       }
 
-      // @media (min-width: 240px) and (max-width: 320px) {
-      //   padding: 0px 0px;
-      // }
+      /* Mobile Ansicht - bis 480px */
+      @include responsive(321px, 480px) {
+        // padding: 0px 0px;
+      }
+
+      /* Mobile Ansicht - bis 767px */
+      @include responsive(481px, 767px) {
+        padding: 0px 0px;
+      }
+
+      /* Mobile Ansicht - bis 1024px */
+      @include responsive(768px, 1024px) {
+        // padding: 0px 0px;
+      }
+
+      /* Mobile Ansicht - bis 1366px */
+      @include responsive(1025px, 1366px) {
+        padding: 40px 24px;
+      }
   
       .reviews-cards {
         display: flex;
@@ -58,27 +134,60 @@
         // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
         width: 56%;
 
+        /* Mobile Ansicht - bis 320px */
         @include responsive(240px, 320px) {
           width: 100%;
           padding: 24px 16px;
         }
 
-        // @media (min-width: 240px) and (max-width: 320px) {
-        //   width: 100%;
-        //   padding: 24px 16px;
-        // }
+        /* Mobile Ansicht - bis 480px */
+        @include responsive(321px, 480px) {
+          width: 90%;
+          padding: 24px 16px;
+        }
+
+        /* Mobile Ansicht - bis 767px */
+        @include responsive(481px, 767px) {
+          width: 84%;
+          // padding: 24px 8px;
+        }
+
+        /* Mobile Ansicht - bis 1024px */
+        @include responsive(768px, 1024px) {
+          width: 64%;
+          padding: 24px 8px;
+        }
+
+        /* Mobile Ansicht - bis 1366px */
+        @include responsive(1025px, 1366px) {
+          // width: 100%;
+          padding: 40px 24px;
+        }
 
         .review-card-content {
           display: flex;
           flex-direction: row;
 
+          /* Mobile Ansicht - bis 320px */
           @include responsive(240px, 320px) {
             padding: 24px 16px;
           }
 
-          // @media (min-width: 240px) and (max-width: 320px) {
-          //   padding: 24px 16px;
-          // }
+          /* Mobile Ansicht - bis 480px */
+          @include responsive(321px, 480px) {
+            padding: 24px 16px;
+          }
+
+          /* Mobile Ansicht - bis 767px */
+          @include responsive(481px, 767px) {
+            padding: 24px 16px;
+          }
+
+          /* Mobile Ansicht - bis 1024px */
+          @include responsive(768px, 1024px) {
+            padding: 32px 20px;
+          }
+
         }
   
         .review-card {
@@ -99,14 +208,29 @@
           align-items: center;
         //   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   
+        /* Mobile Ansicht - bis 320px */
         @include responsive(240px, 320px) {
           padding: 24px 16px;
           // flex: 0 0 100%;
         }  
 
-        // @media (min-width: 240px) and (max-width: 320px) {
-        //   padding: 24px 16px;
-        // }
+        /* Mobile Ansicht - bis 480px */
+        @include responsive(321px, 480px) {
+          padding: 24px 16px;
+          // flex: 0 0 100%;
+        }
+
+        /* Mobile Ansicht - bis 767px */
+        @include responsive(481px, 767px) {
+          padding: 24px 16px;
+          // flex: 0 0 100%;
+        }
+
+        /* Mobile Ansicht - bis 1024px */
+        @include responsive(768px, 1024px) {
+          padding: 32px 20px;
+          // flex: 0 0 100%;
+        }
 
           &.active {
             opacity: 1;
@@ -116,13 +240,25 @@
             box-shadow: 0 12px 24px rgba(0, 255, 174, 0.4), 0px 4px 8px rgba(0, 0, 0, 0.2);
             z-index: 2;
 
+            /* Mobile Ansicht - bis 320px */
             @include responsive(240px, 320px) {
               max-width: fit-content;
             }
 
-            // @media (min-width: 240px) and (max-width: 320px) {
-            //   max-width: fit-content;
-            // }
+            /* Mobile Ansicht - bis 480px */
+            @include responsive(321px, 480px) {
+              max-width: fit-content;
+            }
+
+            /* Mobile Ansicht - bis 767px */
+            @include responsive(481px, 767px) {
+              max-width: fit-content;
+            }
+
+            /* Mobile Ansicht - bis 1024px */
+            @include responsive(768px, 1024px) {
+              max-width: fit-content;
+            }
           }
   
           &.inactive {
@@ -139,15 +275,33 @@
             flex-direction: column;
             padding: 16px;
 
+            /* Mobile Ansicht - bis 320px */
             @include responsive(240px, 320px) {
               // margin-bottom: 16px;
               position: absolute;
               margin-top: 8px;
             }
 
-            // @media (min-width: 240px) and (max-width: 320px) {
-            //   position: absolute;
-            // }
+            /* Mobile Ansicht - bis 480px */
+            @include responsive(321px, 480px) {
+              // margin-bottom: 16px;
+              position: absolute;
+              margin-top: 12px;
+            }
+
+            /* Mobile Ansicht - bis 767px */
+            @include responsive(481px, 767px) {
+              // margin-bottom: 16px;
+              position: absolute;
+              margin-top: 16px;
+            }
+
+            /* Mobile Ansicht - bis 1024px */
+            @include responsive(768px, 1024px) {
+              // margin-bottom: 16px;
+              position: absolute;
+              margin-top: 20px;
+            }
   
             .profile-pic {
               width: 120px;
@@ -158,11 +312,52 @@
               position: absolute;
               z-index: 2;
 
+              /* Mobile Ansicht - bis 320px */
               @include responsive(240px, 320px) {
                 width: 60px;
                 height: 60px;
                 top: -20px;
                 left: 40px;
+              }
+
+              /* Mobile Ansicht - bis 480px */
+              @include responsive(321px, 480px) {
+                width: 60px;
+                height: 60px;
+                top: -20px;
+                left: 100px;
+              }
+
+              /* Mobile Ansicht - bis 767px */
+              @include responsive(481px, 767px) {
+                width: 80px;
+                height: 80px;
+                top: -20px;
+                left: 112px;
+              }
+
+              /* Mobile Ansicht - bis 1024px */
+              @include responsive(768px, 1024px) {
+                width: 80px;
+                height: 80px;
+                top: -20px;
+                left: 128px;
+              }
+
+              /* Mobile Ansicht - 900 bis 1024px */
+              @include responsive(900px, 1024px) {
+                width: 80px;
+                height: 80px;
+                top: -20px;
+                left: 232px;
+              }
+
+              /* Mobile Ansicht - 1366px */
+              @include responsive(1025px, 1366px) {
+                width: 100px;
+                height: 100px;
+                // top: -20px;
+                // left: 232px;
               }
             }
   
@@ -196,11 +391,52 @@
               top: -10px;
               left: -10px;
 
+              /* Mobile Ansicht - bis 320px */
               @include responsive(240px, 320px) {
                 width: 80px;
                 height: 80px;
                 top: -40px;
                 left: 32px;
+              }
+
+              /* Mobile Ansicht - bis 480px */
+              @include responsive(321px, 480px) {
+                width: 80px;
+                height: 80px;
+                top: -40px;
+                left: 100px;
+              }
+
+              /* Mobile Ansicht - bis 767px */
+              @include responsive(481px, 767px) {
+                width: 100px;
+                height: 100px;
+                top: -40px;
+                left: 120px;
+              }
+
+              /* Mobile Ansicht - bis 1024px */
+              @include responsive(768px, 1024px) {
+                width: 100px;
+                height: 100px;
+                top: -40px;
+                left: 128px;
+              }
+
+              /* Mobile Ansicht - 900 bis 1024px */
+              @include responsive(900px, 1024px) {
+                width: 100px;
+                height: 100px;
+                top: -40px;
+                left: 232px;
+              }
+
+              /* Mobile Ansicht - bis 1366px */
+              @include responsive(1025px, 1366px) {
+                width: 140px;
+                height: 140px;
+                // top: -40px;
+                // left: 232px;
               }
             }
 
@@ -231,6 +467,7 @@
               font-size: 16px;
               font-style: italic;
 
+              /* Mobile Ansicht - bis 320px */
               @include responsive(240px, 320px) {
                 font-size: 12px;
                 max-width: 100%;
@@ -241,19 +478,61 @@
                 padding: 0px 0px;
               }
 
-              // @media (min-width: 240px) and (max-width: 320px) {
-              //   font-size: 12px;
-              //   padding: 0px 0px;
-              //   margin: 0;
-              //   margin-top: 80px;
-              // }
+              /* Mobile Ansicht - bis 480px */
+              @include responsive(321px, 480px) {
+                font-size: 15px;
+                max-width: 100%;
+                margin-top: 72px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0px 0px;
+              }
+
+              /* Mobile Ansicht - bis 767px */
+              @include responsive(481px, 767px) {
+                font-size: 15px;
+                max-width: 100%;
+                margin-top: 104px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0px 0px;
+              }
+
+              /* Mobile Ansicht - bis 1024px */
+              @include responsive(768px, 1024px) {
+                font-size: 15px;
+                max-width: 100%;
+                margin-top: 104px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0px 0px;
+              }
+
+              /* Mobile Ansicht - bis 1366px */
+              @include responsive(1025px, 1366px) {
+                // font-size: 15px;
+                max-width: 100%;
+                // margin-top: 104px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                padding: 0px 0px;
+              }
             }
   
             .review-author {
               font-family: var(--font-family);
-              margin-top: 8px;
-              font-size: 14px;
+              margin-top: 16px;
+              font-size: 16px;
               color: var(--accent-color);
+
+              /* Mobile Ansicht - bis 320px */
+              @include responsive(240px, 320px) {
+                font-size: 14px;
+              }
             }
 
             .read-more {
@@ -319,7 +598,8 @@
       .dots-navigation {
         display: none;
 
-        @include responsive(240px, 320px) {
+        /* Mobile Ansicht - bis 767px */
+        @include responsive(240px, 767px) {
             display: flex;
             justify-content: center;
             gap: 8px;
@@ -348,7 +628,8 @@
         overflow: hidden;
         transition: transform 0.3s ease;
 
-        @include responsive(240px, 320px) {
+        /* Mobile Ansicht - bis 767px */
+        @include responsive(240px, 767px) {
           display: none;
         }
   
