@@ -24,14 +24,17 @@
               <blockquote>
                 {{ showFullText === i ? review.text : review.text | slice:0:100 }}...
               </blockquote>
-              <p class="review-author">
-                {{ review.name }} &#11089; {{ review.position }}
-              </p>
+
               <!-- "Read More" Option -->
               <span *ngIf="review.text.length > 100 && showFullText !== i" class="read-more" (click)="expandText(i)">
                 Read More
               </span>
+
+              <!-- Review Name and Position -->
               <span *ngIf="showFullText === i" class="read-more" (click)="collapseText()">Read Less</span>
+              <p class="review-author">
+                {{ review.name }} &#11089; {{ review.position }}
+              </p>
 
               <!-- Star Rating -->
             <div class="star-rating">
@@ -41,14 +44,6 @@
                 ></fa-icon>
               </div>
             </div>
-  
-            <!-- Star Rating -->
-            <!-- <div class="star-rating">
-              <fa-icon
-                [icon]="faStar"
-                *ngFor="let star of getStarArray(review.rating)"
-              ></fa-icon>
-            </div> -->
           </div>
         </div>
       </div>

@@ -27,8 +27,10 @@
       color: var(--accent-color);
 
       @include responsive(240px, 320px) {
-        font-size: 24px;
+        // font-size: 24px;
         margin-bottom: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
       }
     }
   
@@ -140,6 +142,7 @@
             @include responsive(240px, 320px) {
               // margin-bottom: 16px;
               position: absolute;
+              margin-top: 8px;
             }
 
             // @media (min-width: 240px) and (max-width: 320px) {
@@ -247,16 +250,21 @@
             }
   
             .review-author {
+              font-family: var(--font-family);
               margin-top: 8px;
               font-size: 14px;
               color: var(--accent-color);
             }
 
             .read-more {
-              color: var(--accent-color);
-              cursor: pointer;
-              text-decoration: underline;
+              font-family: var(--font-family);
               font-size: 14px;
+              font-weight: 700;
+              // color: var(--accent-color);
+              color: #dfff00;
+              cursor: pointer;
+              text-decoration: none;
+              padding-bottom: 16px;
             }
           }
   
