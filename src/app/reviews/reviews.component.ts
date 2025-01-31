@@ -88,10 +88,11 @@ export class ReviewsComponent {
 
   @HostListener('window:resize')
   checkViewport() {
-    // this.isMobileView = window.innerWidth <= 480;
     if (isPlatformBrowser(this.platformId)) {
+      requestAnimationFrame(() => {
       this.isMobileView = this.windowService.isMobile();
-    }
+    });
+   }
   }
 
   // get currentTransform(): string {
