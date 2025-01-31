@@ -5,7 +5,7 @@
     <!-- Slider Wrapper -->
     <div class="slider-wrapper" role="region" aria-label="Testimonials Slider">
       <!-- Review Cards -->
-      <div class="reviews-cards" [style.transform]="currentTransform" aria-live="polite">
+      <div class="reviews-cards" [class.mobile]="isMobileView" [style.transform]="currentTransform" aria-live="polite">
         <div
           class="review-card"
           *ngFor="let review of reviews; let i = index; trackBy: trackByIndex"

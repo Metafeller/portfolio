@@ -125,6 +125,10 @@
       @include responsive(1025px, 1366px) {
         padding: 40px 24px;
       }
+
+      // .reviews-cards.mobile {
+      //   transform: translateX(calc(-103% * var(--current-index)));
+      // }
   
       .reviews-cards {
         display: flex;
@@ -154,8 +158,10 @@
 
         /* Mobile Ansicht - bis 1024px */
         @include responsive(768px, 1024px) {
-          width: 64%;
-          padding: 24px 8px;
+          // width: 64%;
+          // padding: 24px 8px;
+          width: 90%;
+          // padding: 24px 8px;
         }
 
         /* Mobile Ansicht - bis 1366px */
@@ -208,28 +214,40 @@
           align-items: center;
         //   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
   
+        // sieht gut aus*
         /* Mobile Ansicht - bis 320px */
         @include responsive(240px, 320px) {
           padding: 24px 16px;
           // flex: 0 0 100%;
         }  
 
-        /* Mobile Ansicht - bis 480px */
+        // sieht gut aus*
+        /* Mobile Ansicht - bis 480px */ 
         @include responsive(321px, 480px) {
-          padding: 24px 16px;
-          // flex: 0 0 100%;
+          // padding: 24px 16px;
+          // margin: 0 20px;
+          margin: 0 -12px;
+          flex: 0 0 99%;
         }
 
+        // Einiger Maßen Okay*
         /* Mobile Ansicht - bis 767px */
         @include responsive(481px, 767px) {
-          padding: 24px 16px;
-          // flex: 0 0 100%;
+          padding: 24px 36px;
+          // margin: 0 8px;
+          margin: 0 -16px;
+          flex: 0 0 94%;
         }
 
+        // sieht gut aus*
         /* Mobile Ansicht - bis 1024px */
         @include responsive(768px, 1024px) {
-          padding: 32px 20px;
-          // flex: 0 0 100%;
+          // padding: 32px 20px;
+          // flex: 0 0 90%;
+          // padding: 32px 20px;
+          margin: 0;
+          flex: 0 0 100%;
+          padding: 0;
         }
 
           &.active {
