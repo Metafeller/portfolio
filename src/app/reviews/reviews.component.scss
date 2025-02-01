@@ -67,7 +67,7 @@
 
       /* Mobile Ansicht - bis 767px */
       @include responsive(481px, 767px) {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         margin-left: 16px;
         margin-right: 16px;
         padding-left: 60px;
@@ -76,7 +76,7 @@
 
       /* Mobile Ansicht - bis 1024px */
       @include responsive(768px, 1024px) {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         margin-left: 16px;
         margin-right: 16px;
         padding-left: 60px;
