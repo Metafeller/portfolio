@@ -422,6 +422,7 @@
 
               /* Mobile Ansicht - bis 320px */
               @include responsive(240px, 320px) {
+                transition: none;
                 width: 80px;
                 height: 80px;
                 top: -40px;
@@ -484,7 +485,7 @@
                 transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
                     opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
                     filter 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Langsamer Übergang */
-  }  
+            }  
           }
   
           .review-text {
@@ -560,7 +561,7 @@
 
               /* Mobile Ansicht - bis 320px */
               @include responsive(240px, 320px) {
-                font-size: 14px;
+                font-size: 15px;
               }
             }
 
