@@ -1,0 +1,132 @@
+.contact-section-container {
+    max-width: 1920px;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 48px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    display: flex;
+    padding: 48px 32px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    gap: 40px;
+
+.contact-left {
+    width: 50%;
+    // color: white;
+
+    h4 {
+    font-size: 24px;
+    color: var(--accent-color);
+    font-family: var(--font-family-second);
+    }
+
+    h2 {
+    font-size: 64px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--accent-color);
+    }
+
+    h3 {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--accent-color);
+    }
+
+    p {
+    font-size: 18px;
+    // color: #bbb;
+    line-height: 1.6;
+    font-family: var(--font-family-second);
+    }
+
+    span {
+    font-size: 18px;
+    font-family: var(--font-family-second);
+    font-weight: 700;
+
+        .accent-text {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+}
+
+    .contact-right {
+        width: 50%;
+
+        form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            font-family: var(--font-family);
+            color: var(--accent-color);
+        }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 1px solid var(--accent-color);
+                background: transparent;
+                color: white;
+                outline: none;
+                border-radius: 8px;
+                font-family: var(--font-family-second);
+            }
+
+            textarea {
+                resize: none;
+                height: 120px;
+            }
+
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                input {
+                transform: scale(1.2);
+                }
+
+                label {
+                font-size: 14px;
+                }
+            }
+
+            .default-button {
+                width: 100%;
+                padding: 14px;
+                font-size: 18px;
+                border: 2px solid var(--accent-color);
+                background: transparent;
+                color: white;
+                cursor: not-allowed;
+                transition: 0.3s;
+
+                &:hover {
+                background: var(--accent-color);
+                color: black;
+                }
+
+                &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                }
+            }
+        }
+    }
+}

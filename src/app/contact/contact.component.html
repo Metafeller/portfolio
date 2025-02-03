@@ -1,1 +1,41 @@
-<p>contact works!</p>
+<section class="contact-section-container">
+    <div class="contact-content">
+        
+        <!-- Linke Seite: Text -->
+        <div class="contact-left">
+        <h4>Contact me</h4>
+        <h2>Let's work <br> together</h2>
+        <h3>Got a problem to solve?</h3>
+        <p>
+            Contact me through this form, I am interested in hearing from you, 
+            knowing your ideas and contributing to your projects with my work.
+        </p>
+        <span>
+            Need a Frontend developer? 
+            <a href="#contact-form" class="accent-text">Let’s talk!</a>
+        </span>
+        </div>
+
+        <!-- Rechte Seite: Formular -->
+        <div class="contact-right">
+            <form id="contact-form">
+                <label for="name">What's your name?</label>
+                <input type="text" id="name" placeholder="Your name goes here">
+
+                <label for="email">What's your email?</label>
+                <input type="email" id="email" placeholder="yourmail@email.com">
+
+                <label for="message">How can I help you?</label>
+                <textarea id="message" placeholder="What do you need to develop?" maxlength="369"></textarea>
+
+                <div class="checkbox-container">
+                <input type="checkbox" id="privacy">
+                <label for="privacy">I've read the <a href="/privacy-policy" class="accent-text">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                </div>
+
+                <button type="submit" class="default-button" disabled>Say Hello :)</button>
+            </form>
+        </div>
+    </div>
+</section>
+  
