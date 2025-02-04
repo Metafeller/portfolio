@@ -1,20 +1,17 @@
 .contact-section-container {
     max-width: 1920px;
-    min-height: 80vh;
+    // min-height: 80vh;
     margin: 0 auto;
     padding: 48px 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // text-align: start;
 
     // Desktop Version Display None
     .headline {
         display: flex;
         justify-content: start;
-        // align-items: left;
-        // text-align: start;
         padding: 0px 32px;
         display: none;
     
@@ -26,8 +23,6 @@
         }
     }
 }
-
-
 
 .contact-content {
     display: flex;
