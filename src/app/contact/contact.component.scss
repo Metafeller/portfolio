@@ -5,14 +5,18 @@
     padding: 48px 32px;
     display: flex;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
     flex-direction: column;
+    // text-align: start;
 
+    // Desktop Version Display None
     .headline {
         display: flex;
         justify-content: start;
         // align-items: left;
+        // text-align: start;
         padding: 0px 32px;
+        display: none;
     
         h4 {
             font-size: 24px;
@@ -37,11 +41,12 @@
     width: 50%;
     // color: white;
 
-    // h4 {
-    // font-size: 24px;
-    // color: var(--accent-color);
-    // font-family: var(--font-family-second);
-    // }
+    h4 {
+    font-size: 24px;
+    color: var(--accent-color);
+    font-family: var(--font-family-second);
+    margin-top: 16px;
+    }
 
     h2 {
     font-size: 64px;
