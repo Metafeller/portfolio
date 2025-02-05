@@ -1,6 +1,6 @@
 .contact-section-container {
     max-width: 1920px;
-    // min-height: 80vh;
+    min-height: 80vh;
     margin: 0 auto;
     padding: 48px 32px;
     display: flex;
@@ -130,6 +130,16 @@
 
                 label {
                 font-size: 14px;
+                color: gray;
+                }
+
+                .accent-text {
+                    color: var(--accent-color);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: white;
+                    }
                 }
             }
 
