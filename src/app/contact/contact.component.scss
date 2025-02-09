@@ -48,6 +48,10 @@
     width: 50%;
     // color: white;
 
+    @include responsive(768px, 1024px) {
+        width: 90%;
+    }
+
     h4 {
     font-size: 24px;
     color: var(--accent-color);
