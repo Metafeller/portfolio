@@ -53,6 +53,11 @@
     color: var(--accent-color);
     font-family: var(--font-family-second);
     margin-top: 16px;
+
+        @include responsive(768px, 1024px) {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     h2 {
@@ -61,6 +66,12 @@
     font-family: var(--font-family);
     color: var(--accent-color);
     margin-top: 0;
+
+        @include responsive(768px, 1024px) {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     h3 {
@@ -68,6 +79,11 @@
     font-weight: bold;
     font-family: var(--font-family);
     color: var(--accent-color);
+
+        @include responsive(768px, 1024px) {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     p {
@@ -75,6 +91,12 @@
     // color: #bbb;
     line-height: 1.6;
     font-family: var(--font-family-second);
+
+        @include responsive(768px, 1024px) {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     span {
@@ -82,10 +104,22 @@
     font-family: var(--font-family-second);
     // font-weight: 700;
 
+        @include responsive(768px, 1024px) {
+            display: flex;
+            justify-content: center;
+        }
+
         .accent-text {
             color: var(--accent-color);
             text-decoration: none;
             font-weight: bold;
+
+            @include responsive(768px, 1024px) {
+                // display: flex;
+                // justify-content: center;
+                margin-left: 8px;
+            }
+
         }
     }
 }
