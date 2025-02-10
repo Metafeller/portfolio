@@ -48,9 +48,9 @@
     width: 50%;
     // color: white;
 
-    @include responsive(768px, 1024px) {
-        width: 90%;
-    }
+    // @include responsive(768px, 1024px) {
+    //     width: 90%;
+    // }
 
     h4 {
     font-size: 24px;
@@ -60,7 +60,7 @@
 
         @include responsive(768px, 1024px) {
             display: flex;
-            justify-content: center;
+            justify-content: left;
         }
     }
 
@@ -74,7 +74,7 @@
         @include responsive(768px, 1024px) {
             display: flex;
             justify-content: center;
-            text-align: center;
+            text-align: left;
         }
     }
 
@@ -86,7 +86,7 @@
 
         @include responsive(768px, 1024px) {
             display: flex;
-            justify-content: center;
+            justify-content: left;
         }
     }
 
@@ -99,7 +99,7 @@
         @include responsive(768px, 1024px) {
             display: flex;
             justify-content: center;
-            text-align: center;
+            text-align: left;
         }
     }
 
@@ -110,7 +110,7 @@
 
         @include responsive(768px, 1024px) {
             display: flex;
-            justify-content: center;
+            justify-content: left;
         }
 
         .accent-text {
