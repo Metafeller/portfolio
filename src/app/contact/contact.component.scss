@@ -14,6 +14,10 @@
     align-items: center;
     flex-direction: column;
 
+    @include responsive(321px, 480px) {
+        padding: 20px 12px;
+    }    
+
     // Desktop Version Display None
     .headline {
         display: flex;
@@ -37,6 +41,13 @@
     max-width: 1200px;
     justify-content: space-between;
     gap: 40px;
+
+    @include responsive(321px, 480px) {
+        padding: 20px 12px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
 
     @include responsive(481px, 767px) {
         padding: 24px 16px;
@@ -65,6 +76,12 @@
     font-family: var(--font-family-second);
     margin-top: 16px;
 
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: left;
+            font-size: 20px;
+        }
+
         @include responsive(481px, 767px) {
             display: flex;
             justify-content: left;
@@ -83,6 +100,13 @@
     font-family: var(--font-family);
     color: var(--accent-color);
     margin-top: 0;
+
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 32px;
+        }
 
         @include responsive(481px, 767px) {
             display: flex;
@@ -105,6 +129,12 @@
     font-family: var(--font-family);
     color: var(--accent-color);
 
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: left;
+            font-size: 22px;
+        }
+
         @include responsive(481px, 767px) {
             display: flex;
             justify-content: left;
@@ -122,6 +152,13 @@
     // color: #bbb;
     line-height: 1.6;
     font-family: var(--font-family-second);
+
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            font-size: 16px;
+        }
 
         @include responsive(481px, 767px) {
             display: flex;
@@ -142,11 +179,17 @@
     font-family: var(--font-family-second);
     // font-weight: 700;
 
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: left;
+            font-size: 20px;
+            gap: 12px;
+        }
+
         @include responsive(481px, 767px) {
             display: flex;
             justify-content: left;
-            font-size: 24px;
-            padding: 32px;
+            font-size: 20px;
         }
 
         @include responsive(768px, 1024px) {
@@ -215,6 +258,11 @@
                 padding: 8px 0px;
                 gap: 16px;
 
+                @include responsive(321px, 480px) {
+                    gap: 28px;
+                    padding: 8px 8px;
+                }
+
                 @include responsive(481px, 767px) {
                     gap: 24px;
                     padding: 8px 8px;
@@ -274,6 +322,10 @@
                 label {
                 font-size: 14px;
                 color: gray;
+
+                    @include responsive(321px, 480px) {
+                        font-size: 12px;
+                    }
                 }
 
                 .accent-text {
