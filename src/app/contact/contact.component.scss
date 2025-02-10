@@ -287,10 +287,10 @@
             font-family: var(--font-family);
             color: var(--accent-color);
 
-            @include responsive(240px, 320px) {
-                display: flex;
-                justify-content: center;
-            }
+            // @include responsive(240px, 320px) {
+            //     display: flex;
+            //     justify-content: center;
+            // }
         }
 
             input,
@@ -332,7 +332,7 @@
                 gap: 16px;
 
                 @include responsive(240px, 320px) {
-                    gap: 28px;
+                    gap: 24px;
                     padding: 8px 0px;
                 }
 
