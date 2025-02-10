@@ -38,6 +38,13 @@
     justify-content: space-between;
     gap: 40px;
 
+    @include responsive(481px, 767px) {
+        padding: 24px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
     @include responsive(768px, 1024px) {
         flex-direction: column;
         align-items: center;
@@ -58,6 +65,12 @@
     font-family: var(--font-family-second);
     margin-top: 16px;
 
+        @include responsive(481px, 767px) {
+            display: flex;
+            justify-content: left;
+            font-size: 20px;
+        }
+
         @include responsive(768px, 1024px) {
             display: flex;
             justify-content: left;
@@ -71,10 +84,18 @@
     color: var(--accent-color);
     margin-top: 0;
 
+        @include responsive(481px, 767px) {
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 40px;
+        }
+
         @include responsive(768px, 1024px) {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             text-align: left;
+            font-size: 48px;
         }
     }
 
@@ -83,6 +104,12 @@
     font-weight: bold;
     font-family: var(--font-family);
     color: var(--accent-color);
+
+        @include responsive(481px, 767px) {
+            display: flex;
+            justify-content: left;
+            font-size: 24px;
+        }
 
         @include responsive(768px, 1024px) {
             display: flex;
@@ -96,6 +123,13 @@
     line-height: 1.6;
     font-family: var(--font-family-second);
 
+        @include responsive(481px, 767px) {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            font-size: 16px;
+        }
+
         @include responsive(768px, 1024px) {
             display: flex;
             justify-content: center;
@@ -107,6 +141,13 @@
     font-size: 18px;
     font-family: var(--font-family-second);
     // font-weight: 700;
+
+        @include responsive(481px, 767px) {
+            display: flex;
+            justify-content: left;
+            font-size: 24px;
+            padding: 32px;
+        }
 
         @include responsive(768px, 1024px) {
             display: flex;
@@ -173,6 +214,11 @@
                 color: white;
                 padding: 8px 0px;
                 gap: 16px;
+
+                @include responsive(481px, 767px) {
+                    gap: 24px;
+                    padding: 8px 8px;
+                }
 
                 .custom-checkbox {
                     position: relative;
