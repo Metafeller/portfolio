@@ -14,9 +14,13 @@
     align-items: center;
     flex-direction: column;
 
+    @include responsive(240px, 320px) {
+        padding: 16px 8px;
+    }
+
     @include responsive(321px, 480px) {
         padding: 20px 12px;
-    }    
+    }     
 
     // Desktop Version Display None
     .headline {
@@ -42,6 +46,13 @@
     justify-content: space-between;
     gap: 40px;
 
+    @include responsive(240px, 320px) {
+        padding: 16px 8px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
     @include responsive(321px, 480px) {
         padding: 20px 12px;
         flex-direction: column;
@@ -66,6 +77,10 @@
     width: 50%;
     // color: white;
 
+    @include responsive(240px, 320px) {
+        width: 90%;
+    }
+
     // @include responsive(768px, 1024px) {
     //     width: 90%;
     // }
@@ -75,6 +90,12 @@
     color: var(--accent-color);
     font-family: var(--font-family-second);
     margin-top: 16px;
+
+        @include responsive(321px, 480px) {
+            display: flex;
+            justify-content: left;
+            font-size: 18px;
+        }
 
         @include responsive(321px, 480px) {
             display: flex;
@@ -100,6 +121,13 @@
     font-family: var(--font-family);
     color: var(--accent-color);
     margin-top: 0;
+
+        @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 32px;
+        }
 
         @include responsive(321px, 480px) {
             display: flex;
@@ -129,6 +157,12 @@
     font-family: var(--font-family);
     color: var(--accent-color);
 
+        @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: left;
+            font-size: 20px;
+        }
+
         @include responsive(321px, 480px) {
             display: flex;
             justify-content: left;
@@ -152,6 +186,13 @@
     // color: #bbb;
     line-height: 1.6;
     font-family: var(--font-family-second);
+
+        @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            font-size: 14px;
+        }
 
         @include responsive(321px, 480px) {
             display: flex;
@@ -178,6 +219,13 @@
     font-size: 18px;
     font-family: var(--font-family-second);
     // font-weight: 700;
+
+        @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: left;
+            font-size: 18px;
+            gap: 24px;
+        }
 
         @include responsive(321px, 480px) {
             display: flex;
@@ -215,6 +263,10 @@
     .contact-right {
         width: 50%;
 
+        @include responsive(240px, 320px) {
+            width: 90%;
+        }
+
         form {
         display: flex;
         flex-direction: column;
@@ -242,6 +294,10 @@
                 font-family: var(--font-family-second);
                 border-bottom-style: solid; // Neu hinzugefügt wegen Figma
 
+                @include responsive(240px, 320px) {
+                    font-size: 14px;
+                }
+
                 @include responsive(321px, 480px) {
                     font-size: 14px;
                 }
@@ -261,6 +317,11 @@
                 color: white;
                 padding: 8px 0px;
                 gap: 16px;
+
+                @include responsive(240px, 320px) {
+                    gap: 28px;
+                    padding: 8px 8px;
+                }
 
                 @include responsive(321px, 480px) {
                     gap: 28px;
@@ -326,6 +387,10 @@
                 label {
                 font-size: 14px;
                 color: gray;
+
+                    @include responsive(240px, 320px) {
+                        font-size: 12px;
+                    }
 
                     @include responsive(321px, 480px) {
                         font-size: 12px;
