@@ -241,6 +241,10 @@
                 // border-radius: 8px;
                 font-family: var(--font-family-second);
                 border-bottom-style: solid; // Neu hinzugefügt wegen Figma
+
+                @include responsive(321px, 480px) {
+                    font-size: 14px;
+                }
             }
 
             textarea {
