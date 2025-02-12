@@ -29,6 +29,7 @@
     @include responsive(481px, 767px) {
       padding: 24px 16px;
       background-size: contain; /* Verhindert abgeschnittene Bereiche */
+      min-height: 50vh;
     }
 
     /* Mobile Ansicht - bis 1024px */
