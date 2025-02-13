@@ -361,6 +361,35 @@
                 border-radius: 8px;
             }
 
+            select {
+                font-family: var(--font-family-second);
+                background-color: var(--primary-color);
+                border-radius: 8px;
+                border: 1px solid var(--accent-color);
+                height: 40px;
+                color: white;
+                padding-left: 8px;
+                padding: 4px;
+                cursor: pointer;
+            }
+
+            .error {
+                font-family: var(--font-family);
+                color: red;
+                font-size: 14px;
+                margin-top: 4px;
+              }
+              
+              .char-counter {
+                font-size: 14px;
+                text-align: right;
+                color: var(--accent-color);
+              
+                &.warning {
+                  color: red;
+                }
+            }
+
             .checkbox-container {
                 display: flex;
                 align-items: center;
@@ -474,6 +503,8 @@
                 display: flex;
                 justify-content: center;
             }
+
+
 
             // .default-button {
             //     width: 100%;

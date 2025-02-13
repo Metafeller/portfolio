@@ -22,33 +22,58 @@
 
         <!-- Rechte Seite: Formular -->
         <div class="contact-right">
-            <form id="contact-form">
+            <form [formGroup]="contactForm">
                 <label for="name">What's Your Name?</label>
-                <input type="text" id="name" placeholder="Your name goes here">
-
+                <input type="text" id="name" formControlName="name" placeholder="Your name goes here">
+                <div class="error" *ngIf="name?.invalid && name?.touched">⚠ Please enter a valid name.</div>
+        
                 <label for="email">What's Your Email?</label>
-                <input type="email" id="email" placeholder="yourmail@email.com">
-
+                <input type="email" id="email" formControlName="email" placeholder="yourmail@email.com">
+                <div class="error" *ngIf="email?.invalid && email?.touched">⚠ Please enter a valid email.</div>
+        
                 <label for="message">How can I help you?</label>
-                <textarea id="message" placeholder="What do you need to develop?" maxlength="369"></textarea>
-
+                <textarea id="message" formControlName="message" placeholder="What do you need to develop?" maxlength="369"></textarea>
+                <div class="char-counter" [class.warning]="getCharCount() < 50">
+                  {{ getCharCount() }} / 369 characters
+                </div>
+                <div class="error" *ngIf="message?.invalid && message?.touched">⚠ Minimum 50 characters required.</div>
+        
+                <label for="category">Select Category</label>
+                    <select id="category" formControlName="category">
+                    <option value="" disabled selected>Choose a category</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="app">App Development</option>
+                    <option value="ui-ux">UI/UX Design</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="branding">Branding and Marketing</option>
+                    <option value="other">Other</option>
+                    </select>
+                <div class="error" *ngIf="category?.invalid && category?.touched">⚠ Please select a category.</div>
+        
+                <div *ngIf="category?.value === 'other'">
+                  <label for="customCategory">Custom Category</label>
+                  <input type="text" id="customCategory" formControlName="customCategory" placeholder="Specify your category">
+                </div>
+        
                 <div class="checkbox-container">
-                 <label class="custom-checkbox">
-                  <input type="checkbox" id="privacy">
-                  <span class="checkmark"></span>
-                 </label>    
-
-                <label for="privacy">I've read the <a href="/privacy-policy" class="accent-text">privacy policy</a> and agree to the processing of my data as outlined.</label>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" id="privacy" formControlName="privacy">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label for="privacy">I've read the <a href="/privacy-policy" class="accent-text">privacy policy</a> and agree to the processing of my data as outlined.</label>
                 </div>
-                
+                <div class="error" *ngIf="privacy?.invalid && privacy?.touched">⚠ You must accept the privacy policy.</div>
+        
                 <div class="button">
-                    <!-- Button Component -->
-                    <app-button type="button" buttonClass="default-button">
-                        Say Hello <span id="emoji">😊</span>
-                    </app-button>
+                  <app-button 
+                    type="submit" 
+                    buttonClass="default-button" 
+                    [disabled]="!isFormValid()"
+                    [title]="!isFormValid() ? 'Please complete all fields' : ''">
+                    Say Hello 😊
+                  </app-button>
                 </div>
-                
-            </form>
+              </form>
         </div>
     </div>
 </section>
