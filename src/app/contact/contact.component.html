@@ -46,6 +46,7 @@
                     <option value="ui-ux">UI/UX Design</option>
                     <option value="seo">SEO Optimization</option>
                     <option value="branding">Branding and Marketing</option>
+                    <option value="ai-agency">AI-Agency</option>
                     <option value="other">Other</option>
                     </select>
                 <div class="error" *ngIf="category?.invalid && category?.touched">⚠️ Please select a category.</div>
@@ -54,7 +55,7 @@
                   <label for="customCategory">Custom Category</label>
                   <input type="text" id="customCategory" formControlName="customCategory" placeholder="Specify your category">
                 </div>
-        
+
                 <div class="checkbox-container">
                   <label class="custom-checkbox">
                     <input type="checkbox" id="privacy" formControlName="privacy">
