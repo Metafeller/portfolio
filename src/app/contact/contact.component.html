@@ -72,13 +72,15 @@
                 <div class="error" *ngIf="privacy?.invalid && privacy?.touched">⚠️ You must accept the privacy policy.</div>
         
                 <div class="button">
-                  <app-button 
-                    type="submit" 
-                    buttonClass="default-button" 
-                    [disabled]="!isFormValid()"
-                    [title]="!isFormValid() ? 'Please complete all fields' : ''">
-                    {{ isLoading ? 'Sending...' : 'Say Hello 😊' }}
-                  </app-button>
+                  <div class="tooltip-container">
+                    <app-button 
+                        type="submit" 
+                        buttonClass="default-button" 
+                        [disabled]="!isFormValid()">
+                        {{ isLoading ? 'Sending...' : 'Say Hello 😊' }}
+                    </app-button>
+                    <span class="tooltip" *ngIf="!isFormValid()">⚠️ Please complete all fields! ⚠️</span>
+                  </div>
                 </div>
 
                 <div *ngIf="formSubmitted" class="success-message">
