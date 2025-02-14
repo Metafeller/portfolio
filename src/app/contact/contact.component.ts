@@ -11,6 +11,7 @@ import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angula
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.pattern(/^[a-zA-Z\s]*$/)]),
     email: new FormControl('', [Validators.required, Validators.email]),
@@ -28,11 +29,15 @@ export class ContactComponent {
   get customCategory() { return this.contactForm.get('customCategory'); }
 
   isFormValid(): boolean {
-    return this.contactForm.valid;
+    return this.contactForm.valid && this.isCustomCategoryValid();
   }
 
   getCharCount(): number {
     return this.message?.value?.length || 0;
+  }
+
+  isCustomCategoryValid(): boolean {
+    return this.category?.value !== 'other' || ((this.customCategory?.value?? '').trim().length > 0);
   }
 }
 
