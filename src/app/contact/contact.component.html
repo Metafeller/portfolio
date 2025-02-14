@@ -22,7 +22,7 @@
 
         <!-- Rechte Seite: Formular -->
         <div class="contact-right">
-            <form [formGroup]="contactForm">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <label for="name">What's Your Name?</label>
                 <input type="text" id="name" formControlName="name" placeholder="Your name goes here"
                     [class.error-border]="name?.invalid && name?.touched">
@@ -77,8 +77,16 @@
                     buttonClass="default-button" 
                     [disabled]="!isFormValid()"
                     [title]="!isFormValid() ? 'Please complete all fields' : ''">
-                    Say Hello 😊
+                    {{ isLoading ? 'Sending...' : 'Say Hello 😊' }}
                   </app-button>
+                </div>
+
+                <div *ngIf="formSubmitted" class="success-message">
+                    ✅ Your message has been sent successfully!
+                </div>
+
+                <div *ngIf="formError" class="error-message">
+                    ❌ {{ formError }}
                 </div>
               </form>
         </div>
