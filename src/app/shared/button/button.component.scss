@@ -40,6 +40,14 @@
   transform: translateY(-7px);
 }
 
+.default-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: gray;
+}
+
+
 // .primary-button {
 //   background: var(--accent-color);
 //   color: #ffffff;
