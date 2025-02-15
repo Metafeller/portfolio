@@ -17,12 +17,12 @@ export class ContactComponent {
   formError = ''; // Fehlernachricht für Backend-Fehler
 
   contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.pattern(/^[a-zA-Z\s]*$/)]),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
+    email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(40)]),
     message: new FormControl('', [Validators.required, Validators.minLength(50), Validators.maxLength(369)]),
     privacy: new FormControl(false, [Validators.requiredTrue]),
     category: new FormControl('', [Validators.required]),
-    customCategory: new FormControl('')
+    customCategory: new FormControl('', [Validators.maxLength(40)])
   });
 
   constructor(private http: HttpClient) {}
