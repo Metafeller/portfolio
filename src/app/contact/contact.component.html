@@ -42,7 +42,29 @@
                 <div class="error" *ngIf="message?.invalid && message?.touched">⚠️ Minimum 50 characters required.</div>
         
                 <label for="category">Select Category</label>
-                    <select id="category" formControlName="category">
+
+                    <!-- Eigene Dropdown-Komponente -->
+                    <div class="custom-dropdown" (click)="toggleDropdown($event)">
+                        <div class="selected-option">
+                        {{ selectedCategory || 'Choose a category' }}
+                        </div>
+                        <ul class="dropdown-options" [class.show]="dropdownOpen">
+                        <li (click)="selectCategory('Brand Strategy')">Brand Strategy 
+                            <span class="category-description">(Personal Brand, Market Positioning)</span></li>
+                        <li (click)="selectCategory('PR & Marketing')">PR & Marketing
+                            <span class="category-description">(Social Media, Paid-Ads, Organic, SEO)</span></li>
+                        <li (click)="selectCategory('Web Development')">Web Development 
+                            <span class="category-description">(App, Website, Online-Shop, SaaS-Software)</span></li>
+                        <li (click)="selectCategory('AI-Solutions')">AI-Solutions 
+                            <span class="category-description">(AI-Agency, AI-Content Creation and more)</span></li>
+                        <li (click)="selectCategory('All-Round Carefree Package')">All-Round Carefree Package
+                            <span class="category-description">(Full Service Package)</span></li>  
+                        <li (click)="selectCategory('other')">Other
+                            <span class="category-description">(Other Specific Solution)</span></li>
+                        </ul>
+                    </div>
+  
+                    <!-- <select id="category" formControlName="category">
                         <option value="" disabled selected>Choose a category</option>
                         <option value="web-development">Web Development</option>
                         <option value="app">App Development</option>
@@ -51,7 +73,8 @@
                         <option value="branding">Branding and Marketing</option>
                         <option value="ai-agency">AI-Agency</option>
                         <option value="other">Other</option>
-                    </select>
+                    </select> -->
+
                 <div class="error" *ngIf="category?.invalid && category?.touched">⚠️ Please select a category.</div>
         
                 <div *ngIf="category?.value === 'other'"

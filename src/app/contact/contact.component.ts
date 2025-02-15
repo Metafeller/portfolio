@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { ButtonComponent } from '../shared/button/button.component';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -11,10 +11,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit, OnDestroy {
   formSubmitted = false; // Zustand für "Erfolgreich gesendet"
   isLoading = false; // Ladespinner aktivieren
   formError = ''; // Fehlernachricht für Backend-Fehler
+  dropdownOpen = false;
+  selectedCategory = '';
 
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
@@ -25,7 +27,19 @@ export class ContactComponent {
     customCategory: new FormControl('', [Validators.maxLength(40)])
   });
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      document.addEventListener('click', this.closeDropdownOnClickOutside.bind(this));
+    }
+  }
+
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.platformId)) {
+      document.removeEventListener('click', this.closeDropdownOnClickOutside.bind(this));
+    }
+  }
 
   get name() { return this.contactForm.get('name'); }
   get email() { return this.contactForm.get('email'); }
@@ -34,8 +48,37 @@ export class ContactComponent {
   get category() { return this.contactForm.get('category'); }
   get customCategory() { return this.contactForm.get('customCategory'); }
 
-  /** Prüft, ob alle Felder korrekt sind & Button aktivieren */
-  isFormValid(): boolean {
+  // Logik für eigenes Dropdown-Menü
+  toggleDropdown(event?: Event) {
+    if (event) {
+      event.stopPropagation(); // Verhindert, dass der Click das Schließen auslöst
+    }
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+  
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.contactForm.patchValue({ category }); // Wert ins Formular übertragen
+
+    // 🔥 Sicherstellen, dass das Dropdown schließt, auch wenn Angular den State nicht sofort aktualisiert
+    setTimeout(() => {
+      this.dropdownOpen = false;
+    }, 300);
+
+    // this.dropdownOpen = false; // Dropdown schließen nach Auswahl
+  }
+
+  closeDropdownOnClickOutside(event: Event) {
+    if (isPlatformBrowser(this.platformId)) {
+      const dropdownElement = document.querySelector('.custom-dropdown');
+      if (dropdownElement && !dropdownElement.contains(event.target as Node)) {
+        this.dropdownOpen = false;
+      }
+    }
+  }
+
+   /** Prüft, ob alle Felder korrekt sind & Button aktivieren */
+   isFormValid(): boolean {
     return this.contactForm.valid && this.isCustomCategoryValid();
   }
 
