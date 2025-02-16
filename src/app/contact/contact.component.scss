@@ -601,10 +601,17 @@
             }
 
             .success-message {
-                color: var(--accent-color);
+                font-family: var(--font-family);
+                // color: var(--accent-color);
                 font-size: 18px;
                 text-align: center;
                 margin-top: 16px;
+                background-color: rgba(0, 255, 174, 0.9);
+                box-shadow: 0px 4px 10px rgba(0, 255, 174, 0.3);
+                color: var(--primary-color);
+                font-weight: 700;
+                padding: 8px 16px;
+                border-radius: 8px;
               }
 
             .button {
