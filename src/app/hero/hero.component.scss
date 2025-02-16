@@ -88,7 +88,7 @@
   span {
     font-family: var(--font-family-second);
     color: var(--accent-color);
-    font-size: 16px;
+    font-size: 24px;
   }
 
 
@@ -340,12 +340,19 @@
     h1 {
       font-size: 48px; /* Kleinere Schrift für mobile Ansicht */
     }
+
     h3 {
       font-size: 18px;
     }
+
     p {
       font-size: 11px;
     }
+
+    span {
+      font-size: 11px;
+    }
+
     .hero-buttons {
       flex-direction: column; /* Buttons vertikal ausrichten */
 
@@ -425,12 +432,19 @@
     h1 {
       font-size: 64px; /* Kleine Größe für Smartpohnes */
     }
+
     h3 {
       font-size: 24px;
     }
+
     p {
       font-size: 14px;
     }
+
+    // span {
+    //   font-size: 12px;
+    // }
+
     .hero-buttons {
       flex-direction: row; /* Buttons horizontal für Tablets */
       button {
@@ -508,12 +522,19 @@
     h1 {
       font-size: 96px; /* Mittlere Größe für Tablets */
     }
+
     h3 {
       font-size: 32px;
     }
+
     p {
       font-size: 18px;
     }
+
+    span {
+      font-size: 18px;
+    }
+
     .hero-buttons {
       flex-direction: row; /* Buttons horizontal für Tablets */
       button {

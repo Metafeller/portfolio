@@ -98,8 +98,10 @@
 
     .vector-background {
         position: absolute;
-        top: 286px;
-        left: 110px;
+        // top: 286px;
+        // left: 110px;
+        top: 224px;
+        left: 80px;
         right: 0;
         bottom: 0;
         height: 350px;
@@ -113,6 +115,7 @@
     img {
         position: relative;
         margin-top: 235px;
+        margin-top: 180px;
         max-width: 100%;
         border-radius: 32px;
         transition: transform 0.3s ease;
@@ -120,6 +123,7 @@
 
         &:hover {
             transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+            cursor: pointer;
         }
     }
 }
