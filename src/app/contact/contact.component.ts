@@ -3,6 +3,7 @@ import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core
 import { ButtonComponent } from '../shared/button/button.component';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../environments/environment.prod';
 
 @Component({
   selector: 'app-contact',
@@ -93,26 +94,65 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   /** Formular an Formspree senden */
+  // onSubmit(): void {
+  //   if (!this.isFormValid()) return;
+
+  //   this.isLoading = true; // Ladeanimation aktivieren
+  //   this.formError = ''; // Fehler zurücksetzen
+
+  //   const formData = {
+  //     name: this.name?.value,
+  //     email: this.email?.value,
+  //     message: this.message?.value,
+  //     category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
+  //   };
+
+  //   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+  //   this.http.post('https://formspree.io/f/xqaeblej', formData, { headers })
+  //     .subscribe({
+  //       next: () => {
+  //         this.formSubmitted = true; // Erfolgsmeldung anzeigen
+  //         this.contactForm.reset(); // Formular leeren
+  //         this.isLoading = false;
+  //       },
+  //       error: (err) => {
+  //         this.formError = 'Something went wrong. Please try again.';
+  //         this.isLoading = false;
+  //       }
+  //     });
+  // }
+
+  // Alternative Lösung: Formular an Resend senden!!!
   onSubmit(): void {
     if (!this.isFormValid()) return;
-
+  
     this.isLoading = true; // Ladeanimation aktivieren
     this.formError = ''; // Fehler zurücksetzen
-
+  
     const formData = {
-      name: this.name?.value,
-      email: this.email?.value,
-      message: this.message?.value,
-      category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
+      from: `contact@${environment.resend.domain}`, // Deine Domain als Absender
+      to: this.email?.value, // User bekommt eine Bestätigungsmail
+      subject: "Thank you for reaching out!",
+      html: `
+        <h2>Hey ${this.name?.value},</h2>
+        <p>Thank you for your message! I'll get back to you as soon as possible.</p>
+        <br/>
+        <p><strong>Your Message:</strong></p>
+        <p>${this.message?.value}</p>
+      `,
     };
-
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-    this.http.post('https://formspree.io/f/xqaeblej', formData, { headers })
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${environment.resend.apiKey}` // API-Key sicher in den Header packen
+    });
+  
+    this.http.post(environment.resend.endpoint, formData, { headers })
       .subscribe({
         next: () => {
-          this.formSubmitted = true; // Erfolgsmeldung anzeigen
-          this.contactForm.reset(); // Formular leeren
+          this.formSubmitted = true;
+          this.contactForm.reset();
           this.isLoading = false;
         },
         error: (err) => {
@@ -121,5 +161,6 @@ export class ContactComponent implements OnInit, OnDestroy {
         }
       });
   }
+  
 }
 
