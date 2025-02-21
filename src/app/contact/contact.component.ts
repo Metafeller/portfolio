@@ -125,14 +125,17 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   // Alternative Lösung: Formular an Resend senden!!!
   onSubmit(): void {
-    if (!this.isFormValid()) return;
+    if (!this.isFormValid()) {
+      this.formError = '⚠️ Please complete all fields correctly.';
+      return;
+    }
   
     this.isLoading = true; // Ladeanimation aktivieren
     this.formError = ''; // Fehler zurücksetzen
   
     const formData = {
-      from: `contact@${environment.resend.domain}`, // Deine Domain als Absender
-      to: this.email?.value, // User bekommt eine Bestätigungsmail
+      from: `contact@${environment.resend.domain}`,
+      to: this.email?.value,
       subject: "Thank you for reaching out!",
       html: `
         <h2>Hey ${this.name?.value},</h2>
@@ -145,7 +148,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${environment.resend.apiKey}` // API-Key sicher in den Header packen
+      'Authorization': `Bearer ${environment.resend.apiKey}`
     });
   
     this.http.post(environment.resend.endpoint, formData, { headers })
@@ -156,7 +159,7 @@ export class ContactComponent implements OnInit, OnDestroy {
           this.isLoading = false;
         },
         error: (err) => {
-          this.formError = 'Something went wrong. Please try again.';
+          this.formError = '❌ Something went wrong. Please try again.';
           this.isLoading = false;
         }
       });
