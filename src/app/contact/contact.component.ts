@@ -93,77 +93,36 @@ export class ContactComponent implements OnInit, OnDestroy {
     return this.category?.value !== 'other' || ((this.customCategory?.value?? '').trim().length > 0);
   }
 
+
   /** Formular an Formspree senden */
-  // onSubmit(): void {
-  //   if (!this.isFormValid()) return;
-
-  //   this.isLoading = true; // Ladeanimation aktivieren
-  //   this.formError = ''; // Fehler zurücksetzen
-
-  //   const formData = {
-  //     name: this.name?.value,
-  //     email: this.email?.value,
-  //     message: this.message?.value,
-  //     category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
-  //   };
-
-  //   const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
-  //   this.http.post('https://formspree.io/f/xqaeblej', formData, { headers })
-  //     .subscribe({
-  //       next: () => {
-  //         this.formSubmitted = true; // Erfolgsmeldung anzeigen
-  //         this.contactForm.reset(); // Formular leeren
-  //         this.isLoading = false;
-  //       },
-  //       error: (err) => {
-  //         this.formError = 'Something went wrong. Please try again.';
-  //         this.isLoading = false;
-  //       }
-  //     });
-  // }
-
-  // Alternative Lösung: Formular an Resend senden!!!
   onSubmit(): void {
-    if (!this.isFormValid()) {
-      this.formError = '⚠️ Please complete all fields correctly.';
-      return;
-    }
-  
+    if (!this.isFormValid()) return;
+
     this.isLoading = true; // Ladeanimation aktivieren
     this.formError = ''; // Fehler zurücksetzen
-  
+
     const formData = {
-      from: `contact@${environment.resend.domain}`,
-      to: this.email?.value,
-      subject: "Thank you for reaching out!",
-      html: `
-        <h2>Hey ${this.name?.value},</h2>
-        <p>Thank you for your message! I'll get back to you as soon as possible.</p>
-        <br/>
-        <p><strong>Your Message:</strong></p>
-        <p>${this.message?.value}</p>
-      `,
+      name: this.name?.value,
+      email: this.email?.value,
+      message: this.message?.value,
+      category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
     };
-  
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${environment.resend.apiKey}`
-    });
-  
-    this.http.post(environment.resend.endpoint, formData, { headers })
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http.post('https://formspree.io/f/xqaeblej', formData, { headers })
       .subscribe({
         next: () => {
-          this.formSubmitted = true;
-          this.contactForm.reset();
+          this.formSubmitted = true; // Erfolgsmeldung anzeigen
+          this.contactForm.reset(); // Formular leeren
           this.isLoading = false;
         },
         error: (err) => {
-          this.formError = '❌ Something went wrong. Please try again.';
+          this.formError = 'Something went wrong. Please try again.';
           this.isLoading = false;
         }
       });
   }
-  
+
 }
 
