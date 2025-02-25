@@ -41,5 +41,10 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# API Tresor (Schutz vor Fremde)
+# API Tresor (API Guardian)
 .env
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+# API Tresor (API Guardian)
+env.js
