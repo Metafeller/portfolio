@@ -94,7 +94,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
 
-  /** Formular an Formspree senden */
+  /** Formular an Brevo senden */
   onSubmit(): void {
     if (!this.isFormValid()) return;
 
@@ -110,12 +110,15 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('https://formspree.io/f/xqaeblej', formData, { headers })
+    this.http.post('https://api.brevo.com/v3/smtp/email', formData, { headers })
       .subscribe({
         next: () => {
           this.formSubmitted = true; // Erfolgsmeldung anzeigen
           this.contactForm.reset(); // Formular leeren
           this.isLoading = false;
+          setTimeout(() => {
+            window.location.href = '/thank-you'; // 🔥 Weiterleitung nach 3 Sekunden
+          }, 3000);
         },
         error: (err) => {
           this.formError = 'Something went wrong. Please try again.';
