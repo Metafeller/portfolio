@@ -208,7 +208,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     document.body.appendChild(confetti);
 
     // 🎵 Sound abspielen
-    const sound = new Audio('./public/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
+    const sound = new Audio('assets/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
     sound.play();
   }
 
