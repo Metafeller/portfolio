@@ -117,7 +117,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 
     // ✅ Der Prospect / oder Nutzer erhält Bestätigungsmail
     const formData = {
-      sender: { email: "no-reply@mail.metafeller.com" }, // Deine verifizierte Brevo-Absender-Adresse
+      sender: { 
+        name: "Taironman",
+        email: "no-reply@mail.metafeller.com" 
+      }, // Deine verifizierte Brevo-Absender-Adresse
       to: [{ email: this.email?.value }], // Der User erhält die E-Mail
       subject: "Danke für deine Anfrage! 📩",
       htmlContent: /*html*/`
@@ -128,6 +131,8 @@ export class ContactComponent implements OnInit, OnDestroy {
         <p>Falls du deine Bestätigungsmail nicht findest, überprüfe deinen E-Mail-Posteingang:</p>
         <a href="https://mail.google.com/" class="button">📧 E-Mail öffnen</a>
         <p>Bis bald und Beste Grüße!</p>
+        <!-- <img src="https://www.deine-domain.com/assets/images/profilbild.jpg" width="100" style="border-radius: 50%;" /> -->
+        <!-- Das Bild muss öffentlich erreichbar sein, also in /public/images/ oder auf einer CDN. -->
         <p>Dein, Savas</p>
       `
     };
@@ -148,9 +153,12 @@ export class ContactComponent implements OnInit, OnDestroy {
     
     // Ich erhalte eine Kopie der Kontaktformular-Anfrage als E-Mail
     const adminMailData = {
-      sender: { email: "no-reply@mail.metafeller.com" },
+      sender: { 
+        name: "Taironman",
+        email: "no-reply@mail.metafeller.com" 
+      },
       to: [{ email: "mail@metafeller.com" }],
-      subject: "Neue Kontaktanfrage erhalten!",
+      subject: "Neue Kontaktanfrage erhalten! ✅",
       htmlContent: `
         <h2>Neue Anfrage von ${this.name?.value}</h2>
         <p><strong>Name:</strong> ${this.name?.value}</p>
@@ -208,7 +216,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     document.body.appendChild(confetti);
 
     // 🎵 Sound abspielen
-    const sound = new Audio('./assets/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
+    const sound = new Audio('/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
     sound.play();
   }
 
