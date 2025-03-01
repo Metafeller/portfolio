@@ -1,64 +1,78 @@
-body {
-    font-family: Arial, sans-serif;
+/* CSS-Variablen definieren */
+:root {
+    --primary-color: #1C1C1C;
+    --primary-color-transparent: rgba(28, 28, 28, 0.3);
+    --accent-color: #00ffae;
+    --font-family: 'Karla', sans-serif;
+    --font-family-second: 'Fira Code', monospace;
+  }
+
+  body {
+    font-family: var(--font-family);
     text-align: center;
     padding: 50px;
-    background-color: #f4f4f4;
-}
+    margin: 0;
+    background: var(--primary-color) url('/public/bg-images/bg-hero.png') no-repeat center center fixed;
+    background-size: cover;
+  }
 
 .thank-you-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background: white;
+    /* background: rgb(33, 33, 33, 0.8); */
+    background: var(--primary-color-transparent);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-top: 56px;
+    /* font-family: var(--font-family); */
+    margin-bottom: 40px;
+}
+
+.avatar {
+    border-radius: 8px;
 }
 
 h1 {
-    color: #007bff;
+    /* color: #007bff; */
+    color: var(--accent-color);
+    /* font-family: var(--font-family-second); */
+    margin-bottom: 32px;
 }
 
 .button {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #007bff;
+    background-color: var(--accent-color);
+    /* background-color: #007bff; */
+    /* color: var(--primary-color); */
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    /* font-family: var(--font-family-second); */
+    margin-bottom: 40px;
+}
+
+.button-two {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    /* background-color: var(--accent-color); */
+    background-color: rgb(0, 123, 255, 0.3);
+    /* color: var(--primary-color); */
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    /* font-family: var(--font-family-second); */
+    margin-bottom: 24px;
 }
 
-
-/* Passend zu meinem Portfolio-Design */
-/* .thank-you-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+/* Footer */
+footer {
+    margin-top: 40px;
     text-align: center;
-    
-    h2 {
-      font-size: 2rem;
-      color: var(--accent-color);
-    }
-  
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-  
-    .button {
-      padding: 10px 20px;
-      background: var(--accent-color);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: 0.3s;
-      margin-top: 10px;
-  
-      &:hover {
-        background: #00c18f;
-      }
-    }
-  } */
+    color: white;
+    font-family: var(--font-family-second);
+}
