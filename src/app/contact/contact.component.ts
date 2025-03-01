@@ -149,7 +149,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     // Ich erhalte eine Kopie der Kontaktformular-Anfrage als E-Mail
     const adminMailData = {
       sender: { email: "no-reply@mail.metafeller.com" },
-      to: [{ email: "savasboas@gmail.com" }],
+      to: [{ email: "mail@metafeller.com" }],
       subject: "Neue Kontaktanfrage erhalten!",
       htmlContent: `
         <h2>Neue Anfrage von ${this.name?.value}</h2>
@@ -208,7 +208,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     document.body.appendChild(confetti);
 
     // 🎵 Sound abspielen
-    const sound = new Audio('assets/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
+    const sound = new Audio('./assets/sounds/yay-sound.mp3'); // 🔥✅ Eigene Sound-Datei aus dem public-Ordner
     sound.play();
   }
 
