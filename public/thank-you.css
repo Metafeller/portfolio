@@ -1,4 +1,4 @@
-/* CSS-Variablen definieren */
+/* CSS-Variablen Global*/
 :root {
     --primary-color: #1C1C1C;
     --primary-color-transparent: rgba(28, 28, 28, 0.3);
@@ -124,3 +124,139 @@ footer {
     color: white;
     font-family: var(--font-family-second);
 }
+
+
+/* ---------------- Responsive Styles ---------------- */
+
+/* Mobile Ansicht - 240px bis 320px */
+@media (min-width: 240px) and (max-width: 320px) {
+    body {
+      padding: 16px 8px;
+    }
+    .thank-you-container {
+      padding: 10px;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+    .button, .button-two {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Mobile Ansicht - 321px bis 480px */
+  @media (min-width: 321px) and (max-width: 480px) {
+    body {
+      padding: 20px 12px;
+    }
+    .thank-you-container {
+      padding: 15px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .avatar {
+        width: 256px;
+        height: 256px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 26px;
+    }
+    .button, .button-two {
+      font-size: 15px;
+      padding: 9px 18px;
+    }
+  }
+  
+  /* Mobile Ansicht - 481px bis 767px */
+  @media (min-width: 481px) and (max-width: 767px) {
+    body {
+      padding: 24px 16px;
+    }
+    .thank-you-container {
+      padding: 18px;
+      margin-top: 22px;
+      margin-bottom: 32px;
+    }
+
+    .avatar {
+        width: 400px;
+        height: 400px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 28px;
+    }
+    .button, .button-two {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Mobile Ansicht - 768px bis 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+      padding: 32px 20px;
+    }
+    .thank-you-container {
+      padding: 20px;
+      margin-top: 24px;
+      margin-bottom: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .button, .button-two {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* Mobile Ansicht - 1025px bis 1366px */
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    body {
+      padding: 40px 24px;
+    }
+    .thank-you-container {
+      padding: 22px;
+      margin-top: 26px;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 30px;
+      margin-bottom: 32px;
+    }
+    .button, .button-two {
+      font-size: 16px;
+      padding: 12px 22px;
+    }
+  }
