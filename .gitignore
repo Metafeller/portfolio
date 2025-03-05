@@ -48,3 +48,6 @@ Thumbs.db
 
 # API Tresor (API Guardian)
 env.js
+
+# Functions Firebase .env
+functions/.env

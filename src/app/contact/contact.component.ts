@@ -94,7 +94,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
 
-  /** Formular an Brevo senden */
+  /** Formular an Firebase-API und danach Brevo senden */
   onSubmit(): void {
     if (!this.isFormValid()) return;
 

@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   brevo: {
-    apiKey: 'Platzhalter Brevo API',
-    endpoint: 'https://api.brevo.com/v3/smtp/email'
+    apiKey: '', // 🔥 Falls nötig, kann ich den API-Key direkt hier definieren
+    endpoint: 'https://us-central1-my-portfolio-dcb57.cloudfunctions.net/api/sendEmail' // ✅ Meine Firebase API-URL
   }
 };
