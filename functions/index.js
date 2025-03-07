@@ -21,6 +21,12 @@ app.post("/sendEmail", async (req, res) => {
       });
     }
 
+    console.log("📩 Empfangene Daten:", req.body);
+
+    // console.log("📩 Sende Email an:", email);
+    // console.log("📨 Admin wird benachrichtigt:", "mail@metafeller.com");
+
+     // Kundene-Mail (kritischer Teil)
     const customerEmail = {
       sender: {
         name: "Savas Boas",
@@ -39,10 +45,14 @@ app.post("/sendEmail", async (req, res) => {
           border-radius:5px;">
           📅 Kostenloses Erstgespräch buchen
         </a>
-        <p>Bis bald & beste Grüße,</p>
+        <p>Bis bald und beste Grüße,</p>
         <p><strong>Dein, Savas</strong></p>`,
     };
 
+    console.log("📤 Sende diese Daten an Brevo API für Kunde:",
+      JSON.stringify(customerEmail, null, 2));
+
+    // Admin-Mail (nicht kritisch – Fehler hier beeinflussen nicht die Gesamtantwort)  
     const adminEmail = {
       sender: {
         name: "Savas Boas",
@@ -53,11 +63,13 @@ app.post("/sendEmail", async (req, res) => {
       htmlContent: `<h2>Neue Anfrage von ${name}</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>E-Mail:</strong> ${email}</p>
+        <p><strong>Nachricht:</strong> ${message}</p>
         <p><strong>Kategorie:</strong>
         ${category === "other" ? customCategory : category}</p>
-        <p><strong>Nachricht:</strong> ${message}</p>`,
+        `,
     };
 
+    // Kontaktanlage bei Brevo (ebenfalls nicht kritisch)
     const contactData = {
       email,
       attributes: {
@@ -75,40 +87,96 @@ app.post("/sendEmail", async (req, res) => {
       },
     };
 
+    console.log("📤 Sende Anfrage an Brevo API...");
     const emailResponse = await axios.post(
         "https://api.brevo.com/v3/smtp/email",
         customerEmail,
         brevoHeaders,
     );
 
-    await axios.post(
+    console.log("✅ Kundene-Mail gesendet:", emailResponse.data);
+
+    
+    // Versuche, die Admin-Mail zu senden – falls Fehler auftreten, nur loggen
+
+    // await axios.post(
+    //     "https://api.brevo.com/v3/smtp/email",
+    //     adminEmail,
+    //     brevoHeaders,
+    // );
+
+    try {
+      console.log("📤 Sende Admin-Mail an Brevo API...");
+      await axios.post(
         "https://api.brevo.com/v3/smtp/email",
         adminEmail,
-        brevoHeaders,
-    );
+        brevoHeaders
+      );
+      console.log("✅ Admin-Mail gesendet");
+    } catch (error) {
+      console.error("❌ Fehler beim Senden der Admin-Mail:",
+        error.response ? error.response.data : error.message);
+    }
 
-    await axios.post(
+
+    // Versuche, den Kontakt in der Brevo-Kontaktliste anzulegen – bei Fehlern (z. B. Duplikaten) ignorieren
+
+    // await axios.post(
+    //     "https://api.brevo.com/v3/contacts",
+    //     contactData,
+    //     brevoHeaders,
+    // );
+
+    try {
+      console.log("📤 Füge Kontakt zur Brevo-Kontaktliste hinzu...");
+      await axios.post(
         "https://api.brevo.com/v3/contacts",
         contactData,
-        brevoHeaders,
-    );
+        brevoHeaders
+      );
+      console.log("✅ Kontakt angelegt");
+    } catch (error) {
+      const errorMsg = error.response &&
+                       error.response.data &&
+                       error.response.data.message;
+      if (errorMsg && errorMsg.toLowerCase().includes("already exist")) {
+        console.log("ℹ Kontakt existiert bereits – Fehler ignorieren.");
+      } else {
+        console.error("❌ Fehler beim Anlegen des Kontakts:",
+          error.response ? error.response.data : error.message);
+      }
+    }
 
-    console.log("✅ Brevo API Response:", emailResponse.data);
+
+    // Rückgabe eines Erfolgs, da die Kundene-Mail (der kritische Teil) erfolgreich gesendet wurde
 
     res.status(200).json({
       success: true,
       message: "E-Mail erfolgreich gesendet!",
       brevoResponse: emailResponse.data,
     });
-  } catch (error) {
-    console.error("❌ Fehler beim Senden der E-Mail:", error.message);
+  
+//   } catch (error) {
+//     console.error("❌ Fehler in index.js:", error.response ? error.response.data : error.message);
+//     // console.error("❌ Fehler beim Senden der E-Mail:", error.message);
 
-    res.status(500).json({
-      success: false,
-      message: "Fehler beim Senden der E-Mail.",
-      error: error.message,
-    });
-  }
+//     res.status(500).json({
+//       success: false,
+//       message: "Fehler beim Senden der E-Mail.",
+//       error: error.response ? error.response.data : error.message,
+//     });
+//   }
+// });
+
+} catch (error) {
+  console.error("❌ Kritischer Fehler in sendEmail:",
+    error.response ? error.response.data : error.message);
+  res.status(500).json({
+    success: false,
+    message: "Fehler beim Senden der E-Mail.",
+    error: error.response ? error.response.data : error.message,
+  });
+}
 });
 
 exports.api = functions.https.onRequest(app);
