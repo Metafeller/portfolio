@@ -19,6 +19,10 @@ export class ContactComponent implements OnInit, OnDestroy {
   dropdownOpen = false;
   selectedCategory = '';
 
+  // Neue Variablen für das Overlay-Popup
+  overlayVisible = false;
+  updateConfirmed = false;
+
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
     email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(40)]),
@@ -104,13 +108,6 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.isLoading = true; // Ladeanimation aktivieren
     this.formError = ''; // Fehler zurücksetzen
 
-    // const headers = new HttpHeaders({ 
-    //   'Content-Type': 'application/json',
-    //   'accept': 'application/json',
-    //   // 'api-key': environment.brevo.apiKey // 🔥 API-Key sicher aus environment.ts laden
-    //   // 'api-key': environment.firebaseApi || '' // ✅ Falls API-Key undefined ist, nutze leeren String
-    // });
-
     const formData = {
       name: this.name?.value,
       email: this.email?.value,
@@ -118,104 +115,58 @@ export class ContactComponent implements OnInit, OnDestroy {
       category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
     };
 
-    // ✅ Der Prospect / oder Nutzer erhält Bestätigungsmail
-
-    // const formData = {
-    //   sender: { 
-    //     name: "Taironman",
-    //     email: "no-reply@mail.metafeller.com" 
-    //   }, // Deine verifizierte Brevo-Absender-Adresse
-    //   to: [{ email: this.email?.value }], // Der User erhält die E-Mail
-    //   subject: "Danke für deine Anfrage! 📩",
-    //   htmlContent: /*html*/`
-    //     <h2>Hallo ${this.name?.value},</h2>
-    //     <p>Danke, dass du mich über mein Kontaktformular erreicht hast! Ich werde mich bald bei dir melden.</p>
-    //     <p>Falls du nicht warten möchtest, kannst du direkt unverbindlich einen Termin buchen:</p>
-    //     <a href="https://calendly.com/dein-link" style="display: inline-block; padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">📅 Kostenloses Erstgespräch buchen</a>
-    //     <p>Falls du deine Bestätigungsmail nicht findest, überprüfe deinen E-Mail-Posteingang:</p>
-    //     <a href="https://mail.google.com/" class="button">📧 E-Mail öffnen</a>
-    //     <p>Bis bald und Beste Grüße!</p>
-    //     <!-- <img src="https://www.deine-domain.com/assets/images/profilbild.jpg" width="100" style="border-radius: 50%;" /> -->
-    //     <!-- Das Bild muss öffentlich erreichbar sein, also in /public/images/ oder auf einer CDN. -->
-    //     <p>Dein, Savas</p>
-    //   `
-    // };
-
-    // ✅ Daten für Brevo-Kontaktliste
-    // const contactData = {
-    //   email: this.email?.value,
-    //   attributes: {
-    //     NAME: this.name?.value,
-    //     MESSAGE: this.message?.value,
-    //     CATEGORY: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
-    //   },
-    //   listIds: [4] // ID deiner Brevo-Kontaktliste eintragen
-    // };
-
-    // Sende Daten an Brevo-Kontaktliste
-    // this.http.post('https://api.brevo.com/v3/contacts', contactData, { headers }).subscribe();
-    
-    // Ich erhalte eine Kopie der Kontaktformular-Anfrage als E-Mail
-    // const adminMailData = {
-    //   sender: { 
-    //     name: "Taironman",
-    //     email: "no-reply@mail.metafeller.com" 
-    //   },
-    //   to: [{ email: "mail@metafeller.com" }],
-    //   subject: "Neue Kontaktanfrage erhalten! ✅",
-    //   htmlContent: `
-    //     <h2>Neue Anfrage von ${this.name?.value}</h2>
-    //     <p><strong>Name:</strong> ${this.name?.value}</p>
-    //     <p><strong>E-Mail:</strong> ${this.email?.value}</p>
-    //     <p><strong>Kategorie:</strong> ${this.category?.value === 'other' ? this.customCategory?.value : this.category?.value}</p>
-    //     <p><strong>Nachricht:</strong> ${this.message?.value}</p>
-    //   `
-    // };
-
-    // const headers = new HttpHeaders({ 
-    //   'Content-Type': 'application/json',
-    //   'accept': 'application/json',
-    //   // 'api-key': environment.brevo.apiKey // 🔥 API-Key sicher aus environment.ts laden
-    //   'api-key': environment.brevo.apiKey || '' // ✅ Falls API-Key undefined ist, nutze leeren String
-    // });
-
-    // // Sende Daten an Brevo-Kontaktliste
-    // this.http.post('https://api.brevo.com/v3/contacts', contactData, { headers }).subscribe();
-
     // ✅ Kontaktanfrage absenden!
     this.http.post(environment.firebaseApi, formData).subscribe({
-        next: (response: any) => {
-          console.log("✅ API Response erhalten:", response); // DEBUG LOG
-
-          if (response && response.success) {
-            console.log("🎉 Erfolgreiche API-Antwort, Formular wird als erfolgreich markiert."); // DEBUG LOG
-
-            this.formSubmitted = true; // Erfolgsmeldung anzeigen
-            this.contactForm.reset(); // Formular leeren
+      next: (response: any) => {
+        console.log("✅ API Response erhalten:", response);
+        if (response && response.success) {
+          // Falls duplicate true ist, zeige das Overlay-Popup
+          if (response.duplicate) {
+            this.overlayVisible = true;
             this.isLoading = false;
-
-            // ✅ Konfetti + Sound starten 🎉🔊
-            this.triggerConfetti();
-
-            // ✅ Weiterleitung nach 3 Sekunden zur Danke-Seite
-            setTimeout(() => {
-              window.open('/thank-you.html', '_blank'); // 🔥 Dankeseite als echte HTML-Datei als Neues Tab öffnen!
-            }, 3000);
-        } else {
-            console.error("❌ Fehler: API-Antwort enthält kein success: true!", response); // DEBUG LOG
-
-            // Falls die API-Antwort kein success: true enthält, zeige eine Fehlermeldung
-            this.formError = 'Fehler: Die API hat keine Erfolgsantwort zurückgegeben.';
-            this.isLoading = false;
+          } else {
+            this.handleSuccess();
           }
-        },  
-        error: (error) => {
-          console.error("❌ Fehler beim Absenden:", error);
-          this.formError = 'Something went wrong. Please try again.';
+        } else {
+          console.error("❌ Fehler: API-Antwort enthält kein success: true!", response);
+          this.formError = 'Fehler: Die API hat keine Erfolgsantwort zurückgegeben.';
           this.isLoading = false;
         }
+      },
+      error: (error) => {
+        console.error("❌ Fehler beim Absenden:", error);
+        this.formError = 'Something went wrong. Please try again.';
+        this.isLoading = false;
+      }
     });
   }
+
+  
+  // Diese Methode wird aufgerufen, wenn der Nutzer im Overlay "Einverstanden" klickt.
+  confirmUpdate(): void {
+    this.overlayVisible = false;
+    this.handleSuccess();
+  }
+
+  // Diese Methode wird aufgerufen, wenn der Nutzer im Overlay "Nicht Einverstanden" klickt.
+  cancelUpdate(): void {
+    // Schließe das Overlay, sodass der Nutzer seine E-Mail ändern kann.
+    this.overlayVisible = false;
+    this.isLoading = false;
+    // Optional: Du kannst hier noch eine Benachrichtigung anzeigen oder das Formular in den Bearbeitungsmodus setzen.
+  }
+
+  // Diese Methode verarbeitet den Erfolg (Erfolgsmeldung, Konfetti, Weiterleitung).
+  handleSuccess(): void {
+    this.formSubmitted = true;
+    this.contactForm.reset();
+    this.isLoading = false;
+    this.triggerConfetti();
+    setTimeout(() => {
+      window.open('/thank-you.html', '_blank');
+    }, 3000);
+  }
+
 
   /** 🎉 Konfetti-Effekt starten */
   triggerConfetti() {

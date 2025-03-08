@@ -122,3 +122,19 @@
     </div>
 </section>
   
+<!-- Overlay-Popup für Duplicate-Update -->
+<div class="overlay" *ngIf="overlayVisible">
+    <div class="overlay-content">
+      <p>
+        Diese E-Mail-Adresse ist bereits registriert. Mit dieser Anfrage werden Ihre Kontaktdaten aktualisiert.
+        Bitte bestätigen Sie, dass Sie mit dem Update Ihrer Kontaktdaten einverstanden sind.
+        Für andere Anliegen kontaktieren Sie bitte unseren Kundenservice unter mail&#64;metafeller.com
+        oder nutzen Sie unseren 24/7 Kundenchat auf unserer Website.
+      </p>
+      <div class="overlay-buttons">
+        <button (click)="confirmUpdate()">Ich bin mit dem Update einverstanden</button>
+        <button (click)="cancelUpdate()">Nicht Einverstanden</button>
+      </div>
+    </div>
+</div>
+  
