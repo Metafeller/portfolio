@@ -69,7 +69,7 @@ app.post("/sendEmail", async (req, res) => {
         `,
     };
 
-    // Kontaktanlage bei Brevo (ebenfalls nicht kritisch)
+    // Kontaktanfrage/Kontaktanlage bei Brevo (ebenfalls nicht kritisch)
     const contactData = {
       email,
       attributes: {
