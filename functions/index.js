@@ -12,6 +12,26 @@ app.use(cors({ origin: true }));
 app.use(express.json());
 
 // === POST-Endpunkt: /sendEmail ===
+// Schritte:
+// 1. Prüft, ob der Kontakt bereits existiert
+// (GET-Anfrage an Brevo).
+//
+// 2. Wenn der Kontakt existiert und der Request nicht bestätigt ist
+// (confirmUpdate fehlt oder false),
+//    wird ein Response mit duplicate:true zurückgegeben –
+// ohne weitere Aktionen.
+//
+// 3. Falls der Kontakt existiert und confirmUpdate true ist
+// oder der Kontakt neu ist, wird der Kontakt
+//    aktualisiert (bei Duplicate) oder neu erstellt.
+//
+// 4. Danach werden die Kundene-Mail (kritisch)
+// und Admin-Mail (nicht kritisch) gesendet.
+//
+// 5. Zum Schluss wird eine Erfolgsmeldung
+// mit dem duplicate-Flag zurückgegeben.
+
+// === POST-Endpunkt: /sendEmail ===
 // Dieser Endpunkt prüft, ob der Kontakt bereits existiert.
 // Falls ja, wird er aktualisiert (duplicate=true).
 // Anschließend werden Kundene-Mail (kritisch)
@@ -22,7 +42,7 @@ app.use(express.json());
 app.post("/sendEmail", async (req, res) => {
   try {
     // ----- Parameter aus dem Request extrahieren -----
-    const { name, email, message, category, customCategory } = req.body;
+    const { name, email, message, category, customCategory, confirmUpdate } = req.body;
     const brevoApiKey = process.env.BREVO_API_KEY;
     if (!brevoApiKey) {
       console.error("❌ BREVO_API_KEY fehlt! Prüfe .env Datei.");
@@ -57,6 +77,17 @@ app.post("/sendEmail", async (req, res) => {
         console.error("❌ Fehler beim Prüfen des Kontakts:",
           error.response ? error.response.data : error.message);
       }
+    }
+
+    // Wenn der Kontakt bereits existiert und der Nutzer
+    // nicht bestätigt hat, sende nur das Duplicate-Flag zurück.
+    if (contactExists && !confirmUpdate) {
+      console.log("ℹ️ Duplicate detected. Bitte bestätigen Sie das Update.");
+      return res.status(200).json({
+        success: true,
+        message: "Duplicate detected. Please confirm update.",
+        duplicate: true,
+      });
     }
 
     // ----- Schritt 2: Kontakt-Daten vorbereiten -----
@@ -112,11 +143,11 @@ app.post("/sendEmail", async (req, res) => {
         <p>Falls du nicht warten möchtest, 
         kannst du direkt einen Termin buchen:</p>
         <a href="https://calendly.com/dein-link" style="display:inline-block;
-        // padding:10px 20px;
-        // background:#007bff;
-        // color:white;
-        // text-decoration:none;
-        // border-radius:5px;">
+        padding:10px 20px;
+        background:#007bff;
+        color:white;
+        text-decoration:none;
+        border-radius:5px;">
           📅 Kostenloses Erstgespräch buchen
         </a>
         <p>Bis bald und beste Grüße,</p>

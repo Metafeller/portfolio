@@ -22,6 +22,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   // Neue Variablen für das Overlay-Popup
   overlayVisible = false;
   updateConfirmed = false;
+  formDataCache: any = null; // Um die Formulardaten zwischenzuspeichern
 
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
@@ -112,16 +113,20 @@ export class ContactComponent implements OnInit, OnDestroy {
       name: this.name?.value,
       email: this.email?.value,
       message: this.message?.value,
-      category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value
+      category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value,
+      confirmUpdate: false // Standardmäßig false
     };
+
+    // Speichere das FormData in einer Variablen, um es bei Bedarf erneut zu senden
+    this.formDataCache = formData;
 
     // ✅ Kontaktanfrage absenden!
     this.http.post(environment.firebaseApi, formData).subscribe({
       next: (response: any) => {
         console.log("✅ API Response erhalten:", response);
         if (response && response.success) {
-          // Falls duplicate true ist, zeige das Overlay-Popup
-          if (response.duplicate) {
+          // Duplicate wurde erkannt, aber der Nutzer hat noch nicht bestätigt – Overlay anzeigen
+          if (response.duplicate && !formData.confirmUpdate) {
             this.overlayVisible = true;
             this.isLoading = false;
           } else {
@@ -141,16 +146,38 @@ export class ContactComponent implements OnInit, OnDestroy {
     });
   }
 
-  
+
   // Diese Methode wird aufgerufen, wenn der Nutzer im Overlay "Einverstanden" klickt.
   confirmUpdate(): void {
-    this.overlayVisible = false;
-    this.handleSuccess();
+    // Setze das Flag in den gespeicherten Formulardaten
+
+    if (this.formDataCache) {
+      this.formDataCache.confirmUpdate = true;
+      this.isLoading = true;
+      // Sende die Anfrage erneut mit confirmUpdate true.
+      this.http.post(environment.firebaseApi, this.formDataCache).subscribe({
+        next: (response: any) => {
+          console.log("✅ API Response erhalten (Update bestätigt):", response);
+          if (response && response.success) {
+            this.overlayVisible = false;
+            this.handleSuccess();
+          } else {
+            this.formError = 'Fehler: Die API hat keine Erfolgsantwort zurückgegeben.';
+            this.isLoading = false;
+          }
+        },
+        error: (error) => {
+          console.error("❌ Fehler beim erneuten Absenden:", error);
+          this.formError = 'Something went wrong. Please try again.';
+          this.isLoading = false;
+        }
+      });
+    }
   }
 
   // Diese Methode wird aufgerufen, wenn der Nutzer im Overlay "Nicht Einverstanden" klickt.
   cancelUpdate(): void {
-    // Schließe das Overlay, sodass der Nutzer seine E-Mail ändern kann.
+    // Schließe das Overlay, sodass der Nutzer die E-Mail-Adresse ändern oder das Formular anpassen kann.
     this.overlayVisible = false;
     this.isLoading = false;
     // Optional: Du kannst hier noch eine Benachrichtigung anzeigen oder das Formular in den Bearbeitungsmodus setzen.
