@@ -42,7 +42,16 @@ app.use(express.json());
 app.post("/sendEmail", async (req, res) => {
   try {
     // ----- Parameter aus dem Request extrahieren -----
-    const { name, email, message, category, customCategory, confirmUpdate } = req.body;
+    const {
+      name,
+      email,
+      message,
+      category,
+      customCategory,
+      confirmUpdate,
+      website,
+      websiteOwnership,
+    } = req.body;
     const brevoApiKey = process.env.BREVO_API_KEY;
     if (!brevoApiKey) {
       console.error("❌ BREVO_API_KEY fehlt! Prüfe .env Datei.");
@@ -97,6 +106,8 @@ app.post("/sendEmail", async (req, res) => {
         NAME: name,
         MESSAGE: message,
         CATEGORY: category === "other" ? customCategory : category,
+        WEBSITE: website || "", // Falls leer, speichern wir ""
+        WEBSITE_OWNERSHIP: websiteOwnership || "",
       },
       listIds: [4], // Kontaktliste ID #4
     };
@@ -170,6 +181,8 @@ app.post("/sendEmail", async (req, res) => {
       htmlContent: `<h2>Neue Anfrage von ${name}</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>E-Mail:</strong> ${email}</p>
+        <p><strong>Website:</strong> ${website || "N/A"}</p>
+        <p><strong>Ownership:</strong> ${websiteOwnership || "N/A"}</p>
         <p><strong>Nachricht:</strong> ${message}</p>
         <p><strong>Kategorie:</strong> ${category === "other" ? customCategory : category}</p>`,
     };

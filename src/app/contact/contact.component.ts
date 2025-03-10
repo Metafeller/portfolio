@@ -27,6 +27,14 @@ export class ContactComponent implements OnInit, OnDestroy {
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
     email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(40)]),
+
+    // NEU: Radiobutton-Gruppe: "Do you have a website?"
+    hasWebsite: new FormControl('', [Validators.required]),
+    // NEU: Wenn der Nutzer "yes" wählt, muss er die Website-Domain eingeben.
+    website: new FormControl(''),
+    // NEU: Bestätigung, ob er verantwortlich ist – ebenfalls als Radiobutton-Gruppe.
+    websiteOwnership: new FormControl(''),
+
     message: new FormControl('', [Validators.required, Validators.minLength(50), Validators.maxLength(369)]),
     privacy: new FormControl(false, [Validators.requiredTrue]),
     category: new FormControl('', [Validators.required]),
@@ -39,6 +47,22 @@ export class ContactComponent implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       document.addEventListener('click', this.closeDropdownOnClickOutside.bind(this));
     }
+    // Dynamische Validierung: Wenn der Nutzer "yes" auswählt, müssen "website" und "websiteOwnership" gesetzt werden.
+    this.contactForm.get('hasWebsite')!.valueChanges.subscribe((value: string | null) => {
+      if (value === 'yes') {
+        this.contactForm.get('website')!.setValidators([
+          Validators.required,
+          // Erlaubt Domainnamen ohne "www.", z.B. "maxmustermann.com" (grobe Prüfung)
+          Validators.pattern(/^(?!www\.)[a-z0-9]+(-?[a-z0-9])*(\.[a-z]{2,})+$/i)
+        ]);
+        this.contactForm.get('websiteOwnership')!.setValidators([Validators.required]);
+      } else {
+        this.contactForm.get('website')!.clearValidators();
+        this.contactForm.get('websiteOwnership')!.clearValidators();
+      }
+      this.contactForm.get('website')!.updateValueAndValidity();
+      this.contactForm.get('websiteOwnership')!.updateValueAndValidity();
+    });
   }
 
   ngOnDestroy() {
@@ -47,6 +71,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     }
   }
 
+  // Getter für die FormControls
   get name() { return this.contactForm.get('name'); }
   get email() { return this.contactForm.get('email'); }
   get message() { return this.contactForm.get('message'); }
@@ -109,18 +134,29 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.isLoading = true; // Ladeanimation aktivieren
     this.formError = ''; // Fehler zurücksetzen
 
+    // Falls 'hasWebsite' oder 'website' mal null sein könnten, gehen wir auf Nummer sicher:
+    const hasWebsiteVal: string = (this.contactForm.get('hasWebsite')?.value ?? '') as string;
+    const websiteVal: string = (this.contactForm.get('website')?.value ?? '') as string;
+    // NEU: Ownership aus dem FormControl
+    const websiteOwnershipVal: string = (this.contactForm.get('websiteOwnership')?.value ?? '') as string;
+
     const formData = {
       name: this.name?.value,
       email: this.email?.value,
       message: this.message?.value,
       category: this.category?.value === 'other' ? this.customCategory?.value : this.category?.value,
-      confirmUpdate: false // Standardmäßig false
+      confirmUpdate: false, // Standardmäßig false
+      website: hasWebsiteVal === 'yes'
+        ? `https://${websiteVal.trim()}`
+        : '',
+        // NEU: Ownership übergeben
+      websiteOwnership: websiteOwnershipVal
     };
 
     // Speichere das FormData in einer Variablen, um es bei Bedarf erneut zu senden
     this.formDataCache = formData;
 
-    // ✅ Kontaktanfrage absenden!
+    // ✅ Kontaktanfrage an das Backend absenden!
     this.http.post(environment.firebaseApi, formData).subscribe({
       next: (response: any) => {
         console.log("✅ API Response erhalten:", response);

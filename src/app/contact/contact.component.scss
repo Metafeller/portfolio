@@ -598,6 +598,43 @@
                         color: #f653a6;
                     }
                 }
+
+                /* Styles für die Website-Options */
+                .website-options {
+                    margin: 16px 0;
+                    display: flex;
+                    gap: 16px;
+                
+                    label {
+                    font-size: 12px;
+                    font-family: var(--font-family);
+                    color: white;
+                    cursor: pointer;
+                
+                        input {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+                
+                /* Styles für das Website-Feld und die Ownership-Optionen */
+                .website-ownership {
+                    margin-top: 8px;
+                    display: flex;
+                    gap: 16px;
+                
+                    label {
+                    font-size: 16px;
+                    font-family: var(--font-family);
+                    color: white;
+                    cursor: pointer;
+                
+                        input {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+  
             }
 
             .success-message {
