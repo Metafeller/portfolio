@@ -12,7 +12,7 @@
     text-align: center;
     padding: 50px;
     margin: 0;
-    background: var(--primary-color) url('/public/bg-images/bg-hero.png') no-repeat center center fixed;
+    background: var(--primary-color) url('/bg-images/bg-hero.png') no-repeat center center fixed;
     background-size: cover;
   }
 

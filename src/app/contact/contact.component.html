@@ -38,11 +38,11 @@
                 <div class="website-options">
                 <label>
                     <input type="radio" formControlName="hasWebsite" value="no">
-                    NO! I don't have a website yet.
+                    NO! I don't have a website yet
                 </label>
                 <label>
                     <input type="radio" formControlName="hasWebsite" value="yes">
-                    YES! I have a website.
+                    YES! I have a website
                 </label>
                 </div>
 
@@ -53,8 +53,8 @@
                 <div class="error" *ngIf="contactForm.get('website')?.invalid && contactForm.get('website')?.touched">
                     ⚠️ Please enter a valid domain (without www. Example: savasboas.com)
                 </div>
-
-                <label>Are you the decision maker / owner of this website?</label>
+                <br>
+                <label>Are you the decision maker and / or owner of this website?</label>
                 <div class="website-ownership">
                     <label>
                     <input type="radio" formControlName="websiteOwnership" value="yes">

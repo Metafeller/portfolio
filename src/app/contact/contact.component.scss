@@ -598,43 +598,55 @@
                         color: #f653a6;
                     }
                 }
+            }
 
-                /* Styles für die Website-Options */
-                .website-options {
-                    margin: 16px 0;
-                    display: flex;
-                    gap: 16px;
-                
-                    label {
-                    font-size: 12px;
-                    font-family: var(--font-family);
-                    color: white;
-                    cursor: pointer;
-                
-                        input {
-                            margin-right: 8px;
-                        }
+            /* Styles für die Website-Options */
+            .website-options {
+                display: flex;
+                flex-direction: column;
+                margin: 16px 0;
+                display: flex;
+                gap: 16px;
+            
+                label {
+                font-size: 16px;
+                font-family: var(--font-family-second);
+                color: white;
+                cursor: pointer;
+
+                    input {
+                        margin-right: 8px;
                     }
                 }
-                
-                /* Styles für das Website-Feld und die Ownership-Optionen */
-                .website-ownership {
-                    margin-top: 8px;
-                    display: flex;
-                    gap: 16px;
-                
-                    label {
-                    font-size: 16px;
-                    font-family: var(--font-family);
-                    color: white;
-                    cursor: pointer;
-                
-                        input {
-                            margin-right: 8px;
-                        }
+            }
+
+            #website {
+                position: relative;
+                border: 1px solid var(--accent-color);
+                border-radius: 8px;
+                padding: 12px;
+                text-align: center;
+                margin-left: 16px;
+                margin-bottom: 24px;
+                width: 60%;
+            }
+            
+            /* Styles für das Website-Feld und die Ownership-Optionen */
+            .website-ownership {
+                margin-top: 16px;
+                display: flex;
+                gap: 16px;
+            
+                label {
+                font-size: 16px;
+                font-family: var(--font-family-second);
+                color: white;
+                cursor: pointer;
+            
+                    input {
+                        margin-right: 8px;
                     }
                 }
-  
             }
 
             .success-message {

@@ -14,7 +14,7 @@ import { HostListener } from '@angular/core';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet, 
+    // RouterOutlet, 
     HeaderComponent,
     HeroComponent,
     AboutMeComponent,

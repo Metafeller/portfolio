@@ -162,7 +162,7 @@ app.post("/sendEmail", async (req, res) => {
           📅 Kostenloses Erstgespräch buchen
         </a>
         <p>Bis bald und beste Grüße,</p>
-        <p><strong>Dein, Savas</strong></p>`,
+        <p>Dein, <strong>Savas</strong></p>`,
     };
 
     console.log("📤 Sende Kundene-Mail:", JSON.stringify(customerEmail, null, 2));
