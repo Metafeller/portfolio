@@ -51,7 +51,9 @@
                 <label for="website">What's Your Website?</label>
                 <input type="text" id="website" formControlName="website" placeholder="e.g. maxmustermann.com" maxlength="100">
                 <div class="error" *ngIf="contactForm.get('website')?.invalid && contactForm.get('website')?.touched">
-                    ⚠️ Please enter a valid domain (without www. Example: savasboas.com)
+                    ⚠️ Please enter a valid domain <br>
+                    ⚠️ Please without www. <br>
+                    ✅ Example: savasboas.com
                 </div>
                 <br>
                 <label>Are you the decision maker and / or owner of this website?</label>

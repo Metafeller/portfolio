@@ -614,6 +614,14 @@
                 color: white;
                 cursor: pointer;
 
+                @include responsive(240px, 480px) {
+                    font-size: 12px;
+                }
+
+                @include responsive(481px, 767px) {
+                    font-size: 14px;
+                }
+
                     input {
                         margin-right: 8px;
                     }
@@ -626,9 +634,34 @@
                 border-radius: 8px;
                 padding: 12px;
                 text-align: center;
-                margin-left: 16px;
+                // margin-left: 16px;
+                margin-top: 24px;
                 margin-bottom: 24px;
-                width: 60%;
+                width: 95%;
+
+                @include responsive(240px, 320px) {
+                    // margin-left: 0px;
+                    // margin-top: 24px;
+                    width: 90%;
+                }
+
+                @include responsive(321px, 480px) {
+                    // margin-left: 0px;
+                    // margin-top: 24px;
+                    width: 92%;
+                }
+
+                @include responsive(481px, 767px) {
+                    // margin-left: 0px;
+                    // margin-top: 24px;
+                    width: 94%;
+                }
+
+                @include responsive(768px, 1024px) {
+                    // margin-left: 0px;
+                    // margin-top: 24px;
+                    width: 95%;
+                }
             }
             
             /* Styles für das Website-Feld und die Ownership-Optionen */
@@ -642,6 +675,14 @@
                 font-family: var(--font-family-second);
                 color: white;
                 cursor: pointer;
+
+                @include responsive(240px, 480px) {
+                    font-size: 12px;
+                }
+
+                @include responsive(481px, 767px) {
+                    font-size: 14px;
+                }
             
                     input {
                         margin-right: 8px;
