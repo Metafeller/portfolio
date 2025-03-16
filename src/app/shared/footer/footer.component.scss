@@ -1,1 +1,285 @@
-// Hier kommt unsere footer css / scss
+/* footer.component.scss */
+
+@mixin responsive($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+}
+
+.footer {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    color: white;
+    // padding: 40px; // 8er-Schritte
+    padding: 48px 32px;
+    font-family: var(--font-family);
+    z-index: 1;
+  
+    // Background Video Styling
+    .footer-background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+  
+    .footer-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(28, 28, 28, 0.6);
+      z-index: -1;
+    }
+  
+    /* Top Container */
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+  
+      .footer-top-left,
+      .footer-top-right {
+        flex: 1;
+        padding: 16px;
+      }
+  
+      .footer-top-left {
+        .footer-logo {
+          img {
+            width: 120px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+          }
+          &:hover img {
+            transform: scale(1.1);
+          }
+        }
+        .footer-personal-message {
+          margin-top: 16px;
+          p {
+            font-size: 16px;
+            font-family: var(--font-family-second);
+            font-weight: 300;
+          }
+        }
+        .footer-seals {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+          .seal {
+            flex: 1;
+            padding: 8px;
+            img {
+              width: 50px;
+              transition: transform 0.3s ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+  
+      .footer-top-right {
+        .fundraising-campaign {
+          h2 {
+            font-size: 64px;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+          }
+          h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
+          p, span {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+          img {
+            width: 100%;
+            max-width: 300px;
+            margin: 16px 0;
+            transition: transform 0.3s ease;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+          .next-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: var(--font-family-second);
+            transition: background-color 0.3s ease;
+            &:hover {
+            //   background-color: lighten(var(--accent-color), 10%);
+                background-color: var(--accent-color);
+            }
+          }
+        }
+      }
+    }
+  
+    /* Middle Container */
+    .footer-middle {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      
+      .footer-middle-left,
+      .footer-middle-inner-left,
+      .footer-middle-inner-right,
+      .footer-middle-right,
+      .contact-me {
+        flex: 1;
+        min-width: 250px;
+        padding: 16px;
+      }
+  
+      h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin-bottom: 8px;
+          a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            &:hover {
+              color: var(--accent-color);
+            }
+          }
+          img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+            transition: transform 0.3s ease;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      
+      .creative-locations,
+      .follow-me,
+      .contact-me {
+        margin-top: 16px;
+      }
+    }
+  
+    /* Bottom Container */
+    .footer-bottom {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 16px;
+  
+      .footer-bottom-left,
+      .footer-bottom-center,
+      .footer-bottom-right {
+        padding: 8px;
+      }
+  
+      .footer-bottom-left {
+        img {
+          width: 24px;
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+      }
+  
+      .footer-bottom-center {
+        text-align: center;
+      }
+  
+      .footer-bottom-right {
+        display: flex;
+        gap: 16px;
+        a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+  
+  /* Slide-in Animationen */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+  
+  .animate-slide-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+  
+  /* Responsive Breakpoints (Beispiel mit Mixin, wie in deinem Projekt) */
+  @include responsive(240px, 320px) {
+    .footer {
+      padding: 16px;
+      .footer-top, .footer-middle, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  
+  @include responsive(321px, 480px) {
+    /* Weitere responsive Anpassungen */
+  }
+  
+  @include responsive(481px, 767px) {
+    /* Weitere responsive Anpassungen */
+  }
+  
+  @include responsive(768px, 1024px) {
+    /* Weitere responsive Anpassungen */
+  }
+  

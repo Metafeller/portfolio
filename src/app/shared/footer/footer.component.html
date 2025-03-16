@@ -1,1 +1,118 @@
-<p>footer works!</p>
+<footer class="footer">
+    <!-- Background Video (Bonus) -->
+    <video class="footer-background-video" autoplay muted loop playsinline>
+      <source src="/videos/space-dark.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Overlay to darken the video background -->
+    <div class="footer-overlay"></div>
+    
+    <!-- Top Container -->
+    <div class="footer-top">
+      <div class="footer-top-left animate-slide-left">
+        <!-- Logo with Hover-Effekt -->
+        <div class="footer-logo">
+          <img 
+            [src]="logoHover ? config.top.logoHover : config.top.logoDefault" 
+            alt="Footer Logo" 
+            (mouseenter)="logoHover = true" 
+            (mouseleave)="logoHover = false">
+        </div>
+        <!-- Persönliche Message -->
+        <div class="footer-personal-message">
+          <p>{{ config.top.personalMessage }} <span class="heart-icon" aria-label="heart">❤️</span></p>
+        </div>
+        <!-- Siegel-Icons (3-spaltig) -->
+        <div class="footer-seals">
+          <div class="seal" *ngFor="let seal of config.top.sealIcons">
+            <img [src]="seal" alt="Seal Icon">
+          </div>
+        </div>
+      </div>
+      <div class="footer-top-right animate-slide-right">
+        <!-- Fundraising-Kampagne -->
+        <div class="fundraising-campaign">
+          <h2>{{ config.top.fundraising.h2 }}</h2>
+          <h3>{{ config.top.fundraising.h3 }}</h3>
+          <p>{{ config.top.fundraising.p }}</p>
+          <span>{{ config.top.fundraising.span }}</span>
+          <img [src]="config.top.fundraising.image" alt="Fundraising Image">
+          <a [href]="config.top.fundraising.buttonLink" class="next-button" [attr.aria-label]="config.top.fundraising.buttonText">
+            {{ config.top.fundraising.buttonText }}
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Middle Container -->
+    <div class="footer-middle">
+      <div class="footer-middle-left">
+        <h3>Superhero Skills</h3>
+        <ul>
+          <li *ngFor="let skill of config.middle.superheroSkills">
+            <a [href]="skill.link" [attr.aria-label]="skill.text">{{ skill.text }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-middle-inner-left">
+        <div class="creative-locations">
+          <h3>Creative Locations</h3>
+          <ul>
+            <li *ngFor="let loc of config.middle.creativeLocations">
+              <img [src]="loc.icon" alt="{{ loc.text }} Icon">
+              <a [href]="loc.link" [attr.aria-label]="loc.text">{{ loc.text }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-middle-inner-right">
+        <div class="follow-me">
+            <h3>Follow Me On</h3>
+            <ul>
+              <li *ngFor="let social of config.middle.followMeOn">
+                <img [src]="social.icon" alt="{{ social.text }} Icon">
+                <a [href]="social.link" [attr.aria-label]="social.text">{{ social.text }}</a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="footer-middle-right">
+        <div class="contact-me">
+            <h3>Contact Me</h3>
+            <ul>
+              <li>
+                <img [src]="config.middle.contactMe.emailIcon" alt="Email Icon">
+                <a [href]="'mailto:' + config.middle.contactMe.emailAddress" aria-label="Email">{{ config.middle.contactMe.emailAddress }}</a>
+              </li>
+              <li>
+                <a href="#" aria-label="Contact Request">{{ config.middle.contactMe.contactRequestText }}</a>
+              </li>
+              <li>
+                <a [href]="config.middle.contactMe.buttonLink" class="default-button" [attr.aria-label]="config.middle.contactMe.buttonText">
+                  {{ config.middle.contactMe.buttonText }}
+                </a>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Container -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <img [src]="config.bottom.copyrightIcon" alt="Copyright">
+        <span>{{ config.bottom.copyrightText }}</span>
+      </div>
+      <div class="footer-bottom-center">
+        <span>{{ config.bottom.madeBy }} <span class="heart-icon" aria-label="heart">❤️</span></span>
+      </div>
+      <div class="footer-bottom-right">
+        <div class="legal-notice">
+          <a [href]="config.bottom.legalNoticeLink" aria-label="Legal Notice">{{ config.bottom.legalNoticeText }}</a>
+        </div>
+        <div class="privacy-policy">
+          <a [href]="config.bottom.privacyPolicyLink" aria-label="Privacy Policy">{{ config.bottom.privacyPolicyText }}</a>
+        </div>
+      </div>
+    </div>
+  </footer>  

@@ -45,9 +45,9 @@ export interface FooterConfig {
 export class FooterConfigService {
   private config: FooterConfig = {
     top: {
-      logoDefault: '/logos/logo-default.png',
-      logoHover: '/logos/logo-hover.png',
-      personalMessage: 'Your personal message here with love',
+      logoDefault: '/logos/beispiel-logo-default.png',
+      logoHover: '/logos/beispiel-logo-hover.png',
+      personalMessage: 'This is art at the highest level. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular',
       sealIcons: [
         '/placeholder/seal1.png',
         '/placeholder/seal2.png',
@@ -97,7 +97,7 @@ export class FooterConfigService {
     },
     bottom: {
       copyrightIcon: '/placeholder/copyright.png',
-      copyrightText: '2023 AYA, Inc. All rights reserved',
+      copyrightText: '© 2023 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',
       legalNoticeLink: '/legal',
