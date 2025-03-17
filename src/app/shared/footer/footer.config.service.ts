@@ -49,9 +49,9 @@ export class FooterConfigService {
       logoHover: '/logos/beispiel-logo-hover.png',
       personalMessage: 'This is art at the highest level. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular',
       sealIcons: [
-        '/placeholder/seal1.png',
-        '/placeholder/seal2.png',
-        '/placeholder/seal3.png'
+        '/icons/art/feather-ta.png',
+        '/icons/seal/footer_seal_google_45.webp',
+        '/icons/seal/software-quality.png'
       ],
       fundraising: {
         h2: 'Fundraising Campaign',
@@ -72,12 +72,12 @@ export class FooterConfigService {
         { text: 'AI-Solutions', link: '#' }
       ],
       creativeLocations: [
-        { icon: '/placeholder/germany.png', text: 'NRW - Germany', link: '#' },
-        { icon: '/placeholder/switzerland.png', text: 'Switzerland', link: '#' },
-        { icon: '/placeholder/spain.png', text: 'Tenerife', link: '#' },
-        { icon: '/placeholder/your-logo.png', text: 'Razor-Point', link: '#' },
-        { icon: '/placeholder/cyprus.png', text: 'Cyprus Blue Zone', link: '#' },
-        { icon: '/placeholder/dubai.png', text: 'Dubai', link: '#' }
+        { icon: '/icons/nation/deutschland.png', text: 'Germany', link: '#' },
+        { icon: '/icons/nation/schweiz.png', text: 'Switzerland', link: '#' },
+        { icon: '/icons/nation/spanien.png', text: 'Tenerife', link: '#' },
+        { icon: '/icons/nation/nord-zypern.png', text: 'Northern Cyprus', link: '#' },
+        { icon: '/icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
+        { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: '#' }
       ],
       followMeOn: [
         { icon: '/placeholder/github.png', text: 'GitHub', link: '#' },
