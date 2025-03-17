@@ -150,6 +150,7 @@
       h3 {
         font-size: 24px;
         margin-bottom: 16px;
+        color: var(--accent-color);
       }
   
       ul {
@@ -158,8 +159,8 @@
         li {
           margin-bottom: 8px;
           a {
-            font-size: 18px;
-            color: white;
+            font-size: 16px;
+            color: grey;
             text-decoration: none;
             transition: color 0.3s ease;
             &:hover {
@@ -195,6 +196,7 @@
       padding-top: 16px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       font-size: 16px;
+      color: grey;
   
       .footer-bottom-left,
       .footer-bottom-center,
@@ -218,7 +220,7 @@
         display: flex;
         gap: 16px;
         a {
-          color: white;
+          color: grey;
           text-decoration: none;
           transition: color 0.3s ease;
           &:hover {

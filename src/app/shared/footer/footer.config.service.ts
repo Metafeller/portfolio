@@ -23,6 +23,7 @@ export interface FooterConfig {
     contactMe: {
       emailIcon: string;
       emailAddress: string;
+      contactRequestIcon: string;
       contactRequestText: string;
       buttonText: string;
       buttonLink: string;
@@ -58,7 +59,7 @@ export class FooterConfigService {
         h3: 'Join the Movement',
         p: 'Support our cause and help us make a difference.',
         span: 'Your contribution matters.',
-        image: '/placeholder/fundraising.png',
+        image: '/images/fundrasing-child.png',
         buttonText: 'Donate Now',
         buttonLink: '/donate'
       }
@@ -80,23 +81,25 @@ export class FooterConfigService {
         { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: '#' }
       ],
       followMeOn: [
-        { icon: '/placeholder/github.png', text: 'GitHub', link: '#' },
-        { icon: '/placeholder/linkedin.png', text: 'LinkedIn', link: '#' },
-        { icon: '/placeholder/instagram.png', text: 'Instagram', link: '#' },
-        { icon: '/placeholder/twitter.png', text: 'Twitter (X)', link: '#' },
-        { icon: '/placeholder/discord.png', text: 'Discord', link: '#' },
-        { icon: '/placeholder/tiktok.png', text: 'TikTok', link: '#' }
+        { icon: '/icons/social/github.svg', text: 'GitHub', link: '#' },
+        { icon: '/icons/social/linkedin.svg', text: 'LinkedIn', link: '#' },
+        { icon: '/icons/social/instagram.svg', text: 'Instagram', link: '#' },
+        { icon: '/icons/social/twitterx.svg', text: 'Twitter (X)', link: '#' },
+        { icon: '/icons/media/discord.png', text: 'Discord', link: '#' },
+        { icon: '/icons/media/tiktok.png', text: 'TikTok', link: '#' },
+        { icon: '/icons/media/youtube.png', text: 'YouTube', link: '#' }
       ],
       contactMe: {
-        emailIcon: '/placeholder/email.png',
-        emailAddress: 'contact@taironman.com',
+        emailIcon: '/icons/social/mail.svg',
+        emailAddress: ' contact@taironman.com',
+        contactRequestIcon: '/icons/art/feather-3.png', // Neue Icon-Property
         contactRequestText: 'Contact Request',
         buttonText: "Let's Talk",
         buttonLink: '/contact'
       }
     },
     bottom: {
-      copyrightIcon: '/placeholder/copyright.png',
+      copyrightIcon: '/icons/copyright/trade-mark.png',
       copyrightText: '© 2023 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',

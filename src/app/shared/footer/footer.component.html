@@ -85,7 +85,9 @@
                 <a [href]="'mailto:' + config.middle.contactMe.emailAddress" aria-label="Email">{{ config.middle.contactMe.emailAddress }}</a>
               </li>
               <li>
-                <a href="#" aria-label="Contact Request">{{ config.middle.contactMe.contactRequestText }}</a>
+                <img [src]="config.middle.contactMe.contactRequestIcon" alt="Contact Request Icon">
+                <a href="#" [attr.aria-label]="config.middle.contactMe.contactRequestText">
+                  {{ config.middle.contactMe.contactRequestText }}</a>
               </li>
               <li>
                 <a [href]="config.middle.contactMe.buttonLink" class="default-button" [attr.aria-label]="config.middle.contactMe.buttonText">
@@ -104,7 +106,7 @@
         <span>{{ config.bottom.copyrightText }}</span>
       </div>
       <div class="footer-bottom-center">
-        <span>{{ config.bottom.madeBy }} <span class="heart-icon" aria-label="heart">❤️</span></span>
+        <span>{{ config.bottom.madeBy }} <span class="heart-icon" aria-label="heart">💚</span></span>
       </div>
       <div class="footer-bottom-right">
         <div class="legal-notice">
