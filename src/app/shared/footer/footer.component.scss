@@ -44,14 +44,19 @@
       display: flex;
       justify-content: space-between;
       padding: 16px 0;
+      // gap: 64px;
   
+      /* Gemeinsame Styles für beide Seiten */
       .footer-top-left,
       .footer-top-right {
         flex: 1;
         padding: 16px;
       }
   
+      /* Linke Spalte: 40% */
       .footer-top-left {
+        flex: 0 0 35%;
+
         .footer-logo {
           img {
             width: 120px;
@@ -88,30 +93,41 @@
         }
       }
   
+      /* Rechte Spalte: 60% */
       .footer-top-right {
+        flex: 0 0 55%;
+
+        /* Fundraising-Kampagne als Flex-Container */
         .fundraising-campaign {
-          h2 {
-            font-size: 64px;
-            color: var(--accent-color);
-            margin-bottom: 8px;
-          }
-          h3 {
-            font-size: 24px;
-            margin-bottom: 8px;
-          }
-          p, span {
-            font-size: 18px;
-            margin-bottom: 8px;
-          }
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          /* optional: gap: 16px; // Abstand zwischen .fundraising-image & .fundraising-content */
+
+         /* Bild + Button (30%) */
+        .fundraising-image {
+          flex: 0 0 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
           img {
-            width: 100%;
-            max-width: 300px;
+            // width: 100%;
+            // max-width: 256px;
+            width: 180px;
+            height: 180px;
             margin: 16px 0;
+
+            border: solid 2px;
+            border-radius: 50%;
+            border-color: var(--accent-color);
+
             transition: transform 0.3s ease;
             &:hover {
               transform: scale(1.05);
             }
           }
+
           .next-button {
             display: inline-block;
             padding: 8px 16px;
@@ -127,8 +143,31 @@
             }
           }
         }
+
+
+        .fundraising-content {
+          flex: 0 0 50%;
+          margin-left: 16px;
+
+          h2 {
+            font-size: 64px;
+            color: var(--accent-color);
+            margin-top: auto;
+            margin-bottom: 8px;
+          }
+          h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
+          p, span {
+            font-size: 18px;
+            margin-bottom: 8px;
+          }
+
+        }
       }
     }
+  }
   
     /* Middle Container */
     .footer-middle {
@@ -284,4 +323,3 @@
   @include responsive(768px, 1024px) {
     /* Weitere responsive Anpassungen */
   }
-  

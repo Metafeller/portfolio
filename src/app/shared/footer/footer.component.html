@@ -9,6 +9,7 @@
     
     <!-- Top Container -->
     <div class="footer-top">
+      <!-- Linke Spalte (30%) -->
       <div class="footer-top-left animate-slide-left">
         <!-- Logo with Hover-Effekt -->
         <div class="footer-logo">
@@ -18,10 +19,13 @@
             (mouseenter)="logoHover = true" 
             (mouseleave)="logoHover = false">
         </div>
+
         <!-- Persönliche Message -->
         <div class="footer-personal-message">
-          <p>{{ config.top.personalMessage }} <span class="heart-icon" aria-label="heart">❤️</span></p>
+          <p>{{ config.top.personalMessage }} 
+            <span class="heart-icon" aria-label="heart">❤️</span></p>
         </div>
+
         <!-- Siegel-Icons (3-spaltig) -->
         <div class="footer-seals">
           <div class="seal" *ngFor="let seal of config.top.sealIcons">
@@ -29,17 +33,30 @@
           </div>
         </div>
       </div>
+
+      <!-- Rechte Spalte (70%) -->
       <div class="footer-top-right animate-slide-right">
         <!-- Fundraising-Kampagne -->
         <div class="fundraising-campaign">
-          <h2>{{ config.top.fundraising.h2 }}</h2>
-          <h3>{{ config.top.fundraising.h3 }}</h3>
-          <p>{{ config.top.fundraising.p }}</p>
-          <span>{{ config.top.fundraising.span }}</span>
-          <img [src]="config.top.fundraising.image" alt="Fundraising Image">
-          <a [href]="config.top.fundraising.buttonLink" class="next-button" [attr.aria-label]="config.top.fundraising.buttonText">
-            {{ config.top.fundraising.buttonText }}
-          </a>
+
+          <!-- Linker Bereich: Bild + Button (30% innerhalb der Kampagne) -->
+          <div class="fundraising-image">
+            <img [src]="config.top.fundraising.image" alt="Fundraising Image">
+            <a [href]="config.top.fundraising.buttonLink" 
+               class="next-button" 
+               [attr.aria-label]="config.top.fundraising.buttonText">
+              {{ config.top.fundraising.buttonText }}
+            </a>
+          </div>
+
+          <!-- Rechter Bereich: Texte (70% innerhalb der Kampagne) -->
+          <div class="fundraising-content">
+            <h2>{{ config.top.fundraising.h2 }}</h2>
+            <h3>{{ config.top.fundraising.h3 }}</h3>
+            <p>{{ config.top.fundraising.p }}</p>
+            <span>{{ config.top.fundraising.span }}</span>
+          </div>
+
         </div>
       </div>
     </div>
