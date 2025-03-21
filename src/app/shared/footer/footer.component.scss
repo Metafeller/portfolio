@@ -59,7 +59,9 @@
 
         .footer-logo {
           img {
-            width: 120px;
+            width: 280px;
+            // margin-top: -16px;
+            // margin-bottom: -16px;
             transition: transform 0.3s ease;
             cursor: pointer;
           }
@@ -79,9 +81,13 @@
           display: flex;
           justify-content: space-between;
           margin-top: 16px;
+          gap: 16px;
+
+          // Standardstil für alle Siegel
           .seal {
             flex: 1;
             padding: 8px;
+
             img {
               width: 80px;
               transition: transform 0.3s ease;
@@ -90,6 +96,28 @@
               }
             }
           }
+
+          // Individuelle Anpassungen für jedes Siegel
+          #seal-0 {
+            img {
+              width: 200px; // Beispiel: erste Siegel-Größe
+            }
+          }
+
+          #seal-1 {
+            img {
+              width: 140px; // Beispiel: zweite Siegel-Größe
+              margin-top: 56px;
+            }
+          }
+
+          #seal-2 {
+            img {
+              width: 240px; // Beispiel: dritte Siegel-Größe
+              margin-top: 48px;
+            }
+          }
+
         }
       }
   

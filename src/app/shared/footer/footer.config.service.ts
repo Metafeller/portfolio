@@ -46,11 +46,11 @@ export interface FooterConfig {
 export class FooterConfigService {
   private config: FooterConfig = {
     top: {
-      logoDefault: '/logos/beispiel-logo-default.png',
-      logoHover: '/logos/beispiel-logo-hover.png',
+      logoDefault: '/logos/aya/10.svg',
+      logoHover: '/logos/aya/9.svg',
       personalMessage: 'This is art at the highest level. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular',
       sealIcons: [
-        '/icons/art/feather-ta.png',
+        '/icons/seal/taironman-seal-4.svg',
         '/icons/seal/footer_seal_google_45.webp',
         '/icons/seal/software-quality.png'
       ],
