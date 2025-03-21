@@ -43,11 +43,18 @@
           <!-- Linker Bereich: Bild + Button (30% innerhalb der Kampagne) -->
           <div class="fundraising-image">
             <img [src]="config.top.fundraising.image" alt="Fundraising Image">
-            <a [href]="config.top.fundraising.buttonLink" 
+            <!-- <a [href]="config.top.fundraising.buttonLink" 
                class="next-button" 
                [attr.aria-label]="config.top.fundraising.buttonText">
               {{ config.top.fundraising.buttonText }}
-            </a>
+            </a> -->
+              <app-button 
+                type="button" 
+                buttonClass="default-button"
+                [disabled]="false" 
+                [attr.aria-label]="config.top.fundraising.buttonText">
+                {{ config.top.fundraising.buttonText }}
+              </app-button>
           </div>
 
           <!-- Rechter Bereich: Texte (70% innerhalb der Kampagne) -->
@@ -108,10 +115,14 @@
                   {{ config.middle.contactMe.contactRequestText }}</a>
               </li>
               <li>
-                <a [href]="config.middle.contactMe.buttonLink" class="default-button" [attr.aria-label]="config.middle.contactMe.buttonText">
+                <app-button 
+                  type="button" 
+                  buttonClass="contact-button"
+                  [disabled]="false" 
+                  [attr.aria-label]="config.middle.contactMe.buttonText">
                   {{ config.middle.contactMe.buttonText }}
-                </a>
-              </li>
+                </app-button>
+              </li>              
             </ul>
           </div>
       </div>
@@ -123,9 +134,11 @@
         <img [src]="config.bottom.copyrightIcon" alt="Copyright">
         <span>{{ config.bottom.copyrightText }}</span>
       </div>
+
       <div class="footer-bottom-center">
         <span>{{ config.bottom.madeBy }} <span class="heart-icon" aria-label="heart">💚</span></span>
       </div>
+
       <div class="footer-bottom-right">
         <div class="legal-notice">
           <a [href]="config.bottom.legalNoticeLink" aria-label="Legal Notice">{{ config.bottom.legalNoticeText }}</a>
@@ -134,5 +147,6 @@
           <a [href]="config.bottom.privacyPolicyLink" aria-label="Privacy Policy">{{ config.bottom.privacyPolicyText }}</a>
         </div>
       </div>
+
     </div>
   </footer>  

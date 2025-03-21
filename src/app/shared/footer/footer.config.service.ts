@@ -51,7 +51,7 @@ export class FooterConfigService {
       personalMessage: 'This is art at the highest level. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular',
       sealIcons: [
         '/icons/seal/taironman-seal-4.svg',
-        '/icons/seal/footer_seal_google_45.webp',
+        '/icons/seal/google-reviews_49.png',
         '/icons/seal/software-quality.png'
       ],
       fundraising: {
@@ -94,7 +94,7 @@ export class FooterConfigService {
         emailAddress: ' contact@taironman.com',
         contactRequestIcon: '/icons/art/feather-3.png', // Neue Icon-Property
         contactRequestText: 'Contact Request',
-        buttonText: "Let's Talk",
+        buttonText: "Let's Talk ↗",
         buttonLink: '/contact'
       }
     },
