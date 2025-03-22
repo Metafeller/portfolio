@@ -200,13 +200,13 @@
           display: flex;
           justify-content: center;
           align-items: flex-start;
-          padding: 8px;
+          padding: 32px 8px;
           /* optional: gap: 16px; // Abstand zwischen .fundraising-image & .fundraising-content */
           background-color: rgb(28, 28, 28, 0.4);
           border-radius: 32px;
 
           @include responsive(240px, 320px) {
-            // padding: 16px 8px;
+            padding: 8px 8px;
             flex-direction: column-reverse;
             align-items: center;
             // gap: 16px;
