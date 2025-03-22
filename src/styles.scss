@@ -50,6 +50,10 @@
     padding: 0;
     background-color: var(--primary-color);
     color: #ffffff;
+
+    // Ich habe das mit den background-images max-width außerhalb des Contents das auf 1921px begrenzt ist, noch nicht gefixxt!
+    // display: flex;
+    // justify-content: center;
   }
 
 

@@ -17,6 +17,22 @@
     padding: 48px 32px;
     font-family: var(--font-family);
     z-index: 1;
+
+    @include responsive(240px, 320px) {
+      padding: 16px 8px;
+    }
+
+    @include responsive(321px, 480px) {
+        padding: 20px 12px;
+    }    
+    
+    @include responsive(481px, 767px) {
+        padding: 24px 16px;
+    }
+
+    @include responsive(768px, 1024px) {
+        padding: 32px 20px;
+    }
   
     // Background Video Styling
     .footer-background-video {
@@ -45,12 +61,22 @@
       justify-content: space-between;
       padding: 48px 32px;
       // padding: 16px 0;
+
+      @include responsive(240px, 320px) {
+        padding: 16px 8px;
+        // gap: 16px;
+      }
   
       /* Gemeinsame Styles für beide Seiten */
       .footer-top-left,
       .footer-top-right {
         flex: 1;
         padding: 48px 32px;
+
+        @include responsive(240px, 320px) {
+          padding: 32px 8px;
+          // gap: 16px;
+        }
       }
   
       /* Linke Spalte: 40% */
@@ -61,6 +87,12 @@
 
           margin-left: -40px;
           margin-top: -40px;
+
+          @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+          }
 
           img {
             width: 280px;
@@ -89,6 +121,11 @@
           margin-top: 16px;
           gap: 16px;
 
+          @include responsive(240px, 320px) {
+            flex-direction: column;
+            align-items: center;
+          } 
+
           // Standardstil für alle Siegel
           .seal {
             flex: 1;
@@ -108,6 +145,14 @@
             img {
               width: 200px; // Beispiel: erste Siegel-Größe
               margin-left: -48px;
+
+              @include responsive(240px, 320px) {
+                width: 320px;
+                margin-left: 0px;
+                margin-top: -40px;
+                margin-bottom: -80px;
+              } 
+
             }
           }
 
@@ -115,6 +160,12 @@
             img {
               width: 176px; // Beispiel: zweite Siegel-Größe
               margin-top: 56px;
+
+              @include responsive(240px, 320px) {
+                width: 200px;               
+                margin-top: 32px;
+              }
+
             }
           }
 
@@ -122,6 +173,12 @@
             img {
               width: 240px; // Beispiel: dritte Siegel-Größe
               margin-top: 52px;
+
+              @include responsive(240px, 320px) {
+                width: 200px;               
+                margin-top: 40px;
+              }
+
             }
           }
 
@@ -141,6 +198,15 @@
           align-items: flex-start;
           padding: 8px;
           /* optional: gap: 16px; // Abstand zwischen .fundraising-image & .fundraising-content */
+          background-color: rgb(28, 28, 28, 0.4);
+          border-radius: 32px;
+
+          @include responsive(240px, 320px) {
+            // padding: 16px 8px;
+            flex-direction: column-reverse;
+            align-items: center;
+            // gap: 16px;
+          }
 
          /* Bild + Button (30%) */
         .fundraising-image {
@@ -148,6 +214,11 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+
+          @include responsive(240px, 320px) {
+            padding: 16px 8px;
+            align-items: normal;
+          }
 
           img {
             // width: 100%;
@@ -187,19 +258,38 @@
           flex: 0 0 50%;
           margin-left: 16px;
 
+          @include responsive(240px, 320px) {
+            margin-left: 0px;
+          }
+
           h2 {
             font-size: 64px;
             color: var(--accent-color);
             margin-top: auto;
             margin-bottom: 8px;
+
+            @include responsive(240px, 320px) {
+              margin-top: revert;
+              font-size: 32px;
+            }
+
           }
           h3 {
             font-size: 24px;
             margin-bottom: 8px;
           }
-          p, span {
+
+          p {
             font-size: 18px;
+            margin-bottom: 16px;
+            font-family: var(--font-family);
+          }
+
+          span {
+            font-size: 184x;
             margin-bottom: 8px;
+            font-family: var(--font-family-second);
+            color: grey;
           }
 
         }
@@ -214,6 +304,10 @@
       flex-wrap: wrap;
       gap: 24px;
       padding: 48px 32px;
+
+      @include responsive(240px, 320px) {
+        padding: 16px 8px;
+      }
       
       .footer-middle-left,
       .footer-middle-inner-left,
@@ -224,6 +318,16 @@
         min-width: 250px;
         // padding: 16px;
         padding: 48px 32px;
+
+        @include responsive(240px, 320px) {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+
+          min-width: auto;
+          padding: 20px 12px;
+        }
+
       }
   
       h3 {
@@ -231,6 +335,12 @@
         margin-bottom: 16px;
         margin-left: 16px;
         color: var(--accent-color);
+
+        @include responsive(240px, 320px) {
+          font-size: 20px;
+          margin-left: 0px;
+          text-align: center;
+        }
       }
   
       ul {
@@ -238,8 +348,21 @@
         list-style: none;
         padding: 0;
 
+        @include responsive(240px, 320px) {
+            // font-size: 20px;
+            // text-align: start;
+            margin-left: 0px;
+          }
+
         li {
           margin-bottom: 8px;
+
+          // @include responsive(240px, 320px) {
+          //   // font-size: 20px;
+          //   text-align: start;
+          //   margin-left: 40px;
+          // }
+
           a {
             font-size: 16px;
             color: grey;
@@ -269,10 +392,34 @@
       }
 
       .contact-me {
-        background-color: rgb(28, 28, 28, 0.5);
+        background-color: rgb(28, 28, 28, 0.4);
         border-radius: 32px;
         // border: solid 1px;
         // border-color: var(--accent-color);
+
+        @include responsive(240px, 320px) {
+
+          li {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 0px;
+            padding: 12px;
+            gap: 8px;
+          }
+
+          h3 {
+            padding-top: 20px;
+
+          }
+
+            // font-size: 20px;
+            text-align: center;
+            margin-left: 0px;
+            padding: 8px 12px;
+          }
+
       }
 
     }
@@ -358,7 +505,7 @@
       padding: 16px;
       .footer-top, .footer-middle, .footer-bottom {
         flex-direction: column;
-        text-align: center;
+        // text-align: start;
       }
     }
   }

@@ -29,9 +29,11 @@
     padding: 4px;
   
     img {
-      max-height: 48px;
+      max-height: 100px;
       transition: opacity 0.3s ease;
       padding-right: 32px;
+      margin-top: -8px;
+      margin-bottom: -16px;
     }
   } 
 

@@ -76,8 +76,8 @@ export class FooterConfigService {
         { icon: '/icons/nation/deutschland.png', text: 'Germany', link: '#' },
         { icon: '/icons/nation/schweiz.png', text: 'Switzerland', link: '#' },
         { icon: '/icons/nation/spanien.png', text: 'Tenerife', link: '#' },
-        { icon: '/icons/nation/nord-zypern.png', text: 'Northern Cyprus', link: '#' },
         { icon: '/icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
+        { icon: '/icons/nation/cyprus.png', text: 'Cyprus', link: '#' },
         { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: '#' }
       ],
       followMeOn: [

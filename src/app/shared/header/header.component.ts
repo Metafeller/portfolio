@@ -34,14 +34,14 @@ export class HeaderComponent implements OnInit {
   onMouseOver() {
     const logo = document.getElementById('header-logo') as HTMLImageElement;
     if (logo) {
-      logo.src = './../logos/beispiel-logo-hover.png';
+      logo.src = './../logos/aya/9.svg';
     }
   }
 
   onMouseLeave() {
     const logo = document.getElementById('header-logo') as HTMLImageElement;
     if (logo) {
-      logo.src = './../logos/beispiel-logo-default.png';
+      logo.src = './../logos/aya/11.svg';
     }
   }
 
