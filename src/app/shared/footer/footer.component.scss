@@ -66,6 +66,12 @@
         padding: 16px 8px;
         // gap: 16px;
       }
+
+      @include responsive(321px, 480px) {
+        padding: 20px 12px;
+        flex-direction: column;
+        // gap: 16px;
+      }
   
       /* Gemeinsame Styles für beide Seiten */
       .footer-top-left,
@@ -74,6 +80,11 @@
         padding: 48px 32px;
 
         @include responsive(240px, 320px) {
+          padding: 32px 8px;
+          // gap: 16px;
+        }
+
+        @include responsive(321px, 480px) {
           padding: 32px 8px;
           // gap: 16px;
         }
@@ -89,6 +100,12 @@
           margin-top: -40px;
 
           @include responsive(240px, 320px) {
+            display: flex;
+            justify-content: center;
+            margin-left: 0px;
+          }
+
+          @include responsive(321px, 480px) {
             display: flex;
             justify-content: center;
             margin-left: 0px;
@@ -117,6 +134,11 @@
             @include responsive(240px, 320px) {
               text-align: center;
             }
+
+            @include responsive(321px, 480px) {
+              text-align: center;
+              font-size: 16px;
+            }
           }
         }
         .footer-seals {
@@ -129,6 +151,11 @@
             flex-direction: column;
             align-items: center;
           } 
+
+          @include responsive(321px, 480px) {
+            flex-direction: column;
+            align-items: center;
+          }
 
           // Standardstil für alle Siegel
           .seal {
@@ -157,6 +184,13 @@
                 margin-bottom: -80px;
               } 
 
+              @include responsive(321px, 480px) {
+                width: 320px;
+                margin-left: 0px;
+                margin-top: -40px;
+                margin-bottom: -80px;
+              }
+
             }
           }
 
@@ -170,6 +204,11 @@
                 margin-top: 32px;
               }
 
+              @include responsive(321px, 480px) {
+                width: 200px;               
+                margin-top: 32px;
+              }
+
             }
           }
 
@@ -179,6 +218,11 @@
               margin-top: 52px;
 
               @include responsive(240px, 320px) {
+                width: 200px;               
+                margin-top: 40px;
+              }
+
+              @include responsive(321px, 480px) {
                 width: 200px;               
                 margin-top: 40px;
               }
@@ -212,6 +256,13 @@
             // gap: 16px;
           }
 
+          @include responsive(321px, 480px) {
+            padding: 8px 8px;
+            flex-direction: column-reverse;
+            align-items: center;
+            // gap: 16px;
+          }
+
          /* Bild + Button (30%) */
         .fundraising-image {
           flex: 0 0 30%;
@@ -220,6 +271,11 @@
           align-items: center;
 
           @include responsive(240px, 320px) {
+            padding: 16px 8px;
+            align-items: normal;
+          }
+
+          @include responsive(321px, 480px) {
             padding: 16px 8px;
             align-items: normal;
           }
@@ -268,6 +324,12 @@
             padding: 0px 12px;
           }
 
+          @include responsive(321px, 480px) {
+            margin-left: 0px;
+            text-align: center;
+            padding: 0px 12px;
+          }
+
           h2 {
             font-size: 64px;
             color: var(--accent-color);
@@ -279,12 +341,22 @@
               font-size: 32px;
             }
 
+            @include responsive(321px, 480px) {
+              margin-top: revert;
+              font-size: 32px;
+            }
+
           }
+
           h3 {
             font-size: 24px;
             margin-bottom: 8px;
 
             @include responsive(240px, 320px) {
+              font-size: 20px;
+            }
+
+            @include responsive(321px, 480px) {
               font-size: 20px;
             }
           }
@@ -297,6 +369,10 @@
             @include responsive(240px, 320px) {
               font-size: 14px;
             }
+
+            @include responsive(321px, 480px) {
+              font-size: 16px;
+            }
           }
 
           span {
@@ -306,6 +382,10 @@
             color: grey;
 
             @include responsive(240px, 320px) {
+              font-size: 14px;
+            }
+
+            @include responsive(321px, 480px) {
               font-size: 14px;
             }
           }
@@ -325,6 +405,11 @@
 
       @include responsive(240px, 320px) {
         padding: 16px 8px;
+      }
+
+      @include responsive(321px, 480px) {
+        padding: 16px 8px;
+        flex-direction: column;
       }
       
       .footer-middle-left,
@@ -346,6 +431,15 @@
           padding: 20px 8px;
         }
 
+        @include responsive(321px, 480px) {
+          display: flex;
+          justify-content: center;
+          // flex-direction: column;
+
+          min-width: auto;
+          padding: 20px 8px;
+        }
+
       }
 
       @include responsive(240px, 320px) {
@@ -357,7 +451,19 @@
           align-items: start;
           margin-left: 48px;
         }
+        
+      }
 
+      @include responsive(321px, 480px) {
+        
+        .footer-middle-left ul {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: start;
+          margin-left: 80px;
+        }
+        
       }
   
       h3 {
@@ -366,7 +472,7 @@
         margin-left: 16px;
         color: var(--accent-color);
 
-        @include responsive(240px, 320px) {
+        @include responsive(240px, 480px) {
           font-size: 20px;
           margin-left: 0px;
           text-align: center;
@@ -378,7 +484,7 @@
         list-style: none;
         padding: 0;
 
-        @include responsive(240px, 320px) {
+        @include responsive(240px, 480px) {
             // font-size: 20px;
             // text-align: start;
             margin-left: 0px;
@@ -454,13 +560,47 @@
         }
       }
 
+      @include responsive(321px, 480px) {
+        
+        .creative-locations {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+  
+          ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 40px;
+          }
+        }
+
+        .follow-me {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+  
+          ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 40px;
+          }
+        }
+      }
+
       .contact-me {
         background-color: rgb(28, 28, 28, 0.4);
         border-radius: 32px;
+        flex-direction: column;
         // border: solid 1px;
         // border-color: var(--accent-color);
 
-        @include responsive(240px, 320px) {
+        @include responsive(240px, 480px) {
           text-align: center;
           margin-left: 0px;
           padding: 8px 12px;
@@ -500,7 +640,7 @@
       .footer-bottom-right {
         padding: 8px;
 
-        @include responsive(240px, 320px) {
+        @include responsive(240px, 480px) {
           padding: 12px;
         } 
       }
@@ -584,7 +724,22 @@
   }
   
   @include responsive(321px, 480px) {
-    /* Weitere responsive Anpassungen */
+    .footer {
+      padding: 16px;
+      .footer-top, .footer-middle, .footer-middle-left, .footer-bottom {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        flex-direction: column-reverse;
+        padding: 16px 8px;
+        font-size: 16px;
+
+        img {
+          display: none;
+        }
+      }
+    }
   }
   
   @include responsive(481px, 767px) {
