@@ -100,8 +100,8 @@ export class FooterConfigService {
       }
     },
     bottom: {
-      copyrightIcon: '/icons/copyright/trade-mark.png',
-      copyrightText: '© 2023 AYA, Inc. All rights reserved',
+      copyrightIcon: '/icons/copyright/copyright-accent-color.png',
+      copyrightText: '2023 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',
       legalNoticeLink: '/legal',
