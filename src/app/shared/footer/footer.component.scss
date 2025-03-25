@@ -78,6 +78,12 @@
         flex-direction: column;
         // gap: 16px;
       }
+
+      @include responsive(768px, 1024px) {
+        padding: 28px 20px;
+        flex-direction: column;
+        // gap: 16px;
+      }
   
       /* Gemeinsame Styles für beide Seiten */
       .footer-top-left,
@@ -97,6 +103,11 @@
 
         @include responsive(481px, 767px) {
           padding: 32px 8px;
+          // gap: 16px;
+        }
+
+        @include responsive(768px, 1024px) {
+          padding: 40px 12px;
           // gap: 16px;
         }
       }
@@ -122,10 +133,10 @@
             margin-left: 0px;
           }
 
-          @include responsive(481px, 767px) {
+          @include responsive(481px, 1024px) {
             display: flex;
             justify-content: center;
-            margin-left: 0px;
+            // margin-left: 0px;
           }
 
           img {
@@ -156,6 +167,11 @@
               text-align: center;
               font-size: 16px;
             }
+
+            @include responsive(768px, 1024px) {
+              text-align: center;
+              font-size: 18px;
+            }
           }
         }
         .footer-seals {
@@ -173,6 +189,11 @@
             flex-direction: column;
             align-items: center;
           }
+
+          // @include responsive(768px, 1024px) {
+          //   flex-direction: column;
+          //   align-items: center;
+          // }
 
           // Standardstil für alle Siegel
           .seal {
@@ -297,6 +318,13 @@
             // gap: 16px;
           }
 
+          @include responsive(768px, 1024px) {
+            // padding: 12px 12px;
+            // flex-direction: column-reverse;
+            // align-items: center;
+            gap: 20px;
+          }
+
          /* Bild + Button (30%) */
         .fundraising-image {
           flex: 0 0 30%;
@@ -380,6 +408,11 @@
               font-size: 40px;
             }
 
+            @include responsive(768px, 1024px) {
+              // margin-top: revert;
+              font-size: 48px;
+            }
+
           }
 
           h3 {
@@ -391,7 +424,7 @@
             }
 
             @include responsive(481px, 767px) {
-              font-size: 24px;
+              font-size: 22px;
             }
           }
 
@@ -407,6 +440,7 @@
             @include responsive(321px, 767px) {
               font-size: 16px;
             }
+
           }
 
           span {
@@ -450,6 +484,14 @@
         padding: 20px 12px;
         flex-direction: column;
       }
+
+      @include responsive(768px, 1024px) {
+        margin-top: 0px;
+        // display: flex;
+        // flex-wrap: wrap;
+        gap: 20px;
+        padding: 32px 20px;
+      }
       
       .footer-middle-left,
       .footer-middle-inner-left,
@@ -486,6 +528,10 @@
 
           min-width: auto;
           padding: 24px 12px;
+        }
+
+        @include responsive(768px, 1024px) {
+          padding: 32px 20px;
         }
 
       }
@@ -768,6 +814,10 @@
         @include responsive(481px, 767px) {
           padding: 16px;
         } 
+
+        @include responsive(768px, 1024px) {
+          padding: 12px;
+        } 
       }
   
       .footer-bottom-left {
@@ -838,8 +888,8 @@
 
       .footer-bottom {
         flex-direction: column-reverse;
-        padding: 16px 8px;
-        font-size: 14px;
+        padding: 40px 8px;
+        font-size: 12px;
 
         img {
           display: none;
@@ -857,8 +907,8 @@
 
       .footer-bottom {
         flex-direction: column-reverse;
-        padding: 16px 8px;
-        font-size: 16px;
+        padding: 40px 8px;
+        font-size: 14px;
 
         img {
           display: none;
@@ -876,8 +926,8 @@
 
       .footer-bottom {
         flex-direction: column-reverse;
-        padding: 16px 8px;
-        font-size: 18px;
+        padding: 32px 12px;
+        font-size: 16px;
 
         img {
           display: none;
@@ -887,5 +937,20 @@
   }
   
   @include responsive(768px, 1024px) {
-    /* Weitere responsive Anpassungen */
+    .footer {
+      padding: 16px;
+      // .footer-top, .footer-middle, .footer-middle-left, .footer-bottom {
+      //   flex-direction: column;
+      // }
+
+      .footer-bottom {
+        // flex-direction: column-reverse;
+        padding: 20px 8px;
+        font-size: 14px;
+
+        img {
+          display: none;
+        }
+      }
+    }
   }
