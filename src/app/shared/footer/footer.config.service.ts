@@ -77,8 +77,8 @@ export class FooterConfigService {
         { icon: '/icons/nation/schweiz.png', text: 'Switzerland', link: '#' },
         { icon: '/icons/nation/spanien.png', text: 'Tenerife', link: '#' },
         { icon: '/icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: '#' },
-        { icon: '/icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
-        // { icon: '/icons/nation/cyprus.png', text: 'Cyprus', link: '#' },
+        // { icon: '/icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
+        { icon: '/icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: '#' },
         { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: '#' }
       ],
       followMeOn: [
@@ -104,9 +104,9 @@ export class FooterConfigService {
       copyrightText: '2023 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',
-      legalNoticeLink: 'https://example.com/legal-notice/legal',
+      legalNoticeLink: '/legal/legal',
       privacyPolicyText: 'Privacy Policy',
-      privacyPolicyLink: 'https://example.com/privacy-policy/privacy'
+      privacyPolicyLink: '/privacy/privacy'
     }
   };
 
