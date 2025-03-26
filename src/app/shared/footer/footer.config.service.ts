@@ -104,9 +104,9 @@ export class FooterConfigService {
       copyrightText: '2023 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',
-      legalNoticeLink: '/legal',
+      legalNoticeLink: 'https://example.com/legal-notice/legal',
       privacyPolicyText: 'Privacy Policy',
-      privacyPolicyLink: '/privacy'
+      privacyPolicyLink: 'https://example.com/privacy-policy/privacy'
     }
   };
 
