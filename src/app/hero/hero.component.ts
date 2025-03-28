@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +10,12 @@ import { Component } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
+
+  constructor(private scrollService: ScrollService) {}
+
+  navigateTo(section: string) {
+    this.scrollService.navigateToSection(section);
+  }
 
   // Methode für das Wechseln des Icons bei Hover
   changeIconToWhite(id: string) {

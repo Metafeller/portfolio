@@ -7,13 +7,13 @@
       <span>&#11089; &#11089; &#11089; TAI SAVAS BOAS AYA &#11089; &#11089; &#11089; </span>
       <p>Check my work or contact me below</p>
       <div class="hero-buttons">
-        <button>Check my work</button>
-        <button>Contact me</button>
+        <button (click)="navigateTo('projects')">Check my work</button>
+        <button (click)="navigateTo('contact')">Contact me</button>
       </div>
     </div>
 
     <!-- Scroll-Button -->
-    <div class="scroll-button" id="scroll-down">
+    <div class="scroll-button" (click)="navigateTo('about-me')">
       <span class="arrow">&#8595;</span>
       <div class="vertical-line">
         <div class="line-top"></div> <!-- Oberer Teil -->
