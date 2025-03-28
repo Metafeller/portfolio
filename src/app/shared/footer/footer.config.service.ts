@@ -64,6 +64,7 @@ export class FooterConfigService {
         buttonLink: '/donate'
       }
     },
+    
     middle: {
       superheroSkills: [
         { text: 'Web Developer', link: '#' },

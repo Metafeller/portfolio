@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WindowService } from '../../window.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   menuOpen = false;
   screenWidth: number = 0;
 
-  constructor(private windowService: WindowService) {}
+  constructor(private windowService: WindowService, private scrollService: ScrollService) {}
 
   ngOnInit() {
     const windowRef = this.windowService.nativeWindow;
@@ -47,6 +48,10 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  navigateTo(section: string) {
+    this.scrollService.navigateToSection(section);  // Nutze den neuen ScrollService zum Navigieren
   }
 
 

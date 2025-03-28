@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FooterConfig, FooterConfigService } from './footer.config.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -14,9 +15,14 @@ export class FooterComponent implements OnInit {
   config!: FooterConfig;
   logoHover: boolean = false;
 
-  constructor(private footerConfigService: FooterConfigService) {}
+  constructor(private footerConfigService: FooterConfigService, private scrollService: ScrollService) {}
 
   ngOnInit(): void {
     this.config = this.footerConfigService.getFooterConfig();
   }
+
+  navigateTo(section: string) {
+    this.scrollService.navigateToSection(section);  // ScrollService nutzen
+  }
+
 }

@@ -8,10 +8,14 @@
         
     <nav class="navbar" [ngClass]="{ 'open': menuOpen }">
       <ul class="navbar-menu">
-        <li><a href="#about-me">About me</a></li>
+        <!-- <li><a href="#about-me">About me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Contact</a></li> -->
+        <li><a (click)="navigateTo('about-me')">About me</a></li>
+        <li><a (click)="navigateTo('skills')">Skills</a></li>
+        <li><a (click)="navigateTo('projects')">Projects</a></li>
+        <li><a (click)="navigateTo('contact')">Contact</a></li>
       </ul>
 
       <div class="switch-btn-container">
@@ -30,7 +34,7 @@
 
 
     <!-- Desktop Logo - Nur bei größerer Bildschirmgröße anzeigen -->
-    <div *ngIf="screenWidth > 1024" class="header-logo header-logo-desktop" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+    <div *ngIf="screenWidth > 1024" class="header-logo header-logo-desktop" (click)="navigateTo('')" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
       <img id="header-logo" src="./../logos/aya/11.svg" alt="TAYFUN AYA TECH LOGO">
     </div>
 

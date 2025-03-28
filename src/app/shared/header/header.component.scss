@@ -34,6 +34,7 @@
       padding-right: 32px;
       margin-top: -8px;
       margin-bottom: -16px;
+      cursor: pointer;
     }
   } 
 
@@ -73,6 +74,7 @@
     transition: color 0.3s;
     font-size: 20px;
     position: relative; // Notwendig, damit das Pseudo-Element sich relativ zum Link positioniert
+    cursor: pointer;
 
 
     // Pseudo-Element für den grünen Punkt unter dem Link
