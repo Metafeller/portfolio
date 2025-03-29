@@ -25,4 +25,9 @@ export class FooterComponent implements OnInit {
     this.scrollService.navigateToSection(section);  // ScrollService nutzen
   }
 
+  // Funktion zum Öffnen externer Seiten
+  redirectToExternalSite(url: string) {
+    window.open(url, '_blank');
+  }
+
 }

@@ -61,35 +61,35 @@ export class FooterConfigService {
         span: 'Your contribution matters.',
         image: '/images/fundrasing-child.png',
         buttonText: 'Donate Now',
-        buttonLink: '/donate'
+        buttonLink: 'https://savasboas.com/fundraising'  // Externe URL
       }
     },
     
     middle: {
       superheroSkills: [
-        { text: 'Web Developer', link: '#' },
-        { text: 'Web Design (UI/UX)', link: '#' },
-        { text: 'Branding- and Marketingmanager', link: '#' },
-        { text: 'Inbound-Marketing-Manager', link: '#' },
-        { text: 'AI-Solutions', link: '#' }
+        { text: 'Web Developer', link: 'skills' },
+        { text: 'Web Design (UI/UX)', link: 'skills' },
+        { text: 'Branding- and Marketingmanager', link: 'skills' },
+        { text: 'Inbound-Marketing-Manager', link: 'skills' },
+        { text: 'AI-Solutions', link: 'skills' }
       ],
       creativeLocations: [
-        { icon: '/icons/nation/deutschland.png', text: 'Germany', link: '#' },
-        { icon: '/icons/nation/schweiz.png', text: 'Switzerland', link: '#' },
-        { icon: '/icons/nation/spanien.png', text: 'Tenerife', link: '#' },
-        { icon: '/icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: '#' },
+        { icon: '/icons/nation/deutschland.png', text: 'Germany', link: 'https://savasboas.com/blog/locations' },
+        { icon: '/icons/nation/schweiz.png', text: 'Switzerland', link: 'https://savasboas.com/blog/locations' },
+        { icon: '/icons/nation/spanien.png', text: 'Tenerife', link: 'https://savasboas.com/blog/locations' },
+        { icon: '/icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: 'https://savasboas.com/blog/locations' },
         // { icon: '/icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
-        { icon: '/icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: '#' },
-        { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: '#' }
+        { icon: '/icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: 'https://savasboas.com/blog/locations' },
+        { icon: '/icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: 'https://savasboas.com/blog/locations' }
       ],
       followMeOn: [
-        { icon: '/icons/social/github.svg', text: 'GitHub', link: '#' },
-        { icon: '/icons/social/linkedin.svg', text: 'LinkedIn', link: '#' },
-        { icon: '/icons/social/instagram.svg', text: 'Instagram', link: '#' },
-        { icon: '/icons/social/twitterx.svg', text: 'Twitter (X)', link: '#' },
-        { icon: '/icons/media/discord.png', text: 'Discord', link: '#' },
-        { icon: '/icons/media/tiktok.png', text: 'TikTok', link: '#' },
-        { icon: '/icons/media/youtube.png', text: 'YouTube', link: '#' }
+        { icon: '/icons/social/github.svg', text: 'GitHub', link: 'https://github.com/Metafeller' },
+        { icon: '/icons/social/linkedin.svg', text: 'LinkedIn', link: 'https://www.linkedin.com/' },
+        { icon: '/icons/social/instagram.svg', text: 'Instagram', link: 'https://www.instagram.com/' },
+        { icon: '/icons/social/twitterx.svg', text: 'Twitter (X)', link: 'https://www.twitter.com/' },
+        { icon: '/icons/media/discord.png', text: 'Discord', link: 'https://discord.com/' },
+        { icon: '/icons/media/tiktok.png', text: 'TikTok', link: 'https://www.tiktok.com/' },
+        { icon: '/icons/media/youtube.png', text: 'YouTube', link: 'https://www.youtube.com/' }
       ],
       contactMe: {
         emailIcon: '/icons/social/mail.svg',
@@ -97,7 +97,7 @@ export class FooterConfigService {
         contactRequestIcon: '/icons/art/feather-3.png', // Neue Icon-Property
         contactRequestText: 'Contact Request',
         buttonText: "Let's Talk ↗",
-        buttonLink: '/contact'
+        buttonLink: 'contact'
       }
     },
     bottom: {

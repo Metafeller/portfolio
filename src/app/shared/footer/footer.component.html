@@ -43,12 +43,8 @@
           <!-- Linker Bereich: Bild + Button (30% innerhalb der Kampagne) -->
           <div class="fundraising-image">
             <img [src]="config.top.fundraising.image" alt="Fundraising Image">
-            <!-- <a [href]="config.top.fundraising.buttonLink" 
-               class="next-button" 
-               [attr.aria-label]="config.top.fundraising.buttonText">
-              {{ config.top.fundraising.buttonText }}
-            </a> -->
-              <app-button 
+              <app-button
+                (click)="redirectToExternalSite(config.top.fundraising.buttonLink)" 
                 type="button" 
                 buttonClass="default-button"
                 [disabled]="false" 
@@ -75,7 +71,7 @@
         <h3>Superhero Skills</h3>
         <ul>
           <li *ngFor="let skill of config.middle.superheroSkills">
-            <a [href]="skill.link" [attr.aria-label]="skill.text">{{ skill.text }}</a>
+            <a (click)="navigateTo(skill.link)" [attr.aria-label]="skill.text">{{ skill.text }}</a>
           </li>
         </ul>
       </div>
@@ -85,7 +81,7 @@
           <ul>
             <li *ngFor="let loc of config.middle.creativeLocations">
               <img [src]="loc.icon" alt="{{ loc.text }} Icon">
-              <a [href]="loc.link" [attr.aria-label]="loc.text">{{ loc.text }}</a>
+              <a [href]="loc.link" target="_blank" [attr.aria-label]="loc.text">{{ loc.text }}</a>
             </li>
           </ul>
         </div>
@@ -96,7 +92,7 @@
             <ul>
               <li *ngFor="let social of config.middle.followMeOn">
                 <img [src]="social.icon" alt="{{ social.text }} Icon">
-                <a [href]="social.link" [attr.aria-label]="social.text">{{ social.text }}</a>
+                <a [href]="social.link" target="_blank" [attr.aria-label]="social.text">{{ social.text }}</a>
               </li>
             </ul>
           </div>
@@ -111,11 +107,11 @@
               </li>
               <li>
                 <img [src]="config.middle.contactMe.contactRequestIcon" alt="Contact Request Icon">
-                <a href="#" [attr.aria-label]="config.middle.contactMe.contactRequestText">
+                <a (click)="navigateTo(config.middle.contactMe.buttonLink)" [attr.aria-label]="config.middle.contactMe.contactRequestText">
                   {{ config.middle.contactMe.contactRequestText }}</a>
               </li>
               <li>
-                <app-button 
+                <app-button (click)="navigateTo(config.middle.contactMe.buttonLink)"
                   type="button" 
                   buttonClass="contact-button"
                   [disabled]="false" 
