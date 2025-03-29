@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
+import { ScrollService } from '../../services/scroll.service';
 // import { ServerTestingModule } from '@angular/platform-server/testing';
 
 interface InfoboxIcon {
@@ -146,7 +147,11 @@ export class BrandingComponent {
 
   ];
 
-  constructor(private windowService: WindowService) {}
+  constructor(private windowService: WindowService, private scrollService: ScrollService) {}
+
+  navigateTo(section: string) {
+    this.scrollService.navigateToSection(section);
+  }
 
   toggleInfobox(skill: any): void {
     if (this.windowService.isMobile() || this.windowService.isTablet()) {
