@@ -5,7 +5,11 @@
     font-family: var(--font-family-second);
     color: #ffffff;
     padding: 16px;
-    position: sticky;
+
+    // position: sticky;
+    position: fixed;
+    width: -webkit-fill-available;
+
     top: 0;
     z-index: 1000;
     display: flex;
