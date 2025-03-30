@@ -125,7 +125,7 @@
 
     // Inline Style meines EN DE Buttons
     display: inline-flex;
-    border: 1px solid var(--accent-color);
+    border: 2px solid var(--accent-color);
     box-shadow: 9px 1px 20px 0px rgb(28 87 63 / 50%);
     border-radius: 20px;
     overflow: hidden;
@@ -142,12 +142,20 @@
       border-radius: 20px;
       color: #00ffae;
       box-shadow: 9px 1px 20px 0px rgb(28 87 63 / 50%);
-      padding: 8px 16px;
+      padding: 8px 12px;
       cursor: pointer;
       transition: background-color 0.3s;
       font-weight: 700;
+
+
   
       &.active {
+        // Ich style den Button 30.03.2025
+        // border: 3px solid var(--primary-color);
+        border: 3px solid;
+        border-color: #132f29;
+        padding: 5px 14px;
+
         background-color: var(--accent-color);
         color: var(--primary-color);
         // color: #ffffff;
