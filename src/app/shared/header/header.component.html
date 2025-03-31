@@ -2,8 +2,8 @@
   <div class="container">
 
     <div *ngIf="!menuOpen" class="language-switch language-switch-desktop">
-      <button class="language-btn active">DE</button>
-      <button class="language-btn">EN</button>
+      <button [ngClass]="getLangClass('de')" (click)="switchLanguage('de')">DE</button>
+      <button [ngClass]="getLangClass('en')" (click)="switchLanguage('en')">EN</button>
     </div>
         
     <nav class="navbar" [ngClass]="{ 'open': menuOpen }">
@@ -21,8 +21,8 @@
       <div class="switch-btn-container">
         <div *ngIf="menuOpen" class="language-switch-mobile">
           <div class="language-switch">
-            <button class="language-btn active">DE</button>
-            <button class="language-btn">EN</button>
+            <button [ngClass]="getLangClass('de')" (click)="switchLanguage('de')">DE</button>
+            <button [ngClass]="getLangClass('en')" (click)="switchLanguage('en')">EN</button>
           </div>
         </div>
       </div>

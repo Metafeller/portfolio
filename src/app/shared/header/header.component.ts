@@ -2,6 +2,9 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WindowService } from '../../window.service';
 import { ScrollService } from '../../services/scroll.service';
+import { TranslateService } from '@ngx-translate/core'; // ✅ NEU
+import { Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -14,14 +17,49 @@ export class HeaderComponent implements OnInit {
 
   menuOpen = false;
   screenWidth: number = 0;
+  currentLang = 'de'; // Aktive Sprache (Standard: Deutsch)
 
-  constructor(private windowService: WindowService, private scrollService: ScrollService) {}
+  constructor(
+    private windowService: WindowService, 
+    private scrollService: ScrollService,
+    private translate: TranslateService, // ✅ NEU
+    @Inject(PLATFORM_ID) private platformId: Object // ✅ hinzufügen!
+  ) {}
 
   ngOnInit() {
+    this.setScreenWidth();
+
+    if (isPlatformBrowser(this.platformId)) {
+      const savedLang = localStorage.getItem('lang');
+      this.currentLang = savedLang || 'de';
+      this.translate.use(this.currentLang); // Sprache setzen
+    } else {
+      // Fallback z.B. für Server oder Tests
+      this.currentLang = 'de';
+      this.translate.use('de');
+    }
+
     const windowRef = this.windowService.nativeWindow;
     if (windowRef) {
       this.screenWidth = windowRef.innerWidth;
     }
+  }
+
+  setScreenWidth() {
+    const windowRef = this.windowService.nativeWindow;
+    if (windowRef) {
+      this.screenWidth = windowRef.innerWidth;
+    }
+  }
+
+  switchLanguage(lang: string) {
+    this.currentLang = lang;
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang); // Sprache speichern
+  }
+
+  getLangClass(lang: string): string {
+    return this.currentLang === lang ? 'language-btn active' : 'language-btn';
   }
 
   @HostListener('window:resize', ['$event'])
