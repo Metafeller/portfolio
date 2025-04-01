@@ -1,7 +1,46 @@
 {
+
+  "header": {
+    "about-me": "Über Mich",
+    "skills": "Superkräfte",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+
   "hero": {
-    "title": "Webentwickler"
+    "title": "Webentwickler",
+    "description": "Sieh Dir meine Arbeit an und kontaktiere mich",
+    "cta": {
+      "work": "Meine Arbeit",
+      "contact": "Kontaktiere mich"
+    },
+
+    "banner": {
+      "remote": "Verfügbar für Remote-Arbeit",
+      "frontend": "Webentwicklung",
+      "first-location": "Deutschland (NRW)",
+      "second-location": "Schweiz",
+      "dpa": "Digitale Prozesse",
+      "ai": "AI-Lösungen",
+      "branding": "Personal Branding",
+      "social": "Social Media",
+      "open": "Offen für neue Projekte"
+    }
+  },
+
+  "about": {
+    "h4": "Wer Ich Bin",
+    "h2": "Über Mich",
+    "description": "Hi, Willkommen! Ich bin dein leidenschaftlicher Frontend-Entwickler und digitaler Stratege, der in Deutschland (NRW) und in der wunderschönen Schweiz zuhause ist. Mit meiner kleinen Familie bereise ich die Welt und arbeite flexibel – sei es remote oder an meinem inspirierenden Razor-Point à la Tony Stark. Angetrieben von den grenzenlosen Möglichkeiten in IT, Marketing und Branding, kreiere ich visuell fesselnde und intuitive Webseiten sowie Anwendungen, die nicht nur begeistern, sondern auch konvertieren und nachhaltig skalieren.",
+    "benefit": {
+      "flexibility": "Flexibilität: Ob im modernen Arbeitsumfeld vor Ort oder remote – ich richte mich gerne nach deinen Bedürfnissen und garantiere reibungslose Abläufe.",
+      "openminded": "Offenheit für Neues: Als wissbegieriger Profi suche ich stets nach neuen Herausforderungen, um mein Know-how kontinuierlich zu erweitern und innovative Lösungen speziell für dich zu entwickeln.",
+      "excellence": "Kreative Exzellenz: Für mich sind Programmierung und Marketing mehr als nur technische Disziplinen – sie sind kreative Problemlösungen und digitale Kunst. Ich verwandle komplexe Herausforderungen in einfache, benutzerfreundliche Konzepte, die deinen Erfolg nachhaltig steigern."
+    }
   }
+
+  
+
 }
 
   
