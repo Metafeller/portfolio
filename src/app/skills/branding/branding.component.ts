@@ -3,6 +3,7 @@ import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
+import { TranslateModule } from '@ngx-translate/core';
 // import { ServerTestingModule } from '@angular/platform-server/testing';
 
 interface InfoboxIcon {
@@ -13,7 +14,7 @@ interface InfoboxIcon {
 @Component({
   selector: 'app-branding',
   standalone: true,
-  imports: [ButtonComponent, CommonModule],
+  imports: [ButtonComponent, CommonModule, TranslateModule],
   templateUrl: './branding.component.html',
   styleUrl: './branding.component.scss'
 })

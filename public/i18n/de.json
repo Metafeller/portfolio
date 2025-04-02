@@ -37,9 +37,53 @@
       "openminded": "Offenheit für Neues: Als wissbegieriger Profi suche ich stets nach neuen Herausforderungen, um mein Know-how kontinuierlich zu erweitern und innovative Lösungen speziell für dich zu entwickeln.",
       "excellence": "Kreative Exzellenz: Für mich sind Programmierung und Marketing mehr als nur technische Disziplinen – sie sind kreative Problemlösungen und digitale Kunst. Ich verwandle komplexe Herausforderungen in einfache, benutzerfreundliche Konzepte, die deinen Erfolg nachhaltig steigern."
     }
-  }
+  },
 
-  
+  "skills": {
+    "developer": {
+      "h4": "Entwickler Technologien",
+      "h2": "Entwickler Fähigkeiten",
+      "description": "→ Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine breite Palette moderner Frontend-Technologien und innovativer Konzepte erfolgreich eingesetzt. Ich entwickle moderne Webanwendungen, die schnell, benutzerfreundlich und zukunftssicher skalierbar sind.",
+      "description-2": "→ Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte kontinuierlich zu erweitern und in der dynamischen Welt der Webentwicklung immer einen Schritt voraus zu sein.",
+
+      "h3": {
+        "text-1": "Bereit für digitale Lösungen ",
+        "text-2": "die wirklich funktionieren?"
+      },
+
+      "sub-description": "Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
+      "sub-description-2": "Ich freue mich darauf, dich dabei zu unterstützen, deine Ziele zu erreichen und dein Projekt zum Erfolg zu führen.",
+      "cta": "Jetzt Kontakt aufnehmen"
+    },
+
+    "branding": {
+      "h4": "",
+      "h2": "",
+      "description": "",
+
+      "h3": {
+        "text-1": "",
+        "text-2": ""
+      },
+
+      "sub-description": "",
+      "cta": ""
+    },
+
+    "marketing": {
+      "h4": "",
+      "h2": "",
+      "description": "",
+
+      "h3": {
+        "text-1": "",
+        "text-2": ""
+      },
+
+      "sub-description": "",
+      "cta": ""
+    }
+  }
 
 }
 

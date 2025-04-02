@@ -37,6 +37,52 @@
       "openminded": "Embracing New Challenges: As a curious professional, I’m constantly seeking new challenges to continuously expand my know-how and develop innovative solutions specifically for you.",
       "excellence": "Creative Excellence: For me, coding and marketing are more than just technical disciplines – they’re creative problem-solving and digital art. I transform complex challenges into simple, user-friendly concepts that sustainably boost your success."
     }
+  },
+
+  "skills": {
+    "developer": {
+      "h4": "Developer Technologies",
+      "h2": "Developer Skill Set",
+      "description": "My journey has involved working on a wide range of projects, where I've successfully employed an array of modern frontend technologies and innovative concepts. I create modern web applications that are fast, user-friendly, and built to scale into the future.",
+      "description-2": "I remain curious and open to new technologies and methods, continuously expanding my expertise to stay ahead in the dynamic world of web development.",
+
+      "h3": {
+        "text-1": "Ready for ",
+        "text-2": "digital solutions that really work?"
+      },
+
+      "sub-description": "Feel free to reach out – I’m here to support you from the very first idea to the final product, always with transparency, efficiency, and genuine passion.",
+      "sub-description-2": " I look forward to helping you achieve your goals and making your project a success.",
+      "cta": "Let's Talk"
+    },
+
+    "branding": {
+      "h4": "",
+      "h2": "",
+      "description": "",
+
+      "h3": {
+        "text-1": "",
+        "text-2": ""
+      },
+
+      "sub-description": "",
+      "cta": ""
+    },
+
+    "marketing": {
+      "h4": "",
+      "h2": "",
+      "description": "",
+
+      "h3": {
+        "text-1": "",
+        "text-2": ""
+      },
+
+      "sub-description": "",
+      "cta": ""
+    }
   }
 
 

@@ -3,6 +3,7 @@ import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface InfoboxIcon {
   src: string;
@@ -12,7 +13,7 @@ interface InfoboxIcon {
 @Component({
   selector: 'app-marketing',
   standalone: true,
-  imports: [ButtonComponent, CommonModule],
+  imports: [ButtonComponent, CommonModule, TranslateModule],
   templateUrl: './marketing.component.html',
   styleUrl: './marketing.component.scss',
 })

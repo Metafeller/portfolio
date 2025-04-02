@@ -75,7 +75,7 @@
   
   .skill-box p {
     font-family: var(--font-family-second);
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     color: #ffffff;
   }
@@ -163,7 +163,8 @@
   // Infobox Area
   .infobox {
     position: absolute;
-    top: -130%; // Zentrierte Position über dem Icon
+    // top: -130%; // Zentrierte Position über dem Icon
+    top: -56%;
     left: 50%;
     transform: translateX(-50%);
     width: 240px;

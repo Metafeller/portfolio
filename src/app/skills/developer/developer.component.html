@@ -4,27 +4,31 @@
 
   <!-- Überschrift über der Skill-Box -->
   <div class="developer-headline">
-    <h4 class="developer-title">Developer Technologies</h4>
+    <h4 class="developer-title">{{'skills.developer.h4' | translate}}</h4>
   </div>
 
   <div class="developer-content">
     <!-- Skill Box -->
     <div class="skill-box">
-      <h2>Developer Skill Set</h2>
+      <h2>{{'skills.developer.h2' | translate}}</h2>
       <p>
-        My journey has involved working on diverse projects, employing a range of frontend technologies and concepts.
-        I am open to embracing new technologies and methodologies to continuously enhance my skills and stay ahead
-        in the ever-evolving landscape of web development.
+        {{'skills.developer.description' | translate}}
+      </p>
+      <p>
+        {{'skills.developer.description-2' | translate}}
       </p>
       <h3 class="highlight">
-        <strong>You need <span>another skill?</span></strong>
+        <strong>{{'skills.developer.h3.text-1' | translate}}<span>{{'skills.developer.h3.text-2' | translate}}</span></strong>
       </h3>
       <p>
-        Feel free to contact me. I look forward to expanding on my previous knowledge.
+        {{'skills.developer.sub-description' | translate}}
+      </p>
+      <p>
+        {{'skills.developer.sub-description-2' | translate}}
       </p>
       <!-- Button Component -->
       <app-button type="button" buttonClass="default-button" (click)="navigateTo('contact')">
-        Let's Talk
+        {{'skills.developer.cta' | translate}}
       </app-button>
     </div>
 
