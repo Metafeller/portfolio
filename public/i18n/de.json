@@ -53,38 +53,60 @@
 
       "sub-description": "Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
       "sub-description-2": "Ich freue mich darauf, dich dabei zu unterstützen, deine Ziele zu erreichen und dein Projekt zum Erfolg zu führen.",
-      "cta": "Jetzt Kontakt aufnehmen"
-    },
+      "cta": "Jetzt Kontakt aufnehmen",
 
-    "branding": {
-      "h4": "",
-      "h2": "",
-      "description": "",
-
-      "h3": {
-        "text-1": "",
-        "text-2": ""
-      },
-
-      "sub-description": "",
-      "cta": ""
-    },
-
-    "marketing": {
-      "h4": "",
-      "h2": "",
-      "description": "",
-
-      "h3": {
-        "text-1": "",
-        "text-2": ""
-      },
-
-      "sub-description": "",
-      "cta": ""
+      "skills": {
+        "html": {
+          "title": "HTML",
+          "description": "Das Rückgrat des Webs. Strukturiere deinen Content effektiv."
+        },
+        "css": {
+          "title": "CSS",
+          "description": "Gestalte das Web. Bring Struktur und Design in Einklang."
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "description": "Erwecke dein Projekt zum Leben. Interaktive Funktionen und Logik für deine Website."
+        },
+        "material": {
+          "title": "Material Design",
+          "description": "Schöne, Moderne und Konsistente UI-Komponenten nach Googles Designrichtlinien."
+        },
+        "typescript": {
+          "title": "TypeScript",
+          "description": "Mehr Struktur, bessere Fehlervermeidung und wartbarer Code."
+        },
+        "angular": {
+          "title": "Angular",
+          "description": "Erstelle dynamische Webanwendungen mit einem leistungsstarken Framework."
+        },
+        "firebase": {
+          "title": "Firebase",
+          "description": "Vereinfache Backend-Operationen mit Echtzeit-Datenbank und Hosting."
+        },
+        "bootstrap": {
+          "title": "Bootstrap",
+          "description": "Entwerfe im Handumdrehen responsive Websites mit vorgefertigten Komponenten und Rastersystemen."
+        },
+        "git": {
+          "title": "GIT",
+          "description": "Verfolge, verwalte und arbeite effektiv an Codeänderungen mit."
+        },
+        "restapi": {
+          "title": "Rest-API",
+          "description": "Nahtlose Verbindung und Kommunikation mit Webdiensten (Schnittstellen)."
+        },
+        "scrum": {
+          "title": "Scrum",
+          "description": "Agiles arbeiten. Liefert qualitative Projekte effizient in Teamarbeit."
+        },
+        "growth": {
+          "title": "Growth Mindset",
+          "description": "Ich habe ein besonderes Interesse am Lernen. Ich liebe es mich jeden Tag weiterzubilden und 1% besser zu werden als gestern."
+        }
+      }
     }
   }
-
 }
 
   

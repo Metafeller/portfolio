@@ -53,38 +53,58 @@
 
       "sub-description": "Feel free to reach out – I’m here to support you from the very first idea to the final product, always with transparency, efficiency, and genuine passion.",
       "sub-description-2": " I look forward to helping you achieve your goals and making your project a success.",
-      "cta": "Let's Talk"
-    },
+      "cta": "Let's Talk",
 
-    "branding": {
-      "h4": "",
-      "h2": "",
-      "description": "",
-
-      "h3": {
-        "text-1": "",
-        "text-2": ""
-      },
-
-      "sub-description": "",
-      "cta": ""
-    },
-
-    "marketing": {
-      "h4": "",
-      "h2": "",
-      "description": "",
-
-      "h3": {
-        "text-1": "",
-        "text-2": ""
-      },
-
-      "sub-description": "",
-      "cta": ""
+      "skills": {
+        "html": {
+          "title": "HTML",
+          "description": "The backbone of the web. Structure your content effectively."
+        },
+        "css": {
+          "title": "CSS",
+          "description": "Design the web. Bring style and structure to your content."
+        },
+        "javascript": {
+          "title": "JavaScript",
+          "description": "Bring your website to life with interactivity and logic."
+        },
+        "material": {
+          "title": "Material Design",
+          "description": "Create beautiful and consistent user interfaces inspired by Google."
+        },
+        "typescript": {
+          "title": "TypeScript",
+          "description": "Enhance JavaScript with type safety and cleaner code."
+        },
+        "angular": {
+          "title": "Angular",
+          "description": "Build dynamic web applications with a powerful framework."
+        },
+        "firebase": {
+          "title": "Firebase",
+          "description": "Simplify backend operations with real-time database and hosting."
+        },
+        "bootstrap": {
+          "title": "Bootstrap",
+          "description": "Quickly design responsive websites with prebuilt components and grid systems."
+        },
+        "git": {
+          "title": "GIT",
+          "description": "Track, manage, and collaborate on code changes effectively."
+        },
+        "restapi": {
+          "title": "Rest-API",
+          "description": "Connect and communicate seamlessly with web services."
+        },
+        "scrum": {
+          "title": "Scrum",
+          "description": "Work agile. Deliver projects efficiently with team collaboration."
+        },
+        "growth": {
+          "title": "Growth Mindset",
+          "description": "I have a special interest in learning. I love learning every day and becoming 1% better than I was yesterday."
+        }
+      }
     }
   }
-
-
-
 }
