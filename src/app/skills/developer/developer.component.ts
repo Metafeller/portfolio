@@ -42,16 +42,16 @@ export class DeveloperComponent implements OnInit {
   loadSkills(): void {
 
     this.skills = [
-      this.createSkill('html', '/icons/skillset/html.svg'),
-      this.createSkill('css', '/icons/skillset/css.svg'),
-      this.createSkill('javascript', '/icons/skillset/javascript.svg'),
-      this.createSkill('material', '/icons/skillset/material-design.svg'),
-      this.createSkill('typescript', '/icons/skillset/typescript.svg'),
+      this.createSkill('HTML', '/icons/skillset/html.svg'),
+      this.createSkill('CSS', '/icons/skillset/css.svg'),
+      this.createSkill('JavaScript', '/icons/skillset/javascript.svg'),
+      this.createSkill('Material Design', '/icons/skillset/material-design.svg'),
+      this.createSkill('TypeScript', '/icons/skillset/typescript.svg'),
       this.createSkill('angular', '/icons/skillset/angular.svg'),
       this.createSkill('firebase', '/icons/skillset/firebase.svg'),
       this.createSkill('bootstrap', '/icons/skillset/bootstrap-100.svg'),
-      this.createSkill('git', '/icons/skillset/git.svg'),
-      this.createSkill('restapi', '/icons/skillset/rest-api.svg'),
+      this.createSkill('GIT', '/icons/skillset/git.svg'),
+      this.createSkill('REST-API', '/icons/skillset/rest-api.svg'),
       this.createSkill('scrum', '/icons/skillset/scrum.svg'),
       {
         name: 'Growth Mindset',

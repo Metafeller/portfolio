@@ -43,8 +43,9 @@
     "developer": {
       "h4": "Entwickler Technologien",
       "h2": "Entwickler Fähigkeiten",
-      "description": "→ Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine breite Palette moderner Frontend-Technologien und innovativer Konzepte erfolgreich eingesetzt. Ich entwickle moderne Webanwendungen, die schnell, benutzerfreundlich und zukunftssicher skalierbar sind.",
-      "description-2": "→ Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte kontinuierlich zu erweitern und in der dynamischen Welt der Webentwicklung immer einen Schritt voraus zu sein.",
+      "description": "→ Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine breite Palette moderner Frontend-Technologien und innovativer Konzepte erfolgreich eingesetzt.",
+      "description-2": "→ Ich entwickle hochmoderne Webseiten, Apps, Salesfunnel, SaaS-Modelle und Webanwendungen, die schnell, benutzerfreundlich und zukunftssicher skalierbar sind.",
+      "description-3": "→ Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte kontinuierlich zu erweitern und in der dynamischen Welt der Webentwicklung immer einen Schritt voraus zu sein.",
 
       "h3": {
         "text-1": "Bereit für digitale Lösungen ",
@@ -56,23 +57,23 @@
       "cta": "Jetzt Kontakt aufnehmen",
 
       "skills": {
-        "html": {
+        "HTML": {
           "title": "HTML",
           "description": "Das Rückgrat des Webs. Strukturiere deinen Content effektiv."
         },
-        "css": {
+        "CSS": {
           "title": "CSS",
           "description": "Gestalte das Web. Bring Struktur und Design in Einklang."
         },
-        "javascript": {
+        "JavaScript": {
           "title": "JavaScript",
           "description": "Erwecke dein Projekt zum Leben. Interaktive Funktionen und Logik für deine Website."
         },
-        "material": {
+        "Material Design": {
           "title": "Material Design",
           "description": "Schöne, Moderne und Konsistente UI-Komponenten nach Googles Designrichtlinien."
         },
-        "typescript": {
+        "TypeScript": {
           "title": "TypeScript",
           "description": "Mehr Struktur, bessere Fehlervermeidung und wartbarer Code."
         },
@@ -88,11 +89,11 @@
           "title": "Bootstrap",
           "description": "Entwerfe im Handumdrehen responsive Websites mit vorgefertigten Komponenten und Rastersystemen."
         },
-        "git": {
+        "GIT": {
           "title": "GIT",
           "description": "Verfolge, verwalte und arbeite effektiv an Codeänderungen mit."
         },
-        "restapi": {
+        "REST-API": {
           "title": "Rest-API",
           "description": "Nahtlose Verbindung und Kommunikation mit Webdiensten (Schnittstellen)."
         },

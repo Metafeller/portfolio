@@ -43,8 +43,9 @@
     "developer": {
       "h4": "Developer Technologies",
       "h2": "Developer Skill Set",
-      "description": "My journey has involved working on a wide range of projects, where I've successfully employed an array of modern frontend technologies and innovative concepts. I create modern web applications that are fast, user-friendly, and built to scale into the future.",
-      "description-2": "I remain curious and open to new technologies and methods, continuously expanding my expertise to stay ahead in the dynamic world of web development.",
+      "description": "→ My journey has involved working on a wide range of projects, where I've successfully employed an array of modern frontend technologies and innovative concepts.",
+      "description-2": "→  I create modern websites, apps, sales funnels, SaaS platforms and web applications that are fast, user-friendly, and built to scale into the future.",
+      "description-3": "→  I remain curious and open to new technologies and methods, continuously expanding my expertise to stay ahead in the dynamic world of web development.",
 
       "h3": {
         "text-1": "Ready for ",
@@ -56,23 +57,23 @@
       "cta": "Let's Talk",
 
       "skills": {
-        "html": {
+        "HTML": {
           "title": "HTML",
           "description": "The backbone of the web. Structure your content effectively."
         },
-        "css": {
+        "CSS": {
           "title": "CSS",
           "description": "Design the web. Bring style and structure to your content."
         },
-        "javascript": {
+        "JavaScript": {
           "title": "JavaScript",
           "description": "Bring your website to life with interactivity and logic."
         },
-        "material": {
+        "Material Design": {
           "title": "Material Design",
           "description": "Create beautiful and consistent user interfaces inspired by Google."
         },
-        "typescript": {
+        "TypeScript": {
           "title": "TypeScript",
           "description": "Enhance JavaScript with type safety and cleaner code."
         },
@@ -88,11 +89,11 @@
           "title": "Bootstrap",
           "description": "Quickly design responsive websites with prebuilt components and grid systems."
         },
-        "git": {
+        "GIT": {
           "title": "GIT",
           "description": "Track, manage, and collaborate on code changes effectively."
         },
-        "restapi": {
+        "REST-API": {
           "title": "Rest-API",
           "description": "Connect and communicate seamlessly with web services."
         },
