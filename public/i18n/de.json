@@ -105,7 +105,75 @@
           "description": "Ich habe ein besonderes Interesse am Lernen. Ich liebe es mich jeden Tag weiterzubilden und 1% besser zu werden als gestern."
         }
       }
+    },
+
+    "branding": {
+      "h4": "Branding Technologien",
+      "h2": "Branding Fähigkeiten",
+      "description": "→ Mit einem umfassenden Ansatz – von deinem Brandbook und den Guidelines bis hin zu jedem Detail deiner Vision, Mission und Ziele – kreieren wir markante visuelle Identitäten, Strategien und Erlebnisse, die deine Zielgruppe begeistern und deine Marke zum Leben erwecken.",
+      "description-2": "→ Jeder ist einzigartig, und genau diese Einzigartigkeit setzen wir gekonnt in Szene. Das ist unser Versprechen. Für uns ist erst Schluss, wenn wir unser gemeinsames Ziel erreicht haben.",
+      "h3": {
+        "text-1": "Positionierung ist alles!",
+        "text-2": "Bist du bereit für eine Branding-Lösung, die dich klar von der Konkurrenz abhebt?"
+      },
+
+      "sub-description": "Kontaktiere mich – mein Team und ich freuen uns darauf, gemeinsam mit dir die perfekte Strategie zu entwickeln, um deine Marke auf das nächste Level zu bringen.",
+      "cta": "Jetzt Kontakt aufnehmen",
+
+      "skills": {
+        "brand-awareness": {
+          "title": "Markenbekanntheit",
+          "description": "Schaffe eine starke Omni-Präsenz, um bei deiner Zielgruppe Anklang zu finden."
+        },
+        "brand-strategy": {
+          "title": "Strategischer Aufbau",
+          "description": "Entwickle intelligente, emotionale Strategien, um eine authentische Marke zu schaffen."
+        },
+        "personal-brand": {
+          "title": "Personenmarke",
+          "description": "Baue eine authentische und inspirierende Personenmarke auf, mit der du dich identifizieren kannst."
+        },
+        "target-group": {
+          "title": "Zielgruppendefinition",
+          "description": "Identifiziere und verstehe die Bedürfnisse deines idealen Publikums, um deine Kommunikation optimal anzupassen."
+        },
+        "positioning": {
+          "title": "Positionierung",
+          "description": "Hebe dich ab, indem du deine Marke smart und einzigartig auf dem Markt positionierst."
+        },
+        "Unique-Selling-Point": {
+          "title": "Alleinstellungsmerkmal",
+          "description": "Definiere, was deine Marke besonders macht und dich von der Konkurrenz abhebt."
+        },
+        "brandbook": {
+          "title": "Brandbook & Guidelines",
+          "description": "Kommuniziere visuell mit hochwertigen Designs und kreativen Elementen."
+        },
+        "webdesign": {
+          "title": "Web Design & UX/UI",
+          "description": "Nahtlose und visuell ansprechende digitale Erlebnisse, die sich auf Benutzerfreundlichkeit und Markenerfahrung konzentrieren."
+        },
+        "public-releations": {
+          "title": "Public Relations [PR]",
+          "description": "Baue Vertrauen auf, um den Ruf deiner Marke effektiv zu verwalten."
+        },
+        "visability": {
+          "title": "Sichtbarkeitsstrategien",
+          "description": "Sei mit adaptiven Strategien auf allen wichtigen Kanälen sichtbar und relevant."
+        },
+        "AI-agency": {
+          "title": "AI Agenten",
+          "description": "Nutze KI, um dein Geschäft zu automatisieren und/oder digitale Influencer zu schaffen, die die Reichweite deiner Marke erhöhen."
+        },
+        "growth": {
+          "title": "Growth Mindset",
+          "description": "Ich interessiere mich für innovative und seltene Nischen wie Blockchain, KI-Agenten, Web 3.0 oder Startups, deren Projekte mich begeistern."
+        }
+      }
     }
+
+
+
   }
 }
 

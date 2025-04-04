@@ -2,24 +2,25 @@
   <div class="branding-content">
     <!-- Branding Skill Set -->
     <div class="branding-text-area">
-      <h4 class="headline-desktop">Branding Technologies</h4>
+      <h4 class="headline-desktop">{{ 'skills.branding.h4' | translate }}</h4>
 
       <div class="branding-box">
-        <h2>Branding Skills</h2>
+        <h2>{{ 'skills.branding.h2' | translate }}</h2>
         <p>
-          Crafting impactful visual identities, strategies, and experiences that resonate
-          with target audiences and bring brands to life. It's not over until we say it's over. 
-          Everyone is special and we bring it to life. That's our promise.
+          {{ 'skills.branding.description' | translate }}
+        </p>
+        <p>
+          {{'skills.branding.description-2' | translate}}
         </p>
         <h3 class="highlight">
-          <strong>Need a unique <span>branding solution?</span></strong>
+          <strong>{{ 'skills.branding.h3.text-1' | translate }} <span>{{ 'skills.branding.h3.text-2' | translate }}</span></strong>
         </h3>
         <p>
-          Feel free to contact me. Together, we can create the perfect strategy to elevate your brand.
+          {{ 'skills.branding.sub-description' | translate }}
         </p>
         <!-- Button Component -->
         <app-button type="button" buttonClass="default-button" (click)="navigateTo('contact')">
-          Get in Touch
+          {{ 'skills.branding.cta' | translate }}
         </app-button>
       </div>
     </div>
@@ -48,7 +49,7 @@
       </div>
     </div>
     <div class="headline-mobile">
-      <h4>Branding Technologies</h4>
+      <h4>{{ 'skills.branding.h4' | translate }}</h4>
     </div>
   </div>
 </section>

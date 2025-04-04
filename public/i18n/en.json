@@ -105,6 +105,74 @@
           "description": "I have a special interest in learning. I love learning every day and becoming 1% better than I was yesterday."
         }
       }
+    },
+
+    "branding": {
+      "h4": "Branding Technologies",
+      "h2": "Branding Skills",
+      "description": "→ Using a comprehensive approach – from your brand book and guidelines to every detail of your vision, mission, and goals – we craft striking visual identities, strategies, and experiences that captivate your target audience and bring your brand to life.",
+      "description-2": "→ Everyone is unique, and we expertly showcase that uniqueness. That’s our promise. We don’t stop until we have achieved our shared goal.",
+      "h3": {
+        "text-1": "Positioning is everything!",
+        "text-2": "Are you ready for a branding solution that clearly sets you apart from the competition?"
+      },
+
+      "sub-description": "Get in touch – my team and I are excited to work together with you to develop the perfect strategy to elevate your brand to the next level.",
+      "cta": "Get in Touch",
+
+      "skills": {
+        "brand-awareness": {
+          "title": "Brand Awareness",
+          "description": "Establish a strong presence to resonate with your target audience."
+        },
+        "brand-strategy": {
+          "title": "Brand Strategy",
+          "description": "Craft smart, emotional strategies to create an authentic brand."
+        },
+        "personal-brand": {
+          "title": "Personal Brand",
+          "description": "Build an authentic and inspiring personal brand that you can identify with."
+        },
+        "target-group": {
+          "title": "Target Group Definition",
+          "description": "Identify and understand the frequency of your ideal audience to customize your communication."
+        },
+        "positioning": {
+          "title": "Market Positioning",
+          "description": "Stand out by positioning your brand smartly and uniquely on the market."
+        },
+        "Unique-Selling-Point": {
+          "title": "Unique Selling Point (USP)",
+          "description": "Define what makes your brand special and sets you apart from the competition."
+        },
+        "brandbook": {
+          "title": "Brandbook & Guidelines",
+          "description": "Communicate visually with high-quality designs and creative elements."
+        },
+        "webdesign": {
+          "title": "Web Design & UX / UI",
+          "description": "Create seamless and visually appealing digital experiences. Design focused on usability and brand experience."
+        },
+        "public-releations": {
+          "title": "Public Relations [PR]",
+          "description": "Build trust and manage your brand's reputation effectively."
+        },
+        "visability": {
+          "title": "Visability Strategies",
+          "description": "Be visible and relevant across all key channels with adaptive strategies."
+        },
+        "AI-agency": {
+          "title": "AI Agency",
+          "description": "Use AI to automate your business or create digital influencers to increase your brand's reach."
+        },
+        "growth": {
+          "title": "Growth Mindset",
+          "description": "I am interested in innovative and rare niches such as blockchain. AI agents and Web 3.0 or startups' where I like the project."
+        }
+      }
     }
   }
+
+
+
 }
