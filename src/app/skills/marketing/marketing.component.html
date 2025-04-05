@@ -2,26 +2,28 @@
     <div class="marketing-content">
       <!-- Marketing Skill Set -->
       <div class="marketing-text-area">
-        <h4 class="headline-desktop">Marketing Technologies</h4>
+        <h4 class="headline-desktop">{{ 'skills.marketing.h4' | translate }}</h4>
   
         <div class="marketing-box">
-          <h2>Marketing Skills</h2>
+          <h2>{{ 'skills.marketing.h2' | translate }}</h2>
           <p>
-            Crafting innovative marketing strategies to amplify brand visibility, engage audiences, 
-            and drive growth. Leveraging data and creativity to deliver impactful campaigns. 
-            Transform your marketing strategies into results-driven campaigns. 
-            Combining creativity, data insights, and technology, we build a bridge 
-            between your brand and its audience to deliver measurable success.
+            {{ 'skills.marketing.description' | translate }}
+          </p>
+          <p>
+            {{ 'skills.marketing.description-2' | translate }}
+          </p>
+          <p>
+            {{ 'skills.marketing.description-3' | translate }}
           </p>
           <h3 class="highlight">
-            <strong>Want to <span>grow your audience?</span></strong>
+            <strong>{{ 'skills.marketing.h3.text-1' | translate }} <span>{{ 'skills.marketing.h3.text-2' | translate }}</span></strong>
           </h3>
           <p>
-            Let's create targeted strategies to ensure your brand reaches and connects with the right audience.
+            {{ 'skills.marketing.sub-description' | translate }}
           </p>
           <!-- Button Component -->
           <app-button type="button" buttonClass="default-button" (click)="navigateTo('contact')">
-            Get in Touch
+            {{ 'skills.marketing.cta' | translate }}
           </app-button>
         </div>
       </div>

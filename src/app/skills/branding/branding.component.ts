@@ -19,6 +19,7 @@ interface InfoboxIcon {
   templateUrl: './branding.component.html',
   styleUrl: './branding.component.scss'
 })
+
 export class BrandingComponent implements OnInit, OnDestroy {
   skills: any[] = [];
   private langChangeSub!: Subscription;

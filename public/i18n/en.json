@@ -171,7 +171,73 @@
           "description": "I am interested in innovative and rare niches such as blockchain. AI agents and Web 3.0 or startups' where I like the project."
         }
       }
-    }
+    },
+
+      "marketing": {
+        "h4": "Marketing Technologies",
+        "h2": "Marketing Skills",
+        "description": "→ Developing innovative and tailor-made marketing strategies that shine a spotlight on your brand, attract new target audiences, and drive sustainable growth.",
+        "description-2": "→ With a smart blend of creative ideas, years of experience, precise data analytics, and cutting-edge technology, we transform your vision into targeted campaigns that deliver genuine success.",
+        "description-3": "→ In doing so, we forge an effective connection between your brand and your audience – achieving measurable results and long-term success.",
+        
+        "h3": {
+          "text-1": "Want to",
+          "text-2": "grow your audience?"
+        },
+        "sub-description": "Let’s create targeted strategies that reach and engage your audience.",
+        "cta": "Get in Touch",
+        "skills": {
+          "touchpoints": {
+            "title": "Touchpoints Selection",
+            "description": "Choose the right channels to reach your audience at the perfect time."
+          },
+          "organic-campaigns": {
+            "title": "Organic Campaigns",
+            "description": "Engage authentically with creative, budget-free marketing."    
+          },  
+          "paid-ads": {
+            "title": "Paid Marketing",
+            "description": "Maximize reach with efficient paid strategies across digital platforms."
+          },
+          "social-media": {
+            "title": "Social Media",
+            "description": "Build your brand presence on platforms like Instagram & LinkedIn."
+          },
+          "SEO-strategies": {
+            "title": "Search Engine Optimization (SEO)",
+            "description": "Increase visibility and attract more organic traffic."
+          },
+          "funnel-concepts": {
+            "title": "Sales Funnel Concepts",
+            "description": "Develop structured funnels to guide prospects through every stage of the buying process."
+          },
+          "automation": {
+            "title": "Marketing Automation",
+            "description": "Convert visitors into loyal customers with targeted landing pages. Save time and resources with smart automation tools. "
+          },
+          "content-marketing": {
+            "title": "Content Marketing",
+            "description": "Create value-driven content to engage your audience. Inspire and inform with high-quality, engaging content."
+          },
+          "email-marketing": {
+            "title": "Email Marketing",
+            "description": "Leads are digital Gold. Boost conversions and maintain relationships through emails."
+          },
+          "analytics": {
+            "title": "Analytics & Tracking",
+            "description": "Leverage smart google tools for effective marketing and monetization. Track your campaign performance with actionable insights."
+          },
+          "AI-marketing": {
+            "title": "AI Marketing",
+            "description": "Use artificial intelligence for automation and personalization."
+          },
+          "growth": {
+            "title": "Exponential Growth Strategies",
+            "description": "Achieve sustainable and impactful scaling with innovative methods."
+          }
+        }
+      }
+
   }
 
 

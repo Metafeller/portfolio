@@ -171,8 +171,72 @@
           "description": "Ich interessiere mich für innovative und seltene Nischen wie Blockchain, KI-Agenten, Web 3.0 oder Startups, deren Projekte mich begeistern."
         }
       }
-    }
+    },
 
+      "marketing": {
+        "h4": "Marketing Technologien",
+        "h2": "Marketing Kompetenzen",
+        "description": "→ Entwicklung innovativer und maßgeschneiderter Marketingkonzepte, die deine Marke ins Rampenlicht stellen, neue Zielgruppen ansprechen und nachhaltiges Wachstum generieren.",
+        "description-2": "→ Mit einer Kombination aus kreativen Ideen, jahrelanger Erfahrung aus der Praxis, präzisen Datenanalysen und modernster Technologie setzen wir deine Vision in zielgerichtete Kampagnen um, die echten Erfolg bringen.",
+        "description-3": "→ So schaffen wir eine effektive Verbindung zwischen deiner Marke und deiner Zielgruppe – für messbare Resultate und langfristigen Erfolg.",
+
+        "h3": {
+          "text-1": "Bereit für",
+          "text-2": "mehr Reichweite?"
+        },
+        "sub-description": "Lass uns gemeinsam gezielte Strategien entwickeln, die deine Zielgruppe erreichen.",
+        "cta": "Kostenloses Beratungsgespräch",
+        "skills": {
+          "touchpoints": {
+            "title": "Touchpoints-Auswahl",
+            "description": "Wähle die optimalen Kanäle, um deine Zielgruppe genau zum richtigen Zeitpunkt zu erreichen."
+          },
+          "organic-campaigns": {
+            "title": "Organische Kampagnen",
+            "description": "Starte authentische und kreative Kampagnen, die deine Marke organisch ins Gespräch bringen."
+          },  
+          "paid-ads": {
+            "title": "Bezahlte Werbung",
+            "description": "Erweitere deine Reichweite gezielt mit effizienten bezahlten Strategien auf digitalen Plattformen."
+          },
+          "social-media": {
+            "title": "Social Media",
+            "description": "Stärke deine Markenpräsenz durch direkte Interaktion und gezielte Aktivitäten auf den Social-Media-Kanälen."
+          },
+          "SEO-strategies": {
+            "title": "SEO-Optimierung",
+            "description": "Steigere deine Online-Sichtbarkeit, indem du deine Website und Inhalte für Suchmaschinen optimierst."
+          },
+          "funnel-concepts": {
+            "title": "Sales Funnel Konzepte",
+            "description": "Entwickle strukturierte Funnels, die Interessenten durch den gesamten Kaufprozess leiten."
+          },
+          "automation": {
+            "title": "Marketing-Automatisierung",
+            "description": "Automatisiere deine Prozesse mit smarten Tools, um effizient Leads in Kunden zu verwandeln."
+          },
+          "content-marketing": {
+            "title": "Content Marketing",
+            "description": "Erstelle hochwertigen, wertvollen Content, der deine Zielgruppe informiert und begeistert."
+          },
+          "email-marketing": {
+            "title": "E-Mail Marketing",
+            "description": "Leads sind digitales Gold. Nutze zielgerichtete E-Mail-Kampagnen, um Beziehungen zu pflegen und Leads in loyale Kunden zu verwandeln."
+          },
+          "analytics": {
+            "title": "Analytics & Tracking",
+            "description": "Überwache und analysiere deine Kampagnen mit präzisen KPI's, um kontinuierlich zu optimieren."
+          },
+          "AI-marketing": {
+            "title": "AI Marketing",
+            "description": "Setze künstliche Intelligenz ein, um Marketingprozesse zu personalisieren und weiter zu automatisieren."
+          },
+          "growth": {
+            "title": "Exponentielle Wachstumsstrategien",
+            "description": "Skalieren dein Unternehmen nachhaltig mit innovativen, zukunftsweisenden Strategien für effektives Wachstum."
+          }
+        }
+      }
 
 
   }

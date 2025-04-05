@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 interface InfoboxIcon {
   src: string;
@@ -17,128 +18,78 @@ interface InfoboxIcon {
   templateUrl: './marketing.component.html',
   styleUrl: './marketing.component.scss',
 })
-export class MarketingComponent {
-  skills = [
+
+export class MarketingComponent implements OnInit, OnDestroy {
+  skills: any[] = [];
+  private langChangeSub!: Subscription;
+
+  constructor(
+    private windowService: WindowService, 
+    private scrollService: ScrollService,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit(): void {
+    this.loadSkills();
+
+    this.langChangeSub = this.translate.onLangChange.subscribe(() => {
+      this.loadSkills();
+    });
+  }  
+
+  ngOnDestroy(): void {
+    if (this.langChangeSub) {
+      this.langChangeSub.unsubscribe();
+    }
+  }
+
     // Gruppe 1: Strategien und Kanäle
-    {
-      name: 'Touchpoints Selection',
-      icon: '/icons/marketing/channels.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Touchpoints Selection',
-      infoboxDescription: 'Choose the right channels to reach your audience at the perfect time.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Organic Online Campaigns',
-      icon: '/icons/marketing/organic-sprout.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Organic Online Campaigns',
-      infoboxDescription: 'Engage authentically with creative, budget-free marketing.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Paid Marketing Campaigns',
-      icon: '/icons/marketing/meta.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Paid Marketing',
-      infoboxDescription: 'Maximize reach with efficient paid strategies across digital platforms.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Social Media Marketing',
-      icon: '/icons/marketing/social-media-advertising.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Social Media Marketing',
-      infoboxDescription: 'Connect with your audience directly on platforms they love.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-
     // Gruppe 2: Technische Optimierung und Automatisierung
-    {
-      name: 'SEO Optimization',
-      icon: '/icons/marketing/seo.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'SEO Optimization',
-      infoboxDescription: 'Boost your visibility by optimizing for search engines.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Google Ads & AdSense',
-      icon: '/icons/marketing/google-ads.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Google Ads & AdSense',
-      infoboxDescription: "Leverage Google's ad tools for effective marketing and monetization.",
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Automated Funnel Concepts',
-      icon: '/icons/marketing/sales-funnel.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Funnel Concepts',
-      infoboxDescription: 'Streamline your processes with automated sales and lead funnels.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-
     // Gruppe 3: Lead-Generierung und Kundenbindung
-    {
-      name: 'Automated Lead Generation',
-      icon: '/icons/marketing/lead-generation.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Lead Generation',
-      infoboxDescription: 'Convert visitors into loyal customers with targeted landing pages.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Account Management',
-      icon: '/icons/marketing/account-management-network.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Account Management [CRM]',
-      infoboxDescription: 'Foster long-term customer relationships with personalized strategies.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-
     // Gruppe 4: Content und Partnerstrategien
-    {
-      name: 'Content Marketing',
-      icon: '/icons/marketing/digital-content.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Content Marketing',
-      infoboxDescription: 'Inspire and inform with high-quality, engaging content.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-    {
-      name: 'Affiliate Marketing',
-      icon: '/icons/marketing/up-arrow.png',
-      isHovered: false,
-      isInfoboxVisible: false,
-      infoboxTitle: 'Influencer & Affiliate Marketing',
-      infoboxDescription: 'Partner with influencers and affiliates to expand your reach.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-
     // Gruppe 5: Wachstum und Skalierung
-    {
-      name: 'Exponential Growth Strategies',
-      icon: '/icons/marketing/growth-strategies-pestle.png',
+  
+  loadSkills(): void {
+    this.skills = [
+      this.createSkill('touchpoints', '/icons/marketing/channels.png'),
+      this.createSkill('organic-campaigns', '/icons/marketing/organic-sprout.png'),
+      this.createSkill('paid-ads', '/icons/marketing/meta.png'),
+      this.createSkill('social-media', '/icons/marketing/social-media-advertising.png'),
+      this.createSkill('SEO-strategies', '/icons/marketing/seo.png'),
+      this.createSkill('funnel-concepts', '/icons/marketing/sales-funnel.png'),
+      this.createSkill('automation', '/icons/marketing/lead-generation.png'),
+      this.createSkill('content-marketing', '/icons/marketing/digital-content.png'),
+      this.createSkill('email-marketing', '/icons/marketing/lead-generation.png'),
+      this.createSkill('analytics', '/icons/marketing/up-arrow.png'),
+      this.createSkill('AI-marketing', '/icons/branding/bot.png'),
+      
+      {
+        name: 'Exponential Growth Strategies',
+        icon: '/icons/marketing/growth-strategies-pestle.png',
+        isHovered: false,
+        isInfoboxVisible: false,
+        infoboxTitle: this.translate.instant('skills.marketing.skills.growth.title'),
+        infoboxDescription: this.translate.instant('skills.marketing.skills.growth.description'),
+        infoboxIcons: [
+          { src: '/icons/marketing/customer-journey.png', alt: 'Data Driven' },
+          { src: '/icons/marketing/account-management-network.png', alt: 'KPI Tracking' },
+          { src: '/icons/marketing/up-arrow.png', alt: 'Conversion Optimization' },
+        ] as InfoboxIcon[]
+      },
+    ];
+  }  
+
+  createSkill(key: string, iconPath: string): any {
+    return {
+      name: key.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+      icon: iconPath,
       isHovered: false,
       isInfoboxVisible: false,
-      infoboxTitle: 'Exponential Growth Strategies',
-      infoboxDescription: 'Achieve sustainable and impactful scaling with innovative methods.',
-      infoboxIcons: [] as InfoboxIcon[],
-    },
-  ];
-
-  constructor(private windowService: WindowService, private scrollService: ScrollService) {}
+      infoboxTitle: this.translate.instant(`skills.marketing.skills.${key}.title`),
+      infoboxDescription: this.translate.instant(`skills.marketing.skills.${key}.description`),
+      infoboxIcons: [] as InfoboxIcon[]
+    };
+  }
 
   navigateTo(section: string) {
     this.scrollService.navigateToSection(section);
