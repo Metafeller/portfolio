@@ -1,7 +1,8 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 import { TechnologyPipe } from '../pipes/technology-pipe.pipe';
 import { ButtonComponent } from '../shared/button/button.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface Technology {
   name: string; 
@@ -21,57 +22,120 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TechnologyPipe, ButtonComponent],
+  imports: [CommonModule, TechnologyPipe, ButtonComponent, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
-  projects: Project[] = [
-    {
-      id: 1,
-      name: 'Join CMS',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      technologies: [
-        { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
-        { name: 'HTML', icon: '/icons/overlay/html.svg' },
-        { name: 'CSS', icon: '/icons/overlay/css.svg' },
-        { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
-      ],
-      githubUrl: 'https://example.com/github-join',
-      liveUrl: 'https://example.com/live-join',
-      imageUrl: '/images/projects/frame-join-cms.png',
-    },
-    {
-      id: 2,
-      name: 'El Pollo Loco',
-      description:
-        'Jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight against the crazy hen.',
+export class ProjectsComponent implements OnInit {
+  projects: Project[] = [];
+  selectedProject: Project | null = null; // Initialwert: null
+  isOverlayOpen: boolean = false; // Steuerung der Sichtbarkeit des Overlays
+  selectedProjectIndex: number = 0;
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit(): void {
+    this.loadProjects();
+    this.translate.onLangChange.subscribe(() => {
+      this.loadProjects();
+    });
+  }
+
+  loadProjects(): void {
+    this.projects = [
+
+      {
+        id: 1,
+        name: this.translate.instant('projects.items.join.name'),
+        description: this.translate.instant('projects.items.join.description'),
+        technologies: [
+          { name: 'Firebase', icon: '/icons/overlay/firebase.svg' },
+          { name: 'HTML', icon: '/icons/overlay/html.svg' },
+          { name: 'CSS', icon: '/icons/overlay/css.svg' },
+          { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+        ],
+        githubUrl: 'https://example.com/github-join',
+        liveUrl: 'https://example.com/live-join',
+        imageUrl: '/images/projects/frame-join-cms.png',
+      },
+      {
+        id: 2,
+        name: this.translate.instant('projects.items.pollo.name'),
+        description: this.translate.instant('projects.items.pollo.description'),
         technologies: [
           { name: 'HTML', icon: '/icons/overlay/html.svg' },
           { name: 'CSS', icon: '/icons/overlay/css.svg' },
           { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
         ],
-      githubUrl: 'https://example.com/github-el-pollo-loco',
-      liveUrl: 'https://example.com/live-el-pollo-loco',
-      imageUrl: '/images/projects/frame-pollo-loco.png',
-    },
-    {
-      id: 3,
-      name: '15K Portfolio',
-      description:
-        'My 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work. Every line of code is written by me.',
-      technologies: [
-        { name: 'Angular', icon: '/icons/overlay/angular.svg' }, 
-        // { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
-        { name: 'HTML', icon: '/icons/overlay/html.svg' },
-        { name: 'CSS', icon: '/icons/overlay/css.svg' },
-        { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
-      ],
-      githubUrl: 'https://github.com/Metafeller/portfolio',
-      liveUrl: 'https://example.com/live-da-bubble',
-      imageUrl: '/images/projects/frame-da-bubble.png',
-    },
+        githubUrl: 'https://example.com/github-el-pollo-loco',
+        liveUrl: 'https://example.com/live-el-pollo-loco',
+        imageUrl: '/images/projects/frame-pollo-loco.png',
+      },
+      {
+        id: 3,
+        name: this.translate.instant('projects.items.portfolio.name'),
+        description: this.translate.instant('projects.items.portfolio.description'),
+        technologies: [
+          { name: 'Angular', icon: '/icons/overlay/angular.svg' },
+          { name: 'HTML', icon: '/icons/overlay/html.svg' },
+          { name: 'CSS', icon: '/icons/overlay/css.svg' },
+          { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
+        ],
+        githubUrl: 'https://github.com/Metafeller/portfolio',
+        liveUrl: 'https://example.com/live-da-bubble',
+        imageUrl: '/images/projects/frame-da-bubble.png',
+      },
+
+    ];
+  }
+
+    // {
+    //   id: 1,
+    //   name: 'Join CMS',
+    //   description:
+    //     'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+    //   technologies: [
+    //     { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
+    //     { name: 'HTML', icon: '/icons/overlay/html.svg' },
+    //     { name: 'CSS', icon: '/icons/overlay/css.svg' },
+    //     { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+    //   ],
+    //   githubUrl: 'https://example.com/github-join',
+    //   liveUrl: 'https://example.com/live-join',
+    //   imageUrl: '/images/projects/frame-join-cms.png',
+    // },
+    // {
+    //   id: 2,
+    //   name: 'El Pollo Loco',
+    //   description:
+    //     'Jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and tabasco salsa to fight against the crazy hen.',
+    //     technologies: [
+    //       { name: 'HTML', icon: '/icons/overlay/html.svg' },
+    //       { name: 'CSS', icon: '/icons/overlay/css.svg' },
+    //       { name: 'JavaScript', icon: '/icons/overlay/javascript.svg' },
+    //     ],
+    //   githubUrl: 'https://example.com/github-el-pollo-loco',
+    //   liveUrl: 'https://example.com/live-el-pollo-loco',
+    //   imageUrl: '/images/projects/frame-pollo-loco.png',
+    // },
+    // {
+    //   id: 3,
+    //   name: '15K Portfolio',
+    //   description:
+    //     'My 15K premium portfolio website to give you a serious introduction to my projects and a taste of my quality work. Every line of code is written by me.',
+    //   technologies: [
+    //     { name: 'Angular', icon: '/icons/overlay/angular.svg' }, 
+    //     // { name: 'Firebase', icon: '/icons/overlay/firebase.svg' }, 
+    //     { name: 'HTML', icon: '/icons/overlay/html.svg' },
+    //     { name: 'CSS', icon: '/icons/overlay/css.svg' },
+    //     { name: 'TypeScript', icon: '/icons/overlay/typescript.svg' },
+    //   ],
+    //   githubUrl: 'https://github.com/Metafeller/portfolio',
+    //   liveUrl: 'https://example.com/live-da-bubble',
+    //   imageUrl: '/images/projects/frame-da-bubble.png',
+    // },
+    
+    // Der DA Bubble hier wird später freigeschaltet!
     // {
     //   id: 4,
     //   name: 'DA Bubble',
@@ -82,12 +146,7 @@ export class ProjectsComponent {
     //   liveUrl: 'https://example.com/live-da-bubble',
     //   imageUrl: '/images/projects/frame-da-bubble.png',
     // },
-  ];
 
-  selectedProject: Project | null = null; // Initialwert: null
-  isOverlayOpen: boolean = false; // Steuerung der Sichtbarkeit des Overlays
-
-  selectedProjectIndex: number = 0;
 
   openOverlay(project: Project, index: number): void {
     this.isOverlayOpen = true;
@@ -122,12 +181,9 @@ export class ProjectsComponent {
     this.selectedProjectIndex = nextIndex + 1;
   }  
 
-  // Hier wird die Weiterleitung zu einer Unterseite/Subdomain umgesetzt
+  // Hier wird die Weiterleitung zu einer Unterseite/Subdomain umgesetzt: Hier kommt meine Hauptwebseite mit savasboas.com/portfolio/projects
   openMoreProjects(): void {
     window.open('https://example.com/all-projects', '_blank'); // Link zu einer Beispiel-Seite
   }
-
-
-  constructor() {}
 
 }

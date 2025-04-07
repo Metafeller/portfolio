@@ -237,8 +237,30 @@
           }
         }
       }
+  },
 
-  }
+  "projects": {
+    "h4": "Portfolio",
+    "h2": "Featured Projects",
+    "description": "→ Experience my projects in action – witness firsthand how innovative digital experiences are brought to life. Dive into a curated selection of my work, interact directly with the projects, and get inspired by what my team and I can create for you.",
+    "description-2": "→ Let your imagination run wild – with us, almost anything is possible. Want to see more? Click on the “More Projects” button for a comprehensive look at our entire portfolio.",
+
+    "items": {
+      "join": {
+        "name": "Join CMS",
+        "description": "Streamline your project management with ease! Inspired by the Kanban system, the JOIN Task Manager features an intuitive drag-and-drop interface that lets you create tasks, assign team members, and maintain full oversight – ensuring sustainable success for your business."
+      },
+      "pollo": {
+        "name": "El Pollo Loco",
+        "description": "An action-packed jump 'n' run adventure built on dynamic, in-depth JavaScript object-oriented programming. Help Pepe collect coins and salsa bottles as he battles a crazy chicken to rescue his beloved Maria – pure excitement and fun guaranteed!"
+      },
+      "portfolio": {
+        "name": "15K Portfolio",
+        "description": "A premium showcase of my projects that highlights meticulous attention to detail. Experience 100% transparency and top-quality work – because I value excellence over quantity and collaborate closely with my clients."
+      }
+    }
+}
+
 
 
 
