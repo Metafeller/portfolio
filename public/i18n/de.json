@@ -243,21 +243,23 @@
       "h4": "Meine Referenzen",
       "h2": "Ausgewählte Projekte",
       "description": "→ Entdecke meine Projekte live in Aktion – erlebe, wie aus Ideen innovative digitale Erlebnisse werden. Tauche ein in eine handverlesene Auswahl meiner Arbeiten, interagiere direkt mit den Projekten und lass dich inspirieren, was mein Team und ich für dich realisieren können.",
-      "description-2": "→ Deiner Kreativität sind keine Grenzen gesetzt – bei uns ist nahezu alles möglich. Möchtest du noch mehr entdecken? Dann klicke auf „More Projects“ und erhalte einen umfassenden Einblick in unsere gesamten Referenzen.",
+      "description-2": "→ Deiner Kreativität sind keine Grenzen gesetzt – bei uns ist nahezu alles möglich. Möchtest du noch mehr entdecken? Dann klicke auf „Mehr Projekte“ und erhalte einen umfassenden Einblick in unsere gesamten Referenzen.",
+      "cta": "Mehr Projekte ↗",
 
       "items": {
-        "join": {
-          "name": "Join CMS",
-          "description": "Effizientes Projektmanagement leicht gemacht! Inspiriert vom Kanban-System bietet der JOIN-Taskmanager eine intuitive Drag‑and‑Drop-Oberfläche, mit der du Aufgaben erstellst, Teammitglieder zuweist und stets den Überblick behältst – für nachhaltigen Erfolg in deinem Unternehmen."
-        },
-        "pollo": {
-          "name": "El Pollo Loco",
-          "description": "Ein actiongeladenes Jump ’n’ Run-Abenteuer, das mit stiefgreifender Objektorientierung begeistert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu sammeln und gegen das verrückte Huhn zu kämpfen, um seine geliebte Maria zu retten – pure Spannung und Spaß garantiert!"
-        },
-        "portfolio": {
-          "name": "15K Portfolio",
-          "description": "Ein Premium-Portfolio, das meine Projekte mit Liebe zum Detail präsentiert. Erlebe 100% Transparenz und höchste Qualität – denn ich setze auf exzellente Ergebnisse statt auf Massenproduktion und arbeite eng mit meinen Kunden zusammen."
-        }
+        "h4": "Worum geht es bei diesem Projekt?",
+          "join": {
+            "name": "Join CMS",
+            "description": "Effizientes Projektmanagement leicht gemacht! Inspiriert vom Kanban-System bietet der JOIN-Taskmanager eine intuitive Drag‑and‑Drop-Oberfläche, mit der du Aufgaben erstellst, Teammitglieder zuweist und stets den Überblick behältst – für nachhaltigen Erfolg in deinem Unternehmen."
+          },
+          "pollo": {
+            "name": "El Pollo Loco",
+            "description": "Ein actiongeladenes Jump ’n’ Run-Abenteuer, das mit stiefgreifender Objektorientierung begeistert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu sammeln und gegen das verrückte Huhn zu kämpfen, um seine geliebte Maria zu retten – pure Spannung und Spaß garantiert!"
+          },
+          "portfolio": {
+            "name": "15K Portfolio",
+            "description": "Ein Premium-Portfolio, das meine Projekte mit Liebe zum Detail präsentiert. Erlebe 100% Transparenz und höchste Qualität – denn ich setze auf exzellente Ergebnisse statt auf Massenproduktion und arbeite eng mit meinen Kunden zusammen."
+          }
       }
     }
 

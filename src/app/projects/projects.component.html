@@ -45,7 +45,7 @@
             <!-- Hierkommt ein zusätzlicher Button der mich zu allen meinen Projekten führt -->
             <div class="more-projects">
                 <app-button buttonClass="next-button" (click)="openMoreProjects()">
-                    More Projects ↗
+                    {{ 'projects.cta' | translate }}
                 </app-button>
             </div>
 
@@ -81,7 +81,7 @@
                         </h2>
                         <h3 class="project-title">{{ selectedProject?.name }}</h3>
                 
-                        <h4 class="overlay-subtitle">What is this project about?</h4>
+                        <h4 class="overlay-subtitle">{{ 'projects.items.h4' | translate }}</h4>
                         <p class="overlay-description">
                         {{ selectedProject?.description }}
                         </p>
