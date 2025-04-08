@@ -1,6 +1,6 @@
 <div class="reviews-section" role="region" aria-label="Testimonials">
     <!-- Section Headline -->
-    <h2 class="section-title">What my colleagues say about me</h2>
+    <h2 class="section-title">{{ 'reviews.sectionTitle' | translate }}</h2>
   
     <!-- Slider Wrapper -->
     <div class="slider-wrapper" role="region" aria-label="Testimonials Slider">
@@ -15,25 +15,40 @@
           <div class="review-card-content">
             <!-- Profile Picture -->
             <div class="profile-pic-container">
-              <img [src]="review.image" alt="{{ review.name }}" class="profile-pic" />
+              <img [src]="review.image" alt="review.nameKey | translate" class="profile-pic" />
               <div class="profile-pic-background"></div>
             </div>
   
             <!-- Review Text -->
             <div class="review-text">
               <blockquote>
-                {{ showFullText === i ? review.text : review.text | slice:0:100 }}...
+                {{ 
+                  showFullText === i 
+                  ? (review.textKey | translate) 
+                  : (review.textKey | translate | slice:0:100) 
+                  }}...
               </blockquote>
 
               <!-- "Read More" Option -->
-              <span *ngIf="review.text.length > 100 && showFullText !== i" class="read-more" (click)="expandText(i)">
-                Read More
+              <span 
+                *ngIf="getTranslatedTextLength(review.textKey) > 100 && showFullText !== i" 
+                class="read-more" 
+                (click)="expandText(i)"
+                >
+                {{ 'reviews.readMore' | translate }}
               </span>
 
               <!-- Review Name and Position -->
-              <span *ngIf="showFullText === i" class="read-more" (click)="collapseText()">Read Less</span>
+              <span 
+                *ngIf="showFullText === i" 
+                class="read-more" 
+                (click)="collapseText()"
+              >
+              {{ 'reviews.readLess' | translate }}
+              </span>
+              
               <p class="review-author">
-                {{ review.name }} &#11089; {{ review.position }}
+                {{ review.nameKey | translate }} &#11089; {{ review.positionKey | translate }}
               </p>
 
               <!-- Star Rating -->
@@ -71,7 +86,7 @@
         [class.active]="isActive(i)"
         (click)="navigateToReview(i)"
       >
-        <img [src]="review.image" alt="{{ review.name }}" class="miniature-img" />
+        <img [src]="review.image" alt="{{ review.nameKey }}" class="miniature-img" />
       </div>
   
       <!-- Right Arrow -->
