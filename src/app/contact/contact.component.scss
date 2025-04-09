@@ -234,6 +234,7 @@
     span {
     font-size: 16px;
     font-family: var(--font-family-second);
+    color: darkgray;
     // font-weight: 700;
 
         @include responsive(240px, 320px) {
@@ -496,7 +497,7 @@
             .checkbox-container {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-end;
                 color: white;
                 padding: 8px 0px;
                 gap: 16px;

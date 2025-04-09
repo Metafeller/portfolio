@@ -5,7 +5,7 @@
         <h4>{{ 'contact.headline' | translate }}</h4>
     </div>
     
-    <div class="contact-content">        
+    <div class="contact-content">       
         <!-- Linke Seite: Text -->
         <div class="contact-left slide-in-left">
         <!-- <h4>Contact me</h4> -->
@@ -26,6 +26,10 @@
             {{ 'contact.description' | translate }}
         </p>
 
+        <p>
+            {{ 'contact.description-2' | translate }}
+        </p>
+
         <!-- <span>
             Need a Frontend developer? 
             <a href="#contact-form" class="accent-text"> &#10132; Let’s talk!</a>
@@ -33,13 +37,13 @@
 
         <span>
             {{ 'contact.callToAction' | translate }}
-            <a href="#contact-form" class="accent-text"> &#10132; {{ 'contact.letsTalk' | translate }}</a>
+            <a href="#contact" class="accent-text"> &#10132; {{ 'contact.letsTalk' | translate }}</a>
         </span>
         </div>
 
         <!-- Rechte Seite: Formular -->
         <div class="contact-right slide-in-right">
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                 <!-- <label for="name">What's Your Name?</label> -->
                 <label for="name">{{ 'contact.form.name.label' | translate }}</label>
 

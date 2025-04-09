@@ -305,8 +305,9 @@
     "subheadline": "Contact",
     "title": "Let's work together",
     "subtitle": "Got a problem to solve?",
-    "description": "Contact me through this form, I’m excited to hear your ideas and collaborate with you.",
-    "callToAction": "Need a frontend developer?",
+    "description": "Contact me using this form for a free consultation. I look forward to hearing more about your ideas and challenges.",
+    "description-2": "Together, we develop modern, innovative and tailor-made digital solutions that take your business to the next level. Your success is my mission – don't hesitate to take the next step with me and my team.",
+    "callToAction": "Are you a startup entrepreneur or working solo? Do you need a web developer or even an entire team? Do you prioritize quality and proven methods? Then you're exactly where you need to be",
     "letsTalk": "Let’s talk!",
     "characters": "characters",
     "tooltip": "Please complete all required fields!",
@@ -341,7 +342,7 @@
       },
       "message": {
         "label": "How can I help you?",
-        "placeholder": "Tell me what you need"
+        "placeholder": "What do you need to develop? Tell me what you need..."
       },
       "category": {
         "label": "Select a category",

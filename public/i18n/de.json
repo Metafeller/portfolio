@@ -305,8 +305,9 @@
       "subheadline": "Kontakt",
       "title": "Lass uns zusammenarbeiten",
       "subtitle": "Hast du ein Problem zu lösen?",
-      "description": "Kontaktiere mich über dieses Formular. Ich freue mich, von dir zu hören und deine Ideen kennenzulernen.",
-      "callToAction": "Du brauchst einen Frontend-Entwickler?",
+      "description": "Kontaktiere mich über dieses Formular für ein kostenloses Beratungsgespräch. Ich freue mich darauf, mehr über deine Ideen und Herausforderungen zu erfahren.",
+      "description-2": "Gemeinsam entwickeln wir innovative und maßgeschneiderte digitale Lösungen, die dein Business auf das nächste Level heben. Dein Erfolg ist meine Mission – zögere nicht und starte den nächsten Schritt mit mir und meinem Team.",
+      "callToAction": "Bist du ein Startup-Unternehmer oder solo? Brauchst du einen Web-Entwickler oder sogar ein ganzes Team? Legst du Wert auf Qualität und bewährte Methoden? Dann bist du hier genau richtig",
       "letsTalk": "Lass uns reden!",
       "characters": "Zeichen",
       "tooltip": "Bitte fülle alle Pflichtfelder aus!",
@@ -341,7 +342,7 @@
         },
         "message": {
           "label": "Wie kann ich dir helfen?",
-          "placeholder": "Was brauchst du für dein Projekt?"
+          "placeholder": "Was brauchst du für d/ein Projekt?"
         },
         "category": {
           "label": "Kategorie auswählen",
