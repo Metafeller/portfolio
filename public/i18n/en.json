@@ -298,7 +298,99 @@
       "position": "Frontend Developer",
       "text": "Ty places great importance on effective communication, which fosters a collaborative and efficient working environment. Tayfun is disciplined and produces clean, reusable code that adheres to best practices. His design-oriented approach ensures that his solutions are both functional and aesthetically pleasing, enhancing the overall user experience. Tayfuns ability to work effectively and productively ensured that all projects were completed to the highest standard, making him an invaluable asset to any team."
     }
+  },
+
+  "contact": {
+    "headline": "Get in touch",
+    "subheadline": "Contact",
+    "title": "Let's work together",
+    "subtitle": "Got a problem to solve?",
+    "description": "Contact me through this form, I’m excited to hear your ideas and collaborate with you.",
+    "callToAction": "Need a frontend developer?",
+    "letsTalk": "Let’s talk!",
+    "characters": "characters",
+    "tooltip": "Please complete all required fields!",
+    "successMessage": "Your message was sent successfully!",
+    "duplicateOverlay": {
+      "text": "This email is already registered. Your contact details will be updated. Please confirm.",
+      "confirm": "I agree to update",
+      "cancel": "Cancel"
+    },
+    "form": {
+      "name": {
+        "label": "What's your name?",
+        "placeholder": "Your name here..."
+      },
+      "email": {
+        "label": "Your email address",
+        "placeholder": "your@email.com"
+      },
+      "hasWebsite": {
+        "label": "Do you have a website?",
+        "yes": "Yes, I have a website",
+        "no": "No, not yet"
+      },
+      "website": {
+        "label": "What's your website?",
+        "placeholder": "e.g. johndoe.com"
+      },
+      "websiteOwnership": {
+        "label": "Are you the owner of the website?",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "message": {
+        "label": "How can I help you?",
+        "placeholder": "Tell me what you need"
+      },
+      "category": {
+        "label": "Select a category",
+        "placeholder": "Choose a category"
+      },
+      "customCategory": {
+        "label": "Custom category",
+        "placeholder": "Specify your category"
+      }
+    },
+    "categories": {
+      "ai": "AI-Solutions",
+      "branding": "Brand Strategy",
+      "marketing": "PR & Marketing",
+      "web": "Web Development",
+      "automation": "IT-Automation",
+      "carefree": "All-Round Carefree Package",
+      "other": "Other",
+      "description": {
+        "ai": "(AI Agency, Content, Automation)",
+        "branding": "(Personal brand, positioning)",
+        "marketing": "(Social Media, SEO, Ads)",
+        "web": "(Websites, Apps, SaaS)",
+        "automation": "(Automation with AI)",
+        "carefree": "(Full service package)",
+        "other": "(Custom solution)"
+      }
+    },
+    "privacy": {
+      "label-1": "I've read the",
+      "label-2": "privacy policy",
+      "link": "and agree to it."
+    },
+    "button": {
+      "loading": "Sending...",
+      "default": "Say Hello 😊"
+    },
+    "errorName": "Please enter a valid name.",
+    "errorEmail": "Please enter a valid email.",
+    "errorWebsite": "Please enter a valid domain.",
+    "errorWebsite-2": "Please omit www.",
+    "errorWebsite-3": "e.g. johndoe.com",
+    "errorOwnership": "Please select an option.",
+    "errorMessage": "At least 50 characters required.",
+    "errorCategory": "Please select a category.",
+    "errorCustomCategory": "Please provide a custom category.",
+    "errorPrivacy": "You must accept the privacy policy."
   }
+
 
 
 }

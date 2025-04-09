@@ -1,63 +1,141 @@
 <section id="contact" class="contact-section-container">
 
     <div class="headline">
-        <h4>Contact me</h4>
+        <!-- <h4>Contact me</h4> -->
+        <h4>{{ 'contact.headline' | translate }}</h4>
     </div>
     
     <div class="contact-content">        
         <!-- Linke Seite: Text -->
-        <div class="contact-left">
-        <h4>Contact me</h4>
-        <h2>Let's work together</h2>
-        <h3>Got a problem to solve?</h3>
-        <p>
+        <div class="contact-left slide-in-left">
+        <!-- <h4>Contact me</h4> -->
+        <h4>{{ 'contact.subheadline' | translate }}</h4>
+
+        <!-- <h2>Let's work together</h2> -->
+        <h2>{{ 'contact.title' | translate }}</h2>
+
+        <!-- <h3>Got a problem to solve?</h3> -->
+        <h3>{{ 'contact.subtitle' | translate }}</h3>
+
+        <!-- <p>
             Contact me through this form, I am interested in hearing from you, 
             knowing your ideas and contributing to your projects with my work.
+        </p> -->
+
+        <p>
+            {{ 'contact.description' | translate }}
         </p>
-        <span>
+
+        <!-- <span>
             Need a Frontend developer? 
             <a href="#contact-form" class="accent-text"> &#10132; Let’s talk!</a>
+        </span> -->
+
+        <span>
+            {{ 'contact.callToAction' | translate }}
+            <a href="#contact-form" class="accent-text"> &#10132; {{ 'contact.letsTalk' | translate }}</a>
         </span>
         </div>
 
         <!-- Rechte Seite: Formular -->
-        <div class="contact-right">
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-                <label for="name">What's Your Name?</label>
-                <input type="text" id="name" formControlName="name" placeholder="Your name goes here" maxlength="40"
-                    [class.error-border]="name?.invalid && name?.touched">
-                <div class="error" *ngIf="name?.invalid && name?.touched">⚠️ Please enter a valid name.</div>
+        <div class="contact-right slide-in-right">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contact-form">
+                <!-- <label for="name">What's Your Name?</label> -->
+                <label for="name">{{ 'contact.form.name.label' | translate }}</label>
+
+                <!-- <input type="text" id="name" formControlName="name" placeholder="Your name goes here" maxlength="40"
+                    [class.error-border]="name?.invalid && name?.touched"> -->
+
+                <input 
+                    type="text" 
+                    id="name" 
+                    formControlName="name" 
+                    placeholder="{{ 'contact.form.name.placeholder' | translate }}"
+                    maxlength="40"
+                    [class.error-border]="name?.invalid && name?.touched"
+                >
+
+                <!-- <div class="error" *ngIf="name?.invalid && name?.touched">⚠️ Please enter a valid name.</div> -->
+                <div class="error" *ngIf="name?.invalid && name?.touched">⚠️ {{ 'contact.errorName' | translate }}</div>
         
-                <label for="email">What's Your Email?</label>
-                <input type="email" id="email" formControlName="email" placeholder="yourbestmail@email.com" maxlength="40"
-                    [class.error-border]="email?.invalid && email?.touched">
-                <div class="error" *ngIf="email?.invalid && email?.touched">⚠️ Please enter a valid email.</div>
+
+                <!-- <label for="email">What's Your Email?</label> -->
+                <label for="email">{{ 'contact.form.email.label' | translate }}</label>
+
+                <!-- <input 
+                    type="email" 
+                    id="email" 
+                    formControlName="email" 
+                    placeholder="yourbestmail@email.com" 
+                    maxlength="40"
+                    [class.error-border]="email?.invalid && email?.touched"
+                > -->
+
+                <input 
+                    type="email" 
+                    id="email" 
+                    formControlName="email" 
+                    placeholder="{{'contact.form.email.placeholder' | translate}}" 
+                    maxlength="40"
+                    [class.error-border]="email?.invalid && email?.touched"
+                >
+                
+                <!-- <div class="error" *ngIf="email?.invalid && email?.touched">⚠️ Please enter a valid email.</div> -->
+                <div class="error" *ngIf="email?.invalid && email?.touched">⚠️ {{ 'contact.errorEmail' | translate }}</div>
 
                 <!-- Website-Frage -->
-                <label>Do you have a website?</label>
+                <!-- <label>Do you have a website?</label> -->
+                <label>{{ 'contact.form.hasWebsite.label' | translate }}</label>
+
                 <div class="website-options">
-                <label>
+
+                <!-- <label>
                     <input type="radio" formControlName="hasWebsite" value="no">
                     No! I don't have a website yet
-                </label>
+                </label> -->
+
                 <label>
+                    <input type="radio" formControlName="hasWebsite" value="no">
+                    {{ 'contact.form.hasWebsite.no' | translate }}
+                </label>
+
+                <!-- <label>
                     <input type="radio" formControlName="hasWebsite" value="yes">
                     Yes! I have a website
+                </label> -->
+
+                <label>
+                    <input type="radio" formControlName="hasWebsite" value="yes">
+                    {{ 'contact.form.hasWebsite.yes' | translate }}
                 </label>
                 </div>
 
                 <!-- Bedingter Block: Nur anzeigen, wenn YES gewählt wurde -->
                 <div *ngIf="contactForm.get('hasWebsite')?.value === 'yes'">
-                <label for="website">What's Your Website?</label>
-                <input type="text" id="website" formControlName="website" placeholder="e.g. maxmustermann.com" maxlength="100">
-                <div class="error" *ngIf="contactForm.get('website')?.invalid && contactForm.get('website')?.touched">
+
+                <!-- <label for="website">What's Your Website?</label> -->
+                <label for="website">{{ 'contact.form.website.label' | translate }}</label>
+
+                <!-- <input type="text" id="website" formControlName="website" placeholder="e.g. maxmustermann.com" maxlength="100"> -->
+                <input type="text" id="website" formControlName="website" placeholder="{{'contact.form.website.placeholder' | translate}}" maxlength="100">
+
+                <!-- <div class="error" *ngIf="contactForm.get('website')?.invalid && contactForm.get('website')?.touched">
                     ⚠️ Please enter a valid domain <br>
                     ⚠️ Please without www. <br>
                     ✅ Example: savasboas.com
+                </div> -->
+
+                <div class="error" *ngIf="contactForm.get('website')?.invalid && contactForm.get('website')?.touched">
+                    ⚠️ {{ 'contact.errorWebsite' | translate }} <br>
+                    ⚠️ {{ 'contact.errorWebsite-2' | translate }} <br>
+                    ✅ {{ 'contact.errorWebsite-3' | translate }}
                 </div>
                 <br>
-                <label>Are you the decision maker and / or owner of this website?</label>
-                <div class="website-ownership">
+
+                <!-- <label>Are you the decision maker and / or owner of this website?</label> -->
+                <label>{{ 'contact.form.websiteOwnership.label' | translate }}</label>
+
+                <!-- <div class="website-ownership">
                     <label>
                     <input type="radio" formControlName="websiteOwnership" value="yes">
                     Yes
@@ -66,24 +144,54 @@
                     <input type="radio" formControlName="websiteOwnership" value="no">
                     No
                     </label>
+                </div> -->
+
+                <div class="website-ownership">
+                    <label>
+                    <input type="radio" formControlName="websiteOwnership" value="yes">
+                    {{ 'contact.form.websiteOwnership.yes' | translate }}
+                    </label>
+                    <label>
+                    <input type="radio" formControlName="websiteOwnership" value="no">
+                    {{ 'contact.form.websiteOwnership.no' | translate }}
+                    </label>
                 </div>
-                    <div class="error" *ngIf="contactForm.get('websiteOwnership')?.invalid && contactForm.get('websiteOwnership')?.touched">
+
+                    <!-- <div class="error" *ngIf="contactForm.get('websiteOwnership')?.invalid && contactForm.get('websiteOwnership')?.touched">
                         ⚠️ Please select an option.
+                    </div> -->
+
+                    <div class="error" *ngIf="contactForm.get('websiteOwnership')?.invalid && contactForm.get('websiteOwnership')?.touched">
+                        ⚠️ {{ 'contact.errorOwnership' | translate }}
                     </div>
                 </div>
         
-                <label for="message">How can I help you?</label>
-                <textarea id="message" formControlName="message" placeholder="What do you need to develop?" maxlength="369"
+                <!-- <label for="message">How can I help you?</label> -->
+                <label for="message">{{ 'contact.form.message.label' | translate }}</label>
+
+                <!-- <textarea id="message" formControlName="message" placeholder="What do you need to develop?" maxlength="369"
+                    [class.error-border]="message?.invalid && message?.touched"></textarea> -->
+
+                <textarea id="message" formControlName="message" placeholder="{{ 'contact.form.message.placeholder' | translate }}" maxlength="369"
                     [class.error-border]="message?.invalid && message?.touched"></textarea>
-                <div class="char-counter" [class.warning]="getCharCount() < 50">
+
+                <!-- <div class="char-counter" [class.warning]="getCharCount() < 50">
                   {{ getCharCount() }} / 369 characters
+                </div> -->
+
+                <div class="char-counter" [class.warning]="getCharCount() < 50">
+                    {{ getCharCount() }} / 369 {{ 'contact.characters' | translate }}
                 </div>
-                <div class="error" *ngIf="message?.invalid && message?.touched">⚠️ Minimum 50 characters required.</div>
+
+                <!-- <div class="error" *ngIf="message?.invalid && message?.touched">⚠️ Minimum 50 characters required.</div> -->
+                <div class="error" *ngIf="message?.invalid && message?.touched">⚠️ {{ 'contact.errorMessage' | translate }}</div>
         
-                <label for="category">Select Category</label>
+                <!-- <label for="category">Select Category</label> -->
+                <label for="category">{{ 'contact.form.category.label' | translate }}</label>
 
                     <!-- Eigene Dropdown-Komponente -->
-                    <div class="custom-dropdown" (click)="toggleDropdown($event)">
+
+                    <!-- <div class="custom-dropdown" (click)="toggleDropdown($event)">
                         <div class="selected-option">
                         {{ selectedCategory || 'Choose a category' }}
                         </div>
@@ -100,32 +208,60 @@
                             <span class="category-description">(IT-Automation with SaaS and AI-Solutions)</span></li>     
                         <li (click)="selectCategory('All-Round Carefree Package')">All-Round Carefree Package
                             <span class="category-description">(Full Service Package)</span></li>  
-                        <!-- <li (click)="selectCategory('Done For You')">Done For You
-                            <span class="category-description">(Done For You)</span></li> -->
                         <li (click)="selectCategory('other')">Other
                             <span class="category-description">(Other Specific Solution)</span></li>
                         </ul>
-                    </div>
-  
-                    <!-- <select id="category" formControlName="category">
-                        <option value="" disabled selected>Choose a category</option>
-                        <option value="web-development">Web Development</option>
-                        <option value="app">App Development</option>
-                        <option value="ui-ux">UI/UX Design</option>
-                        <option value="seo">SEO Optimization</option>
-                        <option value="branding">Branding and Marketing</option>
-                        <option value="ai-agency">AI-Agency</option>
-                        <option value="other">Other</option>
-                    </select> -->
+                    </div> -->
 
-                <div class="error" *ngIf="category?.invalid && category?.touched">⚠️ Please select a category.</div>
+                    <div class="custom-dropdown" (click)="toggleDropdown($event)">
+                        <div class="selected-option">
+                        {{ selectedCategory || ('contact.form.category.placeholder' | translate) }}
+                        </div>
+
+                        <ul class="dropdown-options" [class.show]="dropdownOpen">
+                        <li (click)="selectCategory('AI-Solutions')">{{ 'contact.categories.ai' | translate }} 
+                            <span class="category-description">{{ 'contact.categories.description.ai' | translate }}</span></li>
+
+                        <li (click)="selectCategory('Brand Strategy')">{{ 'contact.categories.branding' | translate }} 
+                            <span class="category-description">{{ 'contact.categories.description.branding' | translate }}</span></li>
+
+                        <li (click)="selectCategory('PR & Marketing')">{{ 'contact.categories.marketing' | translate }}
+                            <span class="category-description">{{ 'contact.categories.description.marketing' | translate }}</span></li>
+
+                        <li (click)="selectCategory('Web Development')">{{ 'contact.categories.web' | translate }}
+                            <span class="category-description">{{ 'contact.categories.description.web' | translate }}</span></li>  
+
+                        <li (click)="selectCategory('IT-Automation')">{{ 'contact.categories.automation' | translate }}
+                            <span class="category-description">{{ 'contact.categories.description.automation' | translate }}</span></li>
+
+                        <li (click)="selectCategory('All-Round Carefree Package')">{{ 'contact.categories.carefree' | translate }}
+                            <span class="category-description">{{ 'contact.categories.description.carefree' | translate }}</span></li>  
+
+                        <li (click)="selectCategory('other')">{{ 'contact.categories.other' | translate }}
+                            <span class="category-description">{{ 'contact.categories.description.other' | translate }}</span></li>
+                        </ul>
+                    </div>
+
+                <!-- <div class="error" *ngIf="category?.invalid && category?.touched">⚠️ Please select a category.</div> -->
+                <div class="error" *ngIf="category?.invalid && category?.touched">⚠️ {{ 'contact.errorCategory' | translate }}</div>
         
-                <div *ngIf="category?.value === 'other'"
+                <!-- <div *ngIf="category?.value === 'other'"
                     [ngClass]="{ 'show-custom-category': category?.value === 'other' }">
                   <label for="customCategory">Custom Category</label>
                   <input type="text" id="customCategory" formControlName="customCategory" placeholder="Specify your category" maxlength="40"
                     [class.error-border]="!isCustomCategoryValid()">
                 <div class="error" *ngIf="!isCustomCategoryValid()">⚠️ Please provide a custom category.</div>
+                </div> -->
+
+                <div *ngIf="category?.value === 'other'"
+                    [ngClass]="{ 'show-custom-category': category?.value === 'other' }">
+
+                  <label for="customCategory">{{ 'contact.form.customCategory.label' | translate }}</label>
+
+                  <input type="text" id="customCategory" formControlName="customCategory" placeholder="'contact.form.customCategory.placeholder' | translate" maxlength="40"
+                    [class.error-border]="!isCustomCategoryValid()">
+
+                <div class="error" *ngIf="!isCustomCategoryValid()">⚠️ {{ 'contact.errorCustomCategory' | translate }}</div>
                 </div>
 
                 <div class="checkbox-container">
@@ -133,24 +269,45 @@
                     <input type="checkbox" id="privacy" formControlName="privacy">
                     <span class="checkmark"></span>
                   </label>
-                  <label for="privacy">I've read the <a href="/privacy-policy" class="accent-text">privacy policy</a> and agree to the processing of my data as outlined.</label>
+
+                  <!-- <label for="privacy">I've read the <a href="/privacy-policy" class="accent-text">privacy policy</a> and agree to the processing of my data as outlined.</label> -->
+                  <label for="privacy">
+                    {{ 'contact.privacy.label-1' | translate }} 
+                    <a href="/privacy-policy" class="accent-text">{{ 'contact.privacy.label-2' | translate }}</a> {{ 'contact.privacy.link' | translate }}</label>
                 </div>
-                <div class="error" *ngIf="privacy?.invalid && privacy?.touched">⚠️ You must accept the privacy policy.</div>
+
+                <!-- <div class="error" *ngIf="privacy?.invalid && privacy?.touched">⚠️ You must accept the privacy policy.</div> -->
+                <div class="error" *ngIf="privacy?.invalid && privacy?.touched">⚠️ {{ 'contact.errorPrivacy' | translate }}</div>
         
                 <div class="button">
                   <div class="tooltip-container">
-                    <app-button 
+
+                    <!-- <app-button 
                         type="submit" 
                         buttonClass="default-button" 
                         [disabled]="!isFormValid()">
                         {{ isLoading ? 'Sending...' : 'Say Hello 😊' }}
+                    </app-button> -->
+
+                    <app-button 
+                        type="submit" 
+                        buttonClass="default-button" 
+                        [disabled]="!isFormValid()">
+                        {{ isLoading ? ('contact.button.loading' | translate) : ('contact.button.default' | translate) }}
                     </app-button>
-                    <span class="tooltip" *ngIf="!isFormValid()">⚠️ Please complete all fields! ⚠️</span>
+
+                    <!-- <span class="tooltip" *ngIf="!isFormValid()">⚠️ Please complete all fields! ⚠️</span> -->
+                    <span class="tooltip" *ngIf="!isFormValid()">⚠️ {{ 'contact.tooltip' | translate }} ⚠️</span>
+
                   </div>
                 </div>
 
-                <div *ngIf="formSubmitted" class="success-message">
+                <!-- <div *ngIf="formSubmitted" class="success-message">
                     🥳 Your message has been sent successfully! 🥳
+                </div> -->
+
+                <div *ngIf="formSubmitted" class="success-message">
+                    🥳 {{ 'contact.successMessage' | translate }} 🥳
                 </div>
 
                 <div *ngIf="formError" class="error-message">
@@ -164,15 +321,22 @@
 <!-- Overlay-Popup für Duplicate-Update -->
 <div class="overlay" *ngIf="overlayVisible">
     <div class="overlay-content">
-      <p>
+      <!-- <p>
         Diese E-Mail-Adresse ist bereits registriert. Mit dieser Anfrage werden Ihre Kontaktdaten aktualisiert.
         Bitte bestätigen Sie, dass Sie mit dem Update Ihrer Kontaktdaten einverstanden sind.
         Für andere Anliegen kontaktieren Sie bitte unseren Kundenservice unter mail&#64;metafeller.com
         oder nutzen Sie unseren 24/7 Kundenchat auf unserer Website.
+      </p> -->
+
+      <p>
+        {{ 'contact.duplicateOverlay.text' | translate }}
       </p>
+
       <div class="overlay-buttons">
-        <button (click)="confirmUpdate()">Ich bin mit dem Update einverstanden</button>
-        <button (click)="cancelUpdate()">Nicht Einverstanden</button>
+        <!-- <button (click)="confirmUpdate()">Ich bin mit dem Update einverstanden</button>
+        <button (click)="cancelUpdate()">Nicht Einverstanden</button> -->
+        <button (click)="confirmUpdate()">{{ 'contact.duplicateOverlay.confirm' | translate }}</button>
+        <button (click)="cancelUpdate()">{{ 'contact.duplicateOverlay.cancel' | translate }}</button>
       </div>
     </div>
 </div>

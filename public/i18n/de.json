@@ -298,8 +298,98 @@
         "position": "Frontend Developer",
         "text": "Ty legt großen Wert auf eine effektive Kommunikation, die eine kooperative und effiziente Arbeitsumgebung fördert. Tayfun ist diszipliniert und produziert sauberen, wiederverwendbaren Code, der sich an Best Practices orientiert. Sein designorientierter Ansatz stellt sicher, dass seine Lösungen sowohl funktional als auch ästhetisch ansprechend sind und das Gesamterlebnis der Benutzer verbessern. Tayfuns Fähigkeit, effektiv und produktiv zu arbeiten, sorgte dafür, dass alle Projekte auf höchstem Niveau abgeschlossen wurden, was ihn zu einer unschätzbaren Bereicherung für jedes Team macht."
       }
-    }
+    },
 
+    "contact": {
+      "headline": "Kontakt aufnehmen",
+      "subheadline": "Kontakt",
+      "title": "Lass uns zusammenarbeiten",
+      "subtitle": "Hast du ein Problem zu lösen?",
+      "description": "Kontaktiere mich über dieses Formular. Ich freue mich, von dir zu hören und deine Ideen kennenzulernen.",
+      "callToAction": "Du brauchst einen Frontend-Entwickler?",
+      "letsTalk": "Lass uns reden!",
+      "characters": "Zeichen",
+      "tooltip": "Bitte fülle alle Pflichtfelder aus!",
+      "successMessage": "Deine Nachricht wurde erfolgreich versendet!",
+      "duplicateOverlay": {
+        "text": "Diese E-Mail-Adresse ist bereits registriert. Mit dieser Anfrage werden deine Kontaktdaten aktualisiert. Bitte bestätige dies.",
+        "confirm": "Ich bin einverstanden",
+        "cancel": "Abbrechen"
+      },
+      "form": {
+        "name": {
+          "label": "Wie heißt du?",
+          "placeholder": "Dein Name hier..."
+        },
+        "email": {
+          "label": "Deine E-Mail-Adresse",
+          "placeholder": "Deine beste @mailadresse hier..."
+        },
+        "hasWebsite": {
+          "label": "Hast du eine Website?",
+          "yes": "Ja, ich habe eine Website",
+          "no": "Nein, noch nicht"
+        },
+        "website": {
+          "label": "Wie lautet deine Website?",
+          "placeholder": "z.B. maxmustermann.com"
+        },
+        "websiteOwnership": {
+          "label": "Bist du der Inhaber dieser Website?",
+          "yes": "Ja",
+          "no": "Nein"
+        },
+        "message": {
+          "label": "Wie kann ich dir helfen?",
+          "placeholder": "Was brauchst du für dein Projekt?"
+        },
+        "category": {
+          "label": "Kategorie auswählen",
+          "placeholder": "Kategorie auswählen"
+        },
+        "customCategory": {
+          "label": "Eigene Kategorie",
+          "placeholder": "Gib deine Kategorie ein"
+        }
+      },
+      "categories": {
+        "ai": "AI-Lösungen",
+        "branding": "Markenstrategie",
+        "marketing": "PR & Marketing",
+        "web": "Webentwicklung",
+        "automation": "IT-Automatisierung",
+        "carefree": "Rundum-Sorglos-Paket",
+        "other": "Andere",
+        "description": {
+          "ai": "(KI-Agentur, Inhalte, Automatisierung)",
+          "branding": "(Persönliche Marke, Positionierung)",
+          "marketing": "(Social Media, SEO, Ads)",
+          "web": "(Website, App, SaaS)",
+          "automation": "(Automatisierung mit KI)",
+          "carefree": "(Voller Serviceumfang)",
+          "other": "(Spezielle Lösung)"
+        }
+      },
+      "privacy": {
+        "label-1": "Ich habe die",
+        "label-2": "Datenschutzerklärung",
+        "link": "gelesen und akzeptiere sie."
+      },
+      "button": {
+        "loading": "Sende...",
+        "default": "Sag Hallo 😊"
+      },
+      "errorName": "Bitte gib einen gültigen Namen ein.",
+      "errorEmail": "Bitte gib eine gültige E-Mail ein.",
+      "errorWebsite": "Bitte gib eine gültige Domain ein.",
+      "errorWebsite-2": "Bitte ohne www.",
+      "errorWebsite-3": "z.B. maxmustermann.com",
+      "errorOwnership": "Bitte triff eine Auswahl.",
+      "errorMessage": "Mindestens 50 Zeichen erforderlich.",
+      "errorCategory": "Bitte wähle eine Kategorie.",
+      "errorCustomCategory": "Bitte gib eine eigene Kategorie an.",
+      "errorPrivacy": "Bitte akzeptiere die Datenschutzerklärung."
+    }
 
 }
 

@@ -4,11 +4,12 @@ import { ButtonComponent } from '../shared/button/button.component';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.prod';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, ReactiveFormsModule],
+  imports: [CommonModule, ButtonComponent, ReactiveFormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -41,12 +42,27 @@ export class ContactComponent implements OnInit, OnDestroy {
     customCategory: new FormControl('', [Validators.maxLength(40)])
   });
 
-  constructor(private http: HttpClient, @Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+    private http: HttpClient, 
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       document.addEventListener('click', this.closeDropdownOnClickOutside.bind(this));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.slide-in-left, .slide-in-right').forEach(el => observer.observe(el));
     }
+
     // Dynamische Validierung: Wenn der Nutzer "yes" auswählt, müssen "website" und "websiteOwnership" gesetzt werden.
     this.contactForm.get('hasWebsite')!.valueChanges.subscribe((value: string | null) => {
       if (value === 'yes') {
@@ -176,7 +192,8 @@ export class ContactComponent implements OnInit, OnDestroy {
       },
       error: (error) => {
         console.error("❌ Fehler beim Absenden:", error);
-        this.formError = 'Something went wrong. Please try again.';
+        // this.formError = 'Something went wrong. Please try again.';
+        this.formError = this.translate.instant('contact.formError.generic');
         this.isLoading = false;
       }
     });
@@ -204,7 +221,8 @@ export class ContactComponent implements OnInit, OnDestroy {
         },
         error: (error) => {
           console.error("❌ Fehler beim erneuten Absenden:", error);
-          this.formError = 'Something went wrong. Please try again.';
+          // this.formError = 'Something went wrong. Please try again.';
+          this.formError = this.translate.instant('contact.formError.generic');
           this.isLoading = false;
         }
       });
