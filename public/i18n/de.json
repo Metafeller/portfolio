@@ -355,20 +355,20 @@
       },
       "categories": {
         "ai": "AI-Lösungen",
-        "branding": "Markenstrategie",
+        "branding": "Brandingstrategie",
         "marketing": "PR & Marketing",
         "web": "Webentwicklung",
         "automation": "IT-Automatisierung",
         "carefree": "Rundum-Sorglos-Paket",
         "other": "Andere",
         "description": {
-          "ai": "(KI-Agentur, Inhalte, Automatisierung)",
-          "branding": "(Persönliche Marke, Positionierung)",
-          "marketing": "(Social Media, SEO, Ads)",
-          "web": "(Website, App, SaaS)",
-          "automation": "(Automatisierung mit KI)",
-          "carefree": "(Voller Serviceumfang)",
-          "other": "(Spezielle Lösung)"
+          "ai": "(KI-Agenten, Content Erstellung, Automatisierung)",
+          "branding": "(Persönliche Marke, Positionierung, Brandbook)",
+          "marketing": "(Social Media Kampagnen, SEO, Paid-Ads)",
+          "web": "(Websites, Apps, SaaS, Marketing-Funnels)",
+          "automation": "(IT-Automatisierung und Prozessoptimierung)",
+          "carefree": "(Voller Serviceumfang 'Rundum-Sorglos-Paket')",
+          "other": "(Spezielle Lösung Anfragen)"
         }
       },
       "privacy": {

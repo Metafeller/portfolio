@@ -362,11 +362,11 @@
       "carefree": "All-Round Carefree Package",
       "other": "Other",
       "description": {
-        "ai": "(AI Agency, Content, Automation)",
+        "ai": "(AI Agency, AI-Content, AI-Automation)",
         "branding": "(Personal brand, positioning)",
-        "marketing": "(Social Media, SEO, Ads)",
-        "web": "(Websites, Apps, SaaS)",
-        "automation": "(Automation with AI)",
+        "marketing": "(Social Media Campaigns, SEO, Paid-Ads)",
+        "web": "(Websites, Applications, SaaS, Funnelsteps)",
+        "automation": "(IT-Automation with SaaS and AI-Solutions)",
         "carefree": "(Full service package)",
         "other": "(Custom solution)"
       }
