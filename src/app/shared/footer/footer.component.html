@@ -22,7 +22,7 @@
 
         <!-- Persönliche Message -->
         <div class="footer-personal-message">
-          <p>{{ config.top.personalMessage }} 
+          <p>{{ 'footer.personalMessage' | translate }} 
             <span class="heart-icon" aria-label="heart">❤️</span></p>
         </div>
 
@@ -48,17 +48,17 @@
                 type="button" 
                 buttonClass="default-button"
                 [disabled]="false" 
-                [attr.aria-label]="config.top.fundraising.buttonText">
-                {{ config.top.fundraising.buttonText }}
+                [attr.aria-label]="'footer.fundraising.buttonText' | translate">
+                {{ 'footer.fundraising.buttonText' | translate }}
               </app-button>
           </div>
 
           <!-- Rechter Bereich: Texte (70% innerhalb der Kampagne) -->
           <div class="fundraising-content">
-            <h2>{{ config.top.fundraising.h2 }}</h2>
-            <h3>{{ config.top.fundraising.h3 }}</h3>
-            <p>{{ config.top.fundraising.p }}</p>
-            <span>{{ config.top.fundraising.span }}</span>
+            <h2>{{ 'footer.fundraising.h2' | translate }}</h2>
+            <h3>{{ 'footer.fundraising.h3' | translate }}</h3>
+            <p>{{ 'footer.fundraising.p' | translate }}</p>
+            <span>{{ 'footer.fundraising.span' | translate }}</span>
           </div>
 
         </div>
@@ -67,17 +67,20 @@
     
     <!-- Middle Container -->
     <div class="footer-middle">
-      <div class="footer-middle-left">
-        <h3>Superhero Skills</h3>
+      <div class="footer-middle-left slide-in-left">
+        <!-- <h3>Superhero Skills</h3> -->
+        <h3>{{ 'footer.middle.skillsTitle' | translate }}</h3>
         <ul>
           <li *ngFor="let skill of config.middle.superheroSkills">
             <a (click)="navigateTo(skill.link)" [attr.aria-label]="skill.text">{{ skill.text }}</a>
           </li>
         </ul>
       </div>
-      <div class="footer-middle-inner-left">
+
+      <div class="footer-middle-inner-left slide-in-right">
         <div class="creative-locations">
-          <h3>Creative Locations</h3>
+          <!-- <h3>Creative Locations</h3> -->
+          <h3>{{ 'footer.middle.locationsTitle' | translate }}</h3>
           <ul>
             <li *ngFor="let loc of config.middle.creativeLocations">
               <img [src]="loc.icon" alt="{{ loc.text }} Icon">
@@ -86,9 +89,11 @@
           </ul>
         </div>
       </div>
-      <div class="footer-middle-inner-right">
+
+      <div class="footer-middle-inner-right slide-in-left">
         <div class="follow-me">
-            <h3>Follow Me On</h3>
+            <!-- <h3>Follow Me On</h3> -->
+            <h3>{{ 'footer.middle.followTitle' | translate }}</h3>
             <ul>
               <li *ngFor="let social of config.middle.followMeOn">
                 <img [src]="social.icon" alt="{{ social.text }} Icon">
@@ -97,9 +102,11 @@
             </ul>
           </div>
       </div>
-      <div class="footer-middle-right">
+
+      <div class="footer-middle-right slide-in-right">
         <div class="contact-me">
-            <h3>Contact Me</h3>
+            <!-- <h3>Contact Me</h3> -->
+            <h3>{{ 'footer.middle.contactTitle' | translate }}</h3>
             <ul>
               <li>
                 <img [src]="config.middle.contactMe.emailIcon" alt="Email Icon">
@@ -108,15 +115,15 @@
               <li>
                 <img [src]="config.middle.contactMe.contactRequestIcon" alt="Contact Request Icon">
                 <a (click)="navigateTo(config.middle.contactMe.buttonLink)" [attr.aria-label]="config.middle.contactMe.contactRequestText">
-                  {{ config.middle.contactMe.contactRequestText }}</a>
+                  {{ 'footer.middle.contactRequestText' | translate }}</a>
               </li>
               <li>
                 <app-button (click)="navigateTo(config.middle.contactMe.buttonLink)"
                   type="button" 
                   buttonClass="contact-button"
                   [disabled]="false" 
-                  [attr.aria-label]="config.middle.contactMe.buttonText">
-                  {{ config.middle.contactMe.buttonText }}
+                  [attr.aria-label]="'footer.middle.contactButtonText' | translate">
+                  {{ 'footer.middle.contactButtonText' | translate }}
                 </app-button>
               </li>              
             </ul>
@@ -132,15 +139,15 @@
       </div>
 
       <div class="footer-bottom-center">
-        <span>{{ config.bottom.madeBy }} <span class="heart-icon" aria-label="heart">💚</span></span>
+        <span>{{ 'footer.bottom.madeBy' | translate }} <span class="heart-icon" aria-label="heart">💚</span></span>
       </div>
 
       <div class="footer-bottom-right">
         <div class="legal-notice">
-          <a [href]="config.bottom.legalNoticeLink" target="_blank" aria-label="Legal Notice">{{ config.bottom.legalNoticeText }}</a>
+          <a [href]="config.bottom.legalNoticeLink" target="_blank" aria-label="Legal Notice">{{ 'footer.bottom.legalNotice' | translate }}</a>
         </div>
         <div class="privacy-policy">
-          <a [href]="config.bottom.privacyPolicyLink" target="_blank" aria-label="Privacy Policy">{{ config.bottom.privacyPolicyText }}</a>
+          <a [href]="config.bottom.privacyPolicyLink" target="_blank" aria-label="Privacy Policy">{{ 'footer.bottom.privacyPolicy' | translate }}</a>
         </div>
       </div>
 

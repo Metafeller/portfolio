@@ -239,158 +239,186 @@
       }
   },
 
-    "projects": {
-      "h4": "Meine Referenzen",
-      "h2": "Ausgewählte Projekte",
-      "description": "→ Entdecke meine Projekte live in Aktion – erlebe, wie aus Ideen innovative digitale Erlebnisse werden. Tauche ein in eine handverlesene Auswahl meiner Arbeiten, interagiere direkt mit den Projekten und lass dich inspirieren, was mein Team und ich für dich realisieren können.",
-      "description-2": "→ Deiner Kreativität sind keine Grenzen gesetzt – bei uns ist nahezu alles möglich. Möchtest du noch mehr entdecken? Dann klicke auf „Mehr Projekte“ und erhalte einen umfassenden Einblick in unsere gesamten Referenzen.",
-      "cta": "Mehr Projekte ↗",
+  "projects": {
+    "h4": "Meine Referenzen",
+    "h2": "Ausgewählte Projekte",
+    "description": "→ Entdecke meine Projekte live in Aktion – erlebe, wie aus Ideen innovative digitale Erlebnisse werden. Tauche ein in eine handverlesene Auswahl meiner Arbeiten, interagiere direkt mit den Projekten und lass dich inspirieren, was mein Team und ich für dich realisieren können.",
+    "description-2": "→ Deiner Kreativität sind keine Grenzen gesetzt – bei uns ist nahezu alles möglich. Möchtest du noch mehr entdecken? Dann klicke auf „Mehr Projekte“ und erhalte einen umfassenden Einblick in unsere gesamten Referenzen.",
+    "cta": "Mehr Projekte ↗",
 
-      "items": {
-        "h4": "Worum geht es bei diesem Projekt?",
-          "join": {
-            "name": "Join CMS",
-            "description": "Effizientes Projektmanagement leicht gemacht! Inspiriert vom Kanban-System bietet der JOIN-Taskmanager eine intuitive Drag‑and‑Drop-Oberfläche, mit der du Aufgaben erstellst, Teammitglieder zuweist und stets den Überblick behältst – für nachhaltigen Erfolg in deinem Unternehmen."
-          },
-          "pollo": {
-            "name": "El Pollo Loco",
-            "description": "Ein actiongeladenes Jump ’n’ Run-Abenteuer, das mit stiefgreifender Objektorientierung begeistert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu sammeln und gegen das verrückte Huhn zu kämpfen, um seine geliebte Maria zu retten – pure Spannung und Spaß garantiert!"
-          },
-          "portfolio": {
-            "name": "15K Portfolio",
-            "description": "Ein Premium-Portfolio, das meine Projekte mit Liebe zum Detail präsentiert. Erlebe 100% Transparenz und höchste Qualität – denn ich setze auf exzellente Ergebnisse statt auf Massenproduktion und arbeite eng mit meinen Kunden zusammen."
-          }
-      }
-    },
-
-    "reviews": {
-      "sectionTitle": "Was meine Kolleg:innen über mich sagen",
-      "readMore": "Weiterlesen",
-      "readLess": "Weniger anzeigen",
-
-      "marc": {
-        "name": "Marc Braun",
-        "position": "Senior UI/UX Designer",
-        "text": "Die Zusammenarbeit mit Ty war äußerst produktiv, inspirierend und bereichernd. Die Chemie innerhalb unseres Teams war ausgezeichnet, was sich deutlich in der Qualität unserer Projekte widerspiegelte. Tayfun hat eine große Zukunft vor sich. Seine grenzenlose Motivation und sein fesselndes Engagement haben wesentlich zur positiven Atmosphäre im Team beigetragen. Man spürt seine positive Ausstrahlung und die Leidenschaft, die er entfacht."
-      },
-      "lyonel": {
-        "name": "Lyonel Berzen",
-        "position": "Frontend Developer",
-        "text": "Ich hatte das Vergnügen, mit Ty Savas Boas an einem gemeinsamen Projekt zu arbeiten. Seine positive Einstellung und sein Unternehmergeist waren eine echte Bereicherung für das Team und hielten die Motivation stets hoch. Ty zeichnete sich durch seine Offenheit für Verbesserungsvorschläge aus und brachte oft neue Ideen ein. Herr AYA hat ein Auge für Details, und seine Erfahrung in der Branding- und Marketingbranche war ein besonderer Gewinn."
-      },
-      "fabion": {
-        "name": "Fabion Latifi",
-        "position": "Frontend Developer",
-        "text": "Es war eine große Freude, mit Ty Savas Boas AYA alias Taironman zu arbeiten. Seine positive Energie und sein motivierender Geist haben unser Team beflügelt und zu unserem gemeinsamen Erfolg beigetragen. Ty hat die angeborene Fähigkeit, Teammitglieder zu ermutigen, ihre beste Arbeit abzuliefern, und er hat während der Brainstorming-Sitzungen immer wieder wertvolle Erkenntnisse eingebracht. Sein innovatives Denken und sein proaktiver Ansatz trugen maßgeblich dazu bei, unsere Projekte voranzutreiben. Außerdem ist Ty sehr detailorientiert und achtet auf die kleinen Dinge, die andere vielleicht übersehen."
-      },
-      "marc2": {
-        "name": "Marc Braun II",
-        "position": "UI/UX Designer",
-        "text": "Ty hat die außergewöhnliche Fähigkeit, den Überblick zu behalten und zielorientiert zu handeln. Selbst in Krisensituationen bleibt er ruhig und lösungsorientiert. Seine professionelle Herangehensweise und seine Weisheit, vor allem in einem so jungen Alter, haben mich tief beeindruckt. Tayfun zeigt auch eine starke Fähigkeit zur Selbstreflexion und kontinuierlichen Verbesserung. Ich freue mich darauf, in Zukunft weitere Projekte mit Ty durchzuführen und bin überzeugt, dass seine Fähigkeiten und seine Persönlichkeit jedes Team bereichern werden."
-      },
-      "lyonel2": {
-        "name": "Lyonel Berzen II",
-        "position": "Frontend Developer",
-        "text": "Seine Ausdauer in Krisensituationen ist bemerkenswert, besonders beeindruckend war seine Fähigkeit, Probleme konsequent und effektiv zu lösen. Außerdem war er jederzeit zuverlässig und hat immer sein Wort gehalten. Die Projektarbeit mit Tayfun war eine durchweg positive Erfahrung."
-      },
-      "fabion2": {
-        "name": "Fabion Latifi II",
-        "position": "Frontend Developer",
-        "text": "Ty legt großen Wert auf eine effektive Kommunikation, die eine kooperative und effiziente Arbeitsumgebung fördert. Tayfun ist diszipliniert und produziert sauberen, wiederverwendbaren Code, der sich an Best Practices orientiert. Sein designorientierter Ansatz stellt sicher, dass seine Lösungen sowohl funktional als auch ästhetisch ansprechend sind und das Gesamterlebnis der Benutzer verbessern. Tayfuns Fähigkeit, effektiv und produktiv zu arbeiten, sorgte dafür, dass alle Projekte auf höchstem Niveau abgeschlossen wurden, was ihn zu einer unschätzbaren Bereicherung für jedes Team macht."
-      }
-    },
-
-    "contact": {
-      "headline": "Kontakt aufnehmen",
-      "subheadline": "Kontakt",
-      "title": "Lass uns zusammenarbeiten",
-      "subtitle": "Hast du ein Problem zu lösen?",
-      "description": "Kontaktiere mich über dieses Formular für ein kostenloses Beratungsgespräch. Ich freue mich darauf, mehr über deine Ideen und Herausforderungen zu erfahren.",
-      "description-2": "Gemeinsam entwickeln wir innovative und maßgeschneiderte digitale Lösungen, die dein Business auf das nächste Level heben. Dein Erfolg ist meine Mission – zögere nicht und starte den nächsten Schritt mit mir und meinem Team.",
-      "callToAction": "Bist du ein Startup-Unternehmer oder solo? Brauchst du einen Web-Entwickler oder sogar ein ganzes Team? Legst du Wert auf Qualität und bewährte Methoden? Dann bist du hier genau richtig",
-      "letsTalk": "Lass uns reden!",
-      "characters": "Zeichen",
-      "tooltip": "Bitte fülle alle Pflichtfelder aus!",
-      "successMessage": "Deine Nachricht wurde erfolgreich versendet!",
-      "duplicateOverlay": {
-        "text": "Diese E-Mail-Adresse ist bereits registriert. Mit dieser Anfrage werden deine Kontaktdaten aktualisiert. Bitte bestätige dies.",
-        "confirm": "Ich bin einverstanden",
-        "cancel": "Abbrechen"
-      },
-      "form": {
-        "name": {
-          "label": "Wie heißt du?",
-          "placeholder": "Dein Name hier..."
+    "items": {
+      "h4": "Worum geht es bei diesem Projekt?",
+        "join": {
+          "name": "Join CMS",
+          "description": "Effizientes Projektmanagement leicht gemacht! Inspiriert vom Kanban-System bietet der JOIN-Taskmanager eine intuitive Drag‑and‑Drop-Oberfläche, mit der du Aufgaben erstellst, Teammitglieder zuweist und stets den Überblick behältst – für nachhaltigen Erfolg in deinem Unternehmen."
         },
-        "email": {
-          "label": "Deine E-Mail-Adresse",
-          "placeholder": "Deine beste @mailadresse hier..."
+        "pollo": {
+          "name": "El Pollo Loco",
+          "description": "Ein actiongeladenes Jump ’n’ Run-Abenteuer, das mit stiefgreifender Objektorientierung begeistert. Hilf Pepe dabei, Münzen und Salsa-Flaschen zu sammeln und gegen das verrückte Huhn zu kämpfen, um seine geliebte Maria zu retten – pure Spannung und Spaß garantiert!"
         },
-        "hasWebsite": {
-          "label": "Hast du eine Website?",
-          "yes": "Ja, ich habe eine Website",
-          "no": "Nein, noch nicht"
-        },
-        "website": {
-          "label": "Wie lautet deine Website?",
-          "placeholder": "z.B. maxmustermann.com"
-        },
-        "websiteOwnership": {
-          "label": "Bist du der Inhaber dieser Website?",
-          "yes": "Ja",
-          "no": "Nein"
-        },
-        "message": {
-          "label": "Wie kann ich dir helfen?",
-          "placeholder": "Was brauchst du für d/ein Projekt?"
-        },
-        "category": {
-          "label": "Kategorie auswählen",
-          "placeholder": "Kategorie auswählen"
-        },
-        "customCategory": {
-          "label": "Eigene Kategorie",
-          "placeholder": "Gib deine Kategorie ein"
+        "portfolio": {
+          "name": "15K Portfolio",
+          "description": "Ein Premium-Portfolio, das meine Projekte mit Liebe zum Detail präsentiert. Erlebe 100% Transparenz und höchste Qualität – denn ich setze auf exzellente Ergebnisse statt auf Massenproduktion und arbeite eng mit meinen Kunden zusammen."
         }
-      },
-      "categories": {
-        "ai": "AI-Lösungen",
-        "branding": "Brandingstrategie",
-        "marketing": "PR & Marketing",
-        "web": "Webentwicklung",
-        "automation": "IT-Automatisierung",
-        "carefree": "Rundum-Sorglos-Paket",
-        "other": "Andere",
-        "description": {
-          "ai": "(KI-Agenten, KI-Content, KI-Automatisierung)",
-          "branding": "(Personen Marke, Positionierung, Brandbook)",
-          "marketing": "(Social Media Kampagnen, SEO, Paid-Ads)",
-          "web": "(Websites, Apps, SaaS, Marketing-Funnels etc.)",
-          "automation": "(IT-Automatisierung und Prozessoptimierung)",
-          "carefree": "(Voller Serviceumfang 'Rundum-Sorglos-Paket')",
-          "other": "(Spezielle Lösung Anfragen)"
-        }
-      },
-      "privacy": {
-        "label-1": "Ich habe die",
-        "label-2": "Datenschutzerklärung",
-        "link": "gelesen und akzeptiere sie."
-      },
-      "button": {
-        "loading": "Sende...",
-        "default": "Sag Hallo 😊"
-      },
-      "errorName": "Bitte gib einen gültigen Namen ein.",
-      "errorEmail": "Bitte gib eine gültige E-Mail ein.",
-      "errorWebsite": "Bitte gib eine gültige Domain ein.",
-      "errorWebsite-2": "Bitte ohne www.",
-      "errorWebsite-3": "z.B. maxmustermann.com",
-      "errorOwnership": "Bitte triff eine Auswahl.",
-      "errorMessage": "Mindestens 50 Zeichen erforderlich.",
-      "errorCategory": "Bitte wähle eine Kategorie.",
-      "errorCustomCategory": "Bitte gib eine eigene Kategorie an.",
-      "errorPrivacy": "Bitte akzeptiere die Datenschutzerklärung."
     }
+  },
+
+  "reviews": {
+    "sectionTitle": "Was meine Kolleg:innen über mich sagen",
+    "readMore": "Weiterlesen",
+    "readLess": "Weniger anzeigen",
+
+    "marc": {
+      "name": "Marc Braun",
+      "position": "Senior UI/UX Designer",
+      "text": "Die Zusammenarbeit mit Ty war äußerst produktiv, inspirierend und bereichernd. Die Chemie innerhalb unseres Teams war ausgezeichnet, was sich deutlich in der Qualität unserer Projekte widerspiegelte. Tayfun hat eine große Zukunft vor sich. Seine grenzenlose Motivation und sein fesselndes Engagement haben wesentlich zur positiven Atmosphäre im Team beigetragen. Man spürt seine positive Ausstrahlung und die Leidenschaft, die er entfacht."
+    },
+    "lyonel": {
+      "name": "Lyonel Berzen",
+      "position": "Frontend Developer",
+      "text": "Ich hatte das Vergnügen, mit Ty Savas Boas an einem gemeinsamen Projekt zu arbeiten. Seine positive Einstellung und sein Unternehmergeist waren eine echte Bereicherung für das Team und hielten die Motivation stets hoch. Ty zeichnete sich durch seine Offenheit für Verbesserungsvorschläge aus und brachte oft neue Ideen ein. Herr AYA hat ein Auge für Details, und seine Erfahrung in der Branding- und Marketingbranche war ein besonderer Gewinn."
+    },
+    "fabion": {
+      "name": "Fabion Latifi",
+      "position": "Frontend Developer",
+      "text": "Es war eine große Freude, mit Ty Savas Boas AYA alias Taironman zu arbeiten. Seine positive Energie und sein motivierender Geist haben unser Team beflügelt und zu unserem gemeinsamen Erfolg beigetragen. Ty hat die angeborene Fähigkeit, Teammitglieder zu ermutigen, ihre beste Arbeit abzuliefern, und er hat während der Brainstorming-Sitzungen immer wieder wertvolle Erkenntnisse eingebracht. Sein innovatives Denken und sein proaktiver Ansatz trugen maßgeblich dazu bei, unsere Projekte voranzutreiben. Außerdem ist Ty sehr detailorientiert und achtet auf die kleinen Dinge, die andere vielleicht übersehen."
+    },
+    "marc2": {
+      "name": "Marc Braun II",
+      "position": "UI/UX Designer",
+      "text": "Ty hat die außergewöhnliche Fähigkeit, den Überblick zu behalten und zielorientiert zu handeln. Selbst in Krisensituationen bleibt er ruhig und lösungsorientiert. Seine professionelle Herangehensweise und seine Weisheit, vor allem in einem so jungen Alter, haben mich tief beeindruckt. Tayfun zeigt auch eine starke Fähigkeit zur Selbstreflexion und kontinuierlichen Verbesserung. Ich freue mich darauf, in Zukunft weitere Projekte mit Ty durchzuführen und bin überzeugt, dass seine Fähigkeiten und seine Persönlichkeit jedes Team bereichern werden."
+    },
+    "lyonel2": {
+      "name": "Lyonel Berzen II",
+      "position": "Frontend Developer",
+      "text": "Seine Ausdauer in Krisensituationen ist bemerkenswert, besonders beeindruckend war seine Fähigkeit, Probleme konsequent und effektiv zu lösen. Außerdem war er jederzeit zuverlässig und hat immer sein Wort gehalten. Die Projektarbeit mit Tayfun war eine durchweg positive Erfahrung."
+    },
+    "fabion2": {
+      "name": "Fabion Latifi II",
+      "position": "Frontend Developer",
+      "text": "Ty legt großen Wert auf eine effektive Kommunikation, die eine kooperative und effiziente Arbeitsumgebung fördert. Tayfun ist diszipliniert und produziert sauberen, wiederverwendbaren Code, der sich an Best Practices orientiert. Sein designorientierter Ansatz stellt sicher, dass seine Lösungen sowohl funktional als auch ästhetisch ansprechend sind und das Gesamterlebnis der Benutzer verbessern. Tayfuns Fähigkeit, effektiv und produktiv zu arbeiten, sorgte dafür, dass alle Projekte auf höchstem Niveau abgeschlossen wurden, was ihn zu einer unschätzbaren Bereicherung für jedes Team macht."
+    }
+  },
+
+  "contact": {
+    "headline": "Kontakt aufnehmen",
+    "subheadline": "Kontakt",
+    "title": "Lass uns zusammenarbeiten",
+    "subtitle": "Hast du ein Problem zu lösen?",
+    "description": "Kontaktiere mich über dieses Formular für ein kostenloses Beratungsgespräch. Ich freue mich darauf, mehr über deine Ideen und Herausforderungen zu erfahren.",
+    "description-2": "Gemeinsam entwickeln wir innovative und maßgeschneiderte digitale Lösungen, die dein Business auf das nächste Level heben. Dein Erfolg ist meine Mission – zögere nicht und starte den nächsten Schritt mit mir und meinem Team.",
+    "callToAction": "Bist du ein Startup-Unternehmer oder solo? Brauchst du einen Web-Entwickler oder sogar ein ganzes Team? Legst du Wert auf Qualität und bewährte Methoden? Dann bist du hier genau richtig",
+    "letsTalk": "Lass uns reden!",
+    "characters": "Zeichen",
+    "tooltip": "Bitte fülle alle Pflichtfelder aus!",
+    "successMessage": "Deine Nachricht wurde erfolgreich versendet!",
+    "duplicateOverlay": {
+      "text": "Diese E-Mail-Adresse ist bereits registriert. Mit dieser Anfrage werden deine Kontaktdaten aktualisiert. Bitte bestätige dies.",
+      "confirm": "Ich bin einverstanden",
+      "cancel": "Abbrechen"
+    },
+    "form": {
+      "name": {
+        "label": "Wie heißt du?",
+        "placeholder": "Dein Name hier..."
+      },
+      "email": {
+        "label": "Deine E-Mail-Adresse",
+        "placeholder": "Deine beste @mailadresse hier..."
+      },
+      "hasWebsite": {
+        "label": "Hast du eine Website?",
+        "yes": "Ja, ich habe eine Website",
+        "no": "Nein, noch nicht"
+      },
+      "website": {
+        "label": "Wie lautet deine Website?",
+        "placeholder": "z.B. maxmustermann.com"
+      },
+      "websiteOwnership": {
+        "label": "Bist du der Inhaber dieser Website?",
+        "yes": "Ja",
+        "no": "Nein"
+      },
+      "message": {
+        "label": "Wie kann ich dir helfen?",
+        "placeholder": "Was brauchst du für d/ein Projekt?"
+      },
+      "category": {
+        "label": "Kategorie auswählen",
+        "placeholder": "Kategorie auswählen"
+      },
+      "customCategory": {
+        "label": "Eigene Kategorie",
+        "placeholder": "Gib deine Kategorie ein"
+      }
+    },
+    "categories": {
+      "ai": "AI-Lösungen",
+      "branding": "Brandingstrategie",
+      "marketing": "PR & Marketing",
+      "web": "Webentwicklung",
+      "automation": "IT-Automatisierung",
+      "carefree": "Rundum-Sorglos-Paket",
+      "other": "Andere",
+      "description": {
+        "ai": "(KI-Agenten, KI-Content, KI-Automatisierung)",
+        "branding": "(Personen Marke, Positionierung, Brandbook)",
+        "marketing": "(Social Media Kampagnen, SEO, Paid-Ads)",
+        "web": "(Websites, Apps, SaaS, Marketing-Funnels etc.)",
+        "automation": "(IT-Automatisierung und Prozessoptimierung)",
+        "carefree": "(Voller Serviceumfang 'Rundum-Sorglos-Paket')",
+        "other": "(Spezielle Lösung Anfragen)"
+      }
+    },
+    "privacy": {
+      "label-1": "Ich habe die",
+      "label-2": "Datenschutzerklärung",
+      "link": "gelesen und akzeptiere sie."
+    },
+    "button": {
+      "loading": "Sende...",
+      "default": "Sag Hallo 😊"
+    },
+    "errorName": "Bitte gib einen gültigen Namen ein.",
+    "errorEmail": "Bitte gib eine gültige E-Mail ein.",
+    "errorWebsite": "Bitte gib eine gültige Domain ein.",
+    "errorWebsite-2": "Bitte ohne www.",
+    "errorWebsite-3": "z.B. maxmustermann.com",
+    "errorOwnership": "Bitte triff eine Auswahl.",
+    "errorMessage": "Mindestens 50 Zeichen erforderlich.",
+    "errorCategory": "Bitte wähle eine Kategorie.",
+    "errorCustomCategory": "Bitte gib eine eigene Kategorie an.",
+    "errorPrivacy": "Bitte akzeptiere die Datenschutzerklärung."
+  },
+
+  "footer": {
+  "personalMessage": "Das ist digitale Kunst auf höchstem Niveau. Jede Zeile Code stammt aus meiner Feder.",
+  "fundraising": {
+    "buttonText": "Jetzt spenden",
+    "h2": "Fundraising-Kampagne",
+    "h3": "Mach mit bei der Bewegung",
+    "p": "Unterstütze unsere Sache und hilf mit, etwas zu verändern.",
+    "span": "Dein Beitrag zählt."
+  },
+  "middle": {
+    "skillsTitle": "Superhero Skills",
+    "locationsTitle": "Kreative Orte",
+    "followTitle": "Folge mir auf",
+    "contactTitle": "Kontaktiere mich",
+    "contactRequestText": "Kontaktanfrage",
+    "contactButtonText": "Lass uns reden"
+  },
+  "bottom": {
+    "madeBy": "Erstellt von Taironman mit 💚",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  }
+}
+
+
+  
+
 
 }
 

@@ -390,7 +390,32 @@
     "errorCategory": "Please select a category.",
     "errorCustomCategory": "Please provide a custom category.",
     "errorPrivacy": "You must accept the privacy policy."
+  },
+
+  "footer": {
+  "personalMessage": "This is digital art at its finest. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular",
+  "fundraising": {
+    "buttonText": "Donate Now",
+    "h2": "Fundraising Campaign",
+    "h3": "Join the Movement",
+    "p": "Support our cause and help us make a difference.",
+    "span": "Your contribution matters."
+  },
+  "middle": {
+    "skillsTitle": "Superhero Skills",
+    "locationsTitle": "Creative Locations",
+    "followTitle": "Follow Me On",
+    "contactTitle": "Contact Me",
+    "contactRequestText": "Contact Request",
+    "contactButtonText": "Let's Talk"
+  },
+  "bottom": {
+    "madeBy": "Made By Taironman with",
+    "legalNotice": "Legal Notice",
+    "privacyPolicy": "Privacy Policy"
   }
+}
+
 
 
 

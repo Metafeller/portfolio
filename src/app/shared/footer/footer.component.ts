@@ -1,25 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, AfterViewInit, OnDestroy } from '@angular/core';
 import { FooterConfig, FooterConfigService } from './footer.config.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { ScrollService } from '../../services/scroll.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, ButtonComponent],
+  imports: [CommonModule, ButtonComponent, TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
   config!: FooterConfig;
   logoHover: boolean = false;
+  private observer: IntersectionObserver | null = null;
 
-  constructor(private footerConfigService: FooterConfigService, private scrollService: ScrollService) {}
+  constructor(
+    private footerConfigService: FooterConfigService, 
+    private scrollService: ScrollService,
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
     this.config = this.footerConfigService.getFooterConfig();
   }
+  
+    ngAfterViewInit(): void {
+      if (isPlatformBrowser(this.platformId)) {
+        this.observeElements(); // Beste Stelle für DOM-Animationen!
+      }
+    }
+    
+    ngOnDestroy(): void {
+      if (this.observer) {
+        this.observer.disconnect();
+      }
+  }
+  
 
   navigateTo(section: string) {
     this.scrollService.navigateToSection(section);  // ScrollService nutzen
@@ -28,6 +48,29 @@ export class FooterComponent implements OnInit {
   // Funktion zum Öffnen externer Seiten
   redirectToExternalSite(url: string) {
     window.open(url, '_blank');
+  }
+
+  /**
+   * Initialisiert den IntersectionObserver und beobachtet alle Slide-In-Elemente
+   */
+  observeElements() {
+    const elements = document.querySelectorAll('.slide-in-left, .slide-in-right');
+
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            this.observer?.unobserve(entry.target); // Nur 1x animieren
+          }
+        });
+      },
+      {
+        threshold: 0.3 // Sichtbarkeits-Schwelle
+      }
+    );
+
+    elements.forEach((el) => this.observer?.observe(el));
   }
 
 }
