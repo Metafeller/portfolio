@@ -393,16 +393,18 @@
   },
 
   "footer": {
-  "personalMessage": "Das ist digitale Kunst auf höchstem Niveau. Jede Zeile Code stammt aus meiner Feder.",
+  "personalMessage": "Das ist digitale Kunst auf höchstem Niveau. Jede Zeile Code stammt aus meiner Feder. Diese Website wurde mit HTML, SCSS, CSS, JavaScript, TypeScript und Angular entwickelt.",
   "fundraising": {
     "buttonText": "Jetzt spenden",
-    "h2": "Fundraising-Kampagne",
+    "h2": "Spenden Kampagne",
     "h3": "Mach mit bei der Bewegung",
-    "p": "Unterstütze unsere Sache und hilf mit, etwas zu verändern.",
+    "p": "Unsere Mission ist es, das Leben derjenigen zu verändern, die unter den harten Bedingungen von Armut, Missbrauch und Vernachlässigung leiden. In vielen Ländern werden Kinder misshandelt, haben keinen Zugang zu einer Schulbildung und leiden an Hunger. Unsere Vision ist es, diese Kinder zu retten – sie in die Schweiz zu bringen und ihnen eine neue Familie, Schutz und die Förderung zu bieten, die sie dringend benötigen.",
+    "p-2": "Doch damit hören wir nicht auf: Auch alleinerziehende Mütter und Frauen, die häuslicher Gewalt ausgesetzt sind, verdienen unsere Unterstützung, Sicherheit und eine Perspektive für ein besseres Leben.",
+    "p-3": "Mit deiner Spende schenkst du Hoffnung und veränderst nachhaltig Leben. Jeder Beitrag zählt – hilf uns, Brücken zu bauen und eine Zukunft voller Chancen zu schaffen.",
     "span": "Dein Beitrag zählt."
   },
   "middle": {
-    "skillsTitle": "Superhero Skills",
+    "skillsTitle": "Superhelden Skills",
     "locationsTitle": "Kreative Orte",
     "followTitle": "Folge mir auf",
     "contactTitle": "Kontaktiere mich",
@@ -410,7 +412,7 @@
     "contactButtonText": "Lass uns reden"
   },
   "bottom": {
-    "madeBy": "Erstellt von Taironman mit 💚",
+    "madeBy": "Made By Taironman with",
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutz"
   }

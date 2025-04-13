@@ -331,6 +331,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding-top: 128px;
 
           @include responsive(240px, 480px) {
             padding: 16px 8px;
@@ -393,7 +394,7 @@
           }
 
           h2 {
-            font-size: 64px;
+            font-size: 56px;
             color: var(--accent-color);
             margin-top: auto;
             margin-bottom: 8px;
@@ -429,9 +430,10 @@
           }
 
           p {
-            font-size: 18px;
+            font-size: 14px;
             margin-bottom: 16px;
             font-family: var(--font-family);
+            font-weight: 300;
 
             @include responsive(240px, 320px) {
               font-size: 14px;
@@ -444,7 +446,7 @@
           }
 
           span {
-            font-size: 18x;
+            font-size: 16x;
             margin-bottom: 8px;
             font-family: var(--font-family-second);
             color: grey;
@@ -465,7 +467,7 @@
   
     /* Middle Container */
     .footer-middle {
-      margin-top: 32px;
+      // margin-top: 32px;
       display: flex;
       flex-wrap: wrap;
       gap: 24px;

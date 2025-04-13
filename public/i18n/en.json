@@ -393,12 +393,14 @@
   },
 
   "footer": {
-  "personalMessage": "This is digital art at its finest. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JS, TS and Angular",
+  "personalMessage": "This is digital art at its finest. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JSON, JavaScript, TypeScript and Angular",
   "fundraising": {
     "buttonText": "Donate Now",
     "h2": "Fundraising Campaign",
     "h3": "Join the Movement",
-    "p": "Support our cause and help us make a difference.",
+    "p": "Our mission is to change the lives of those suffering under the harsh conditions of poverty, abuse, and neglect. In many countries, children face maltreatment, lack access to education, and battle hunger. Our vision is to rescue these children – to bring them to Switzerland and provide them with a new family, protection, and the support they so desperately need.",
+    "p-2": "But our commitment doesn’t stop there: We also stand by single mothers and women affected by domestic violence, offering them the support, security, and opportunity for a better life they deserve.",
+    "p-3": "By donating, you bring hope and create lasting change. Every contribution matters – help us build bridges to a brighter future.",
     "span": "Your contribution matters."
   },
   "middle": {
