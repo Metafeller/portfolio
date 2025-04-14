@@ -59,7 +59,8 @@
     .footer-top {
       display: flex;
       justify-content: space-between;
-      padding: 48px 32px;
+      // padding: 48px 32px;
+      padding: 48px 32px 0px 32px;
       // padding: 16px 0;
 
       @include responsive(240px, 320px) {
@@ -290,7 +291,7 @@
         /* Fundraising-Kampagne als Flex-Container */
         .fundraising-campaign {
           display: flex;
-          justify-content: center;
+          justify-content: space-around;
           align-items: flex-start;
           padding: 32px 8px;
           /* optional: gap: 16px; // Abstand zwischen .fundraising-image & .fundraising-content */
@@ -378,8 +379,8 @@
 
 
         .fundraising-content {
-          flex: 0 0 50%;
-          margin-left: 16px;
+          flex: 0 0 60%;
+          // margin-left: 16px;
 
           @include responsive(240px, 480px) {
             margin-left: 0px;
@@ -471,7 +472,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
-      padding: 48px 32px;
+      // padding: 48px 32px;
+      padding: 0px 32px 48px 32px;
 
       @include responsive(240px, 320px) {
         padding: 16px 8px;
