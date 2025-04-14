@@ -1,8 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  AfterViewInit, 
+  Component, 
+  OnInit, 
+  PLATFORM_ID, 
+  Renderer2, 
+  ElementRef, 
+  Inject,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TechnologyPipe } from '../pipes/technology-pipe.pipe';
 import { ButtonComponent } from '../shared/button/button.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { isPlatformBrowser } from '@angular/common';
 
 interface Technology {
   name: string; 
@@ -26,19 +36,51 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent implements OnInit, AfterViewInit {
+
   projects: Project[] = [];
   selectedProject: Project | null = null; // Initialwert: null
   isOverlayOpen: boolean = false; // Steuerung der Sichtbarkeit des Overlays
   selectedProjectIndex: number = 0;
 
-  constructor(private translate: TranslateService) {}
+  @ViewChild('overlayContainer', { static: false }) overlayContainerRef!: ElementRef;
+
+  constructor(
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private renderer: Renderer2,
+    private elRef: ElementRef
+  ) {}
 
   ngOnInit(): void {
     this.loadProjects();
     this.translate.onLangChange.subscribe(() => {
       this.loadProjects();
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observeElements(); // Beste Stelle für DOM-Animationen!
+    }
+  }
+
+  observeElements(): void {
+    const elements = this.elRef.nativeElement.querySelectorAll('.slide-in-left, .slide-in-right');
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(entry.target, 'in-view');
+            observer.unobserve(entry.target); // Nur einmal auslösen
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el: HTMLElement) => observer.observe(el));
   }
 
   loadProjects(): void {
@@ -152,6 +194,13 @@ export class ProjectsComponent implements OnInit {
     this.isOverlayOpen = true;
     this.selectedProjectIndex = index + 1; // Index plus 1, da Array bei 0 beginnt
     this.selectedProject = project;
+
+    // Animierte Show-Klasse verzögert hinzufügen
+    setTimeout(() => {
+      if (this.overlayContainerRef) {
+        this.renderer.addClass(this.overlayContainerRef.nativeElement, 'show');
+      }
+    }, 10);
   }
 
   closeOverlay(): void {

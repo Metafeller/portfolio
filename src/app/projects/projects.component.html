@@ -3,11 +3,11 @@
     <div class="projects-content">
 
         <!-- Right Side: Project List -->
-        <div class="project-list-box">
+        <div class="project-list-box slide-in-right">
 
             <!-- Featured Projects Area -->
-            <div class="projects-text-area">
-                <h4 class="headline-desktop">{{ 'projects.h4' | translate }}</h4>
+            <div class="projects-text-area slide-in-left">
+                <h4 class="headline-desktop slide-in-left">{{ 'projects.h4' | translate }}</h4>
                 <h2>{{ 'projects.h2' | translate }}</h2>
                 <p>
                     {{ 'projects.description' | translate }}
@@ -65,7 +65,7 @@
     <div *ngIf="isOverlayOpen" id="project-overlay" (click)="closeOverlay()">
 
         <!-- Projekt-Overlay-Container -->
-        <div class="overlay-container">
+        <div class="overlay-container" #overlayContainer>
 
             <div class="overlay-content" (click)="$event.stopPropagation()">   
 
