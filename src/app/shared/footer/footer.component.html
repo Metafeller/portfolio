@@ -74,7 +74,10 @@
         <h3>{{ 'footer.middle.skillsTitle' | translate }}</h3>
         <ul>
           <li *ngFor="let skill of config.middle.superheroSkills">
-            <a (click)="navigateTo(skill.link)" [attr.aria-label]="skill.text">{{ skill.text }}</a>
+            <a (click)="navigateTo(skill.link)" [attr.aria-label]="skill.text">
+              <!-- {{ skill.text }} -->
+              {{ ('footer.middle.skills.' + skill.text.toLowerCase()) | translate }}
+            </a>
           </li>
         </ul>
       </div>
@@ -86,7 +89,10 @@
           <ul>
             <li *ngFor="let loc of config.middle.creativeLocations">
               <img [src]="loc.icon" alt="{{ loc.text }} Icon">
-              <a [href]="loc.link" target="_blank" [attr.aria-label]="loc.text">{{ loc.text }}</a>
+              <a [href]="loc.link" target="_blank" [attr.aria-label]="loc.text">
+                <!-- {{ loc.text }} -->
+                {{ ('footer.middle.locations.' + loc.text.toLowerCase()) | translate }}
+              </a>
             </li>
           </ul>
         </div>

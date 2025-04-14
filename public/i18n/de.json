@@ -405,7 +405,22 @@
   },
   "middle": {
     "skillsTitle": "Superhelden Skills",
+      "skills": {
+        "web developer": "Web Entwickler",
+        "web design (ui/ux)": "Web Designer in (UI/UX)",
+        "branding- and marketingmanager": "Branding- und Marketingexperte",
+        "inbound-marketing-manager": "Inbound-Marketing-Manager",
+        "ai-solutions": "Künstliche Intelligenz"
+      },
     "locationsTitle": "Kreative Orte",
+      "locations": {
+        "germany": "Deutschland",
+        "switzerland": "Schweiz",
+        "tenerife": "Teneriffa",
+        "gran canaria": "Gran Canaria",
+        "northern cyprus": "Nordzypern",
+        "razor-point": "Razor-Point"
+      },
     "followTitle": "Folge mir auf",
     "contactTitle": "Kontaktiere mich",
     "contactRequestText": "Kontaktanfrage",

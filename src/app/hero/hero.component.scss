@@ -111,7 +111,7 @@
     filter: blur(1px); // Blur nur auf dem Hintergrund
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.02);
     // background-color: rgba(28, 28, 28, 0.8); // Dunkler Hintergrund für das Banner
     z-index: 2;
   }
@@ -367,6 +367,7 @@
 
   .animated-banner {
     bottom: 80px;
+    transform: rotate(0deg);
   }
 
 
