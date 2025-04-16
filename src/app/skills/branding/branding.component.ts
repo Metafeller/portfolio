@@ -1,10 +1,19 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  OnDestroy, 
+  AfterViewInit, 
+  Inject, 
+  Renderer2,
+  ElementRef,
+  PLATFORM_ID } from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 // import { ServerTestingModule } from '@angular/platform-server/testing';
 
 interface InfoboxIcon {
@@ -20,14 +29,17 @@ interface InfoboxIcon {
   styleUrl: './branding.component.scss'
 })
 
-export class BrandingComponent implements OnInit, OnDestroy {
+export class BrandingComponent implements OnInit, OnDestroy, AfterViewInit {
   skills: any[] = [];
   private langChangeSub!: Subscription;
 
   constructor(
     private windowService: WindowService, 
     private scrollService: ScrollService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private renderer: Renderer2,
+    private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +49,31 @@ export class BrandingComponent implements OnInit, OnDestroy {
       this.loadSkills();
     });
   }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observeElements(); // Beste Stelle für DOM-Animationen!
+    }
+  }
+  
+  observeElements(): void {
+    const elements = this.elRef.nativeElement.querySelectorAll('.slide-in-left, .slide-in-right');
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(entry.target, 'in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+  
+    elements.forEach((el: HTMLElement) => observer.observe(el));
+  }
+  
 
   ngOnDestroy(): void {
     if (this.langChangeSub) {

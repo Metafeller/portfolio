@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  AfterViewInit, 
+  Component, 
+  ElementRef, 
+  Renderer2, 
+  OnDestroy, 
+  OnInit, 
+  Inject, 
+  PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { CommonModule } from '@angular/common';
@@ -13,15 +22,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './developer.component.html',
   styleUrl: './developer.component.scss'
 })
-export class DeveloperComponent implements OnInit {
+export class DeveloperComponent implements OnInit, OnDestroy, AfterViewInit {
   skills: any[] = [];
   private langChangeSub!: Subscription;
 
   constructor(
     private windowService: WindowService, 
     private scrollService: ScrollService,
-    private translate: TranslateService
-  
+    private translate: TranslateService,
+    private renderer: Renderer2,
+    private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +43,31 @@ export class DeveloperComponent implements OnInit {
       this.loadSkills();
     });
   }
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observeElements(); // Beste Stelle für DOM-Animationen!
+    }
+  }
+  
+  observeElements(): void {
+    const elements = this.elRef.nativeElement.querySelectorAll('.slide-in-left, .slide-in-right');
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(entry.target, 'in-view');
+            observer.unobserve(entry.target); // Nur einmal auslösen
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+  
+    elements.forEach((el: HTMLElement) => observer.observe(el));
+  }
+  
 
   ngOnDestroy(): void {
     if (this.langChangeSub) {

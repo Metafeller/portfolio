@@ -581,3 +581,46 @@
 
 }
 
+
+/* Slide-In Animation */
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.slide-in-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeSlideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+  animation: fadeSlideInRight 1s ease-out forwards;
+}
+
+@keyframes fadeSlideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
