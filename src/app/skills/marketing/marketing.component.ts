@@ -1,7 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  OnDestroy, 
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  Renderer2,
+  ElementRef
+} from '@angular/core';
 import { WindowService } from '../../window.service';
 import { ButtonComponent } from '../../shared/button/button.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -19,23 +28,51 @@ interface InfoboxIcon {
   styleUrl: './marketing.component.scss',
 })
 
-export class MarketingComponent implements OnInit, OnDestroy {
+export class MarketingComponent implements OnInit, OnDestroy, AfterViewInit {
   skills: any[] = [];
   private langChangeSub!: Subscription;
 
   constructor(
     private windowService: WindowService, 
     private scrollService: ScrollService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private renderer: Renderer2,
+    private elRef: ElementRef
   ) {}
 
   ngOnInit(): void {
     this.loadSkills();
-
     this.langChangeSub = this.translate.onLangChange.subscribe(() => {
       this.loadSkills();
     });
   }  
+
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observeElements();
+    }
+  }
+
+  observeElements(): void {
+    const elements = this.elRef.nativeElement.querySelectorAll(
+      '.slide-in-left, .slide-in-right'
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.renderer.addClass(entry.target, 'in-view');
+            observer.unobserve(entry.target); // Nur 1x animieren
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el: HTMLElement) => observer.observe(el));
+  }
 
   ngOnDestroy(): void {
     if (this.langChangeSub) {
