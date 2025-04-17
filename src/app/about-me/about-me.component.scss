@@ -551,11 +551,11 @@
   animation: slideInFromRight 0.8s ease-out forwards;
 }
 
-// .fade-in.in-view {
-//   opacity: 1;
-//   pointer-events: auto;
-//   animation: fadeInUp 0.8s ease-out forwards;
-// }
+.fade-in.in-view {
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
 /* === Keyframes === */
 
@@ -581,13 +581,13 @@
   }
 }
 
-// @keyframes fadeInUp {
-//   0% {
-//     opacity: 0;
-//     transform: translateY(30px);
-//   }
-//   100% {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

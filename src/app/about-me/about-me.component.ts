@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID, Renderer2, ElementRef } from '@angular/core';
+import { 
+  Component, 
+  AfterViewInit, 
+  Inject, 
+  PLATFORM_ID, 
+  Renderer2, 
+  ElementRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -24,20 +30,18 @@ export class AboutMeComponent implements AfterViewInit {
   }
 
   observeElements(): void {
-    const elements = this.elRef.nativeElement.querySelectorAll(
-      '.about-me-image-wrapper, .about-me-text, .about-me-box li'
-    );
-
+    const elements = this.elRef.nativeElement.querySelectorAll('.slide-in-left, .slide-in-right, .fade-in');
+    
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.renderer.addClass(entry.target, 'in-view');
-            observer.unobserve(entry.target); // Einmal auslösen
+            observer.unobserve(entry.target); // Animation nur 1x auslösen
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     elements.forEach((el: HTMLElement) => observer.observe(el));
