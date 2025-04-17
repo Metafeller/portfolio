@@ -284,7 +284,9 @@
   
       /* Rechte Spalte: 60% */
       .footer-top-right {
-        flex: 0 0 55%;
+
+        // Vorher 0 0 55%
+        flex: 0 0 48%;
         display: flex;
         flex-direction: column-reverse;
 
