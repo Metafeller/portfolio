@@ -7,8 +7,20 @@
     justify-content: center;
     // color: #ffffff;
     padding-top: 80px;
-    
 
+    position: relative;
+    overflow: hidden;
+
+    .hero-background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Füllt den gesamten Hero-Bereich aus
+      z-index: 0;
+    }
+    
     .container {
       display: flex;
       align-items: center;
