@@ -1,0 +1,54 @@
+@import url('../fonts/karla/static/Karla-Regular.ttf');
+
+:root {
+  --primary-color: #1C1C1C;
+  --accent-color: #00ffae;
+  --font-family: 'Karla', sans-serif;
+  --font-family-second: 'Fira Code', monospace;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--primary-color) url('/bg-images/bg-hero.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 40px 16px;
+  color: white;
+}
+
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+h1 {
+  color: var(--accent-color);
+  margin-bottom: 24px;
+}
+
+.legal-content {
+  text-align: left;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-family-second);
+}
+
+.legal-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .legal-content a:hover {
+    color: rgb(161, 254, 0); /* optional heller beim Hover */
+    text-decoration: underline dotted; /* alternativ: none oder z.B. dotted */
+  }
