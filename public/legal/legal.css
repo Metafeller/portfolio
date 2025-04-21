@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 40px 16px;
   color: white;
+  box-sizing: border-box;
 }
 
 .legal-container {
@@ -23,33 +24,127 @@ body {
   padding: 32px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 h1 {
   color: var(--accent-color);
   margin-bottom: 24px;
+  font-size: 28px;
 }
+
+h2 {
+  font-size: 20px;
+  margin-top: 32px;
+  color: var(--accent-color);
+}
+
+p {
+  font-size: 14px;   
+}  
 
 .legal-content {
   text-align: left;
   line-height: 1.7;
+  font-size: 16px;
+}
+
+/* .legal-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.legal-content a:hover {
+  color: rgb(161, 254, 0);
+  text-decoration: underline dotted;
+} */
+
+.legal-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+  
+.legal-content a:hover {
+  color: rgb(161, 254, 0); /* optional heller beim Hover */
+  text-decoration: underline dotted; /* alternativ: none oder z.B. dotted */
 }
 
 footer {
   margin-top: 48px;
   text-align: center;
   font-family: var(--font-family-second);
+  font-size: 14px;
+  padding: 16px;
 }
+  
 
-.legal-content a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* 240px - 320px */
+@media (min-width: 240px) and (max-width: 320px) {
+    body {
+      padding: 20px 8px;
+    }
+    .legal-container {
+      padding: 16px;
+    }
+    h1 {
+      font-size: 22px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    .legal-content {
+      font-size: 14px;
+    }
   }
   
-  .legal-content a:hover {
-    color: rgb(161, 254, 0); /* optional heller beim Hover */
-    text-decoration: underline dotted; /* alternativ: none oder z.B. dotted */
+  /* 321px - 480px */
+  @media (min-width: 321px) and (max-width: 480px) {
+    body {
+      padding: 24px 12px;
+    }
+    .legal-container {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 19px;
+    }
+    .legal-content {
+      font-size: 15px;
+    }
   }
   
+  /* 481px - 767px */
+  @media (min-width: 481px) and (max-width: 767px) {
+    body {
+      padding: 32px 16px;
+    }
+    .legal-container {
+      padding: 24px;
+    }
+  }
+  
+  /* 768px - 1024px */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .legal-container {
+      padding: 28px;
+    }
+  }
+  
+  /* 1025px - 1366px */
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .legal-container {
+      padding: 32px;
+    }
+  }
