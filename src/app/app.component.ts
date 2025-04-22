@@ -9,6 +9,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HostListener } from '@angular/core';
+import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { HostListener } from '@angular/core';
     ProjectsComponent,
     ReviewsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    CookieBannerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -1,0 +1,15 @@
+<div class="cookie-banner" *ngIf="showBanner">
+  <div class="cookie-icon">🍪</div>
+   <div class="cookie-text">
+    <p>
+      Diese Website verwendet Cookies 🍪, um dir das beste Erlebnis zu bieten.
+     <a href="/privacy/privacy.html" target="_blank">Datenschutz</a>
+    </p>
+  </div>
+  <div class="cookie-buttons">
+    <button class="btn btn-settings" (click)="openSettings()">Details anzeigen</button>
+    <button class="btn btn-decline" (click)="rejectAll()">Ablehnen</button>
+    <button class="btn btn-accept" (click)="acceptAll()">Alle akzeptieren</button>
+  </div>
+</div>
+  
