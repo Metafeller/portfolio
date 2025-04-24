@@ -68,4 +68,74 @@
       font-weight: bold;
     }
   }
+
+  .cookie-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cookie-modal {
+    background: #1c1c1c;
+    color: white;
+    padding: 32px;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 90%;
+    font-family: var(--font-family);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    text-align: left;
+  }
+  
+  .cookie-modal h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+  }
+  
+  .cookie-category {
+    margin-bottom: 16px;
+  
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+  
+    small {
+      color: #aaa;
+      font-size: 13px;
+    }
+  
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  
+    button {
+      background-color: var(--accent-color);
+      border: none;
+      border-radius: 45px;
+      padding: 8px 16px;
+      font-family: var(--font-family-second);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+  
+    .cancel {
+      background-color: #555;
+      color: white;
+    }
+  }
+  
   

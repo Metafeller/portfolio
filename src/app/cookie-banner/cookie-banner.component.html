@@ -2,7 +2,7 @@
   <div class="cookie-icon">🍪</div>
    <div class="cookie-text">
     <p>
-      Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten. 🍪
+      Diese Website verwendet Cookies, um dir das beste Erlebnis zu bieten 🍪
      <a href="/privacy/privacy.html" target="_blank">Datenschutz</a>
     </p>
   </div>
@@ -12,4 +12,39 @@
     <button class="btn btn-accept" (click)="acceptAll()">Alle akzeptieren</button>
   </div>
 </div>
+  
+<!-- Cookie Einstellungen Modal -->
+<div class="cookie-modal-backdrop" *ngIf="showSettings">
+    <div class="cookie-modal">
+      <h2>🍪 Cookie-Einstellungen</h2>
+      <p>Hier kannst du wählen, welche Cookies du zulassen möchtest:</p>
+  
+      <div class="cookie-category">
+        <label>
+          <input type="checkbox" checked disabled />
+          Notwendig (immer aktiv)
+        </label>
+        <small>Diese Cookies werden für den Betrieb der Seite benötigt.</small>
+      </div>
+  
+      <div class="cookie-category">
+        <label>
+          <input type="checkbox" [(ngModel)]="analyticsConsent" />
+          Statistik (z. B. Google Analytics)
+        </label>
+      </div>
+  
+      <div class="cookie-category">
+        <label>
+          <input type="checkbox" [(ngModel)]="marketingConsent" />
+          Marketing (z. B. Facebook, LinkedIn)
+        </label>
+      </div>
+  
+      <div class="modal-buttons">
+        <button (click)="saveSettings()">Speichern</button>
+        <button class="cancel" (click)="showSettings = false">Abbrechen</button>
+      </div>
+    </div>
+  </div>
   
