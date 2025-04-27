@@ -10,6 +10,7 @@
   "hero": {
     "title": "Web Developer",
     "description": "Check my work and contact me below",
+    "sub-description": "for a free consultation",
     "cta": {
       "work": "Check my work",
       "contact": "Contact me now"
