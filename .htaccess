@@ -1,0 +1,35 @@
+########################################
+# 1) SPA-Routing: existierende Dateien/Ordner immer direkt ausliefern
+########################################
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Wenn Datei ODER Ordner existiert → nichts tun
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Alle anderen Requests → index.html (Angular übernimmt das Routing)
+  RewriteRule . index.html [L]
+</IfModule>
+
+########################################
+# 2) HTTPS erzwingen
+########################################
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+########################################
+# 3) Browser-Caching optimieren
+########################################
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg      "access plus 1 year"
+  ExpiresByType image/png       "access plus 1 year"
+  ExpiresByType image/svg+xml   "access plus 1 year"
+  ExpiresByType text/css        "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
