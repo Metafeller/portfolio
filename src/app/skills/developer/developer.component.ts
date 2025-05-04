@@ -78,28 +78,28 @@ export class DeveloperComponent implements OnInit, OnDestroy, AfterViewInit {
   loadSkills(): void {
 
     this.skills = [
-      this.createSkill('HTML', '/icons/skillset/html.svg'),
-      this.createSkill('CSS', '/icons/skillset/css.svg'),
-      this.createSkill('JavaScript', '/icons/skillset/javascript.svg'),
-      this.createSkill('Material Design', '/icons/skillset/material-design.svg'),
-      this.createSkill('TypeScript', '/icons/skillset/typescript.svg'),
-      this.createSkill('angular', '/icons/skillset/angular.svg'),
-      this.createSkill('firebase', '/icons/skillset/firebase.svg'),
-      this.createSkill('bootstrap', '/icons/skillset/bootstrap-100.svg'),
-      this.createSkill('GIT', '/icons/skillset/git.svg'),
-      this.createSkill('REST-API', '/icons/skillset/rest-api.svg'),
-      this.createSkill('scrum', '/icons/skillset/scrum.svg'),
+      this.createSkill('HTML', '/svg-icons/skillset/html.svg'),
+      this.createSkill('CSS', '/svg-icons/skillset/css.svg'),
+      this.createSkill('JavaScript', '/svg-icons/skillset/javascript.svg'),
+      this.createSkill('Material Design', '/svg-icons/skillset/material-design.svg'),
+      this.createSkill('TypeScript', '/svg-icons/skillset/typescript.svg'),
+      this.createSkill('angular', '/svg-icons/skillset/angular.svg'),
+      this.createSkill('firebase', '/svg-icons/skillset/firebase.svg'),
+      this.createSkill('bootstrap', '/svg-icons/skillset/bootstrap-100.svg'),
+      this.createSkill('GIT', '/svg-icons/skillset/git.svg'),
+      this.createSkill('REST-API', '/svg-icons/skillset/rest-api.svg'),
+      this.createSkill('scrum', '/svg-icons/skillset/scrum.svg'),
       {
         name: 'Growth Mindset',
-        icon: '/icons/skillset/growth-mindset.svg',
+        icon: '/svg-icons/skillset/growth-mindset.svg',
         isHovered: false,
         isInfoboxVisible: false,
         infoboxTitle: this.translate.instant('skills.developer.skills.growth.title'),
         infoboxDescription: this.translate.instant('skills.developer.skills.growth.description'),
         infoboxIcons: [
-          { src: '/icons/skillset/react-color.svg', alt: 'React' },
-          { src: '/icons/skillset/python-custom-100.svg', alt: 'Python' },
-          { src: '/icons/skillset/dj-django-100.svg', alt: 'Django' }
+          { src: '/svg-icons/skillset/react-color.svg', alt: 'React' },
+          { src: '/svg-icons/skillset/python-custom-100.svg', alt: 'Python' },
+          { src: '/svg-icons/skillset/dj-django-100.svg', alt: 'Django' }
         ]
       }
     ];

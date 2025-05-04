@@ -83,31 +83,31 @@ export class BrandingComponent implements OnInit, OnDestroy, AfterViewInit {
 
   loadSkills(): void {
     this.skills = [
-      this.createSkill('brand-awareness', '/icons/branding/brand-awareness-flowchart.png'),
-      this.createSkill('brand-strategy', '/icons/branding/brand-strategies.png'),
-      this.createSkill('personal-brand', '/icons/branding/personal-branding.png'),
-      this.createSkill('target-group', '/icons/branding/target-audience.png'),
-      this.createSkill('positioning', '/icons/branding/market-positioning.png'),
-      this.createSkill('Unique-Selling-Point', '/icons/branding/unique-selling-point.png'),
-      this.createSkill('brandbook', '/icons/branding/graphic-design.png'),
-      this.createSkill('webdesign', '/icons/branding/ux-ui-web-design.png'),
-      this.createSkill('public-releations', '/icons/branding/pr-public-relations.png'),
-      this.createSkill('visability', '/icons/branding/visability-strategies.png'),
-      this.createSkill('AI-agency', '/icons/branding/bot.png'),
+      this.createSkill('brand-awareness', '/svg-icons/branding/brand-awareness-flowchart.png'),
+      this.createSkill('brand-strategy', '/svg-icons/branding/brand-strategies.png'),
+      this.createSkill('personal-brand', '/svg-icons/branding/personal-branding.png'),
+      this.createSkill('target-group', '/svg-icons/branding/target-audience.png'),
+      this.createSkill('positioning', '/svg-icons/branding/market-positioning.png'),
+      this.createSkill('Unique-Selling-Point', '/svg-icons/branding/unique-selling-point.png'),
+      this.createSkill('brandbook', '/svg-icons/branding/graphic-design.png'),
+      this.createSkill('webdesign', '/svg-icons/branding/ux-ui-web-design.png'),
+      this.createSkill('public-releations', '/svg-icons/branding/pr-public-relations.png'),
+      this.createSkill('visability', '/svg-icons/branding/visability-strategies.png'),
+      this.createSkill('AI-agency', '/svg-icons/branding/bot.png'),
   
       {
         name: 'Growth Mindset',
-        icon: '/icons/branding/growth-mindset-rare-green.png',
+        icon: '/svg-icons/branding/growth-mindset-rare-green.png',
         isHovered: false,
         isInfoboxVisible: false,
         infoboxTitle: this.translate.instant('skills.branding.skills.growth.title'),
         infoboxDescription: this.translate.instant('skills.branding.skills.growth.description'),
         infoboxIcons: [
-          { src: '/icons/branding/artificial-intelligence-ai.png', alt: 'Artificial Intelligence' },
-          // { src: '/icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
-          { src: '/icons/branding/blockchain-technologie.png', alt: 'Blockchain' },
-          { src: '/icons/branding/metaverse.png', alt: 'Metaverse NFTs' },
-          // { src: '/icons/branding/web-30.png', alt: 'Web 3.0' },
+          { src: '/svg-icons/branding/artificial-intelligence-ai.png', alt: 'Artificial Intelligence' },
+          // { src: '/svg-icons/skillset/vue-js-2-color.svg', alt: 'Vue.js' },
+          { src: '/svg-icons/branding/blockchain-technologie.png', alt: 'Blockchain' },
+          { src: '/svg-icons/branding/metaverse.png', alt: 'Metaverse NFTs' },
+          // { src: '/svg-icons/branding/web-30.png', alt: 'Web 3.0' },
         ] as InfoboxIcon[]
       },
     ];

@@ -59,7 +59,7 @@ export class HeroComponent implements AfterViewInit {
   changeIconToWhite(id: string) {
     const element = document.getElementById(id) as HTMLImageElement;
     if (element) {
-      element.src = `./../icons/social/${id}-white.svg`;
+      element.src = `/svg-icons/social/${id}-white.svg`;
     }
   }
 
@@ -67,7 +67,7 @@ export class HeroComponent implements AfterViewInit {
   resetIcon(id: string) {
     const element = document.getElementById(id) as HTMLImageElement;
     if (element) {
-      element.src = `./../icons/social/${id}.svg`;
+      element.src = `/svg-icons/social/${id}.svg`;
     }
   }
 

@@ -88,29 +88,29 @@ export class MarketingComponent implements OnInit, OnDestroy, AfterViewInit {
   
   loadSkills(): void {
     this.skills = [
-      this.createSkill('touchpoints', '/icons/marketing/channels.png'),
-      this.createSkill('organic-campaigns', '/icons/marketing/organic-sprout.png'),
-      this.createSkill('paid-ads', '/icons/marketing/meta.png'),
-      this.createSkill('social-media', '/icons/marketing/social-media-advertising.png'),
-      this.createSkill('SEO-strategies', '/icons/marketing/seo.png'),
-      this.createSkill('funnel-concepts', '/icons/marketing/sales-funnel.png'),
-      this.createSkill('automation', '/icons/marketing/lead-generation.png'),
-      this.createSkill('content-marketing', '/icons/marketing/digital-content.png'),
-      this.createSkill('email-marketing', '/icons/marketing/lead-generation.png'),
-      this.createSkill('analytics', '/icons/marketing/up-arrow.png'),
-      this.createSkill('AI-marketing', '/icons/branding/bot.png'),
+      this.createSkill('touchpoints', '/svg-icons/marketing/channels.png'),
+      this.createSkill('organic-campaigns', '/svg-icons/marketing/organic-sprout.png'),
+      this.createSkill('paid-ads', '/svg-icons/marketing/meta.png'),
+      this.createSkill('social-media', '/svg-icons/marketing/social-media-advertising.png'),
+      this.createSkill('SEO-strategies', '/svg-icons/marketing/seo.png'),
+      this.createSkill('funnel-concepts', '/svg-icons/marketing/sales-funnel.png'),
+      this.createSkill('automation', '/svg-icons/marketing/lead-generation.png'),
+      this.createSkill('content-marketing', '/svg-icons/marketing/digital-content.png'),
+      this.createSkill('email-marketing', '/svg-icons/marketing/lead-generation.png'),
+      this.createSkill('analytics', '/svg-icons/marketing/up-arrow.png'),
+      this.createSkill('AI-marketing', '/svg-icons/branding/bot.png'),
       
       {
         name: 'Exponential Growth Strategies',
-        icon: '/icons/marketing/growth-strategies-pestle.png',
+        icon: '/svg-icons/marketing/growth-strategies-pestle.png',
         isHovered: false,
         isInfoboxVisible: false,
         infoboxTitle: this.translate.instant('skills.marketing.skills.growth.title'),
         infoboxDescription: this.translate.instant('skills.marketing.skills.growth.description'),
         infoboxIcons: [
-          { src: '/icons/marketing/customer-journey.png', alt: 'Data Driven' },
-          { src: '/icons/marketing/account-management-network.png', alt: 'KPI Tracking' },
-          { src: '/icons/marketing/up-arrow.png', alt: 'Conversion Optimization' },
+          { src: '/svg-icons/marketing/customer-journey.png', alt: 'Data Driven' },
+          { src: '/svg-icons/marketing/account-management-network.png', alt: 'KPI Tracking' },
+          { src: '/svg-icons/marketing/up-arrow.png', alt: 'Conversion Optimization' },
         ] as InfoboxIcon[]
       },
     ];
