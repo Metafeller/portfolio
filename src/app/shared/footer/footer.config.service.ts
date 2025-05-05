@@ -80,7 +80,7 @@ export class FooterConfigService {
         // { icon: '/svg-icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: 'https://savasboas.com/blog/locations' },
         // { icon: '/svg-icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
         { icon: '/svg-icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: 'https://savasboas.com/blog/locations' },
-        { icon: '/svg-icons/media/svg-icons8-avengers-100.svg', text: 'Razor-Point', link: 'https://savasboas.com/blog/locations' }
+        { icon: '/svg-icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: 'https://savasboas.com/blog/locations' }
       ],
       followMeOn: [
         { icon: '/svg-icons/social/github.svg', text: 'GitHub', link: 'https://github.com/Metafeller' },
@@ -102,7 +102,7 @@ export class FooterConfigService {
     },
     bottom: {
       copyrightIcon: '/svg-icons/copyright/copyright-accent-color.png',
-      copyrightText: '2023 AYA, Inc. All rights reserved',
+      copyrightText: '2025 AYA, Inc. All rights reserved',
       madeBy: 'Made By Taironman with',
       legalNoticeText: 'Legal Notice',
       legalNoticeLink: '/legal/legal',
