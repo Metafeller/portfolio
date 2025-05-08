@@ -13,7 +13,7 @@
   margin: 0 auto; // Zentriert den Container innerhalb des Viewports
   margin-top: 156px;
   // min-height: 80vh;
-  padding-top: 240px;
+  padding-top: 160px;
 
   .about-me-content {
     display: flex;
@@ -122,8 +122,10 @@
       p {
         font-family: var(--font-family-second);
         font-size: 16px;
-        line-height: 1.6;
-        margin-bottom: 32px;
+        // line-height: 1.6;
+        line-height: 24px;
+        // margin-bottom: 32px;
+        margin-bottom: 16px;
       }
 
       .about-me-highlights {
@@ -144,7 +146,8 @@
           display: flex;
           align-items: flex-start;
           gap: 16px;
-          margin-bottom: 24px;
+          // margin-bottom: 24px;
+          margin-bottom: 12px;
 
           img {
             width: 32px;
