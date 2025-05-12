@@ -31,11 +31,12 @@
   "about": {
     "h4": "Who I Am",
     "h2": "About Me",
-    "description": "Hi, Welcome! My Name is Tayfun Savas Boas AYA alias Tairon Man! I'm your passionate frontend developer and digital strategist, based in Germany (NRW) and the beautiful Switzerland. With my small family, I travel the world and work flexibly – whether remotely or at my inspiring Razor-Point, in true Tony Stark style. Driven by the endless possibilities in IT, marketing, and branding, I create visually captivating and intuitive websites and applications that not only engage but also convert and scale sustainably.",
+    "description": "Hi! I’m Tayfun “Tai” Savas Boas AYA – a web developer and digital strategist. I call Lake Constance (Bodensee) and beautiful Switzerland home. With my small family, I explore the world. I work flexibly – whether remotely or at my Razor-Point à la Tony Stark.",
+    "description-core": "Passionate about IT, AI and marketing, I craft visually captivating websites, SaaS products and apps that delight, convert and scale sustainably.",
     "benefit": {
-      "flexibility": "Flexibility → Whether in a modern on-site work environment or remotely – I happily adapt to your needs and ensure smooth operations.",
-      "openminded": "Embracing New Challenges → As a curious professional, I’m constantly seeking new challenges to continuously expand my know-how and develop innovative solutions specifically for you.",
-      "excellence": "Creative Excellence → For me, coding and marketing are more than just technical disciplines – they’re creative problem-solving and digital art. I transform complex challenges into simple, user-friendly concepts that sustainably boost your success."
+      "flexibility": "I am very flexible at work. Whether in a modern working environment on site or remotely - I adapt to your needs.",
+      "openminded": "For me, programming and marketing are more than technical disciplines – they’re creative problem-solving and digital art.",
+      "excellence": "Premium-Quality over quantity – I place great value on effective communication and smooth onboarding processes."
     }
   },
 
