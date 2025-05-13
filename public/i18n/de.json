@@ -44,35 +44,33 @@
     "developer": {
       "h4": "Entwickler Technologien",
       "h2": "Entwickler Fähigkeiten",
-      "description": "→ Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine breite Palette moderner Frontend-Technologien und innovativer Konzepte erfolgreich eingesetzt.",
-      "description-2": "→ Ich entwickle hochmoderne Webseiten, Apps, Salesfunnel, SaaS-Modelle und Webanwendungen, die schnell, benutzerfreundlich und zukunftssicher skalierbar sind.",
-      "description-3": "→ Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte kontinuierlich zu erweitern und in der dynamischen Welt der Webentwicklung immer einen Schritt voraus zu sein.",
+      "description": "Auf meinem Weg habe ich moderne Frontend-Technologien und innovative Konzepte in vielfältigen Projekten eingesetzt.",
+      "description-core": "Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte in der Webentwicklung ständig zu erweitern.",
 
       "h3": {
         "text-1": "Bereit für digitale Lösungen ",
         "text-2": "die wirklich funktionieren?"
       },
 
-      "sub-description": "Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
-      "sub-description-2": "Ich freue mich darauf, dich dabei zu unterstützen, deine Ziele zu erreichen und dein Projekt zum Erfolg zu führen.",
+      "sub-description": "Ich freue mich auf die gemeinsame Zusammenarbeit. Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
       "cta": "Jetzt Kontakt aufnehmen",
 
       "skills": {
         "HTML": {
           "title": "HTML",
-          "description": "Das Rückgrat des Webs. Strukturiere deinen Content effektiv."
+          "description": "Das Fundament und Rückgrat des Webs. Strukturiert Inhalte für das Web."
         },
         "CSS": {
           "title": "CSS",
-          "description": "Gestalte das Web. Bring Struktur und Design in Einklang."
+          "description": "Gestaltet das Web. Bringt Struktur und Design in Einklang."
         },
         "JavaScript": {
           "title": "JavaScript",
-          "description": "Erwecke dein Projekt zum Leben. Interaktive Funktionen und Logik für deine Website."
+          "description": "Erwecke dein Projekt zum Leben. Macht Webseiten interaktiv."
         },
         "Material Design": {
           "title": "Material Design",
-          "description": "Schöne, Moderne und Konsistente UI-Komponenten nach Googles Designrichtlinien."
+          "description": "Moderne Designs. Konsistente UI-Komponenten à la Google für dein Projekt."
         },
         "TypeScript": {
           "title": "TypeScript",
@@ -80,7 +78,7 @@
         },
         "angular": {
           "title": "Angular",
-          "description": "Erstelle dynamische Webanwendungen mit einem leistungsstarken Framework."
+          "description": "Das leistungsstarkste Framework für dynamische Web-Apps auf dem Markt."
         },
         "firebase": {
           "title": "Firebase",
@@ -88,23 +86,23 @@
         },
         "bootstrap": {
           "title": "Bootstrap",
-          "description": "Entwerfe im Handumdrehen responsive Websites mit vorgefertigten Komponenten und Rastersystemen."
+          "description": "Smarte Responsive Websites mit Komponenten und Rastersystemen."
         },
         "GIT": {
           "title": "GIT",
-          "description": "Verfolge, verwalte und arbeite effektiv an Codeänderungen mit."
+          "description": "Verfolge, verwalte und arbeite effektiv an Codeänderungen."
         },
         "REST-API": {
           "title": "Rest-API",
-          "description": "Nahtlose Verbindung und Kommunikation mit Webdiensten (Schnittstellen)."
+          "description": "Nahtlose Verbindung und Kommunikation mit Webdiensten."
         },
         "scrum": {
           "title": "Scrum",
-          "description": "Agiles arbeiten. Liefert qualitative Projekte effizient in Teamarbeit."
+          "description": "Liefert Projekte effizient in Teamarbeit. Agiles arbeiten im Team."
         },
         "growth": {
           "title": "Growth Mindset",
-          "description": "Ich habe ein besonderes Interesse am Lernen. Ich liebe es mich jeden Tag weiterzubilden und 1% besser zu werden als gestern."
+          "description": "Ständiges Lernen und Optimieren. Jeden Tag 1% besser werden als gestern."
         }
       }
     },

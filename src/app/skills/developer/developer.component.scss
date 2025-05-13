@@ -56,6 +56,7 @@
   }  
 
   .skill-box {
+    max-width: 700px;
     // flex: 1 1 45%;
     flex: 1 1 35%;
     background-color: rgba(0, 255, 174, 0.1);
@@ -76,15 +77,15 @@
   .skill-box p {
     font-family: var(--font-family-second);
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 24px;
     color: #ffffff;
   }
   
   .skill-box h3 {
     font-family: var(--font-family);
     font-size: 22px;
-    letter-spacing: 4px;
-    // line-height: 1.6;
+    // letter-spacing: 4px;
+    line-height: 24px;
   }
 
   .skill-box .highlight span {

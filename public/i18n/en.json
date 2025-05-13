@@ -44,9 +44,8 @@
     "developer": {
       "h4": "Developer Technologies",
       "h2": "Developer Skill Set",
-      "description": "→ My journey has involved working on a wide range of projects, where I've successfully employed an array of modern frontend technologies and innovative concepts.",
-      "description-2": "→  I create modern websites, apps, sales funnels, SaaS platforms and web applications that are fast, user-friendly, and built to scale into the future.",
-      "description-3": "→  I remain curious and open to new technologies and methods, continuously expanding my expertise to stay ahead in the dynamic world of web development.",
+      "description": "On my journey, I’ve applied modern frontend technologies and innovative concepts across diverse projects.",
+      "description-core": "I remain curious and open to new methods, constantly expanding my superpowers in web development.",
 
       "h3": {
         "text-1": "Ready for ",
@@ -54,7 +53,6 @@
       },
 
       "sub-description": "Feel free to reach out – I’m here to support you from the very first idea to the final product, always with transparency, efficiency, and genuine passion.",
-      "sub-description-2": " I look forward to helping you achieve your goals and making your project a success.",
       "cta": "Let's Talk",
 
       "skills": {
@@ -72,15 +70,15 @@
         },
         "Material Design": {
           "title": "Material Design",
-          "description": "Create beautiful and consistent user interfaces inspired by Google."
+          "description": "Modern designs. Consistent UI components à la Google for your project."
         },
         "TypeScript": {
           "title": "TypeScript",
-          "description": "Enhance JavaScript with type safety and cleaner code."
+          "description": "Safety Code. More structure, better error prevention, and maintainable code."
         },
         "angular": {
           "title": "Angular",
-          "description": "Build dynamic web applications with a powerful framework."
+          "description": "The most powerful framework for dynamic web apps on the market."
         },
         "firebase": {
           "title": "Firebase",
@@ -88,7 +86,7 @@
         },
         "bootstrap": {
           "title": "Bootstrap",
-          "description": "Quickly design responsive websites with prebuilt components and grid systems."
+          "description": "Quickly responsive websites with components and grid systems."
         },
         "GIT": {
           "title": "GIT",
@@ -104,7 +102,7 @@
         },
         "growth": {
           "title": "Growth Mindset",
-          "description": "I have a special interest in learning. I love learning every day and becoming 1% better than I was yesterday."
+          "description": "Continuous learning and improvement. Getting 1% better every day."
         }
       }
     },
