@@ -32,7 +32,7 @@
     "h4": "Wer Ich Bin",
     "h2": "Über Mich",
     "description": "Hi! Ich bin “Tai” Savas Boas AYA - Webentwickler und Digitalstratege. Mein Zuhause habe ich am Bodensee und in der wunderschönen Schweiz. Mit meiner kleinen Familie entdecke ich die Welt. Ich arbeite flexibel – sei es remote oder an meinem inspirierenden Razor-Point à la Tony Stark.",
-    "description-core": "Leidenschaftlich in IT, KI, Marketing und Branding kreiere ich visuell fesselnde Webseiten, SaaS-Produkte und Apps, die begeistern, konvertieren und nachhaltig skalieren.",
+    "description-core": "Leidenschaftlich in KI, Programmierung und Marketing kreiere ich visuell fesselnde Webseiten, SaaS-Produkte und Apps, die begeistern, konvertieren und nachhaltig skalieren.",
     "benefit": {
       "flexibility": "Ob im modernen Arbeitsumfeld vor Ort oder remote – ich passe mich deinen Bedürfnissen an.",
       "openminded": "Programmierung und Marketing sind für mich mehr als nur technische Disziplinen – sie sind kreative Problemlösungen und digitale Kunst.",
@@ -43,7 +43,7 @@
   "skills": {
     "developer": {
       "h4": "Entwickler Technologien",
-      "h2": "Entwickler Fähigkeiten",
+      "h2": "Webentwicklung",
       "description": "Auf meinem Weg habe ich moderne Frontend-Technologien und innovative Konzepte in vielfältigen Projekten eingesetzt.",
       "description-core": "Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte in der Webentwicklung ständig zu erweitern.",
 
@@ -109,81 +109,81 @@
 
     "branding": {
       "h4": "Branding Technologien",
-      "h2": "Branding Fähigkeiten",
-      "description": "→ Mit einem umfassenden Ansatz – von deinem Brandbook und den Guidelines bis hin zu jedem Detail deiner Vision, Mission und Ziele – kreieren wir markante visuelle Identitäten, Strategien und Erlebnisse, die deine Zielgruppe begeistern und deine Marke zum Leben erwecken.",
-      "description-2": "→ Jeder ist einzigartig, und genau diese Einzigartigkeit setzen wir gekonnt in Szene. Das ist unser Versprechen. Für uns ist erst Schluss, wenn wir unser gemeinsames Ziel erreicht haben.",
+      "h2": "Branding",
+      "description": "Von Brandbook bis Guidelines: Wir entwickeln prägnante Markenidentitäten und -strategien, die deine Marke zum Leben erwecken und deine Zielgruppe begeistern.",
+      "description-core": "Wir setzen deine Alleinstellungsmerkmale in Szene. Deine Einzigartigkeit im Fokus – erst wenn dein Ziel erreicht ist, sind wir zufrieden.",
       "h3": {
         "text-1": "Positionierung ist alles!",
-        "text-2": "Bist du bereit für eine Branding-Lösung, die dich klar von der Konkurrenz abhebt?"
+        "text-2": "Bereit für ein Branding, das dich abhebt?"
       },
 
-      "sub-description": "Kontaktiere mich – mein Team und ich freuen uns darauf, gemeinsam mit dir die perfekte Strategie zu entwickeln, um deine Marke auf das nächste Level zu bringen.",
+      "sub-description": "Kontaktiere mich – gemeinsam heben wir deine Marke aufs nächste Level.",
       "cta": "Jetzt Kontakt aufnehmen",
 
       "skills": {
         "brand-awareness": {
-          "title": "Markenbekanntheit",
-          "description": "Schaffe eine starke Omni-Präsenz, um bei deiner Zielgruppe Anklang zu finden."
+          "title": "Marken-Bekanntheit",
+          "description": "Schaffe eine Omni-Präsenz, um bei deiner Zielgruppe Anklang zu finden."
         },
         "brand-strategy": {
           "title": "Strategischer Aufbau",
-          "description": "Entwickle intelligente, emotionale Strategien, um eine authentische Marke zu schaffen."
+          "description": "Entwickle emotionale Markenstrategien für eine authentische Bindung."
         },
         "personal-brand": {
           "title": "Personenmarke",
-          "description": "Baue eine authentische und inspirierende Personenmarke auf, mit der du dich identifizieren kannst."
+          "description": "Forme deine einzigartige persönliche Marke mit der du dich identifizieren kannst."
         },
         "target-group": {
-          "title": "Zielgruppendefinition",
-          "description": "Identifiziere und verstehe die Bedürfnisse deines idealen Publikums, um deine Kommunikation optimal anzupassen."
+          "title": "Zielgruppe definieren",
+          "description": "Treffe deine Zielgruppe ins Bullseye und verstehe ihre Bedürfnisse punktgenau."
         },
         "positioning": {
           "title": "Positionierung",
-          "description": "Hebe dich ab, indem du deine Marke smart und einzigartig auf dem Markt positionierst."
+          "description": "Hebe dich ab, indem du dich smart und einzigartig am Markt positionierst."
         },
         "Unique-Selling-Point": {
           "title": "Alleinstellungsmerkmal",
-          "description": "Definiere, was deine Marke besonders macht und dich von der Konkurrenz abhebt."
+          "description": "Definiere deine USP mit der Anziehungskraft eines Meta-Magneten."
         },
         "brandbook": {
           "title": "Brandbook & Guidelines",
-          "description": "Kommuniziere visuell mit hochwertigen Designs und kreativen Elementen."
+          "description": "Gestalte ein einprägsames Brandbook & Guidelines mit hochwertigen Elementen."
         },
         "webdesign": {
           "title": "Web Design & UX/UI",
-          "description": "Nahtlose und visuell ansprechende digitale Erlebnisse, die sich auf Benutzerfreundlichkeit und Markenerfahrung konzentrieren."
+          "description": "Erschaffe intuitives UX/UI für digitale Erlebnisse deiner Website."
         },
         "public-releations": {
           "title": "Public Relations [PR]",
-          "description": "Baue Vertrauen auf, um den Ruf deiner Marke effektiv zu verwalten."
+          "description": "Stärke dein Markenimage mit strategischer PR - um Vertrauen aufzubauen."
         },
         "visability": {
-          "title": "Sichtbarkeitsstrategien",
-          "description": "Sei mit adaptiven Strategien auf allen wichtigen Kanälen sichtbar und relevant."
+          "title": "Sichtbarkeits-strategien",
+          "description": "Bleibe auf allen Kanälen sichtbar und relevant mit adaptiven Strategien."
         },
         "AI-agency": {
           "title": "AI Agenten",
-          "description": "Nutze KI, um dein Geschäft zu automatisieren und/oder digitale Influencer zu schaffen, die die Reichweite deiner Marke erhöhen."
+          "description": "Automatisiere dein Business zukunftsorientiert mit smarten KI-Agenten"
         },
         "growth": {
           "title": "Growth Mindset",
-          "description": "Ich interessiere mich für innovative und seltene Nischen wie Blockchain, KI-Agenten, Web 3.0 oder Startups, deren Projekte mich begeistern."
+          "description": "Ich interessiere mich für innovative Nischen wie KI, Web 3.0 & Startups"
         }
       }
     },
 
       "marketing": {
         "h4": "Marketing Technologien",
-        "h2": "Marketing Kompetenzen",
-        "description": "→ Entwicklung innovativer und maßgeschneiderter Marketingkonzepte, die deine Marke ins Rampenlicht stellen, neue Zielgruppen ansprechen und nachhaltiges Wachstum generieren.",
-        "description-2": "→ Mit einer Kombination aus kreativen Ideen, jahrelanger Erfahrung aus der Praxis, präzisen Datenanalysen und modernster Technologie setzen wir deine Vision in zielgerichtete Kampagnen um, die echten Erfolg bringen.",
-        "description-3": "→ So schaffen wir eine effektive Verbindung zwischen deiner Marke und deiner Zielgruppe – für messbare Resultate und langfristigen Erfolg.",
+        "h2": "Marketing",
+        "description": "Maßgeschneiderte Konzepte, die deine Marke sichtbar machen und Wachstum fördern in kombination mit kreative Ideen, datengetriebene Analysen und moderne Tools für erfolgreiche Kampagnen.",
+        "description-core": "Wir verbinden deine Marke effektiv mit deiner Zielgruppe und ermöglichen so messbare Erfolge sowie nachhaltiges Wachstum.",
+        "description-benefit": "Präzise Zielgruppenansprache, messbare Resultate für nachhaltiges Wachstum und langfristige Bindung durch relevante Inhalte.",
 
         "h3": {
           "text-1": "Bereit für",
           "text-2": "mehr Reichweite?"
         },
-        "sub-description": "Lass uns gemeinsam gezielte Strategien entwickeln, die deine Zielgruppe erreichen.",
+        "sub-description": "Gemeinsam entwickeln wir Strategien, die deine Zielgruppe erreichen.",
         "cta": "Kostenloses Beratungsgespräch",
         "skills": {
           "touchpoints": {
