@@ -53,7 +53,7 @@
       },
 
       "sub-description": "Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
-      "cta": "Jetzt Kontakt aufnehmen",
+      "cta": "→ Jetzt Kontakt aufnehmen",
 
       "skills": {
         "HTML": {
@@ -118,7 +118,7 @@
       },
 
       "sub-description": "Kontaktiere mich – gemeinsam heben wir deine Marke aufs nächste Level.",
-      "cta": "Jetzt Kontakt aufnehmen",
+      "cta": "→ Jetzt Kontakt aufnehmen",
 
       "skills": {
         "brand-awareness": {
@@ -183,7 +183,7 @@
           "text-2": "mehr Reichweite?"
         },
         "sub-description": "Gemeinsam entwickeln wir Strategien, die deine Zielgruppe erreichen.",
-        "cta": "Kostenloses Beratungsgespräch",
+        "cta": "→ Jetzt Kontakt aufnehmen",
 
         "skills": {
           "touchpoints": {
@@ -241,8 +241,7 @@
   "projects": {
     "h4": "Meine Referenzen",
     "h2": "Ausgewählte Projekte",
-    "description": "→ Entdecke meine Projekte live in Aktion – erlebe, wie aus Ideen innovative digitale Erlebnisse werden. Tauche ein in eine handverlesene Auswahl meiner Arbeiten, interagiere direkt mit den Projekten und lass dich inspirieren, was mein Team und ich für dich realisieren können.",
-    "description-2": "→ Deiner Kreativität sind keine Grenzen gesetzt – bei uns ist nahezu alles möglich. Möchtest du noch mehr entdecken? Dann klicke auf „Mehr Projekte“ und erhalte einen umfassenden Einblick in unsere gesamten Referenzen.",
+    "description": "Entdecke meine Projekte live in Aktion – erlebe, wie aus Ideen innovative digitale Erlebnisse werden. Tauche ein in eine handverlesene Auswahl meiner Arbeiten, interagiere direkt mit den Projekten und lass dich inspirieren, was mein Team und ich für dich realisieren können.",
     "cta": "Mehr Projekte ↗",
 
     "items": {

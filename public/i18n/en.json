@@ -53,7 +53,7 @@
       },
 
       "sub-description": "Feel free to reach out – I’m here to support you from the very first idea to the final product, always with transparency, efficiency, and genuine passion.",
-      "cta": "Let's Talk",
+      "cta": "→ Let's Talk",
 
       "skills": {
         "HTML": {
@@ -118,7 +118,7 @@
       },
 
       "sub-description": "Contact me – together we'll take your brand to the next level.",
-      "cta": "Get in touch now",
+      "cta": "→ Get in touch now",
 
       "skills": {
         "brand-awareness": {
@@ -175,16 +175,15 @@
       "marketing": {
         "h4": "Marketing Technologies",
         "h2": "Marketing Skills",
-        "description": "→ Developing innovative and tailor-made marketing strategies that shine a spotlight on your brand, attract new target audiences, and drive sustainable growth.",
-        "description-2": "→ With a smart blend of creative ideas, years of experience, precise data analytics, and cutting-edge technology, we transform your vision into targeted campaigns that deliver genuine success.",
-        "description-3": "→ In doing so, we forge an effective connection between your brand and your audience – achieving measurable results and long-term success.",
+        "description": "Tailored concepts that make your brand visible and drive growth, combined with creative ideas, data-driven insights and modern tools for successful campaigns.",
+        "description-core": "We connect your brand precisely with your target audience, delivering measurable results, sustainable growth and long-term customer loyalty through relevant content.",
         
         "h3": {
           "text-1": "Want to",
           "text-2": "grow your audience?"
         },
         "sub-description": "Let’s create targeted strategies that reach and engage your audience.",
-        "cta": "Get in Touch",
+        "cta": "→ Free consultation",
         "skills": {
           "touchpoints": {
             "title": "Touchpoints Selection",
@@ -241,8 +240,7 @@
   "projects": {
     "h4": "Portfolio",
     "h2": "Featured Projects",
-    "description": "→ Experience my projects in action – witness firsthand how innovative digital experiences are brought to life. Dive into a curated selection of my work, interact directly with the projects, and get inspired by what my team and I can create for you.",
-    "description-2": "→ Let your imagination run wild – with us, almost anything is possible. Want to see more? Click on the “More Projects” button for a comprehensive look at our entire portfolio.",
+    "description": "Experience my projects in action – witness firsthand how innovative digital experiences are brought to life. Dive into a curated selection of my work, interact directly with the projects, and get inspired by what my team and I can create for you.",
     "cta": "More Projects ↗",
 
     "items": {

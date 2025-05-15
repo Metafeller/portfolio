@@ -6,7 +6,7 @@
     max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
-    padding-top: 120px;
+    // padding-top: 120px;
 }
 
 .projects-content {
@@ -70,7 +70,7 @@
     p {
         font-family: var(--font-family-second);
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 24px;
         color: #ffffff;
         display: flex;
     }
@@ -101,7 +101,7 @@
         position: absolute;
         // top: 286px;
         // left: 110px;
-        top: 224px;
+        top: 214px;
         left: 80px;
         right: 0;
         bottom: 0;
@@ -116,7 +116,7 @@
     img {
         position: relative;
         margin-top: 235px;
-        margin-top: 180px;
+        margin-top: 160px;
         max-width: 100%;
         border-radius: 32px;
         transition: transform 0.3s ease;
@@ -448,7 +448,7 @@
       font-family: var(--font-family-second);
       font-size: 16px;
       color: #ffffff;
-      line-height: 1.6;
+      line-height: 24px;
       margin: 16px;
 
       @media (min-width: 240px) and (max-width: 320px) {
@@ -1304,9 +1304,9 @@
         // text-align: center;    
         // }
 
-        p {
-        font-size: 17px;
-        }
+        // p {
+        // font-size: 17px;
+        // }
     }
 
     .project-preview {
