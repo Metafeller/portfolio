@@ -43,7 +43,7 @@
   "skills": {
     "developer": {
       "h4": "Entwickler Technologien",
-      "h2": "Webentwicklung",
+      "h2": "Entwickler Skills",
       "description": "Auf meinem Weg habe ich moderne Frontend-Technologien und innovative Konzepte in vielfältigen Projekten eingesetzt.",
       "description-core": "Ich bleibe stets neugierig und offen für neue Technologien und Methoden, um meine Superkräfte in der Webentwicklung ständig zu erweitern.",
 
@@ -52,7 +52,7 @@
         "text-2": "die wirklich funktionieren?"
       },
 
-      "sub-description": "Ich freue mich auf die gemeinsame Zusammenarbeit. Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
+      "sub-description": "Fühl dich frei mich zu kontaktieren – ich begleite dich von der ersten Idee bis zum fertigen Produkt, stets transparent, effizient und mit echter Leidenschaft.",
       "cta": "Jetzt Kontakt aufnehmen",
 
       "skills": {
@@ -109,7 +109,7 @@
 
     "branding": {
       "h4": "Branding Technologien",
-      "h2": "Branding",
+      "h2": "Branding Skills",
       "description": "Von Brandbook bis Guidelines: Wir entwickeln prägnante Markenidentitäten und -strategien, die deine Marke zum Leben erwecken und deine Zielgruppe begeistern.",
       "description-core": "Wir setzen deine Alleinstellungsmerkmale in Szene. Deine Einzigartigkeit im Fokus – erst wenn dein Ziel erreicht ist, sind wir zufrieden.",
       "h3": {
@@ -174,10 +174,9 @@
 
       "marketing": {
         "h4": "Marketing Technologien",
-        "h2": "Marketing",
-        "description": "Maßgeschneiderte Konzepte, die deine Marke sichtbar machen und Wachstum fördern in kombination mit kreative Ideen, datengetriebene Analysen und moderne Tools für erfolgreiche Kampagnen.",
-        "description-core": "Wir verbinden deine Marke effektiv mit deiner Zielgruppe und ermöglichen so messbare Erfolge sowie nachhaltiges Wachstum.",
-        "description-benefit": "Präzise Zielgruppenansprache, messbare Resultate für nachhaltiges Wachstum und langfristige Bindung durch relevante Inhalte.",
+        "h2": "Marketing Skills",
+        "description": "Maßgeschneiderte Konzepte, die deine Marke sichtbar machen und Wachstum fördern, in kombination mit kreativen Ideen, datengetriebenen Analysen und modernen Tools für erfolgreiche Kampagnen.",
+        "description-core": "Wir verbinden deine Marke gezielt mit deiner Zielgruppe und erzielen dabei messbare Resultate, nachhaltiges Wachstum sowie langfristige Kundenbindung durch relevante Inhalte.",
 
         "h3": {
           "text-1": "Bereit für",
@@ -185,54 +184,55 @@
         },
         "sub-description": "Gemeinsam entwickeln wir Strategien, die deine Zielgruppe erreichen.",
         "cta": "Kostenloses Beratungsgespräch",
+
         "skills": {
           "touchpoints": {
             "title": "Touchpoints-Auswahl",
-            "description": "Wähle die optimalen Kanäle, um deine Zielgruppe genau zum richtigen Zeitpunkt zu erreichen."
+            "description": "Wähle die richtigen Kanäle, um deine Zielgruppe punktgenau zu erreichen."
           },
           "organic-campaigns": {
             "title": "Organische Kampagnen",
-            "description": "Starte authentische und kreative Kampagnen, die deine Marke organisch ins Gespräch bringen."
+            "description": "Starte kreative Kampagnen, die deine Marke organisch bekannt machen."
           },  
           "paid-ads": {
             "title": "Bezahlte Werbung",
-            "description": "Erweitere deine Reichweite gezielt mit effizienten bezahlten Strategien auf digitalen Plattformen."
+            "description": "Erhöhe deine Reichweite effizient mit gezielten Paid Ads."
           },
           "social-media": {
             "title": "Social Media",
-            "description": "Stärke deine Markenpräsenz durch direkte Interaktion und gezielte Aktivitäten auf den Social-Media-Kanälen."
+            "description": "Stärke deine Marke durch direkte Interaktion auf Social Media."
           },
           "SEO-strategies": {
             "title": "SEO-Optimierung",
-            "description": "Steigere deine Online-Sichtbarkeit, indem du deine Website und Inhalte für Suchmaschinen optimierst."
+            "description": "Optimiere deine Website für bessere Suchmaschinen-Rankings."
           },
           "funnel-concepts": {
             "title": "Sales Funnel Konzepte",
-            "description": "Entwickle strukturierte Funnels, die Interessenten durch den gesamten Kaufprozess leiten."
+            "description": "Baue Sales Funnels, die Interessenten zuverlässig konvertieren."
           },
           "automation": {
             "title": "Marketing-Automatisierung",
-            "description": "Automatisiere deine Prozesse mit smarten Tools, um effizient Leads in Kunden zu verwandeln."
+            "description": "Automatisiere Prozesse, um Leads effizient in Kunden zu verwandeln."
           },
           "content-marketing": {
             "title": "Content Marketing",
-            "description": "Erstelle hochwertigen, wertvollen Content, der deine Zielgruppe informiert und begeistert."
+            "description": "Erstelle wertvollen Content, der deine Zielgruppe begeistert."
           },
           "email-marketing": {
             "title": "E-Mail Marketing",
-            "description": "Leads sind digitales Gold. Nutze zielgerichtete E-Mail-Kampagnen, um Beziehungen zu pflegen und Leads in loyale Kunden zu verwandeln."
+            "description": "Wandle Leads mit gezielten E-Mail-Kampagnen in treue Kunden - digitales Gold."
           },
           "analytics": {
             "title": "Analytics & Tracking",
-            "description": "Überwache und analysiere deine Kampagnen mit präzisen KPI's, um kontinuierlich zu optimieren."
+            "description": "Verfolge KPIs kontinuierlich, um deine Kampagnen zu optimieren."
           },
           "AI-marketing": {
             "title": "AI Marketing",
-            "description": "Setze künstliche Intelligenz ein, um Marketingprozesse zu personalisieren und weiter zu automatisieren."
+            "description": "Setze KI ein, um Marketingprozesse zu automatisieren."
           },
           "growth": {
             "title": "Exponentielle Wachstumsstrategien",
-            "description": "Skalieren dein Unternehmen nachhaltig mit innovativen, zukunftsweisenden Strategien für effektives Wachstum."
+            "description": "Skaliere dein Geschäft mit smarten zukunftsweisenden Wachstumsstrategien."
           }
         }
       }
