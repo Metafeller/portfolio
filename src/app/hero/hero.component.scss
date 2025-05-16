@@ -181,7 +181,7 @@
   .scroll-button {
     position: absolute;
     bottom: 450px; // Abstand vom unteren Rand
-    margin-left: 48px;
+    // margin-left: 48px;
     left: 5%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -196,6 +196,7 @@
     border-bottom-right-radius: 20px;
     border: 2px solid var(--accent-color);
     transition: background-color 0.3s, transform 0.3s;
+    top: 57%;
     
     &:hover {
         // background-color: var(--accent-color);
@@ -219,14 +220,14 @@
 
     // Oberer Teil der Linie
     .line-top {
-    height: 230px; // Länge des oberen Teils
+    height: 178px; // Länge des oberen Teils
     background-color: var(--accent-color);
     z-index: -1;
     }
 
     // Mittlerer Teil der Linie, welcher durch den Banner läuft
   .line-middle {
-    height: 65px; // Höhe, die dem Bannerbereich entspricht
+    height: 62px; // Höhe, die dem Bannerbereich entspricht
     background-color: var(--accent-color);
     filter: blur(3px); // Blur-Effekt für den Bannerbereich
     mix-blend-mode: multiply; // Lässt die Linie mit dem Hintergrund verschmelzen
@@ -254,7 +255,7 @@
 // Social Media Container rechts im Hero-Bereich
 .social-media-container {
   position: absolute;
-  top: 72%;
+  top: 74%;
   right: 6%;
   transform: translateY(-50%);
   display: flex;
@@ -330,18 +331,19 @@
     // background-color: var(--accent-color);
     position: relative;
     z-index: -1;
+    top: 73%;
 
     // Oberer Teil der Linie
     .line-top {
       // height: 134px;
-      height: 32px;
+      height: 12px;
       background-color: var(--accent-color);
       z-index: -1;
     }
 
     // Mittlerer Teil der Linie mit Blur-Effekt
     .line-middle {
-      height: 64px;
+      height: 62px;
       background-color: var(--accent-color);
       filter: blur(3px);
       mix-blend-mode: multiply;
@@ -392,14 +394,15 @@
 
 
   .animated-banner {
-    bottom: 80px;
-    transform: rotate(0deg);
+    bottom: 100px;
+    transform: rotate(-2deg);
   }
 
 
   .scroll-button {
     // left: -5%;
     bottom: 180px; // Abstand vom unteren Rand
+    top: 76%;
 
     .vertical-line {
       // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
@@ -407,7 +410,7 @@
     }
 
     .line-top {
-      height: 20px; // Länge des oberen Teils
+      height: 16px; // Länge des oberen Teils
       }
   
     .line-bottom {
@@ -419,6 +422,7 @@
   .social-media-container {
     // right: 5%;
     transform: translateY(-50%);
+    top: 64%;
 
     .email {
       display: none;
@@ -434,7 +438,7 @@
       height: 20px;
 
       .line-top {
-        height: 94px;
+        height: 88px;
       }
   
       .line-bottom {
@@ -490,6 +494,7 @@
   .scroll-button {
     // left: -5%;
     bottom: 380px; // Abstand vom unteren Rand
+    top: 49%;
 
     .vertical-line {
       // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
@@ -497,7 +502,7 @@
     }
 
     .line-top {
-      height: 220px; // Länge des oberen Teils
+      height: 320px; // Länge des oberen Teils
       }
   
     .line-bottom {
@@ -509,6 +514,7 @@
   .social-media-container {
     // right: 5%;
     transform: translateY(-50%);
+    top: 80%;
 
     .email {
       display: none;
@@ -524,7 +530,7 @@
       height: 200px;
 
       .line-top {
-        height: 110px;
+        height: 28px;
       }
   
       .line-bottom {
@@ -557,7 +563,7 @@
     }
 
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     span {
@@ -568,6 +574,18 @@
       flex-direction: row; /* Buttons horizontal für Tablets */
       button {
         width: auto;
+      }
+    }
+  }
+
+
+  .scroll-button {
+    top: 50%;
+
+    .vertical-line {
+  
+      .line-top {
+        height: 236px;
       }
     }
   }
@@ -585,17 +603,40 @@
       gap: 16px; 
 
     }
+
+    .vertical-line-right {
+      
+      .line-top {
+        height: 100px;
+      }
+    }
+
   }
 }
 
 
 /* Desktop Styles - 1025px bis 1440px */
 @media (min-width: 1025px) and (max-width: 1440px) {
+
+  .vertical-line {
+    .line-top {
+      height: 164px;
+    }
+  }
   
   .social-media-container {
+    top: 80%;
 
     .email {
       display: none;
+    }
+
+    .vertical-line-right {
+
+      .line-top {
+        height: 34px;
+      }
+      
     }
 
   }
@@ -613,6 +654,7 @@
         display: none;
       }
     }
+
   }
 }
 
@@ -628,6 +670,7 @@
         display: none;
       }
     }
+
   }
 }
 
