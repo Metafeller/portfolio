@@ -304,8 +304,7 @@
     "title": "Lass uns zusammenarbeiten",
     "subtitle": "Hast du ein Problem zu lösen?",
     "description": "Kontaktiere mich über dieses Formular für ein kostenloses Beratungsgespräch. Ich freue mich darauf, mehr über deine Ideen und Herausforderungen zu erfahren.",
-    "description-2": "Gemeinsam entwickeln wir innovative und maßgeschneiderte digitale Lösungen, die dein Business auf das nächste Level heben. Dein Erfolg ist meine Mission – zögere nicht und starte den nächsten Schritt mit mir und meinem Team.",
-    "callToAction": "Bist du ein Startup-Unternehmer oder solo? Brauchst du einen Web-Entwickler oder sogar ein ganzes Team? Legst du Wert auf Qualität und bewährte Methoden? Dann bist du hier genau richtig",
+    "callToAction": "Brauchst du einen Web-Entwickler oder ein ganzes Team? Legst du Wert auf Qualität und bewährte Methoden? Dann bist du hier genau richtig",
     "letsTalk": "Lass uns reden!",
     "characters": "Zeichen",
     "tooltip": "Bitte fülle alle Pflichtfelder aus!",
@@ -361,12 +360,12 @@
       "other": "Andere",
       "description": {
         "ai": "(KI-Agenten, KI-Content, KI-Automatisierung)",
-        "branding": "(Personen Marke, Positionierung, Brandbook)",
+        "branding": "(Personenmarke, Positionierung, Brandbook)",
         "marketing": "(Social Media Kampagnen, SEO, Paid-Ads)",
-        "web": "(Websites, Apps, SaaS, Marketing-Funnels etc.)",
+        "web": "(Websites, Apps, SaaS, Marketing-Funnels)",
         "automation": "(IT-Automatisierung und Prozessoptimierung)",
-        "carefree": "(Voller Serviceumfang 'Rundum-Sorglos-Paket')",
-        "other": "(Spezielle Lösung Anfragen)"
+        "carefree": "(Service + Wartung und Instandhaltung)",
+        "other": "(Allg. Anfragen z.B zu Dienstleistungsverträgen)"
       }
     },
     "privacy": {
@@ -396,9 +395,7 @@
     "buttonText": "Jetzt spenden",
     "h2": "Spenden Kampagne",
     "h3": "Mach mit bei der Bewegung",
-    "p": "Unsere Mission ist es, das Leben derjenigen zu verändern, die unter den harten Bedingungen von Armut, Missbrauch und Vernachlässigung leiden. In vielen Ländern werden Kinder misshandelt, haben keinen Zugang zu einer Schulbildung und leiden an Hunger. Unsere Vision ist es, diese Kinder zu retten – sie in die Schweiz zu bringen und ihnen eine neue Familie, Schutz und die Förderung zu bieten, die sie dringend benötigen.",
-    "p-2": "Doch damit hören wir nicht auf: Auch alleinerziehende Mütter und Frauen, die häuslicher Gewalt ausgesetzt sind, verdienen unsere Unterstützung, Sicherheit und eine Perspektive für ein besseres Leben.",
-    "p-3": "Mit deiner Spende schenkst du Hoffnung und veränderst nachhaltig Leben. Jeder Beitrag zählt – hilf uns, Brücken zu bauen und eine Zukunft voller Chancen zu schaffen.",
+    "p": "Unsere Mission ist es, das Leben derjenigen zu verändern, die unter den harten Bedingungen von Armut, Missbrauch und Vernachlässigung leiden.",
     "span": "Dein Beitrag zählt."
   },
   "middle": {

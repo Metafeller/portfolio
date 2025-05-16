@@ -303,8 +303,7 @@
     "title": "Let's work together",
     "subtitle": "Got a problem to solve?",
     "description": "Contact me using this form for a free consultation. I look forward to hearing more about your ideas and challenges.",
-    "description-2": "Together, we develop modern, innovative and tailor-made digital solutions that take your business to the next level. Your success is my mission – don't hesitate to take the next step with me and my team.",
-    "callToAction": "Are you a startup entrepreneur or working solo? Do you need a web developer or even an entire team? Do you prioritize quality and proven methods? Then you're exactly where you need to be",
+    "callToAction": "Do you need a web developer or even an entire team? Do you prioritize quality and proven methods? Then you're exactly where you need to be",
     "letsTalk": "Let’s talk!",
     "characters": "characters",
     "tooltip": "Please complete all required fields!",
@@ -395,9 +394,7 @@
     "buttonText": "Donate Now",
     "h2": "Fundraising Campaign",
     "h3": "Join the Movement",
-    "p": "Our mission is to change the lives of those suffering under the harsh conditions of poverty, abuse, and neglect. In many countries, children face maltreatment, lack access to education, and battle hunger. Our vision is to rescue these children – to bring them to Switzerland and provide them with a new family, protection, and the support they so desperately need.",
-    "p-2": "But our commitment doesn’t stop there: We also stand by single mothers and women affected by domestic violence, offering them the support, security, and opportunity for a better life they deserve.",
-    "p-3": "By donating, you bring hope and create lasting change. Every contribution matters – help us build bridges to a brighter future.",
+    "p": "Our mission is to change the lives of those suffering under the harsh conditions of poverty, abuse, and neglect.",
     "span": "Your contribution matters."
   },
   "middle": {
