@@ -93,7 +93,7 @@ export class FooterConfigService {
       ],
       contactMe: {
         emailIcon: '/svg-icons/social/mail.svg',
-        emailAddress: ' contact@taironman.com',
+        emailAddress: ' mail@metafeller.com',
         contactRequestIcon: '/svg-icons/art/feather-3.png', // Neue Icon-Property
         contactRequestText: 'Contact Request',
         buttonText: "Let's Talk ↗",
