@@ -392,10 +392,11 @@
   "personalMessage": "This is digital art at its finest. Every line of code was written by me. This website was developed with HTML, SCSS, CSS, JSON, JavaScript, TypeScript and Angular",
   "fundraising": {
     "buttonText": "Donate Now",
-    "h2": "Fundraising Campaign",
+    "h2": "Children Of Light",
     "h3": "Join the Movement",
     "p": "Our mission is to change the lives of those suffering under the harsh conditions of poverty, abuse, and neglect.",
-    "span": "Your contribution matters."
+    "p-core": "As it says in Ephesians 5:8, “For you were once darkness, but now you are light in the Lord. Walk as children of light.",
+    "span": "Matthew 19:14 Jesus said, “Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. - Your contribution matters 💚"
   },
   "middle": {
     "skillsTitle": "Superhero Skills",

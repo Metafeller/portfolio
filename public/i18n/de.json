@@ -390,13 +390,14 @@
   },
 
   "footer": {
-  "personalMessage": "Das ist digitale Kunst auf höchstem Niveau. Jede Zeile Code stammt aus meiner Feder. Diese Website wurde mit HTML, SCSS, CSS, JavaScript, TypeScript und Angular entwickelt.",
+  "personalMessage": "Das ist digitale Kunst. Jede Zeile Code stammt aus meiner Feder. Diese Website wurde mit HTML, SCSS, CSS, JavaScript, TypeScript und Angular entwickelt.",
   "fundraising": {
     "buttonText": "Jetzt spenden",
-    "h2": "Spenden Kampagne",
+    "h2": "Kinder des Lichts",
     "h3": "Mach mit bei der Bewegung",
     "p": "Unsere Mission ist es, das Leben derjenigen zu verändern, die unter den harten Bedingungen von Armut, Missbrauch und Vernachlässigung leiden.",
-    "span": "Dein Beitrag zählt."
+    "p-core": "Wie es bereits in Epheser 5:8 steht; Denn ihr wart früher Finsternis; nun aber seid ihr Licht in dem Herrn. Wandelt als Kinder des Lichts.",
+    "span": "Matthäus 19:14 Jesus sprach: Lasset die Kinder und wehret ihnen nicht, zu mir zu kommen; denn solchen gehört das Himmelreich. - Dein Beitag zählt 💚"
   },
   "middle": {
     "skillsTitle": "Superhelden Skills",

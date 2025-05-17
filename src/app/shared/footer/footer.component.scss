@@ -155,7 +155,7 @@
           margin-top: 16px;
 
           p {
-            font-size: 14px;
+            font-size: 16px;
             font-family: var(--font-family-second);
             font-weight: 300;
             padding: 8px;
@@ -335,6 +335,7 @@
           flex-direction: column;
           align-items: center;
           // padding-top: 128px;
+          margin-top: 16px;
 
           @include responsive(240px, 480px) {
             padding: 16px 8px;
@@ -349,13 +350,14 @@
           img {
             // width: 100%;
             // max-width: 256px;
-            width: 180px;
-            height: 180px;
+            width: 176px;
+            height: 176px;
             margin: 16px 0;
 
             border: solid 2px;
             border-radius: 50%;
             border-color: var(--accent-color);
+            object-fit: cover;
 
             transition: transform 0.3s ease;
             &:hover {
@@ -397,7 +399,7 @@
           }
 
           h2 {
-            font-size: 56px;
+            font-size: 48px;
             color: var(--accent-color);
             margin-top: auto;
             margin-bottom: 8px;
@@ -433,7 +435,7 @@
           }
 
           p {
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 16px;
             font-family: var(--font-family-second);
             font-weight: 300;
@@ -623,6 +625,7 @@
             text-decoration: none;
             transition: color 0.3s ease;
             cursor: pointer;
+            font-family: var(--font-family-second);
 
             &:hover {
               color: var(--accent-color);
@@ -808,7 +811,7 @@
       padding: 16px 64px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       font-family: var(--font-family-second);
-      font-size: 14px;
+      font-size: 16px;
       color: grey;
   
       .footer-bottom-left,
