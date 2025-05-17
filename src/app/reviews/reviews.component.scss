@@ -354,6 +354,7 @@
                 height: 60px;
                 top: -20px;
                 left: 40px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 480px */
@@ -362,6 +363,7 @@
                 height: 60px;
                 top: -20px;
                 left: 100px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 767px */
@@ -370,6 +372,7 @@
                 height: 80px;
                 top: -20px;
                 left: 112px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 1024px */
@@ -378,6 +381,7 @@
                 height: 80px;
                 top: -20px;
                 left: 128px;
+                display: none;
               }
 
               /* Mobile Ansicht - 900 bis 1024px */
@@ -386,6 +390,7 @@
                 height: 80px;
                 top: -20px;
                 left: 232px;
+                display: none;
               }
 
               /* Mobile Ansicht - 1366px */
@@ -394,6 +399,7 @@
                 height: 100px;
                 // top: -20px;
                 // left: 232px;
+                display: none;
               }
             }
   
@@ -434,6 +440,7 @@
                 height: 80px;
                 top: -40px;
                 left: 32px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 480px */
@@ -442,6 +449,7 @@
                 height: 80px;
                 top: -40px;
                 left: 100px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 767px */
@@ -450,6 +458,7 @@
                 height: 100px;
                 top: -40px;
                 left: 120px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 1024px */
@@ -458,6 +467,7 @@
                 height: 100px;
                 top: -40px;
                 left: 128px;
+                display: none;
               }
 
               /* Mobile Ansicht - 900 bis 1024px */
@@ -466,6 +476,7 @@
                 height: 100px;
                 top: -40px;
                 left: 232px;
+                display: none;
               }
 
               /* Mobile Ansicht - bis 1366px */
@@ -474,6 +485,7 @@
                 height: 140px;
                 // top: -40px;
                 // left: 232px;
+                display: none;
               }
             }
 
@@ -508,7 +520,7 @@
               @include responsive(240px, 320px) {
                 font-size: 12px;
                 max-width: 100%;
-                margin-top: 72px;
+                // margin-top: 72px;
                 margin-left: 0;
                 margin-right: 0;
                 margin-bottom: 0;
@@ -517,9 +529,9 @@
 
               /* Mobile Ansicht - bis 480px */
               @include responsive(321px, 480px) {
-                font-size: 15px;
+                font-size: 14px;
                 max-width: 100%;
-                margin-top: 72px;
+                // margin-top: 72px;
                 margin-left: 0;
                 margin-right: 0;
                 margin-bottom: 0;
@@ -528,20 +540,20 @@
 
               /* Mobile Ansicht - bis 767px */
               @include responsive(481px, 767px) {
-                font-size: 15px;
+                font-size: 14px;
                 max-width: 100%;
-                margin-top: 104px;
+                // margin-top: 104px;
                 margin-left: 0;
                 margin-right: 0;
                 margin-bottom: 0;
-                padding: 0px 0px;
+                padding: 8px 12px;
               }
 
               /* Mobile Ansicht - bis 1024px */
               @include responsive(768px, 1024px) {
                 font-size: 15px;
-                max-width: 100%;
-                margin-top: 104px;
+                max-width: 720px;
+                // margin-top: 104px;
                 margin-left: 0;
                 margin-right: 0;
                 margin-bottom: 0;
@@ -551,7 +563,7 @@
               /* Mobile Ansicht - bis 1366px */
               @include responsive(1025px, 1366px) {
                 // font-size: 15px;
-                max-width: 100%;
+                max-width: 720px;
                 // margin-top: 104px;
                 margin-left: 0;
                 margin-right: 0;
@@ -621,8 +633,8 @@
         // font-size: 24px;
   
         img {
-          width: 100%;
-          height: 100%;
+          width: 128%;
+          height: 128%;
           object-fit: cover;
         }
   
@@ -649,7 +661,8 @@
                 cursor: pointer;
 
                 &.active {
-                    background-color: var(--active-color, #0ff);
+                    // background-color: var(--active-color, #0ff);
+                    background-color: rgb(77, 114, 40);
                 }
             }
         }
