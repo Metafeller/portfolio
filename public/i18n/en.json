@@ -191,7 +191,7 @@
           },
           "organic-campaigns": {
             "title": "Organic Campaigns",
-            "description": "Engage authentically with creative, budget-free marketing."    
+            "description": "Launch creative campaigns that grow your brand organically."
           },  
           "paid-ads": {
             "title": "Paid Marketing",
@@ -199,35 +199,35 @@
           },
           "social-media": {
             "title": "Social Media",
-            "description": "Build your brand presence on platforms like Instagram & LinkedIn."
+            "description": "Build your brand presence on platforms like Instagram, Tik Tok & LinkedIn."
           },
           "SEO-strategies": {
             "title": "Search Engine Optimization (SEO)",
-            "description": "Increase visibility and attract more organic traffic."
+            "description": "Optimize your site for better search engine rankings."
           },
           "funnel-concepts": {
             "title": "Sales Funnel Concepts",
-            "description": "Develop structured funnels to guide prospects through every stage of the buying process."
+            "description": "Build automated sales funnel concepts that reliably convert prospects."
           },
           "automation": {
             "title": "Marketing Automation",
-            "description": "Convert visitors into loyal customers with targeted landing pages. Save time and resources with smart automation tools. "
+            "description": "Automate processes to turn leads into customers efficiently."
           },
           "content-marketing": {
             "title": "Content Marketing",
-            "description": "Create value-driven content to engage your audience. Inspire and inform with high-quality, engaging content."
+            "description": "Create valuable content that engages your audience."
           },
           "email-marketing": {
             "title": "Email Marketing",
-            "description": "Leads are digital Gold. Boost conversions and maintain relationships through emails."
+            "description": "Convert leads into loyal customers with targeted email campaigns."
           },
           "analytics": {
             "title": "Analytics & Tracking",
-            "description": "Leverage smart google tools for effective marketing and monetization. Track your campaign performance with actionable insights."
+            "description": "Continuously track KPIs to optimize your campaigns."
           },
           "AI-marketing": {
             "title": "AI Marketing",
-            "description": "Use artificial intelligence for automation and personalization."
+            "description": "Use AI to automate your marketing processes."
           },
           "growth": {
             "title": "Exponential Growth Strategies",
