@@ -68,7 +68,8 @@
     padding-right: 16px;
     list-style: none;
     display: flex;
-    gap: 32px;
+    // gap: 32px;
+    gap: 28px;
   }
 
 
@@ -76,7 +77,8 @@
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 20px;
+    // font-size: 20px;
+    font-size: 18px;
     position: relative; // Notwendig, damit das Pseudo-Element sich relativ zum Link positioniert
     cursor: pointer;
 
