@@ -80,6 +80,7 @@ export class FooterConfigService {
         // { icon: '/svg-icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: 'https://savasboas.com/blog/locations' },
         // { icon: '/svg-icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
         { icon: '/svg-icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: 'https://savasboas.com/blog/locations' },
+        // { icon: '/svg-icons/nation/sardinia.png', text: 'Sardinia', link: 'https://savasboas.com/blog/locations' },
         { icon: '/svg-icons/media/icons8-avengers-100.svg', text: 'Razor-Point', link: 'https://savasboas.com/blog/locations' }
       ],
       followMeOn: [
