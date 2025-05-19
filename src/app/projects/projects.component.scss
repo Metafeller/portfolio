@@ -252,30 +252,37 @@
             max-width: 90%;
             padding: 16px 8px;
             gap: 16px;
+            margin-bottom: 40px;
         }
 
         @media (min-width: 321px) and (max-width: 480px) {
             max-width: 90%;
             padding: 20px 12px;
             gap: 16px;
+            margin-bottom: 40px;
         }
 
         @media (min-width: 481px) and (max-width: 767px) {
             max-width: 90%;
             padding: 24px 16px;
             gap: 16px;
+            margin-bottom: 40px;
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
             max-width: 96%;
             padding: 32px 20px;
             gap: 16px;
+            margin-bottom: 80px;
         }
 
         @media (min-width: 1025px) and (max-width: 1366px) {
             max-width: 96%;
-            padding: 40px 24px;
-            gap: 16px;
+            // padding: 40px 24px;
+            padding: 32px 24px;
+            // gap: 16px;
+            gap: 8px;
+            margin-bottom: 80px;
         }
 
         .overlay-content {
@@ -351,7 +358,7 @@
   
     .project-number {
       font-family: var(--font-family);  
-      font-size: 120px; /* z. B. sehr groß laut Figma */
+      font-size: 100px; /* z. B. soll sehr groß sein laut Figma z.B. 120px*/
       color: var(--accent-color);
       margin: 16px;
 
@@ -364,21 +371,28 @@
       }
 
       @media (min-width: 481px) and (max-width: 767px) {
-        font-size: 64px;
+        // font-size: 64px;
+        font-size: 24px;
+        margin: 8px;
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 72px;
+        // font-size: 72px;
+        font-size: 48px;
+        margin: 8px;
       }
 
       @media (min-width: 1025px) and (max-width: 1366px) {
-        font-size: 80px;
+        // font-size: 80px;
+        font-size: 64px;
+        margin: 8px;
       }
     }
 
     .project-title {
       font-family: var(--font-family);
-      font-size: 48px;
+      // font-size: 48px;
+      font-size: 40px;
       color: #ffffff;
       margin: 16px;
 
@@ -397,19 +411,22 @@
       @media (min-width: 481px) and (max-width: 767px) {
         font-size: 32px;
         text-align: center;
-        margin-top: 8px;
+        // margin-top: 8px;
+        margin: 8px;
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
         font-size: 32px;
         text-align: center;
-        margin-top: 8px;
+        // margin-top: 8px;
+        margin: 8px;
       }
 
       @media (min-width: 1025px) and (max-width: 1366px) {
         font-size: 32px;
         text-align: center;
-        margin-top: 8px;
+        // margin-top: 8px;
+        margin: 8px;
       }
     }
 
@@ -424,25 +441,32 @@
       @media (min-width: 240px) and (max-width: 320px) {
         font-size: 16px;
         margin: 8px;
+        display: none;
       }
 
       @media (min-width: 321px) and (max-width: 480px) {
         font-size: 20px;
         margin: 8px;
+        display: none;
       }
 
       @media (min-width: 481px) and (max-width: 767px) {
         font-size: 22px;
         margin: 8px;
+        display: none;
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 24px;
+        // font-size: 24px;
+        font-size: 16px;
         margin: 8px;
       }
 
       @media (min-width: 1025px) and (max-width: 1366px) {
-        font-size: 28px;
+        // font-size: 28px;
+        font-size: 22px;
+        margin: 8px;
+        display: none;
       }
     }
 
@@ -451,7 +475,7 @@
       font-size: 16px;
       color: #ffffff;
       line-height: 24px;
-      margin: 16px;
+      margin: 8px;
 
       @media (min-width: 240px) and (max-width: 320px) {
         font-size: 13px;
@@ -468,15 +492,18 @@
       @media (min-width: 481px) and (max-width: 767px) {
         font-size: 15px;
         margin: 0;
+        display: none;
       }
 
       @media (min-width: 768px) and (max-width: 1024px) {
-        font-size: 16px;
+        // font-size: 16px;
+        font-size: 12px;
         margin: 0;
       }
 
       @media (min-width: 1025px) and (max-width: 1366px) {
-        font-size: 16px;
+        font-size: 14px;
+        // font-size: 14px;
         margin: 0;
       }
     }
@@ -617,7 +644,8 @@
       }
 
       @media (min-width: 481px) and (max-width: 767px) {
-        margin-top: 20px;
+        // margin-top: 20px;
+        margin-top: 8px;
         max-width: 96%;
       }
 
@@ -627,7 +655,8 @@
       }
 
       @media (min-width: 1025px) and (max-width: 1366px) {
-        margin-top: 24px;
+        // margin-top: 24px;
+        margin-top: 12px;
         max-width: 100%;
       }
     }
@@ -1076,28 +1105,31 @@
     
             .project-item {
             flex-direction: column;
-            padding: 32px;
+            padding: 16px;
             font-size: 14px;
             border-radius: 32px; /* Abgerundet für Mobil */
             }
     
             h2 {
-            font-size: 56px; /* Reduzierte Schriftgröße */
+            font-size: 40px; /* Reduzierte Schriftgröße */
             text-align: center;
             }
     
             h3 {
-            font-size: 24px;
+            // font-size: 24px;
+            font-size: 20px;
             align-items: center;
             }
     
             h4 {
-            font-size: 24px;
+            // font-size: 24px;
+            font-size: 18px;
             text-align: center;    
             }
     
             p {
-            font-size: 16px;
+            // font-size: 16px;
+            font-size: 14px;
             text-align: center;
             }
         }
