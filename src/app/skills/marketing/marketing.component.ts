@@ -88,13 +88,13 @@ export class MarketingComponent implements OnInit, OnDestroy, AfterViewInit {
   
   loadSkills(): void {
     this.skills = [
-      this.createSkill('touchpoints', '/svg-icons/marketing/channels.png'),
+      this.createSkill('touchpoints', '/svg-icons/marketing/touchpoints.png'),
       this.createSkill('organic-campaigns', '/svg-icons/marketing/organic-sprout.png'),
       this.createSkill('paid-ads', '/svg-icons/marketing/meta.png'),
       this.createSkill('social-media', '/svg-icons/marketing/social-media-advertising.png'),
       this.createSkill('SEO-strategies', '/svg-icons/marketing/seo.png'),
       this.createSkill('funnel-concepts', '/svg-icons/marketing/sales-funnel.png'),
-      this.createSkill('automation', '/svg-icons/marketing/lead-generation.png'),
+      this.createSkill('automation', '/svg-icons/marketing/channels.png'),
       this.createSkill('content-marketing', '/svg-icons/marketing/digital-content.png'),
       this.createSkill('email-marketing', '/svg-icons/marketing/lead-generation.png'),
       this.createSkill('analytics', '/svg-icons/marketing/up-arrow.png'),

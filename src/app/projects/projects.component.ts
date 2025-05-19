@@ -96,7 +96,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'CSS', icon: '/svg-icons/overlay/css.svg' },
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
-        githubUrl: 'https://example.com/github-join',
+        githubUrl: 'https://github.com/Metafeller/Join-board',
         liveUrl: 'https://example.com/live-join',
         imageUrl: '/images/projects/frame-join-cms.png',
       },
@@ -109,7 +109,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'CSS', icon: '/svg-icons/overlay/css.svg' },
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
-        githubUrl: 'https://example.com/github-el-pollo-loco',
+        githubUrl: 'https://github.com/Metafeller/Pollo-Loco',
         liveUrl: 'https://example.com/live-el-pollo-loco',
         imageUrl: '/images/projects/frame-pollo-loco.png',
       },
@@ -124,7 +124,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'TypeScript', icon: '/svg-icons/overlay/typescript.svg' },
         ],
         githubUrl: 'https://github.com/Metafeller/portfolio',
-        liveUrl: 'https://example.com/live-da-bubble',
+        liveUrl: 'https://metafeller.com/',
         imageUrl: '/images/projects/frame-da-bubble.png',
       },
 
@@ -232,7 +232,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
   // Hier wird die Weiterleitung zu einer Unterseite/Subdomain umgesetzt: Hier kommt meine Hauptwebseite mit savasboas.com/portfolio/projects
   openMoreProjects(): void {
-    window.open('https://example.com/all-projects', '_blank'); // Link zu einer Beispiel-Seite
+    window.open('https://github.com/Metafeller', '_blank'); // Link zu einer Beispiel-Seite
   }
 
 }
