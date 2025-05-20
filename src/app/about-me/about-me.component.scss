@@ -40,7 +40,10 @@
             img { 
               // Maximal 568px für das about me Bild
                 width: 480px;
-                height: 480px;
+                // height: 480px;
+                height: 560px;
+                object-fit: cover;
+
                 // width: 100%;
                 // max-width: 568px;
                 border-radius: 32px; // Abrundung der Ecken, wie im Screenshot
@@ -48,6 +51,7 @@
                 transition: transform 0.3s ease-in-out; // Hinzufügen eines leichten Zoom-Effekts für das Bild beim Hover
                 margin-left: 0px;
                 margin-bottom: 40px;
+                
             }
 
             // Hover Effekt für das Bild (Skalieren)
@@ -59,10 +63,17 @@
             .vector-background {
                 // background-color: tomato;
                 position: absolute;
+
+                // top: 0;
+                // left: -80px;
+                // right: 0;
+                // bottom: 240px;
+
                 top: 0;
                 left: -80px;
-                right: 0;
-                bottom: 240px;
+                right: -60px;
+                bottom: 10px;
+
                 // background-image: linear-gradient(135deg, rgba(0, 255, 174, 0.5) 0.5px, transparent 0.5px);
                 // background-size: 10px 10px;
                 background-image: url('./../../../public/vectors/img-bg-vector.svg'); // Verwende hier den richtigen Pfad zur SVG-Datei

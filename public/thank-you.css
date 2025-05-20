@@ -32,6 +32,9 @@
 
 .avatar {
     border-radius: 8px;
+    width: 480px;
+    /* height: 480px; */
+    object-fit: cover;
 }
 
 h1 {
@@ -42,7 +45,8 @@ h1 {
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
+    padding: 0px 32px;
 }
 
 .button {
@@ -174,7 +178,7 @@ footer {
     }
 
     p {
-      font-size: 16px;
+      font-size: 14px;
     }
     h1 {
       font-size: 24px;
@@ -203,7 +207,7 @@ footer {
     }
 
     p {
-      font-size: 17px;
+      font-size: 16px;
     }
     h1 {
       font-size: 26px;
@@ -226,7 +230,7 @@ footer {
       margin-bottom: 36px;
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
     h1 {
       font-size: 28px;
@@ -249,7 +253,8 @@ footer {
       margin-bottom: 40px;
     }
     p {
-      font-size: 18px;
+      font-size: 16px;
+      padding: 0px 32px;
     }
     h1 {
       font-size: 30px;
