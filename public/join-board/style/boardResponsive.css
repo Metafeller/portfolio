@@ -1,0 +1,207 @@
+.responsive-dots {
+    width: 20px;
+    height: 20px;
+    align-items: flex-end;
+    display: none;
+}
+
+.miniMenu {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: var(--deep-grey);
+    border-radius: 16px;
+    display: none;
+}
+.miniMenu span {
+    cursor: pointer;
+}
+.miniMenu span:hover {
+    text-decoration: underline;
+}
+.featTxt {
+    font-weight: bold;
+}
+
+#addTaskMobile {
+    display: none;
+}
+
+#addTaskMobile {
+    width: 40px;
+    height: 40px;
+
+}
+.flexhelper {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 1230px) {
+    .main-content {
+        flex-wrap: wrap;
+        margin-left: 260px;
+    }
+    .searchform {
+        justify-content: space-between;
+    }
+    .addTaskForm {
+        width: 100%;
+    }
+    .addtaskpopup {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 830px) {
+    .responsive-dots {
+        display: flex;
+    }
+    .miniMenu {
+        display: flex;
+    }
+    #addTaskMobile {
+        display: block;
+    }
+    #addTaskDesktop {
+        display: none;
+    }
+    .boardsections {
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding-left: 20px;
+        margin-bottom: 120px;
+    }
+    .progress-window {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        flex-grow: 1;
+        gap: 16px;
+        /* width: 252px; */
+        flex-wrap: nowrap;
+    }
+    #awaitingfeedback, #inprogress, #todo, #done {
+        display: flex;
+    }
+    .task-cards {
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+    .boardsection-mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+    }
+    .boardsection {
+        display: none;
+    }
+
+
+}  
+
+@media (max-width: 740px) {
+
+}    
+
+@media (max-width: 850px) {
+    .header-left {
+        display: none;
+    }
+    .header-top {
+        width: 100%;
+    }
+    .header-top,
+    .boardsections,
+    .main-content {
+        margin-left: 0;
+    }
+    .footer-mobile {
+        display: block !important;
+    }
+    .main-content {
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .inputfieldfindtask {
+        width: 100%;
+    }
+    .addTaskForm {
+        width: 100%;
+    }
+    .joinLogo {
+        display: block;
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        top: 16px;
+        z-index: 20;
+        left: 16px;
+    }
+    p.subheader-contact {
+        display: none;
+    }
+    .boardsections {
+        padding-bottom: 120px;
+    }
+}  
+
+
+@media (max-width: 830px) {
+    .sectionstodrop {
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .inputfieldfindtask {
+        width: 250px;
+    }
+    .addTaskForm {
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        margin-left: 0;
+    }
+    .main-content {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 41px;
+    }
+    .flexhelper {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
+        width: 252px;
+    }
+    .singletaskpopup {
+        width: 80%;
+    }
+    h2.taskTitleOverlay {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .fullnames {
+        padding: 20px 6px;
+    }
+    span.subtasktitles {
+        font-size: 14px;
+    }
+}
+
+

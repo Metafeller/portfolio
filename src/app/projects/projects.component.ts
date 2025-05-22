@@ -97,7 +97,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
         githubUrl: 'https://github.com/Metafeller/Join-board',
-        liveUrl: 'https://example.com/live-join',
+        liveUrl: 'https://metafeller.com/join-board/',
         imageUrl: '/images/projects/frame-join-cms.png',
       },
       {

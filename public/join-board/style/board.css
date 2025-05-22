@@ -1,0 +1,1345 @@
+:root {
+  --orange: #FF7A00;
+  --pink: #FF5EB3;
+  --blue: #6E52FF;
+  --violet: #9327FF;
+  --babyblue: #00BEE8;
+  --background-prio: #FFA800;
+  --body-background: #F6F7F8;
+  --body-background-grey: #f5f5f5;
+  --border-grey: #d1d1d1;
+  --ligh-tgreen: #1FD7C1;
+  --dark-orange: #FF745E;
+  --brown: #FFA35E;
+  --pink: #FC71FF;
+  --med-orange: #FFC701;
+  --med-blue: #0038FF;
+  --emailblau: #007CEE;
+  --neon-green: #C3FF2B;
+  --yellow: #FFE62B;
+  --light-red: #FF4646;
+  --light-orange: #FFBB2B;
+  --deep-grey: #2A3647;
+  --deepest-grey: #091931;
+  --button-hover: #29ABE2;
+  --footer-grey: #A8A8A8;
+  --links-grey: #cdcdcd;
+  --black: #000000;
+  --white: #ffffff;
+  --technical-green: #1FD7C1;
+  --user-story-blue: #0038FF;
+}
+
+body {
+ background-color: var(--body-background); 
+ width: 100%;
+ overflow-x: hidden;
+}
+
+.iphone-se {
+  width: 375px !important;
+}
+
+
+.boardsection-mobile {
+  display: none;
+}
+
+.sectionstodrop {
+  background-color:var(--body-background); 
+  height: 100vh; 
+}
+
+.drop-indicator {
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  height: 150px;
+  margin-bottom: 10px;
+  width: 230px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.progress-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* Höhe entsprechend des übergeordneten Elements */
+  flex-grow: 1;
+  gap: 16px;
+  /* width: 252px; */
+}
+
+.joinLogo {
+  display: none;
+}
+
+#awaitingfeedback,
+#inprogress,
+#todo,
+#done {
+  width: 252px;
+}
+
+h1 {
+  margin-left: 0 !important;
+}
+
+.no-copy {
+    user-select: none;
+    -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+}
+
+.draggable-true {
+    cursor: grab;
+}
+
+
+.no-tasks-banner {
+  width: 190px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #b6b5b5;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 2px dashed #d6d5d5; 
+}
+
+.no-tasksfound-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 50px;
+  background-color: #f0f0f0;
+  color: #b6b5b5;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2px dashed #d6d5d5;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+/* Optional: Stellt sicher, dass der Container nicht größer als der Viewport ist */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+/*Style für das Editieren der task  */
+.closeXaddtask {
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  height: 32px;
+  width: 32px;
+}
+
+.closeXaddtask:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+.edit-task-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  width: 460px;
+  height: 770px;
+  border-radius: 24px;
+  padding: 20px;
+  overflow-y: auto;
+ 
+ 
+}
+
+.editTaskTitle {
+  
+  width: 450px;
+  color: black;
+  font-family: 'Inter';
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(117, 115, 115, 0.2);
+    height: 40px;
+    padding-left: 10px;
+   
+}
+
+.editTaskDescription {
+  color: black;
+  font-family: 'Inter';
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(117, 115, 115, 0.2);
+    height: 120px;
+    width: 450px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.editDueDate {
+  color: black;
+  font-family: 'Inter';
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 450px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(117, 115, 115, 0.2);
+    height: 40px;
+    padding-left: 10px;
+}
+
+
+.taskFormEdit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.prioFlexEdit {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.OKbutton {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #2A3647;
+  width: 90px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+.Okbuttonposition {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.OKbutton:hover {
+  background-color: var(--babyblue);
+}
+
+.addTaskPrioButtonEdit {
+  width: 136px;
+    height: 56px;
+    border-radius: 10px;
+    gap: 8px;
+    background-color: var(--white);
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.addTaskSubtasksEdit {
+  margin-bottom: 20px;
+}
+
+.subtasklistedit {
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 450px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+ 
+}
+
+.subtaskedit {
+  width: 438px;
+  padding-left: 10px;
+  margin-top: 10px;
+  
+  height: 30px;
+  border-radius: 10px;
+ 
+  line-height: 20px; /* Höhe gleich der Zeilenhöhe für vertikale Zentrierung */
+  list-style-position: inside; 
+}
+
+.subtasklistedit:hover {
+  background-color: rgba(150, 148, 148, 0.2);
+ 
+}
+
+.no-hover .subtasklistedit:hover {
+  background-color: transparent !important; 
+}
+
+.edit-subtask-input {
+  width: 350px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.subtask-input-container {
+  
+  display: flex;
+  align-items: center;
+}
+
+.editanddeletebuttonsub {
+  margin-top: 10px;
+}
+
+#subtasks {
+  flex-grow: 1;
+  padding: 5px;
+  padding-right: 30px; /* Platz für das Icon */
+  border-radius: 5px;
+}
+
+.icons-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: -65px; /* Verschiebt die Icons ins Eingabefeld */
+}
+
+.clear-subtask-icon {
+  cursor: pointer;
+  width: 25px;
+  height: 35px;
+}
+
+.add-subtask-icon {
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(18%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(91%) contrast(86%);
+}
+
+.hidden {
+  display: none;
+}
+
+.addTaskAssignedToButtonEdit {
+  width: 450px;
+}
+
+
+.inputsubtaskedit {
+  padding-right: 30px; 
+  width: 450px;
+  box-sizing: border-box;
+  border: 1px solid var(--border-grey);
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: 10px 30px 10px 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: 'Inter';
+  
+}
+
+.divideredit {
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+
+/*Style Boardseite Progressbar  */
+.Progress {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+ 
+  width: 55%;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+
+}
+
+.progress-bar-container .progress-bar::after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the progress bar */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.progress-bar-container .progress-bar:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3D84FF; /* Farbe des Fortschrittsbalkens */
+  transition: width 0.3s ease-in-out;
+  
+}
+
+.subtask-progress {
+  width: 100px;
+  white-space: nowrap;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.subtasks-container {
+  margin-bottom: 40px;
+}
+
+.taskCategoryHTML {
+  font-size: 24px;
+  margin-left: -15px;
+  
+}
+
+.subtaskhtml {
+  margin-bottom: 20px;
+}
+
+.subtask-item {
+  
+  margin-bottom: 20px;
+  border-radius: 10px;
+  
+  display: flex;
+  align-items: center; /* Aligns the items in the center vertically */
+  
+
+  
+ 
+}
+
+.subtask-item label {
+  display: flex;
+  align-items: flex-start; 
+  height: auto; /* Ermöglicht, dass das Label wächst, wenn der Inhalt es erfordert */
+  max-height: 4.5em; /* Beschränkt die Höhe auf etwa 3 Zeilen (basierend auf einer line-height von 1.5em) */
+  overflow-y: auto; /* Zeigt eine Scroll-Leiste an, wenn der Inhalt die max-height überschreitet */
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.subtasktitles {
+ 
+  display: block;
+  line-height: 1.5em;
+  
+}
+
+
+
+.styled-checkbox {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -1; 
+  cursor: pointer;
+
+}
+
+.styled-checkbox + span {
+  align-items: flex-start;
+  position: relative;
+}
+
+.styled-checkbox + span::before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #fff;
+  border: 2px solid #3a3a3a;
+  border-radius: 3px;
+  margin-right: 8px;
+ 
+  margin-top: 3px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.styled-checkbox:checked + span::before {
+  content: '✔';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px ;
+  height: 15px ;
+  background-color: #fff;
+  border: 2px solid #3a3a3a;
+  border-radius: 3px;
+  color: #3a3a3a;
+  
+  line-height: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+
+
+
+
+.dueDate {
+  margin-left: 20px;
+  color: #000000;
+}
+
+.taskPriority {
+  margin-left: 20px;
+  color: #000000;
+}
+
+.Subtasks {
+  margin-bottom: 20px;
+}
+
+.taskTitleOverlay {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 32px;
+ 
+}
+
+.AssignedTitle {
+  margin-bottom: 10px;
+}
+
+.assignedtoItem {
+  margin: 10px;
+}
+
+.editanddeletetask {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+}
+
+.editbuttontask {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../IMGicons/edit.svg);
+  background-repeat: no-repeat;
+  background-position: left 1px center; 
+  cursor: pointer;
+  width: 44px;
+  height: 24px;
+  padding-left: 30px; 
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--deep-grey);
+}
+
+.deletebuttontask {
+  background-image: url(../IMGicons/delete.svg);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 24px;
+  padding-left: 24px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--deep-grey);
+  border-right: 1px solid grey;
+  padding-right: 20px;
+  
+}
+
+.deletebuttontask:hover {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(85%) saturate(509%) hue-rotate(174deg) brightness(95%) contrast(92%);
+}
+
+.editbuttontask:hover {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(85%) saturate(509%) hue-rotate(174deg) brightness(95%) contrast(92%);
+}
+
+
+/*Style Boardseite einzelne Tasks  */
+.task-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  margin: 10px 0;
+  cursor: grab;
+  gap: 24px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+  background-color: var(--white);
+  flex: 0 0 240px;
+}
+
+.task-cards:active {
+  cursor: grabbing !important;
+  -webkit-animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+@keyframes rotate-90-cw {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(20deg);
+            transform: rotate(20deg);
+  }
+}
+
+#task-card {
+  width: 240px !important;
+  flex: 0 0 240px !important;
+}
+
+
+.task-title {
+  color: var(--deep-grey);
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.task-description {
+  color: rgba(0, 0, 0, 0.3);
+  margin-left: 15px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; 
+}
+
+.taskpriority {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin-right: 20px;
+margin-bottom: 25px;
+}
+
+
+
+.technical-green {
+ 
+   text-align: center;
+    background-color: var(--technical-green);
+    color: var(--white);
+    width: 60%;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.user-story-blue {
+  
+   text-align: center;
+    background-color: var(--user-story-blue);
+    color: var(--white);
+    width: 45%;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.assignedTo-container{
+  display: flex;
+  align-items: center;
+  
+}
+
+.fullnames {
+  padding: 20px;
+}
+
+.fullname {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 10px; /* Abstand zwischen den Namen und den Avataren */
+  white-space: nowrap; 
+}
+
+.avatarsinbig {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatarsinbig .assignedtoItem {
+  margin-left: 0; /* Entfernt die Überlappung innerhalb des .avatarsinbig Containers */
+}
+
+
+
+.assignedToHTML {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.assignedtoavatar {
+  font-weight: 400;
+}
+
+.assignedtoItem {
+  border: 1px solid white;
+  position: relative;
+  margin-left: -20px; /* Überlappung der Avatare */
+  
+}
+
+.assignedtoItem:first-child {
+  margin-left: 0; /* Entfernt die Überlappung beim ersten Avatar */
+}
+
+.main-content {
+    max-width: 1880px;
+    margin-top: 80px;
+    margin-left: 296px; 
+    padding: 20px;
+    background-color: var(--body-background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content p {
+    margin-bottom: 32px;
+}
+
+h1, h2, p {
+    color: var(--deep-grey);
+}
+
+.toast {
+    background-color: var(--deepest-grey);
+    color: var(--white);
+    border-radius: 20px;
+    z-index: 99;
+    width: 326px;
+    height: 60px;
+    margin: 0 auto;
+    bottom: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.toast-text {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.laoding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    --uib-size: 37px;
+    --uib-color: black;
+    --uib-speed: .9s;
+    --uib-bg-opacity: .1;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    transform-origin: center;
+    overflow: visible;
+  }
+
+  .car {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 15, 85;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: travel var(--uib-speed) linear infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.75s ease;
+  }
+
+  .track {
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+    transition: stroke 0.75s ease;
+  }
+
+/* ANIMATION */
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-out-bottom {
+	-webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-out-right {
+	-webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.slide-in-right {
+	-webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Keyframes */
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes slide-out-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+  }
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes travel {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dashoffset: -100;
+    }
+  }
+/* Animation & Spinner ende */
+
+
+/*Style für das Suchfeld */
+
+.searchform {
+  margin-top: 30px;
+ 
+  display: flex;
+}
+
+.addtaskbutton {
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 21px;
+  color: var(--white);
+  width: 180px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--deep-grey);
+  border: unset;
+  margin-left: 20px;
+  
+}
+
+.addtaskbutton:hover {
+  background-color: var(--babyblue);
+}
+
+
+
+.inputfieldfindtask {
+  width: 312px; 
+  height: 48px;
+  padding: 0 60px 0 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 20px;
+  
+ 
+}
+
+.inputfieldfindtask::placeholder {
+ 
+  color: rgb(212, 206, 206); /* Custom placeholder color */
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.background-image {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('../IMGicons/boardicons/search.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  
+}
+
+.background-image:hover {
+  background-color: rgb(177, 175, 175, 0.2);
+  border-radius: 20px;
+
+}
+
+.background-image:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.divider {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: #ccc;
+  margin-right: 5px;
+}
+
+/*Style für die To do In Progress etc. Sektion */
+.boardsections {
+  max-width: 1920px;
+  margin-left: 260px; 
+  background-color: var(--body-background);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.boardsection {
+  width: 232px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boardsection img {
+ cursor: pointer;
+}
+
+.boardsection img:hover {
+  filter: invert(74%) sepia(11%) saturate(686%) hue-rotate(151deg) brightness(96%) contrast(92%);
+}
+
+.boardsectiontext {
+  width: 200px;
+  margin-right: 120px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  color: #42526E;
+  font-size: 20px;
+  font-weight: 700;
+  
+}
+
+.boardsectiontextdone {
+  color: #42526E;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*Style für das Add Task Overlay  */
+
+.overlayaddtask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(65, 64, 64, 0.2);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#addtaskpopup {
+  width: 100%;
+  height: 100%;
+}
+
+.addtaskpopup {
+  background-color: var(--body-background-grey);
+  width: 1116px;
+  height: 870px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+
+
+/*Style für das Single Task Overlay  */
+
+.overlaysingletask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(65, 64, 64, 0.2);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singletaskpopup {
+  background-color: white;
+  height: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500px;
+  
+  overflow: hidden; 
+}
+
+
+
+.single-task-content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 500px;
+  height: 740px;
+  border-radius: 24px;
+  overflow-y: auto;
+}
+
+
+.tooltip {
+  display:inline-block;
+  position:relative;
+  border-bottom:1px dotted #666;
+  text-align:left;
+}
+
+.tooltip .top {
+  min-width:200px;
+  top:-20px;
+  left:50%;
+  transform:translate(-50%, -100%);
+  padding:10px 20px;
+  color:#444444;
+  background-color:#EEEEEE;
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .top {
+  visibility:visible; opacity:1;
+}
+
+.tooltip .top i {
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+.tooltip .top i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background-color:#EEEEEE;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+}
+
+
+
+.column {
+  width: 100px;
+  height: 200px;
+  border: 1px solid grey;
+
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.column.highlight {
+  background-color: yellow;
+}
+
+/* Menüstandard-Einstellungen */
+.miniMenu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Sichtbar und animiert */
+.miniMenu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.responsive-dots {
+  cursor: pointer;
+}
+
+a.responsive-dots {
+  cursor: pointer;
+}
+
+span.featTxt {
+  padding-bottom: 6px;
+  text-decoration: none;
+}
+
+.featTxt {
+  text-decoration: none;
+}
+
+.featTxt:hover {
+  text-decoration: none;
+}
+
+span.mini-menu {
+  padding-bottom: 6px;
+}
+
+span.mini-menu a {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+span.mini-menu a:hover {
+  text-decoration: underline;
+}
+
+
+/* Versteckt die horizontale Scrollbar */
+.progress-window {
+  overflow-x: scroll; /*Needed*/
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.progress-window::-webkit-scrollbar {
+  display: none; 
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.Progress .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  margin-bottom: 55px;
+}
+
+.Progress:hover .tooltiptext {
+  visibility: visible;
+}
+
+
