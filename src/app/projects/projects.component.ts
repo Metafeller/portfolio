@@ -110,7 +110,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
         githubUrl: 'https://github.com/Metafeller/Pollo-Loco',
-        liveUrl: 'https://example.com/live-el-pollo-loco',
+        liveUrl: 'https://metafeller.com/pollo-loco/',
         imageUrl: '/images/projects/frame-pollo-loco.png',
       },
       {
