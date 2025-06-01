@@ -76,7 +76,7 @@ export class FooterConfigService {
       creativeLocations: [
         { icon: '/svg-icons/nation/deutschland.png', text: 'Germany', link: 'https://savasboas.com/blog/locations' },
         { icon: '/svg-icons/nation/schweiz.png', text: 'Switzerland', link: 'https://savasboas.com/blog/locations' },
-        { icon: '/svg-icons/nation/spanien.png', text: 'Tenerife', link: 'https://savasboas.com/blog/locations' },
+        // { icon: '/svg-icons/nation/spanien.png', text: 'Tenerife', link: 'https://savasboas.com/blog/locations' },
         // { icon: '/svg-icons/nation/gran-canaria-islands.png', text: 'Gran Canaria', link: 'https://savasboas.com/blog/locations' },
         // { icon: '/svg-icons/nation/vereinigte-arabische-emirate.png', text: 'Dubai (VAE)', link: '#' },
         // { icon: '/svg-icons/nation/northern-cyprus.png', text: 'Northern Cyprus', link: 'https://savasboas.com/blog/locations' },
@@ -87,10 +87,10 @@ export class FooterConfigService {
         { icon: '/svg-icons/social/github.svg', text: 'GitHub', link: 'https://github.com/Metafeller' },
         { icon: '/svg-icons/social/linkedin.svg', text: 'LinkedIn', link: 'https://www.linkedin.com/' },
         { icon: '/svg-icons/social/instagram.svg', text: 'Instagram', link: 'https://www.instagram.com/savasboas/#' },
-        { icon: '/svg-icons/social/twitterx.svg', text: 'Twitter X', link: 'https://x.com/savasboas_' }
-        // { icon: '/svg-icons/media/discord.png', text: 'Discord', link: 'https://discord.com/' },
-        // { icon: '/svg-icons/media/tiktok.png', text: 'TikTok', link: 'https://www.tiktok.com/@savasboas' },
-        // { icon: '/svg-icons/media/youtube.png', text: 'YouTube', link: 'https://www.youtube.com/' }
+        { icon: '/svg-icons/social/twitterx.svg', text: 'Twitter X', link: 'https://x.com/savasboas_' },
+        { icon: '/svg-icons/media/discord.png', text: 'Discord', link: 'https://discord.com/' },
+        { icon: '/svg-icons/media/tiktok.png', text: 'TikTok', link: 'https://www.tiktok.com/@savasboas' },
+        { icon: '/svg-icons/media/youtube.png', text: 'YouTube', link: 'https://www.youtube.com/' }
       ],
       contactMe: {
         emailIcon: '/svg-icons/social/mail.svg',
