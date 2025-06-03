@@ -220,7 +220,8 @@
 
     // Oberer Teil der Linie
     .line-top {
-    height: 178px; // Länge des oberen Teils
+    // height: 178px; // Länge des oberen Teils
+    height: 226px;
     background-color: var(--accent-color);
     z-index: -1;
     }
@@ -255,7 +256,8 @@
 // Social Media Container rechts im Hero-Bereich
 .social-media-container {
   position: absolute;
-  top: 74%;
+  // top: 74%;
+  top: 77%;
   right: 6%;
   transform: translateY(-50%);
   display: flex;
@@ -336,7 +338,8 @@
     // Oberer Teil der Linie
     .line-top {
       // height: 134px;
-      height: 12px;
+      // height: 12px;
+      height: 8px;
       background-color: var(--accent-color);
       z-index: -1;
     }
