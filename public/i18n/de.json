@@ -378,7 +378,7 @@
       "default": "Sag Hallo 😊"
     },
     "errorName": "Bitte gib einen gültigen Namen ein.",
-    "errorEmail": "Bitte gib eine gültige E-Mail ein.",
+    "errorEmail": "Bitte gib eine gültige E-Mail ein mit @ und z.B .de oder .com etc.",
     "errorWebsite": "Bitte gib eine gültige Domain ein.",
     "errorWebsite-2": "Bitte ohne www.",
     "errorWebsite-3": "z.B. maxmustermann.com",

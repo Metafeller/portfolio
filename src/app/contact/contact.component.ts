@@ -26,8 +26,18 @@ export class ContactComponent implements OnInit, OnDestroy {
   formDataCache: any = null; // Um die Formulardaten zwischenzuspeichern
 
   contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(40), Validators.pattern(/^[a-zA-Z\s]*$/)]),
-    email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(40)]),
+    name: new FormControl('', [
+      Validators.required, 
+      Validators.minLength(2), 
+      Validators.maxLength(40), 
+      Validators.pattern(/^[a-zA-Z\s]*$/)
+    ]),
+    email: new FormControl('', [
+      Validators.required, 
+      Validators.email, 
+      Validators.maxLength(40),
+      Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(de|com|ch|at|io|ai|it|es|dev|tr)$/i)
+    ]),
 
     // NEU: Radiobutton-Gruppe: "Do you have a website?"
     hasWebsite: new FormControl('', [Validators.required]),
