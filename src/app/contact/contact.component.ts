@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       Validators.required, 
       Validators.email, 
       Validators.maxLength(40),
-      Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(de|com|ch|at|io|ai|it|es|dev|tr)$/i)
+      Validators.pattern(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(de|com|ch|at|io|ai|it|es|dev|tr|li)$/i)
     ]),
 
     // NEU: Radiobutton-Gruppe: "Do you have a website?"
