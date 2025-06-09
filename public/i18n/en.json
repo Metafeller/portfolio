@@ -377,7 +377,7 @@
       "default": "Say Hello 😊"
     },
     "errorName": "Please enter a valid name.",
-    "errorEmail": "Please enter a valid email with @ and e.g. .de or .com etc.",
+    "errorEmail": "Please enter a valid e-mail with @ and domain extension Example: .de or .com",
     "errorWebsite": "Please enter a valid domain.",
     "errorWebsite-2": "Please omit www.",
     "errorWebsite-3": "e.g. johndoe.com",
