@@ -7,7 +7,7 @@
     background-color: var(--primary-color);
     min-height: 80vh;
     // max-width: max-content;
-    max-width: 1921px;
+    // max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
 
@@ -39,12 +39,16 @@
     // align-items: flex-start;
     padding: 48px 32px;
     gap: 64px;
+
+    max-width: 1921px;
+    margin: auto;
   }
 
   .developer-headline {
     // display: flex;
     padding-left: 32px;
     margin-bottom: -64px;
+    display: none;
   }
   
   .developer-title {
@@ -56,7 +60,9 @@
   }  
 
   .skill-box {
-    max-width: 700px;
+    // max-width: 700px;
+    margin: 32px;
+
     // flex: 1 1 45%;
     flex: 1 1 35%;
     background-color: rgba(0, 255, 174, 0.1);

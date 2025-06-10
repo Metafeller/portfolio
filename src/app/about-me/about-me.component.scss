@@ -13,14 +13,17 @@
   margin: 0 auto; // Zentriert den Container innerhalb des Viewports
   // margin-top: 156px;
   // min-height: 80vh;
-  padding-top: 160px;
+
+  padding-top: 240px; // vorher 160px
+  padding-bottom: 300px; // vorher nicht eingesetzt
+  // height: 84vh; // vorher nicht eingesetzt
 
   .about-me-content {
     display: flex;
     flex-wrap: wrap;
     // justify-content: space-evenly;
-    justify-content: space-around;
-    padding: 48px 32px;
+    justify-content: space-between;
+    padding: 48px 48px; // statt 48px 32px
     gap: 64px; // Abstand zwischen Bild und Textbereich
     // align-items: center;
     // max-width: 1200px; // Maximale Breite des Inhalts
