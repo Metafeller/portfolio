@@ -6,7 +6,7 @@
     padding: 48px 32px;
     background-color: var(--primary-color);
     min-height: 80vh;
-    max-width: 1921px;
+    // max-width: 1921px;
     margin: 0 auto;
     overflow: hidden;
   
@@ -15,6 +15,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   
   .marketing-section::after {
@@ -40,6 +43,9 @@
     padding: 48px 32px;
     gap: 64px;
 
+    max-width: 1921px;
+    margin: auto;
+
     @media (min-width: 1367px) {
         
      .headline-mobile {
@@ -59,6 +65,7 @@
         font-size: 24px;
         color: var(--accent-color);
         margin-bottom: 16px;
+        margin-left: 32px;
     }
 
     .marketing-box {
@@ -69,7 +76,8 @@
         padding:48px;
         box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
         margin-bottom: 84px;
-        max-width: 700px;
+        // max-width: 700px;
+        margin-left: 32px;
 
         @media (min-width: 240px) and (max-width: 320px) {
         padding: 24px 16px;
