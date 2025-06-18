@@ -1,10 +1,8 @@
 {
   "legal": {
-    "legal": {
-      "title": "Legal Notice – AYA, Inc.",
-      "description": "This is the legal notice of AYA, Inc. Here you will find all legal information and contact details.",
-      "heading": "Legal Notice",
-      "content": "<p>Tayfun Savas Boas AYA<br>Baarerstrasse 43<br>6300 Zug</p>\n<h2>Contact</h2>\n<p>Phone: +49 2196 8836047<br>E-mail: mail@metafeller.com</p>\n<!-- … translate the remaining sections … -->"
-    }
+    "title": "Legal Notice – AYA, Inc.",
+    "description": "This is the legal notice of AYA, Inc. Here you will find all legal information and contact details.",
+    "heading": "Legal Notice",
+    "content": "<p>Tayfun Savas Boas AYA<br />\nFreelance premium web-developer, branding & marketing.<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>Contact</h2>\n<p>Phone: +49 2196 8836047<br />\nE-mail: mail@metafeller.com</p>\n\n<h2>Postal address</h2>\n<p>Mr<br />\nTayfun Savas Boas AYA<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>VAT ID</h2>\n<p>Value-added-tax identification number pursuant to § 27 a German VAT Act:<br />\n123456789</p>\n\n<h2>Business registration</h2>\n<p>The trade licence under § 34c GewO was issued on 01 Dec 2011 by: Finanzamt Köln-Nord.</p>\n\n<h2>Professional title & applicable regulations</h2>\n<p>Professional title:<br />\nWeb developer & marketing manager</p>\n<p>Awarded in:<br />\nGermany</p>\n\n<h2>Editorial responsibility</h2>\n<p>Mr<br />\nTayfun Savas Boas AYA<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>EU dispute resolution</h2>\n<p>The European Commission provides a platform for online dispute resolution (ODR): <a href=\\\"https://ec.europa.eu/consumers/odr/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">https://ec.europa.eu/consumers/odr/</a>.<br /> Our e-mail address can be found above in this legal notice.</p>\n\n<h2>Consumer dispute resolution / universal arbitration board</h2>\n<p>We are neither willing nor obliged to participate in dispute-resolution proceedings before a consumer arbitration board.</p>\n\n<h2>Central contact point under the Digital Services Act (DSA – Regulation (EU) 2022/265)</h2>\n<p>Our central contact point for users and authorities pursuant to Art. 11, 12 DSA can be reached as follows:</p>\n<p>E-mail: mail@metafeller.com<br />\nPhone: +49 2196 8836047</p>\n<p>Languages available for contact: German, English.</p>\n<p>Source: <a href=\\\"https://www.e-recht24.de\\\">eRecht24</a></p>\n\n<p><strong>Information pursuant to § 5 German TMG:</strong></p>\n<p>Tayfun Savas Boas AYA<br />Baarerstrasse 43<br />6300 Zug</p>\n\n<p>This is only a sample template for the DA final examination with certificate.</p>"
   }
 }
