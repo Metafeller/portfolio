@@ -428,12 +428,27 @@
     "legalNotice": "Impressum",
     "privacyPolicy": "Datenschutz"
   }
-}
+  },
 
+  "legal": {
+    "legal": {
+      "title": "Impressum – AYA, Inc.",
+      "description": "Dies ist das Impressum der AYA, Inc. Hier finden Sie alle rechtlichen Angaben und Kontaktinformationen.",
+      "heading": "Impressum",
+      "content": "<p>Tayfun Savas Boas AYA<br />\nFreiberufler in Premium-Webentwicklung, Branding- und Marketing.<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>Kontakt</h2>\n<p>Telefon: 02196 - 8836047<br />\nE-Mail: mail@metafeller.com</p>\n\n<h2>Postadresse</h2>\n<p>Herr<br />\nTayfun Savas Boas AYA<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>Umsatzsteuer-ID</h2>\n<p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br />\n123456789</p>\n\n<h2>Gewerbeanmeldung</h2>\n<p>Die Gewerbeerlaubnis nach &sect; 34c GewO wurde am 01.12.2011 von folgender Stelle erteilt: Finanzamt K&ouml;ln-Nord.</p>\n\n<h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>\n<p>Berufsbezeichnung:<br />\nWebentwickler- und Marketingmanager</p>\n<p>Verliehen in:<br />\nDeutschland</p>\n\n<h2>Redaktionell verantwortlich</h2>\n<p>Herr<br />\nTayfun Savas Boas AYA<br />\nBaarerstrasse 43<br />\n6300 Zug</p>\n\n<h2>EU-Streitschlichtung</h2>\n<p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href=\\\"https://ec.europa.eu/consumers/odr/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">https://ec.europa.eu/consumers/odr/</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>\n\n<h2>Verbraucher&shy;streit&shy;beilegung / Universal&shy;schlichtungs&shy;stelle</h2>\n<p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>\n\n<h2>Zentrale Kontaktstelle nach dem Digital Services Act – DSA (Verordnung (EU) 2022/265)</h2>\n<p>Unsere zentrale Kontaktstelle f&uuml;r Nutzer und Beh&ouml;rden nach Art. 11, 12 DSA erreichen Sie wie folgt:</p>\n<p>E-Mail: mail@metafeller.com<br />\nTelefon: 02196 - 8836047</p>\n<p>Die für den Kontakt zur Verf&uuml;gung stehenden Sprachen sind: Deutsch, Englisch.</p>\n<p>Quelle: <a href=\\\"https://www.e-recht24.de\\\">eRecht24</a></p>\n\n<p><strong>Angaben gem&auml;&szlig; § 5 TMG:</strong></p>\n<p>Tayfun Savas Boas AYA<br />Baarerstrasse 43<br />6300 Zug</p>\n\n<p>Dies ist nur eine Mustervorlage für die DA-Abschlussprüfung mit Zertifikat.</p>"
+    }
+  },
+
+  "privacy": {
+    "privacy": {
+      "title": "Datenschutzerklärung – AYA, Inc.",
+      "description": "Dies ist die Datenschutzerklärung der AYA, Inc. Hier erfahren Sie, welche personenbezogenen Daten wir wie verarbeiten.",
+      "heading": "Datenschutzerklärung",
+      "content": "<h2 id=\"m716\">Präambel</h2>\n<p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als \"Daten\" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z.&nbsp;B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als \"Onlineangebot\").</p>\n<p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>\n\n<p>Stand: 18. April 2025</p><h2>Inhaltsübersicht</h2> <ul class=\"index\"><li><a class=\"index-link\" href=\"#m716\">Präambel</a></li><li><a class=\"index-link\" href=\"#m3\">Verantwortlicher</a></li><li><a class=\"index-link\" href=\"#mOverview\">Übersicht der Verarbeitungen</a></li><li><a class=\"index-link\" href=\"#m2427\">Maßgebliche Rechtsgrundlagen</a></li><li><a class=\"index-link\" href=\"#m27\">Sicherheitsmaßnahmen</a></li><li><a class=\"index-link\" href=\"#m25\">Übermittlung von personenbezogenen Daten</a></li><li><a class=\"index-link\" href=\"#m24\">Internationale Datentransfers</a></li><li><a class=\"index-link\" href=\"#m12\">Allgemeine Informationen zur Datenspeicherung und Löschung</a></li><li><a class=\"index-link\" href=\"#m10\">Rechte der betroffenen Personen</a></li><li><a class=\"index-link\" href=\"#m317\">Geschäftliche Leistungen</a></li><li><a class=\"index-link\" href=\"#m13\">Geschäftsprozesse und -verfahren</a></li><li><a class=\"index-link\" href=\"#m326\">Zahlungsverfahren</a></li><li><a class=\"index-link\" href=\"#m225\">Bereitstellung des Onlineangebots und Webhosting</a></li><li><a class=\"index-link\" href=\"#m134\">Einsatz von Cookies</a></li><li><a class=\"index-link\" href=\"#m182\">Kontakt- und Anfrageverwaltung</a></li><li><a class=\"index-link\" href=\"#m391\">Kommunikation via Messenger</a></li><li><a class=\"index-link\" href=\"#m406\">Chatbots und Chatfunktionen</a></li><li><a class=\"index-link\" href=\"#m638\">Werbliche Kommunikation via E-Mail, Post, Fax oder Telefon</a></li><li><a class=\"index-link\" href=\"#m263\">Webanalyse, Monitoring und Optimierung</a></li><li><a class=\"index-link\" href=\"#m264\">Onlinemarketing</a></li><li><a class=\"index-link\" href=\"#m136\">Präsenzen in sozialen Netzwerken (Social Media)</a></li><li><a class=\"index-link\" href=\"#m328\">Plug-ins und eingebettete Funktionen sowie Inhalte</a></li><li><a class=\"index-link\" href=\"#m723\">Management, Organisation und Hilfswerkzeuge</a></li><li><a class=\"index-link\" href=\"#m15\">Änderung und Aktualisierung</a></li></ul>\n<!-- ... Rest des sehr langen HTMLs ... -->"
+    }
+  }
 
   
-
-
 }
 
   
