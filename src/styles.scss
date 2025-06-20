@@ -250,10 +250,8 @@
 .legal-mini-footer a       { cursor:pointer; user-select:none; }
 
 // Für den optimalen Scroll-Service von Mini-Footer zum Hauptfooter.
-// .anchor-offset {
-//   position: relative;
-//   top: -40px;      // Anker 40 px höher „schieben“
-//   height: 1px;
-//   display: block;
-// }
+#footer{
+  scroll-margin-top: 90px;   /*  ≈ exakte Höhe deines Headers  */
+}
+
 
