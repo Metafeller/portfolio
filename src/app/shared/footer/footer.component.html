@@ -153,12 +153,28 @@
 
       <div class="footer-bottom-right">
         <div class="legal-notice">
-          <a [href]="config.bottom.legalNoticeLink" target="_blank" aria-label="Legal Notice">{{ 'footer.bottom.legalNotice' | translate }}</a>
-        </div>
-        <div class="privacy-policy">
-          <a [href]="config.bottom.privacyPolicyLink" target="_blank" aria-label="Privacy Policy">{{ 'footer.bottom.privacyPolicy' | translate }}</a>
-        </div>
-      </div>
 
+          <!-- <a [href]="config.bottom.legalNoticeLink" target="_blank" aria-label="Legal Notice">{{ 'footer.bottom.legalNotice' | translate }}</a> -->
+          <a
+          role="button"
+          tabindex="0"
+          (click)="scrollService.showLegal('legal')"
+          aria-label="Legal Notice"
+          >{{ 'footer.bottom.legalNotice' | translate }}</a
+        > 
+        </div>
+        
+        <div class="privacy-policy">
+          <!-- <a [href]="config.bottom.privacyPolicyLink" target="_blank" aria-label="Privacy Policy">{{ 'footer.bottom.privacyPolicy' | translate }}</a> -->
+          <a
+          role="button"
+          tabindex="0"
+          (click)="scrollService.showLegal('privacy')"
+          aria-label="Privacy Policy"
+          >{{ 'footer.bottom.privacyPolicy' | translate }}</a
+        >
+        </div>
+
+      </div>
     </div>
   </footer>  

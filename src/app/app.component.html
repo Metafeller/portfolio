@@ -1,12 +1,11 @@
-<!-- Ich hab den Header und den Hero in eine Div gepackt, damit ich ein Hintergrundbild für beide nutzen kann -->
+<!--  Header & Hero teilen sich BG-Bild -->
 <div class="header-hero-container">
   <app-header></app-header>
   <app-hero></app-hero>
 </div>
 
-<!-- Hier beginnt der zweite Teil der Webseite -->
+<!--  Haupt-Content  -->
 <div class="content">
-  <!-- Hier können später weitere Komponenten oder Inhalte eingefügt werden -->
   <app-about-me></app-about-me>
   <app-skills></app-skills>
   <app-projects></app-projects>
@@ -14,14 +13,45 @@
   <app-contact></app-contact>
 </div>
 
-<app-footer></app-footer>
+<!--  Haupt-Footer bekommt eine ID, damit wir hin-scrollen können -->
+<app-footer id="footer"></app-footer>
 
-<!-- <router-outlet></router-outlet> -->
-<!-- <router-outlet /> -->
+<!-- Unsichtbarer Anker fürs Scroll-Ziel unterhalb des Footers -->
+<span id="footer-legal-anchor"></span>
 
-<app-cookie-banner></app-cookie-banner> <!-- 👈 Cookie-Banner eingefügt -->
+<!-- Dynamisch eingeblendeter Rechts-Container -->
+<ng-container *ngIf="showLegal">
+  <div class="legal-wrapper">
+    <div class="legal-container">
+      <h1>{{ legalHeading }}</h1>
 
-<!-- 🔥 Hier kommt das router-outlet für die Danke-Seite -->
-<!-- <router-outlet></router-outlet> -->
+      <!-- Rechtstext -->
+      <div [innerHTML]="legalHtml | safeHtml"></div>
 
+      <!-- Mini-Footer: Made-By + Navigation -->
+      <footer class="legal-footer">
+        Made By Taironman with <span style="color: var(--accent-color);">💚</span>
+      </footer>
+
+      <div class="legal-mini-footer">
+        <!-- Umschalten zwischen Impressum / Datenschutz -->
+        <a (click)="scrollSrv.showLegal('legal')">
+          {{ 'footer.bottom.legalNotice' | translate }}
+        </a>
+        <span class="divider">|</span>
+        <a (click)="scrollSrv.showLegal('privacy')">
+          {{ 'footer.bottom.privacyPolicy' | translate }}
+        </a>
+
+        <!-- Spacer, damit Pfeil rechts steht -->
+        <span class="spacer"></span>
+
+        <!-- ↑  zurück zum Haupt-Footer -->
+        <a (click)="scrollSrv.scrollToElement('footer')">↑</a>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<app-cookie-banner></app-cookie-banner>
 <div id="cursor-shadow" class="cursor-shadow"></div>

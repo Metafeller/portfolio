@@ -18,11 +18,12 @@ export class FooterComponent implements OnInit, AfterViewInit, OnDestroy {
   private observer: IntersectionObserver | null = null;
 
   constructor(
-    private footerConfigService: FooterConfigService, 
-    private scrollService: ScrollService,
-    private translate: TranslateService,
-    @Inject(PLATFORM_ID) private platformId: Object
+  private footerConfigService: FooterConfigService,
+  private translate: TranslateService,
+  @Inject(PLATFORM_ID) private platformId: Object,
+  public scrollService: ScrollService   // 🔸 hier "public"
   ) {}
+
 
   ngOnInit(): void {
     this.config = this.footerConfigService.getFooterConfig();

@@ -34,14 +34,14 @@
 @font-face {
     font-family: 'Karla';
     src: url('../public/fonts/karla/static/Karla-Regular.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Karla';
     src: url('../public/fonts/karla/static/Karla-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
   }
   
@@ -110,3 +110,150 @@
     z-index: 2000;
   }
   
+
+/* ===== LEGAL / PRIVACY WRAPPER =================================== */
+
+.legal-wrapper {
+  width: 100%;
+  padding: 40px 16px;
+  background: var(--primary-color) url('/bg-images/bg-hero.png') no-repeat center /
+              cover fixed;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;      /* zentriert den Container */
+}
+
+.legal-wrapper .legal-container {
+  max-width: 800px;
+  background-color: rgba(28, 28, 28, 0.8);
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.3);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  color: #fff;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.legal-wrapper h1 {
+  color: var(--accent-color);
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+.legal-wrapper h2 {
+  font-size: 20px;
+  margin-top: 32px;
+  color: var(--accent-color);
+}
+
+.legal-wrapper p        
+{ font-size: 14px; }
+.legal-wrapper .legal-content {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.legal-wrapper .legal-content a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s ease;
+}
+.legal-wrapper .legal-content a:hover {
+  color: rgb(161, 254, 0);
+  text-decoration: underline dotted;
+}
+
+/* ----------  Responsive Breakpoints  --------- */
+@media (max-width: 320px) {
+  .legal-wrapper            { padding: 20px 8px;  }
+  .legal-wrapper .legal-container { padding: 16px; }
+  .legal-wrapper h1         { font-size: 22px;    }
+  .legal-wrapper h2         { font-size: 18px;    }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  .legal-wrapper            { padding: 24px 12px; }
+  .legal-wrapper .legal-container { padding: 20px; }
+  .legal-wrapper h1         { font-size: 24px;    }
+  .legal-wrapper h2         { font-size: 19px;    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .legal-wrapper .legal-container { padding: 28px; }
+}
+@media (min-width: 1025px) {
+  .legal-wrapper .legal-container { padding: 32px; }
+}
+/* =============================================================== */
+  
+/* styles.scss – ans Ende der LEGAL-Sektion hängen */
+.legal-wrapper br        { line-height: 200%; }   /* macht <br> etwas „höher“ */
+.legal-wrapper ul            { padding-left: 1.1rem; }
+.legal-wrapper ul.index  { list-style: none; padding-left: 0; }
+.legal-wrapper ul.index li { margin: .25rem 0; }
+
+.legal-wrapper ul          { padding-left: 24px; margin: 0 0 16px; }
+.legal-wrapper li          { margin-bottom: 4px; }
+
+
+/* Footer im Rechtstext-Kasten ----------------------------------- */
+.legal-wrapper .legal-footer {
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+  padding: 16px;
+}
+
+/* ---------- Rechtstexte: Feinschliff ---------- */
+
+/* Footer im Kasten */
+.legal-footer {
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+  padding: 16px;
+}
+
+/* Links + Hover */
+.legal-wrapper a       { color: var(--accent-color); }
+.legal-wrapper a:hover { color: rgb(161, 254, 0); text-decoration: underline dotted; }
+
+/* Normale Schriftbreite */
+.legal-wrapper p { font-weight: 400; }
+
+/*TESTINHO*/
+
+/* ---------- Rechts-Panels: Mini-Footer + Links ---------- */
+.legal-wrapper p            { font-weight: 400; }    /* normale Schrift      */
+.legal-wrapper a            { color: var(--accent-color); }
+.legal-wrapper a:hover      { color: rgb(161,254,0); text-decoration: underline dotted; }
+
+/* Mini-Footer unter dem Text */
+.legal-mini-footer{
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+}
+.legal-mini-footer .divider{ color:#777; }
+.legal-mini-footer .spacer { flex: 1 0 16px; }       /* Abstandshalter */
+.legal-mini-footer a       { cursor:pointer; user-select:none; }
+
+// Für den optimalen Scroll-Service von Mini-Footer zum Hauptfooter.
+// .anchor-offset {
+//   position: relative;
+//   top: -40px;      // Anker 40 px höher „schieben“
+//   height: 1px;
+//   display: block;
+// }
+
