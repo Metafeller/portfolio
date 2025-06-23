@@ -119,24 +119,32 @@
   }
 
 
+  /* ------------------------------------------------------------- */
+  /* 3) ►► NEU: Banner erzeugt den Blur mit backdrop-filter
+  /* ------------------------------------------------------------- */
+
+
   // Animierter Banner
   .animated-banner {
     position: absolute;
-    bottom: 160px;
+    bottom: 140px;
     width: 100%; // Volle Breite des Containers
     overflow: hidden; // Text bleibt im Container
     height: 60px; // Höhe des Banners
-    transform: rotate(-2deg); // Leicht verwinkelte Darstellung
+    transform: rotate(-1.5deg); // Leicht verwinkelte Darstellung
     z-index: 2;
   }
 
-
+  /* Hintergrund bekommt jetzt den Blur */
   .banner-background {
     position: absolute;
-    filter: blur(1px); // Blur nur auf dem Hintergrund
-    height: 100%;
-    width: 100%;
+    inset: 0;
     background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(3px);          /*  = Blur für alles HINTER dem Banner  */
+    -webkit-backdrop-filter: blur(3px);  /*  Safari */
+    // filter: blur(1px); // Blur nur auf dem Hintergrund
+    // height: 100%;
+    // width: 100%;
     // background-color: rgba(28, 28, 28, 0.8); // Dunkler Hintergrund für das Banner
     z-index: 2;
   }
@@ -149,7 +157,7 @@
     animation: scrollText 40s linear infinite; // Unendliche Animation von rechts nach links
     white-space: nowrap; // Verhindert Zeilenumbruch des Textes
     position: relative;
-    z-index: 3; // Text vor dem Hintergrund
+    z-index: 3; // Text steht VOR dem geblurrten BG
   }
 
 
@@ -157,15 +165,13 @@
     display: flex;
     gap: 48px; // Abstand zwischen den Texten
     padding-top: 16px; // Text im Banner zentrieren
+
+    span {
+      font-size: 24px;
+      color: var(--accent-color); // Grüne Akzentfarbe
+      font-family: var(--font-family-second);
+    }
   }
-
-
-  .banner-text span {
-    font-size: 24px;
-    color: var(--accent-color); // Grüne Akzentfarbe
-    font-family: var(--font-family-second);
-  }
-
 
   @keyframes scrollText {
     0% {
@@ -175,8 +181,7 @@
       transform: translateX(-89.5%);
     }
   }
-  
-  
+
   // Linker Scroll-Button Vertikal
   .scroll-button {
     position: absolute;
@@ -196,7 +201,7 @@
     border-bottom-right-radius: 20px;
     border: 2px solid var(--accent-color);
     transition: background-color 0.3s, transform 0.3s;
-    top: 57%;
+    top: 56%;
     
     &:hover {
         // background-color: var(--accent-color);
@@ -209,38 +214,51 @@
         animation: arrowBounce 1.5s infinite;
     }
 
+    /* ▼ nur noch eine vertikale Linie */
     .vertical-line {
       position: absolute;
-      margin-top: 700px; // Kleiner Abstand zwischen Pfeil und Linie
-      width: 1px; // Breite der Linie
-      height: 600px; // Höhe der Linie, kannst du nach Bedarf anpassen
-      // background-color: var(--accent-color);
-      z-index: -1;
+      top: calc(100% + 8px);     /* direkt unter dem Pfeil anfangen */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100vh;             /* reicht locker bis ans Seiten-Ende */
+      background: var(--accent-color);
+      /* kein Blur hier – das erledigt jetzt der Banner selbst */
+      margin-top: 32px;
     }
+
+    // .vertical-line {
+    //   position: absolute;
+    //   margin-top: 700px; // Kleiner Abstand zwischen Pfeil und Linie
+    //   width: 1px; // Breite der Linie
+    //   height: 600px; // Höhe der Linie, kannst du nach Bedarf anpassen
+    //   // background-color: var(--accent-color);
+    //   z-index: -1;
+    // }
 
     // Oberer Teil der Linie
-    .line-top {
-    // height: 178px; // Länge des oberen Teils
-    height: 226px;
-    background-color: var(--accent-color);
-    z-index: -1;
-    }
+    // .line-top {
+    // // height: 178px; // Länge des oberen Teils
+    // height: 226px;
+    // background-color: var(--accent-color);
+    // z-index: -1;
+    // }
 
     // Mittlerer Teil der Linie, welcher durch den Banner läuft
-  .line-middle {
-    height: 62px; // Höhe, die dem Bannerbereich entspricht
-    background-color: var(--accent-color);
-    filter: blur(3px); // Blur-Effekt für den Bannerbereich
-    mix-blend-mode: multiply; // Lässt die Linie mit dem Hintergrund verschmelzen
-    z-index: -1;
-    }
+  // .line-middle {
+  //   height: 62px; // Höhe, die dem Bannerbereich entspricht
+  //   background-color: var(--accent-color);
+  //   filter: blur(3px); // Blur-Effekt für den Bannerbereich
+  //   mix-blend-mode: multiply; // Lässt die Linie mit dem Hintergrund verschmelzen
+  //   z-index: -1;
+  //   }
 
     // Unterer Teil der Linie
-  .line-bottom {
-    height: 300px; // Länge des unteren Teils
-    background-color: var(--accent-color);
-    z-index: -1;
-  }
+  // .line-bottom {
+  //   height: 300px; // Länge des unteren Teils
+  //   background-color: var(--accent-color);
+  //   z-index: -1;
+  // }
 }
 
 @keyframes arrowBounce {
@@ -252,8 +270,7 @@
     }
 }
 
-
-// Social Media Container rechts im Hero-Bereich
+// Social Media Container rechts im Hero-Bereich - rechter Social-Block
 .social-media-container {
   position: absolute;
   // top: 74%;
@@ -325,49 +342,62 @@
     }
   }
 
-  // Vertikale Linie rechts im Hero-Bereich
   .vertical-line-right {
+    position: relative;
     margin-top: 32px;
     width: 1px;
-    height: 400px;
-    // background-color: var(--accent-color);
-    position: relative;
-    z-index: -1;
-    top: 73%;
+    height: 400px;             /* Desktop-Default */
+    background: var(--accent-color);
+  }
+
+  // Vertikale Linie rechts im Hero-Bereich
+  // .vertical-line-right {
+  //   margin-top: 32px;
+  //   width: 1px;
+  //   height: 400px;
+  //   // background-color: var(--accent-color);
+  //   position: relative;
+  //   z-index: -1;
+  //   top: 73%;
 
     // Oberer Teil der Linie
-    .line-top {
-      // height: 134px;
-      // height: 12px;
-      height: 8px;
-      background-color: var(--accent-color);
-      z-index: -1;
-    }
+    // .line-top {
+    //   // height: 134px;
+    //   // height: 12px;
+    //   height: 8px;
+    //   background-color: var(--accent-color);
+    //   z-index: -1;
+    // }
 
     // Mittlerer Teil der Linie mit Blur-Effekt
-    .line-middle {
-      height: 62px;
-      background-color: var(--accent-color);
-      filter: blur(3px);
-      mix-blend-mode: multiply;
-      z-index: -1;
-    }
+    // .line-middle {
+    //   height: 62px;
+    //   background-color: var(--accent-color);
+    //   filter: blur(3px);
+    //   mix-blend-mode: multiply;
+    //   z-index: -1;
+    // }
 
     // Unterer Teil der Linie
-    .line-bottom {
-      height: 360px;
-      background-color: var(--accent-color);
-      z-index: -1;
-    }
-  }
+    // .line-bottom {
+    //   height: 360px;
+    //   background-color: var(--accent-color);
+    //   z-index: -1;
+    // }
+  // }
 }
+
+
+/* ------------------------------------------------------------- */
+/* 4) ►► Medien-Breakpoints: nur noch Höhe anpassen, kein Split
+/* ------------------------------------------------------------- */
 
 
 // ****************************** MEDIA QUERIES *************************************
 /* Media Queries: Standard (Desktop) Styles - ab 1024px sind alle Stile wie bisher. */
 
 
-/* Mobile Styles - 320px bis 480px */
+/* Smartphone - 320px bis 480px */
 @media (max-width: 480px) {
   .hero-content {
     h1 {
@@ -397,27 +427,19 @@
 
 
   .animated-banner {
-    bottom: 100px;
+    // bottom: 48px;
     transform: rotate(-2deg);
   }
 
 
   .scroll-button {
     // left: -5%;
-    bottom: 180px; // Abstand vom unteren Rand
-    top: 76%;
+    // bottom: 180px; // Abstand vom unteren Rand
+    top: 73%;
 
     .vertical-line {
       // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
       height: 600px;
-    }
-
-    .line-top {
-      height: 16px; // Länge des oberen Teils
-      }
-  
-    .line-bottom {
-      height: 192px; // Länge des unteren Teils
     }
   }
 
@@ -425,7 +447,7 @@
   .social-media-container {
     // right: 5%;
     transform: translateY(-50%);
-    top: 64%;
+    top: 84%;
 
     .email {
       display: none;
@@ -438,15 +460,7 @@
 
     .vertical-line-right {
       // display: none; /* Vertikale Linie für die mobile Ansicht ausblenden */
-      height: 20px;
-
-      .line-top {
-        height: 88px;
-      }
-  
-      .line-bottom {
-        height: 206px;
-      }
+      height: 220px;
     }
   }
 
@@ -489,27 +503,19 @@
     }
   }
 
-  .animated-banner {
-    bottom: 80px;
-  }
+  // .animated-banner {
+  //   bottom: 60px;
+  // }
 
 
   .scroll-button {
     // left: -5%;
-    bottom: 380px; // Abstand vom unteren Rand
-    top: 49%;
+    // bottom: 380px; // Abstand vom unteren Rand
+    top: 77%;
 
     .vertical-line {
       // display: none; /* Vertikale Linie für mobile Ansicht ausblenden */
       height: 600px;
-    }
-
-    .line-top {
-      height: 320px; // Länge des oberen Teils
-      }
-  
-    .line-bottom {
-      height: 265px; // Länge des unteren Teils
     }
   }
 
@@ -517,7 +523,7 @@
   .social-media-container {
     // right: 5%;
     transform: translateY(-50%);
-    top: 80%;
+    top: 84%;
 
     .email {
       display: none;
@@ -530,7 +536,7 @@
 
     .vertical-line-right {
       // display: none; /* Vertikale Linie für die mobile Ansicht ausblenden */
-      height: 200px;
+      height: 300px;
 
       .line-top {
         height: 28px;
@@ -581,21 +587,23 @@
     }
   }
 
+  .animated-banner {
+    // bottom: 60px;
+    transform: rotate(-2deg);
+  }
 
   .scroll-button {
-    top: 50%;
+    top: 72%;
 
     .vertical-line {
-  
-      .line-top {
-        height: 236px;
-      }
+      height: 700px;
     }
   }
 
 
   .social-media-container {
     // right: 5%;
+    top: 80%;
 
     .email {
       display: none;
@@ -608,10 +616,7 @@
     }
 
     .vertical-line-right {
-      
-      .line-top {
-        height: 100px;
-      }
+      height: 350px;
     }
 
   }
@@ -621,9 +626,11 @@
 /* Desktop Styles - 1025px bis 1440px */
 @media (min-width: 1025px) and (max-width: 1440px) {
 
-  .vertical-line {
-    .line-top {
-      height: 164px;
+  .scroll-button {
+    top: 70%;
+
+    .vertical-line {
+      height: 800px;
     }
   }
   
@@ -634,13 +641,13 @@
       display: none;
     }
 
-    .vertical-line-right {
+    // .vertical-line-right {
 
-      .line-top {
-        height: 34px;
-      }
+    //   .line-top {
+    //     height: 34px;
+    //   }
       
-    }
+    // }
 
   }
 }
@@ -648,6 +655,14 @@
 
 /* Big-Desktop Styles - 1441px bis 1920px */
 @media (min-width: 1441px) and (max-width: 1920px) {
+
+  .scroll-button {
+    top: 72%;
+
+    // .vertical-line {
+    //   height: 800px;
+    // }
+  }
   
   .social-media-container {
 
