@@ -97,7 +97,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
         githubUrl: 'https://github.com/Metafeller/Join-board',
-        liveUrl: 'https://metafeller.com/join-board/',
+        liveUrl: 'https://join.metafeller.com/',
         imageUrl: '/images/projects/frame-join-cms.png',
       },
       {
@@ -110,7 +110,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           { name: 'JavaScript', icon: '/svg-icons/overlay/javascript.svg' },
         ],
         githubUrl: 'https://github.com/Metafeller/Pollo-Loco',
-        liveUrl: 'https://metafeller.com/pollo-loco/',
+        liveUrl: 'https://loco.metafeller.com/',
         imageUrl: '/images/projects/frame-pollo-loco.png',
       },
       {
