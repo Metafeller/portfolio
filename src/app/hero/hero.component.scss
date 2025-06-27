@@ -41,6 +41,9 @@
       margin: 0 auto; // Zentriert den Inhalt horizontal im Viewport
       padding: 0 32px; // Seitenabstand links und rechts für den Inhalt
       height: 100%; // Höhe für die Hero-Sektion verwenden
+
+      position: relative;
+      width: 2000px;
     }
   }
 
@@ -128,7 +131,7 @@
   .animated-banner {
     position: absolute;
     bottom: 140px;
-    width: 100%; // Volle Breite des Containers
+    width: 180%; // Volle Breite des Containers
     overflow: hidden; // Text bleibt im Container
     height: 60px; // Höhe des Banners
     transform: rotate(-1.5deg); // Leicht verwinkelte Darstellung
