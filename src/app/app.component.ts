@@ -2,6 +2,10 @@ import { Component, HostListener } from '@angular/core';
 import { CommonModule }            from '@angular/common';
 import { TranslateService, LangChangeEvent, TranslateModule } from '@ngx-translate/core';
 
+import { Router, NavigationEnd }   from '@angular/router';       // ← neu
+import { filter }                  from 'rxjs/operators';         // ← neu
+import { RouterModule } from '@angular/router';
+
 import { ScrollService } from './services/scroll.service';
 import { SafeHtmlPipe }  from './pipes/safe-html.pipe';
 
@@ -20,10 +24,19 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
   selector  : 'app-root',
   standalone: true,
   imports   : [
-    CommonModule, SafeHtmlPipe, TranslateModule,
-    HeaderComponent, HeroComponent, AboutMeComponent,
-    SkillsComponent, ProjectsComponent, ReviewsComponent,
-    ContactComponent, FooterComponent, CookieBannerComponent
+    CommonModule, 
+    RouterModule,
+    SafeHtmlPipe, 
+    TranslateModule,
+    HeaderComponent, 
+    HeroComponent, 
+    AboutMeComponent,
+    SkillsComponent, 
+    ProjectsComponent, 
+    ReviewsComponent,
+    ContactComponent, 
+    FooterComponent, 
+    CookieBannerComponent
   ],
   templateUrl: './app.component.html',
   styleUrl   : './app.component.scss'
@@ -38,20 +51,38 @@ export class AppComponent {
 
   constructor(
     public scrollSrv : ScrollService,
-    private translate  : TranslateService
+    private translate  : TranslateService,
+    private router    : Router                 // ← hier injizieren
   ) {
 
-    /* 1)  Footer-Klicks (Impressum / Privacy) ------------------- */
+    // a) Panel-Status wenn jemand im Footer klickt
     this.scrollSrv.legalDisplay$.subscribe(page => {
       this.activePage = page;
       this.refreshLegalContent();
     });
 
-    /* 2)  Language-Switch während Anzeige ----------------------- */
+    // b) Sprachwechsel während Panel offen
     this.translate.onLangChange.subscribe(
-      (_evt: LangChangeEvent) => this.refreshLegalContent()
+      (_: LangChangeEvent) => this.refreshLegalContent()
     );
+
+    // c) Router-Abonnement für direkten URL-Aufruf
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((e: NavigationEnd) => {
+        if (e.urlAfterRedirects === '/legalnotice') {
+          // Panel öffnen für Impressum
+          this.scrollSrv.showLegal('legal');
+        } else if (e.urlAfterRedirects === '/privacypolicy') {
+          // Panel öffnen für Datenschutz
+          this.scrollSrv.showLegal('privacy');
+        } else {
+          // Panel schließen, wenn man woanders hin navigiert
+          this.scrollSrv.showLegal(null);
+        }
+      });
   }
+
 
   /* Holt Überschrift + HTML frisch aus den JSON-Keys ------------- */
   private refreshLegalContent(): void {

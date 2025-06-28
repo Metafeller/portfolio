@@ -59,7 +59,7 @@ export class FooterConfigService {
         h3: 'Join the Movement',
         p: 'Support our cause and help us make a difference.',
         span: 'Your contribution matters.',
-        image: '/images/fundrasing-child.png',
+        image: '/images/fundrasing-child-min.png',
         buttonText: 'Donate Now',
         buttonLink: 'https://savasboas.com/fundraising'  // Externe URL
       }

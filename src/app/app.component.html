@@ -35,13 +35,17 @@
 
       <div class="legal-mini-footer">
         <!-- Umschalten zwischen Impressum / Datenschutz -->
-        <a (click)="scrollSrv.showLegal('legal')">
+
+        <!-- <a (click)="scrollSrv.showLegal('legal')">
           {{ 'footer.bottom.legalNotice' | translate }}
-        </a>
+        </a> -->
+        <a routerLink="/legalnotice" routerLinkActive="active"> {{ 'footer.bottom.legalNotice' | translate }} </a>
+
         <span class="divider">|</span>
-        <a (click)="scrollSrv.showLegal('privacy')">
+        <!-- <a (click)="scrollSrv.showLegal('privacy')">
           {{ 'footer.bottom.privacyPolicy' | translate }}
-        </a>
+        </a> -->
+        <a routerLink="/privacypolicy" routerLinkActive="active"> {{ 'footer.bottom.privacyPolicy' | translate }} </a>
 
         <!-- Spacer, damit Pfeil rechts steht -->
         <span class="spacer"></span>
