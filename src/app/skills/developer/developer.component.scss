@@ -5,7 +5,7 @@
     justify-content: center;
     padding: 48px 32px; // padding ab 48px 32px bis 16px 8px herunterschrauben von Desktop zu Mobile Ansicht
     background-color: var(--primary-color);
-    min-height: 80vh;
+    // min-height: 80vh;
     // max-width: max-content;
     // max-width: 1921px;
     margin: 0 auto;
@@ -13,8 +13,13 @@
 
     /* Hintergrundbild für die gesamte Sektion */
     background-image: url('/bg-images/bg-skills.png');
-    background-size: cover;
-    background-position: center;
+
+    // background-size: cover;
+    background-size: contain;
+
+    // background-position: center;
+    background-position: left;
+    
     background-repeat: no-repeat;
     padding-top: 120px;
     padding-bottom: 120px;
