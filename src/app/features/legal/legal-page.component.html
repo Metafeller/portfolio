@@ -1,0 +1,10 @@
+<section class="legal-page" aria-labelledby="legal-page-title">
+  <h1 id="legal-page-title" class="legal-page__title">
+    {{ 'legal.heading' | translate }}
+  </h1>
+  <p class="legal-page__updated">
+    {{ 'legal.updated' | translate:{ date: ('10/2025') } }}
+  </p>
+
+  <div class="legal-content" [innerHTML]="'legal.content' | translate | safeHtml"></div>
+</section>

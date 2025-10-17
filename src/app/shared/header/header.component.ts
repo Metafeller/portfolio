@@ -92,6 +92,17 @@ export class HeaderComponent implements OnInit {
     this.scrollService.navigateToSection(section);  // Nutze den neuen ScrollService zum Navigieren
   }
 
+  // openLegal(event: Event): void {
+  //   event.preventDefault();
+  //   this.scrollService.showLegal('legal');
+  //   this.menuOpen = false; // Burger schließen
+  // }
+
+  // openPrivacy(event: Event): void {
+  //   event.preventDefault();
+  //   this.scrollService.showLegal('privacy');
+  //   this.menuOpen = false; // Burger schließen
+  // }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {

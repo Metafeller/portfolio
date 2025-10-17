@@ -16,46 +16,14 @@
 <!--  Haupt-Footer bekommt eine ID, damit wir hin-scrollen können -->
 <app-footer id="footer"></app-footer>
 
-<!-- Unsichtbarer Anker fürs Scroll-Ziel unterhalb des Footers -->
-<span id="footer-legal-anchor"></span>
+<!-- globaler Anker für die Legal-Section -->
+<span id="legal-page-anchor"></span>
 
-<!-- Dynamisch eingeblendeter Rechts-Container -->
-<ng-container *ngIf="showLegal">
-  <div class="legal-wrapper">
-    <div class="legal-container">
-      <h1>{{ legalHeading }}</h1>
+<!-- Router-Seiten /legal & /privacy -->
+<router-outlet></router-outlet>
 
-      <!-- Rechtstext -->
-      <div [innerHTML]="legalHtml | safeHtml"></div>
-
-      <!-- Mini-Footer: Made-By + Navigation -->
-      <footer class="legal-footer">
-        Made By Taironman with <span style="color: var(--accent-color);">💚</span>
-      </footer>
-
-      <div class="legal-mini-footer">
-        <!-- Umschalten zwischen Impressum / Datenschutz -->
-
-        <!-- <a (click)="scrollSrv.showLegal('legal')">
-          {{ 'footer.bottom.legalNotice' | translate }}
-        </a> -->
-        <a routerLink="/legalnotice" routerLinkActive="active"> {{ 'footer.bottom.legalNotice' | translate }} </a>
-
-        <span class="divider">|</span>
-        <!-- <a (click)="scrollSrv.showLegal('privacy')">
-          {{ 'footer.bottom.privacyPolicy' | translate }}
-        </a> -->
-        <a routerLink="/privacypolicy" routerLinkActive="active"> {{ 'footer.bottom.privacyPolicy' | translate }} </a>
-
-        <!-- Spacer, damit Pfeil rechts steht -->
-        <span class="spacer"></span>
-
-        <!-- ↑  zurück zum Haupt-Footer -->
-        <a (click)="scrollSrv.scrollToElement('footer')">↑</a>
-      </div>
-    </div>
-  </div>
-</ng-container>
+<!-- Section (wird intern via *ngIf gesteuert) -->
+<app-legal-section></app-legal-section>
 
 <app-cookie-banner></app-cookie-banner>
 <div id="cursor-shadow" class="cursor-shadow"></div>

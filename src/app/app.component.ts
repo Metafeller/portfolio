@@ -1,13 +1,18 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule }            from '@angular/common';
-import { TranslateService, LangChangeEvent, TranslateModule } from '@ngx-translate/core';
+// import { TranslateService, LangChangeEvent, TranslateModule } from '@ngx-translate/core';
 
-import { Router, NavigationEnd }   from '@angular/router';       // ← neu
-import { filter }                  from 'rxjs/operators';         // ← neu
+// import { Router, NavigationEnd }   from '@angular/router';
+// import { filter }                  from 'rxjs/operators';
 import { RouterModule } from '@angular/router';
 
-import { ScrollService } from './services/scroll.service';
-import { SafeHtmlPipe }  from './pipes/safe-html.pipe';
+// import { ScrollService } from './services/scroll.service';
+// import { SafeHtmlPipe }  from './pipes/safe-html.pipe';
+
+import { TranslateModule } from '@ngx-translate/core';
+// (no TranslateService needed here)
+// (no Router/NavigationEnd here)
+// (no ScrollService here)
 
 /* ─ Stand-alone Sektionen ─ */
 import { HeaderComponent }   from './shared/header/header.component';
@@ -19,6 +24,7 @@ import { ReviewsComponent }  from './reviews/reviews.component';
 import { ContactComponent }  from './contact/contact.component';
 import { FooterComponent }   from './shared/footer/footer.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
+import { LegalSectionComponent } from './features/legal/legal-section.component';
 
 @Component({
   selector  : 'app-root',
@@ -26,7 +32,7 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
   imports   : [
     CommonModule, 
     RouterModule,
-    SafeHtmlPipe, 
+    // SafeHtmlPipe, 
     TranslateModule,
     HeaderComponent, 
     HeroComponent, 
@@ -36,65 +42,15 @@ import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
     ReviewsComponent,
     ContactComponent, 
     FooterComponent, 
-    CookieBannerComponent
+    CookieBannerComponent,
+    LegalSectionComponent
   ],
   templateUrl: './app.component.html',
   styleUrl   : './app.component.scss'
 })
 export class AppComponent {
 
-  /* ---------- Felder für das Template ---------- */
-  showLegal     = false;                     // *ngIf
-  legalHeading  = '';                       // H1
-  legalHtml     = '';                       // <div [innerHTML]>
-  private activePage: 'legal' | 'privacy' | null = null;
-
-  constructor(
-    public scrollSrv : ScrollService,
-    private translate  : TranslateService,
-    private router    : Router                 // ← hier injizieren
-  ) {
-
-    // a) Panel-Status wenn jemand im Footer klickt
-    this.scrollSrv.legalDisplay$.subscribe(page => {
-      this.activePage = page;
-      this.refreshLegalContent();
-    });
-
-    // b) Sprachwechsel während Panel offen
-    this.translate.onLangChange.subscribe(
-      (_: LangChangeEvent) => this.refreshLegalContent()
-    );
-
-    // c) Router-Abonnement für direkten URL-Aufruf
-    this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e: NavigationEnd) => {
-        if (e.urlAfterRedirects === '/legalnotice') {
-          // Panel öffnen für Impressum
-          this.scrollSrv.showLegal('legal');
-        } else if (e.urlAfterRedirects === '/privacypolicy') {
-          // Panel öffnen für Datenschutz
-          this.scrollSrv.showLegal('privacy');
-        } else {
-          // Panel schließen, wenn man woanders hin navigiert
-          this.scrollSrv.showLegal(null);
-        }
-      });
-  }
-
-
-  /* Holt Überschrift + HTML frisch aus den JSON-Keys ------------- */
-  private refreshLegalContent(): void {
-    if (!this.activePage) {                 // Panel schließen
-      this.showLegal = false;
-      this.legalHtml = this.legalHeading = '';
-      return;
-    }
-    this.legalHeading = this.translate.instant(`${this.activePage}.heading`);
-    this.legalHtml    = this.translate.instant(`${this.activePage}.content`);
-    this.showLegal    = true;
-  }
+constructor() {}
 
   /* ---------- Cursor-Shadow (unverändert) ---------- */
   @HostListener('document:mousemove', ['$event'])
