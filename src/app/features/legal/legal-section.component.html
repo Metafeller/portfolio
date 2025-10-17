@@ -1,73 +1,76 @@
-<section *ngIf="isOpen" class="legal-section" aria-labelledby="legal-section-title">
-  <!-- anchor at section start -->
-  <!-- <div id="footer-legal-anchor"></div> -->
+<!-- Show only when opened (isOpen=true) -->
+<section *ngIf="isOpen" class="legal-wrapper" aria-labelledby="legal-section-title">
+  <div class="legal-container" #sectionTop>
+    <h2 id="legal-section-title" class="sr-only">
+      {{ 'legal.section.label' | translate }}
+    </h2>
 
-  <h2 id="legal-section-title" class="sr-only">
-    {{ 'legal.section.label' | translate }}
-  </h2>
-
-  <!-- Tabs / Anchor Nav -->
-  <nav class="legal-tabs" [attr.aria-label]="'legal.section.nav_aria' | translate">
-    <a
-      class="legal-tab"
-      [class.active]="activeTab === 'legal'"
-      href="#impressum"
-      (click)="onTabClick($event, 'legal')"
-      aria-controls="impressum"
-    >
-      {{ 'legal.heading' | translate }}
-    </a>
-
-    <a
-      class="legal-tab"
-      [class.active]="activeTab === 'privacy'"
-      href="#datenschutz"
-      (click)="onTabClick($event, 'privacy')"
-      aria-controls="datenschutz"
-    >
-      {{ 'privacy.heading' | translate }}
-    </a>
-  </nav>
-
-  <!-- IMPRESSUM nur wenn aktiv -->
-  <article *ngIf="activeTab === 'legal'" id="impressum" class="legal-block" aria-labelledby="impressum-title">
-    <header class="legal-block__header">
-      <h3 id="impressum-title" class="legal-title">
+    <!-- Tabs -->
+    <nav class="legal-tabs" [attr.aria-label]="'legal.section.nav_aria' | translate">
+      <a
+        class="legal-tab"
+        [class.active]="activeTab === 'legal'"
+        href="#impressum"
+        (click)="onTabClick($event, 'legal')"
+        aria-controls="impressum">
         {{ 'legal.heading' | translate }}
-      </h3>
-      <p class="legal-updated">
-        {{ 'legal.updated' | translate:{ date: lastUpdated } }}
-      </p>
-    </header>
+      </a>
 
-    <!-- Render full HTML from JSON -->
-    <div class="legal-content" [innerHTML]="'legal.content' | translate | safeHtml"></div>
-  </article>
-
-  <!-- DATENSCHUTZ nur wenn aktiv -->
-  <article *ngIf="activeTab === 'privacy'" id="datenschutz" class="legal-block" aria-labelledby="privacy-title">
-    <header class="legal-block__header">
-      <h3 id="privacy-title" class="legal-title">
+      <a
+        class="legal-tab"
+        [class.active]="activeTab === 'privacy'"
+        href="#datenschutz"
+        (click)="onTabClick($event, 'privacy')"
+        aria-controls="datenschutz">
         {{ 'privacy.heading' | translate }}
-      </h3>
-      <p class="legal-updated">
-        {{ 'privacy.updated' | translate:{ date: lastUpdated } }}
-      </p>
-    </header>
+      </a>
+    </nav>
 
-    <div class="legal-content" [innerHTML]="'privacy.content' | translate | safeHtml"></div>
-  </article>
+    <!-- IMPRESSUM (only when active) -->
+    <article *ngIf="activeTab === 'legal'" id="impressum" class="legal-block" aria-labelledby="impressum-title">
+      <header class="legal-block__header">
+        <h3 id="impressum-title" class="legal-title">{{ 'legal.heading' | translate }}</h3>
+        <p class="legal-updated">{{ 'legal.updated' | translate:{ date: lastUpdated } }}</p>
+      </header>
 
-  <!-- Scroll-to-top within the section -->
-  <div class="legal-scroll-top">
-  <button
-    type="button"
-    class="scroll-top-btn"
-    [attr.aria-label]="'legal.section.scroll_top_aria' | translate"
-    (click)="scrollToSectionTop()"
-    >
-      ↑
-    </button>
+      <div class="legal-content" [innerHTML]="'legal.content' | translate | safeHtml"></div>
+    </article>
+
+    <!-- DATENSCHUTZ (only when active) -->
+    <article *ngIf="activeTab === 'privacy'" id="datenschutz" class="legal-block" aria-labelledby="privacy-title">
+      <header class="legal-block__header">
+        <h3 id="privacy-title" class="legal-title">{{ 'privacy.heading' | translate }}</h3>
+        <p class="legal-updated">{{ 'privacy.updated' | translate:{ date: lastUpdated } }}</p>
+      </header>
+
+      <div class="legal-content" [innerHTML]="'privacy.content' | translate | safeHtml"></div>
+    </article>
+
+    <!-- Mini footer inside the container -->
+    <footer class="legal-footer">
+      Made By Taironman with <span class="heart" aria-hidden="true">💚</span>
+    </footer>
+
+    <div class="legal-mini-footer">
+      <a href="#impressum" (click)="onTabClick($event, 'legal')">
+        {{ 'footer.bottom.legalNotice' | translate }}
+      </a>
+      <span class="divider">|</span>
+      <a href="#datenschutz" (click)="onTabClick($event, 'privacy')">
+        {{ 'footer.bottom.privacyPolicy' | translate }}
+      </a>
+
+      <span class="spacer"></span>
+
+      <!-- Scroll to top of the section -->
+      <button
+        type="button"
+        class="scroll-top-btn"
+        [attr.aria-label]="'legal.section.scroll_top_aria' | translate"
+        (click)="scrollToSectionTop()">
+        ↑
+      </button>
+    </div>
   </div>
 </section>
 

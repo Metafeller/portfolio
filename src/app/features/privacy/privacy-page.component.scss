@@ -1,24 +1,65 @@
-@use '../legal/legal-page.component' as *; /* optional: wenn du teilen willst */
-/* oder kopiere aus legal-page.component.scss 1:1 */
-
-.legal-page {
-  padding: 32px 0;
+/* identisch zur Legal-Page, damit Look & Feel einheitlich ist */
+.legal-wrapper {
+  width: 100%;
+  padding: 40px 16px;
+  background: var(--primary-color) url(/bg-images/bg-hero.png) no-repeat center / cover fixed;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 960px;
-  margin: 0 auto;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.legal-page__title { font-size: 24px; line-height: 1.25; }
-.legal-page__updated { font-size: 12px; opacity: 0.75; }
+.legal-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #1c1c1ccc;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #0000004d;
+  color: #fff;
+  font-family: var(--font-family);
+  margin-top: 120px;
+  margin-bottom: 120px;
+  box-sizing: border-box;
+}
+
+.legal-title { font-size: 24px; line-height: 1.25; color: var(--accent-color, #00ffae); }
+.legal-updated { font-size: 12px; opacity: .75; }
 
 .legal-content {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  display: flex; flex-direction: column; gap: 8px;
 
-  h2 { margin: 16px 0 8px; font-size: 18px; }
+  h2, h3, h4 { margin: 16px 0 8px; color: var(--accent-color, #00ffae); }
+  p { margin: 0 0 8px; }
   ul, ol { padding-left: 20px; display: flex; flex-direction: column; gap: 4px; }
-  a { text-decoration: underline; }
+
+  a { text-decoration: underline; color: var(--accent-color, #00ffae); transition: color 140ms ease; }
+  a:hover, a:focus { color: #eaff00; }
+}
+
+.legal-footer {
+  margin-top: 48px; text-align: center;
+  font-family: var(--font-family-second); font-size: 14px; padding: 16px;
+  .heart { color: var(--accent-color, #00ffae); }
+}
+
+.legal-mini-footer {
+  margin-top: 16px; display: flex; flex-wrap: wrap; gap: 20px;
+  justify-content: center; align-items: center;
+  font-family: var(--font-family-second); font-size: 14px;
+
+  a { color: var(--accent-color, #00ffae); text-decoration: none; }
+  a:hover { color: #eaff00; }
+  .divider { opacity: .6; }
+  .spacer { flex: 1 1 auto; }
+
+  .scroll-top-btn {
+    width: 32px; height: 32px; border-radius: 999px;
+    border: 1px solid var(--accent-color, #00ffae);
+    background: transparent; color: var(--accent-color, #00ffae);
+    cursor: pointer; line-height: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-container { padding: 20px; margin-top: 80px; margin-bottom: 80px; }
 }

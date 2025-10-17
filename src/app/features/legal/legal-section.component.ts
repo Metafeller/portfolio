@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -15,6 +15,8 @@ type LegalTab = 'legal' | 'privacy';
   styleUrl: './legal-section.component.scss'
 })
 export class LegalSectionComponent implements OnInit, OnDestroy {
+  @ViewChild('sectionTop') private sectionTop?: ElementRef<HTMLElement>; // 👈 NEU
+
   activeTab: LegalTab = 'legal';
   isOpen = false;
   lastUpdated = '';               // used for {{date}} in i18n
@@ -58,7 +60,13 @@ export class LegalSectionComponent implements OnInit, OnDestroy {
   }
 
   scrollToSectionTop(): void {
-    this.scroll.scrollToElement('footer-legal-anchor');
+  // 1) bevorzugt direkt zum Container (präziser)
+  if (this.sectionTop?.nativeElement) {
+    this.sectionTop.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+  // 2) Fallback: globaler Anker unter dem Footer
+  this.scroll.scrollToElement('footer-legal-anchor');
   }
 
   private scrollToSectionTopThen(anchorId: string): void {

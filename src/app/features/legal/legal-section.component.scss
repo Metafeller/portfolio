@@ -1,14 +1,37 @@
-.legal-section {
-  padding: 32px 0;
+/* Wrapper uses the same background as Skills (fixed cover + primary tint) */
+.legal-wrapper {
+  width: 100%;
+  padding: 40px 16px;
+  background: var(--primary-color) url(/bg-images/bg-hero.png) no-repeat center / cover fixed;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  justify-content: center;
 }
 
+/* Card container */
+.legal-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #1c1c1ccc; /* = rgba(28,28,28,.8) */
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #0000004d;
+  color: #fff;
+  font-family: var(--font-family);
+  margin-top: 120px;
+  margin-bottom: 120px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  scroll-margin-top: 140px; // if header is sticky
+}
+
+/* Tabs */
 .legal-tabs {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  margin-bottom: 12px;
 
   .legal-tab {
     text-decoration: none;
@@ -16,17 +39,22 @@
     border-radius: 999px;
     border: 1px solid var(--primary-color, #1c1c1c);
     background: var(--primary-color-transparent, rgba(28, 28, 28, 0.08));
-    transition: transform 120ms ease;
-    &.active { transform: translateY(-1px); }
+    transition: transform 120ms ease, color 120ms ease, border-color 120ms ease;
+
+    color: var(--accent-color, #00ffae);
+    border-color: var(--accent-color, #00ffae);
+
+    &.active,
     &:hover { transform: translateY(-1px); }
   }
 }
 
+/* Blocks */
 .legal-block {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  scroll-margin-top: 96px; // in case your header is sticky
+  scroll-margin-top: 96px; // if header is sticky
 
   &__header {
     display: flex;
@@ -35,48 +63,100 @@
   }
 
   .legal-title {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1.25;
+    color: var(--accent-color, #00ffae);
   }
 
   .legal-updated {
     font-size: 12px;
     opacity: 0.75;
+    color: #fff;
   }
 
   .legal-content {
     display: flex;
     flex-direction: column;
     gap: 8px;
-  }
 
-  .legal-list,
-  .legal-ol {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    h2, h3, h4 {
+      margin: 16px 0 8px;
+      color: var(--accent-color, #00ffae);
+      line-height: 1.35;
+    }
+
+    p { margin: 0 0 8px; }
+
+    ul, ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: var(--accent-color, #00ffae);
+      transition: color 140ms ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #eaff00; /* Neon yellow on hover */
+    }
   }
 }
 
-.legal-scroll-top {
+/* Mini footer inside container */
+.legal-footer {
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+  padding: 16px;
+
+  .heart { color: var(--accent-color, #00ffae); }
+}
+
+.legal-mini-footer {
+  margin-top: 16px;
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+
+  a {
+    color: var(--accent-color, #00ffae);
+    text-decoration: none;
+  }
+  a:hover { color: #eaff00; }
+
+  .divider { opacity: .6; }
+  .spacer { flex: 1 1 auto; }
+
+  .scroll-top-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-color, #00ffae);
+    background: transparent;
+    color: var(--accent-color, #00ffae);
+    cursor: pointer;
+    line-height: 1;
+  }
 }
 
-.scroll-top-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  border: 1px solid var(--primary-color, #1c1c1c);
-  background: var(--primary-color-transparent, rgba(28, 28, 28, 0.08));
-  cursor: pointer;
-  line-height: 1;
-}
-
-/* Optional: screen reader only helper (use your global if you have one) */
+/* Screen reader helper */
 .sr-only {
   position: absolute !important;
   width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
+
+/* Simple responsive tweak */
+@media (max-width: 640px) {
+  .legal-container { padding: 20px; margin-top: 80px; margin-bottom: 80px; }
 }

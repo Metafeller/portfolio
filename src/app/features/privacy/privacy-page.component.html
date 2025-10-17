@@ -1,10 +1,32 @@
-<section class="legal-page" aria-labelledby="privacy-page-title">
-  <h1 id="privacy-page-title" class="legal-page__title">
-    {{ 'privacy.heading' | translate }}
-  </h1>
-  <p class="legal-page__updated">
-    {{ 'privacy.updated' | translate:{ date: ('10/2025') } }}
-  </p>
+<section class="legal-wrapper" aria-labelledby="privacy-page-title">
+  <div class="legal-container">
+    <h1 id="privacy-page-title" class="legal-title">
+      {{ 'privacy.heading' | translate }}
+    </h1>
+    <p class="legal-updated">
+      {{ 'privacy.updated' | translate:{ date: ('10/2025') } }}
+    </p>
 
-  <div class="legal-content" [innerHTML]="'privacy.content' | translate | safeHtml"></div>
+    <div class="legal-content" [innerHTML]="'privacy.content' | translate | safeHtml"></div>
+
+    <footer class="legal-footer">
+      Made By Taironman with <span class="heart" aria-hidden="true">💚</span>
+    </footer>
+
+    <div class="legal-mini-footer">
+      <a [routerLink]="'/legal'">{{ 'footer.bottom.legalNotice' | translate }}</a>
+      <span class="divider">|</span>
+      <a [routerLink]="'/privacy'">{{ 'footer.bottom.privacyPolicy' | translate }}</a>
+
+      <span class="spacer"></span>
+
+      <button
+        type="button"
+        class="scroll-top-btn"
+        [attr.aria-label]="'legal.section.scroll_top_aria' | translate"
+        (click)="scrollToTop()"
+      >↑</button>
+    </div>
+  </div>
 </section>
+
