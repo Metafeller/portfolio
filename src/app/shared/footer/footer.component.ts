@@ -4,11 +4,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { ScrollService } from '../../services/scroll.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AutoplayKickDirective } from '../directives/autoplay-kick.directive';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, TranslateModule],
+  imports: [CommonModule, ButtonComponent, TranslateModule, AutoplayKickDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

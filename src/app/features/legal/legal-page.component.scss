@@ -46,7 +46,7 @@
   justify-content: center; align-items: center;
   font-family: var(--font-family-second); font-size: 14px;
 
-  a { color: var(--accent-color, #00ffae); text-decoration: underline; }
+  a { color: var(--accent-color, #00ffae); text-decoration: none; }
   a:hover { color: #eaff00; }
   .divider { opacity: .6; }
   .spacer { flex: 1 1 auto; }

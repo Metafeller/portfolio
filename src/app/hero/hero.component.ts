@@ -9,12 +9,13 @@ import {
   PLATFORM_ID, 
   Renderer2 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { AutoplayKickDirective } from '../shared/directives/autoplay-kick.directive';
 
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, AutoplayKickDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
