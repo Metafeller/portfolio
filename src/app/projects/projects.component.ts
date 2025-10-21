@@ -113,20 +113,23 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         liveUrl: 'https://loco.metafeller.com/',
         imageUrl: '/images/projects/frame-pollo-loco.png',
       },
-      {
-        id: 3,
-        name: this.translate.instant('projects.items.portfolio.name'),
-        description: this.translate.instant('projects.items.portfolio.description'),
-        technologies: [
-          { name: 'Angular', icon: '/svg-icons/overlay/angular.svg' },
-          { name: 'HTML', icon: '/svg-icons/overlay/html.svg' },
-          { name: 'CSS', icon: '/svg-icons/overlay/css.svg' },
-          { name: 'TypeScript', icon: '/svg-icons/overlay/typescript.svg' },
-        ],
-        githubUrl: 'https://github.com/Metafeller/portfolio',
-        liveUrl: 'https://metafeller.com/',
-        imageUrl: '/images/projects/frame-da-bubble.png',
-      },
+
+      // Platzhalter für das dritte Projekt, das später freigeschaltet wird***
+
+      // {
+      //   id: 3,
+      //   name: this.translate.instant('projects.items.portfolio.name'),
+      //   description: this.translate.instant('projects.items.portfolio.description'),
+      //   technologies: [
+      //     { name: 'Angular', icon: '/svg-icons/overlay/angular.svg' },
+      //     { name: 'HTML', icon: '/svg-icons/overlay/html.svg' },
+      //     { name: 'CSS', icon: '/svg-icons/overlay/css.svg' },
+      //     { name: 'TypeScript', icon: '/svg-icons/overlay/typescript.svg' },
+      //   ],
+      //   githubUrl: 'https://github.com/Metafeller/portfolio',
+      //   liveUrl: 'https://metafeller.com/',
+      //   imageUrl: '/images/projects/frame-da-bubble.png',
+      // },
 
     ];
   }
