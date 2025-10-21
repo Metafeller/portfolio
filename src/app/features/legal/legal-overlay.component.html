@@ -1,0 +1,53 @@
+<!-- render only when open -->
+<div *ngIf="isOpen" class="legal-overlay" role="dialog" aria-modal="true" aria-labelledby="legal-overlay-title">
+  <div class="legal-overlay__backdrop" (click)="close()"></div>
+
+  <div class="legal-overlay__panel legal-container" tabindex="-1" #panel>
+    <header class="legal-overlay__header">
+      <h2 id="legal-overlay-title" class="sr-only">
+        {{ 'legal.section.label' | translate }}
+      </h2>
+
+      <nav class="legal-tabs" [attr.aria-label]="'legal.section.nav_aria' | translate">
+        <button class="legal-tab" [class.active]="activeTab==='legal'" (click)="switchTab('legal')">
+          {{ 'legal.heading' | translate }}
+        </button>
+        <button class="legal-tab" [class.active]="activeTab==='privacy'" (click)="switchTab('privacy')">
+          {{ 'privacy.heading' | translate }}
+        </button>
+      </nav>
+
+      <button class="legal-close" type="button" aria-label="Close" (click)="close()">×</button>
+    </header>
+
+    <section class="legal-overlay__content legal-block" *ngIf="activeTab==='legal'">
+      <header class="legal-block__header">
+        <h3 class="legal-title">{{ 'legal.heading' | translate }}</h3>
+        <p class="legal-updated">{{ 'legal.updated' | translate:{ date: lastUpdated } }}</p>
+      </header>
+      <div class="legal-content" [innerHTML]="'legal.content' | translate | safeHtml"></div>
+    </section>
+
+    <section class="legal-overlay__content legal-block" *ngIf="activeTab==='privacy'">
+      <header class="legal-block__header">
+        <h3 class="legal-title">{{ 'privacy.heading' | translate }}</h3>
+        <p class="legal-updated">{{ 'privacy.updated' | translate:{ date: lastUpdated } }}</p>
+      </header>
+      <div class="legal-content" [innerHTML]="'privacy.content' | translate | safeHtml"></div>
+    </section>
+
+    <footer class="legal-mini-footer">
+      <a (click)="switchTab('legal')">{{ 'footer.bottom.legalNotice' | translate }}</a>
+      <span class="divider">|</span>
+      <a (click)="switchTab('privacy')">{{ 'footer.bottom.privacyPolicy' | translate }}</a>
+      <span class="spacer"></span>
+      <button
+        type="button"
+        class="scroll-top-btn"
+        [attr.aria-label]="'legal.section.scroll_top_aria' | translate"
+        (click)="scrollToTop()">
+        ↑
+      </button>
+    </footer>
+  </div>
+</div>

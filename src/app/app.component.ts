@@ -25,6 +25,7 @@ import { ContactComponent }  from './contact/contact.component';
 import { FooterComponent }   from './shared/footer/footer.component';
 import { CookieBannerComponent } from './cookie-banner/cookie-banner.component';
 import { LegalSectionComponent } from './features/legal/legal-section.component';
+import { LegalOverlayComponent } from './features/legal/legal-overlay.component';
 
 @Component({
   selector  : 'app-root',
@@ -43,7 +44,8 @@ import { LegalSectionComponent } from './features/legal/legal-section.component'
     ContactComponent, 
     FooterComponent, 
     CookieBannerComponent,
-    LegalSectionComponent
+    // LegalSectionComponent,
+    LegalOverlayComponent
   ],
   templateUrl: './app.component.html',
   styleUrl   : './app.component.scss'

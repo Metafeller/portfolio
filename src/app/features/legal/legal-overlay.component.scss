@@ -1,0 +1,211 @@
+/* === Vollbild-Overlay (mit identischem Wrapper-Background) ================== */
+.legal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+}
+
+/* Hintergrund wie in der Section: var(--primary-color) + bg-hero + dunkles Overlay */
+.legal-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    var(--primary-color) url('/bg-images/bg-hero.png') no-repeat center / cover fixed;
+}
+.legal-overlay__backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+}
+
+/* === Panel = 1:1 Card-Container (wir nutzen die gleichen Klassennamen) ====== */
+.legal-overlay__panel {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 92vw);
+  max-height: 86vh;
+  overflow: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #fff;
+}
+
+/* Die Card-Optik aus der Section (legal-container) 1:1 übernehmen */
+.legal-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #1c1c1ccc; /* = rgba(28,28,28,.8) */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #0000004d;
+  color: #fff;
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* === Header + Tabs (gleiches Styling wie Section) =========================== */
+.legal-overlay__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Tabs – Buttons hier, aber Stil identisch (Farbe, Hover, Accent) */
+.legal-tabs {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+
+  .legal-tab {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--primary-color, #1c1c1c);
+    background: var(--primary-color-transparent, rgba(28, 28, 28, 0.08));
+    transition: transform 120ms ease, color 120ms ease, border-color 120ms ease;
+
+    color: var(--accent-color, #00ffae);
+    border-color: var(--accent-color, #00ffae);
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.legal-close {
+  margin-left: auto;
+  font-size: 22px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover { background: rgba(255,255,255,.08); }
+}
+
+/* === Inhalt – Titles/Lists/Links exakt wie in Section ======================= */
+.legal-title {
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--accent-color, #00ffae);
+}
+.legal-updated {
+  font-size: 12px;
+  opacity: 0.75;
+  color: #fff;
+}
+.legal-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h2, h3, h4 {
+      margin: 16px 0 8px;
+      color: var(--accent-color, #00ffae);
+      line-height: 1.35;
+    }
+
+    p { margin: 0 0 8px; }
+
+    ul, ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: var(--accent-color, #00ffae);
+      transition: color 140ms ease;
+    }
+
+    a:hover,
+    a:focus {
+      color: #eaff00; /* Neon yellow on hover */
+    }
+  }
+}
+
+/* === Mini-Footer in der Card (gleich wie Section) =========================== */
+.legal-footer {
+  margin-top: 48px;
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+  padding: 16px;
+
+  .heart { color: var(--accent-color, #00ffae); }
+}
+
+.legal-mini-footer {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-second);
+  font-size: 14px;
+
+  a {
+    color: var(--accent-color, #00ffae);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a:hover { color: #eaff00; }
+
+  .divider { opacity: .6; }
+  .spacer { flex: 1 1 auto; }
+
+  .scroll-top-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-color, #00ffae);
+    background: transparent;
+    color: var(--accent-color, #00ffae);
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
+/* Screen reader helper */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+}
+
+/* Responsive Tweak wie in Section */
+@media (max-width: 640px) {
+  .legal-overlay__panel { padding: 20px; }
+}

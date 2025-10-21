@@ -163,12 +163,18 @@
           >{{ 'footer.bottom.legalNotice' | translate }}</a
           >  -->
 
-          <a
+          <!-- <a
             class="footer-link"
             href="#impressum"
             (click)="scrollService.showLegal('legal'); $event.preventDefault()"
             aria-label="Legal Notice"
           >
+            {{ 'footer.bottom.legalNotice' | translate }}
+          </a> -->
+
+          <a role="button" tabindex="0"
+            (click)="scrollService.openLegalOverlay('legal')"
+            aria-label="Legal Notice">
             {{ 'footer.bottom.legalNotice' | translate }}
           </a>
         </div>
@@ -183,14 +189,21 @@
           >{{ 'footer.bottom.privacyPolicy' | translate }}</a
           > -->
 
-          <a
+          <!-- <a
             class="footer-link"
             href="#datenschutz"
             (click)="scrollService.showLegal('privacy'); $event.preventDefault()"
             aria-label="Privacy Policy"
           >
             {{ 'footer.bottom.privacyPolicy' | translate }}
-          </a>
+          </a> -->
+
+          <a role="button" tabindex="0"
+            (click)="scrollService.openLegalOverlay('privacy')"
+            aria-label="Privacy Policy">
+            {{ 'footer.bottom.privacyPolicy' | translate }}
+        </a>
+
         </div>
 
       </div>

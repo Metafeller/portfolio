@@ -254,4 +254,74 @@
   scroll-margin-top: 90px;   /*  ≈ exakte Höhe deines Headers  */
 }
 
+/* Overlay: Body scroll lock (global) */
+body.overlay-open { overflow: hidden; }
 
+/* ========= Overlay: innerHTML-Content (ohne View-Encapsulation) ========= */
+.legal-overlay .legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.7;
+  font-size: 16px;
+  text-align: left;
+}
+
+.legal-overlay .legal-content h2,
+.legal-overlay .legal-content h3,
+.legal-overlay .legal-content h4 {
+  margin: 16px 0 8px;
+  color: var(--accent-color, #00ffae);
+  line-height: 1.35;
+}
+
+.legal-overlay .legal-content p { margin: 0 0 8px; font-weight: 400; }
+
+.legal-overlay .legal-content ul,
+.legal-overlay .legal-content ol {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 16px;
+}
+
+.legal-overlay .legal-content a {
+  color: var(--accent-color, #00ffae);
+  text-decoration: underline;
+  transition: color 140ms ease;
+  font-weight: 500;
+}
+
+.legal-overlay .legal-content a:hover,
+.legal-overlay .legal-content a:focus {
+  color: #eaff00; /* Neon-Gelb */
+  text-decoration: underline dotted;
+}
+
+// Bonus: Ich Style die Scrollbars global für die gesamte App***
+
+/* Firefox */
+* {
+  scrollbar-width: thin;  /* auto | thin | none */
+  scrollbar-color: var(--accent-color) rgba(255,255,255,0.12); /* thumb | track */
+}
+
+/* Chromium/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 10px;     /* vertikal */
+  height: 10px;    /* horizontal */
+}
+*::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.10);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 8px;
+  border: 2px solid rgba(0,0,0,0.25); /* „Gap“-Effekt */
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #eaff00; /* Neon-Gelb beim Hover */
+}
+*::-webkit-scrollbar-corner { background: transparent; }
