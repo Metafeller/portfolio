@@ -86,29 +86,31 @@
 
         @media (min-width: 240px) and (max-width: 320px) {
         padding: 24px 16px;
-        margin-left: 0px;
+        margin: 0px;
         margin-top: 8px;
         }
 
         @media (min-width: 321px) and (max-width: 480px) {
         padding: 24px;
-        margin-left: 0px;
+        margin: 0px;
         margin-top: 8px;
         }
 
         @media (min-width: 481px) and (max-width: 767px) {
         padding: 24px;
-        margin-left: 0px;
+        margin: 0px;
         margin-top: 8px;
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
         // padding: 32px;
+        margin: 0px;
         margin-top: 8px;
         }
 
         @media (min-width: 1025px) and (max-width: 1366px) {
         padding: 40px;
+        margin: 0px;
         margin-top: 8px;
         }
   
