@@ -485,8 +485,13 @@
             }
 
             .error-border {
-                border: 1px solid #f653a6 !important;
-                border-radius: 8px;
+                border-bottom: 1px solid #f653a6 !important;
+                // border-radius: 8px;
+            }
+
+            textarea.error-border {
+            border: 1px solid #f653a6 !important;
+            border-radius: 8px; /* beibehalten */
             }
               
             .char-counter {
@@ -773,6 +778,35 @@
             }
               
         }
+
+        /* --- Validation: Keine Content-Sprünge ------------------------- */
+        .error-slot {
+        min-height: 18px;                /* reservierter Platz (1 Zeile) */
+        line-height: 18px;
+        text-align: right;
+        color: #f653a6;
+        font-family: var(--font-family);
+        margin-top: 4px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s ease;
+        }
+
+        .error-slot.show {
+        opacity: 1;
+        visibility: visible;
+        }
+
+        /* Wenn eine Fehlermeldung 2–3 Zeilen haben kann (z. B. Website) */
+        .error-slot--multiline {
+        min-height: 56px;  /* ≈ 3 Zeilen à ~18px */
+        }
+
+        /* Option: Status-Bereich unten (Success/Error) ebenfalls reservieren */
+        .status-slot {
+        min-height: 44px;
+        }
+
     }
 }
 
